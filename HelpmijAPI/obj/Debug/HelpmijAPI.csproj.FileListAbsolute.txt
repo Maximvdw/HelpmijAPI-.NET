@@ -1,0 +1,5 @@
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.pdb
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.dll
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.pdb
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML

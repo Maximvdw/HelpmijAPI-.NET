@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="CredentialsWrongException class" Url="html/5cff24c0-12a9-e43b-9bb1-154a4c3276b0.htm" />
+  <HelpKINode Title="CredentialsWrongException class" Url="html/76fac438-5e76-03c7-f969-19b13d70f1fc.htm" />
+  <HelpKINode Title="CredentialsWrongException class">
+    <HelpKINode Title="about CredentialsWrongException class" Url="html/76fac438-5e76-03c7-f969-19b13d70f1fc.htm" />
+    <HelpKINode Title="all members" Url="html/5cff24c0-12a9-e43b-9bb1-154a4c3276b0.htm" />
+    <HelpKINode Title="constructor" Url="html/681ec440-76cb-4da3-1ce2-a46f0f257a17.htm" />
+    <HelpKINode Title="events" Url="html/675b1ae7-01c8-fc22-c5b3-8e9ae6949387.htm" />
+    <HelpKINode Title="methods" Url="html/e486340a-df0f-df7e-fd01-d2f08b99dff7.htm" />
+    <HelpKINode Title="properties" Url="html/2736273b-f20b-ed55-9635-3bb122009824.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CredentialsWrongException.CredentialsWrongException constructor" Url="html/681ec440-76cb-4da3-1ce2-a46f0f257a17.htm" />
+  <HelpKINode Title="Gebruiker interface" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
+  <HelpKINode Title="Gebruiker interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm" />
+  <HelpKINode Title="Gebruiker interface">
+    <HelpKINode Title="about Gebruiker interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm" />
+    <HelpKINode Title="all members" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
+    <HelpKINode Title="methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Gebruiker.GetCookies method" Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
+  <HelpKINode Title="Gebruiker.GetNickname method" Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
+  <HelpKINode Title="Gebruiker.GetSecurityToken method" Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
+  <HelpKINode Title="Gebruiker.GetUserData method" Url="html/66dcb0be-63b6-759e-3f67-d2c760be4303.htm" />
+  <HelpKINode Title="Gebruiker.GetUserID method" Url="html/73560986-5418-5fe4-9345-30804c429632.htm" />
+  <HelpKINode Title="Gebruiker.IsOnline method" Url="html/b96dda7d-d43b-f340-5a5e-4c67d9a2cde0.htm" />
+  <HelpKINode Title="Gebruiker.refreshData method" Url="html/7e516c46-c871-b9e4-7a53-1e3005d56ab3.htm" />
+  <HelpKINode Title="Gebruiker.SetCookies method" Url="html/7f07555c-51a3-8ef5-8ff5-4962be8e6a7f.htm" />
+  <HelpKINode Title="Gebruiker.SetNickname method" Url="html/0bcb2e16-906a-e7d7-68d7-88ca10479a43.htm" />
+  <HelpKINode Title="Gebruiker.SetOffline method" Url="html/31217e7d-0de7-f823-2614-de6fef2e9a44.htm" />
+  <HelpKINode Title="Gebruiker.SetOnline method" Url="html/daa68053-c41b-3453-9c1a-9ebeb40a5d06.htm" />
+  <HelpKINode Title="Gebruiker.SetSecurityToken method" Url="html/4808b9bc-bd06-e58d-7094-d6c6e0d708c2.htm" />
+  <HelpKINode Title="Gebruiker.SetUserData method" Url="html/748f91c0-7285-b7fb-4533-89cdb26733a9.htm" />
+  <HelpKINode Title="Gebruiker.SetUserID method" Url="html/c9e509f0-e529-8c6d-0aa9-72b7abb2f3ed.htm" />
+  <HelpKINode Title="GebruikerData interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm" />
+  <HelpKINode Title="GebruikerData interface" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
+  <HelpKINode Title="GebruikerData interface">
+    <HelpKINode Title="about GebruikerData interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm" />
+    <HelpKINode Title="all members" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
+    <HelpKINode Title="methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GebruikerData.GetAIM method" Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
+  <HelpKINode Title="GebruikerData.GetAvatar method" Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
+  <HelpKINode Title="GebruikerData.GetAvatarUrl method" Url="html/6a6e39ec-e287-61ee-f570-32885afefe7c.htm" />
+  <HelpKINode Title="GebruikerData.GetBeroep method" Url="html/72d1518c-d92e-0856-7f41-113546b6a31e.htm" />
+  <HelpKINode Title="GebruikerData.GetBiografie method" Url="html/6966208c-9990-6c1d-3899-0b773b64590c.htm" />
+  <HelpKINode Title="GebruikerData.GetBirthday method" Url="html/e2535b7b-26e8-43bd-548d-02fb72dc4491.htm" />
+  <HelpKINode Title="GebruikerData.GetHobbys method" Url="html/aca0b7c1-4a0d-6a04-37cd-1d4c7729e452.htm" />
+  <HelpKINode Title="GebruikerData.GetICQ method" Url="html/9758612b-66d4-4ff5-d114-9bce098a9f25.htm" />
+  <HelpKINode Title="GebruikerData.GetJabber method" Url="html/08211c70-a52a-4ffb-5a67-5327fedc31e0.htm" />
+  <HelpKINode Title="GebruikerData.GetMSN method" Url="html/3f545ac6-e663-de8f-de1b-feb79e1e7c05.htm" />
+  <HelpKINode Title="GebruikerData.GetSkype method" Url="html/b7ecd30f-4e0b-04a9-b4b0-2212245c85b9.htm" />
+  <HelpKINode Title="GebruikerData.GetWebsite method" Url="html/0ccacc37-04a7-fbb6-f848-3b22c86d5808.htm" />
+  <HelpKINode Title="GebruikerData.GetWoonplaats method" Url="html/9fd3bbc9-65f3-8f21-9079-4688a9109425.htm" />
+  <HelpKINode Title="GebruikerData.GetYahoo method" Url="html/388ff61a-e076-ad31-3671-931c62a5e1cd.htm" />
+  <HelpKINode Title="GebruikerData.SetAIM method" Url="html/22f1cc52-3f5e-bab2-204a-84f4d39d1f2b.htm" />
+  <HelpKINode Title="GebruikerData.SetBeroep method" Url="html/9badec02-254b-3d66-09b7-a1b2e801cb63.htm" />
+  <HelpKINode Title="GebruikerData.SetBiografie method" Url="html/6aa9c672-08ac-6ff6-fbfd-c4f28f716886.htm" />
+  <HelpKINode Title="GebruikerData.SetBirthday method" Url="html/f9638a54-90cc-acd4-91f6-d6bded328a83.htm" />
+  <HelpKINode Title="GebruikerData.SetHobbys method" Url="html/38f43b8d-6a8f-2f90-f156-9da8b4454ec6.htm" />
+  <HelpKINode Title="GebruikerData.SetICQ method" Url="html/2b30dc31-a2b0-8289-a891-59502509cc4e.htm" />
+  <HelpKINode Title="GebruikerData.SetJabber method" Url="html/3912db9a-71ac-0196-064b-7cc8aed6f930.htm" />
+  <HelpKINode Title="GebruikerData.SetMSN method" Url="html/e5056b74-3b46-b100-a521-946ff8215e2a.htm" />
+  <HelpKINode Title="GebruikerData.SetSkype method" Url="html/249ee2bb-6b12-7b2d-2d34-7556f1446af7.htm" />
+  <HelpKINode Title="GebruikerData.SetWebsite method" Url="html/053f69d2-df92-b085-df89-994fc966aa8c.htm" />
+  <HelpKINode Title="GebruikerData.SetWoonplaats method" Url="html/5ca07ff9-5c8d-842b-9ff8-4d2032df722a.htm" />
+  <HelpKINode Title="GebruikerData.SetYahoo method" Url="html/0c7d4a82-1757-c159-16d9-2796b2ef2eb5.htm" />
+  <HelpKINode Title="GetAIM method" Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
+  <HelpKINode Title="GetAuthor method" Url="html/000e450f-72e3-8607-2bfa-46ec6d7e50df.htm" />
+  <HelpKINode Title="GetAvatar method" Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
+  <HelpKINode Title="GetAvatarUrl method" Url="html/6a6e39ec-e287-61ee-f570-32885afefe7c.htm" />
+  <HelpKINode Title="GetBeroep method" Url="html/72d1518c-d92e-0856-7f41-113546b6a31e.htm" />
+  <HelpKINode Title="GetBiografie method" Url="html/6966208c-9990-6c1d-3899-0b773b64590c.htm" />
+  <HelpKINode Title="GetBirthday method" Url="html/e2535b7b-26e8-43bd-548d-02fb72dc4491.htm" />
+  <HelpKINode Title="GetCookies method" Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
+  <HelpKINode Title="GetHobbys method" Url="html/aca0b7c1-4a0d-6a04-37cd-1d4c7729e452.htm" />
+  <HelpKINode Title="GetICQ method" Url="html/9758612b-66d4-4ff5-d114-9bce098a9f25.htm" />
+  <HelpKINode Title="GetJabber method" Url="html/08211c70-a52a-4ffb-5a67-5327fedc31e0.htm" />
+  <HelpKINode Title="GetMSN method" Url="html/3f545ac6-e663-de8f-de1b-feb79e1e7c05.htm" />
+  <HelpKINode Title="GetNickname method" Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
+  <HelpKINode Title="GetSecurityToken method" Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
+  <HelpKINode Title="GetSkype method" Url="html/b7ecd30f-4e0b-04a9-b4b0-2212245c85b9.htm" />
+  <HelpKINode Title="GetTitle method" Url="html/57852c09-8b6a-1a94-014a-7127a47edabd.htm" />
+  <HelpKINode Title="GetUser method" Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
+  <HelpKINode Title="GetUserData method" Url="html/66dcb0be-63b6-759e-3f67-d2c760be4303.htm" />
+  <HelpKINode Title="GetUserID method" Url="html/73560986-5418-5fe4-9345-30804c429632.htm" />
+  <HelpKINode Title="GetWebsite method" Url="html/0ccacc37-04a7-fbb6-f848-3b22c86d5808.htm" />
+  <HelpKINode Title="GetWoonplaats method" Url="html/9fd3bbc9-65f3-8f21-9079-4688a9109425.htm" />
+  <HelpKINode Title="GetYahoo method" Url="html/388ff61a-e076-ad31-3671-931c62a5e1cd.htm" />
+  <HelpKINode Title="Helpmij class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm" />
+  <HelpKINode Title="Helpmij class" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
+  <HelpKINode Title="Helpmij class">
+    <HelpKINode Title="about Helpmij class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm" />
+    <HelpKINode Title="all members" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
+    <HelpKINode Title="constructor" Url="html/b9c5b112-2f2d-fcc3-2464-885aaf56ddf3.htm" />
+    <HelpKINode Title="methods" Url="html/2e91ce71-7f70-edab-b5ff-825457f560a8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Helpmij.GetUser method" Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
+  <HelpKINode Title="Helpmij.Helpmij constructor" Url="html/b9c5b112-2f2d-fcc3-2464-885aaf56ddf3.htm" />
+  <HelpKINode Title="Helpmij.Login method" Url="html/1f5b1808-aa67-3072-4e04-a408cfbc4fb0.htm" />
+  <HelpKINode Title="IsOnline method" Url="html/b96dda7d-d43b-f340-5a5e-4c67d9a2cde0.htm" />
+  <HelpKINode Title="Login method" Url="html/1f5b1808-aa67-3072-4e04-a408cfbc4fb0.htm" />
+  <HelpKINode Title="mvdw.helpmijapi namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.forum namespace" Url="html/132a562e-2f68-0f9d-f3a8-8db722543a1a.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.forum.Topic interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.forum.Topic interface" Url="html/cedc37a2-23d2-243a-bcb0-bf73d1233b68.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker namespace" Url="html/4b163277-fa5c-c97f-bae1-1cc445fc0045.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.CredentialsWrongException class" Url="html/5cff24c0-12a9-e43b-9bb1-154a4c3276b0.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.CredentialsWrongException class" Url="html/76fac438-5e76-03c7-f969-19b13d70f1fc.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.Gebruiker interface" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.Gebruiker interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerData interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerData interface" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UnableToConnectException class" Url="html/0a95df96-3c78-c626-d010-74758bbef823.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UnableToConnectException class" Url="html/4af8066e-f183-829d-6bfd-1a1488e51cc5.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UnableToSaveUserException class" Url="html/d9b5aabf-789e-a843-b226-1d4ea2469298.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UnableToSaveUserException class" Url="html/e1727827-6bb8-4ea9-4faf-e615546d57c3.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UserNotLoggedInException class" Url="html/5961971f-e457-a41a-0b9c-73a7313f5a8b.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.UserNotLoggedInException class" Url="html/762132dd-afab-ca41-ce0e-e6c7577ccb52.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.Helpmij class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.Helpmij class" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
+  <HelpKINode Title="refreshData method" Url="html/7e516c46-c871-b9e4-7a53-1e3005d56ab3.htm" />
+  <HelpKINode Title="SetAIM method" Url="html/22f1cc52-3f5e-bab2-204a-84f4d39d1f2b.htm" />
+  <HelpKINode Title="SetBeroep method" Url="html/9badec02-254b-3d66-09b7-a1b2e801cb63.htm" />
+  <HelpKINode Title="SetBiografie method" Url="html/6aa9c672-08ac-6ff6-fbfd-c4f28f716886.htm" />
+  <HelpKINode Title="SetBirthday method" Url="html/f9638a54-90cc-acd4-91f6-d6bded328a83.htm" />
+  <HelpKINode Title="SetCookies method" Url="html/7f07555c-51a3-8ef5-8ff5-4962be8e6a7f.htm" />
+  <HelpKINode Title="SetHobbys method" Url="html/38f43b8d-6a8f-2f90-f156-9da8b4454ec6.htm" />
+  <HelpKINode Title="SetICQ method" Url="html/2b30dc31-a2b0-8289-a891-59502509cc4e.htm" />
+  <HelpKINode Title="SetJabber method" Url="html/3912db9a-71ac-0196-064b-7cc8aed6f930.htm" />
+  <HelpKINode Title="SetMSN method" Url="html/e5056b74-3b46-b100-a521-946ff8215e2a.htm" />
+  <HelpKINode Title="SetNickname method" Url="html/0bcb2e16-906a-e7d7-68d7-88ca10479a43.htm" />
+  <HelpKINode Title="SetOffline method" Url="html/31217e7d-0de7-f823-2614-de6fef2e9a44.htm" />
+  <HelpKINode Title="SetOnline method" Url="html/daa68053-c41b-3453-9c1a-9ebeb40a5d06.htm" />
+  <HelpKINode Title="SetSecurityToken method" Url="html/4808b9bc-bd06-e58d-7094-d6c6e0d708c2.htm" />
+  <HelpKINode Title="SetSkype method" Url="html/249ee2bb-6b12-7b2d-2d34-7556f1446af7.htm" />
+  <HelpKINode Title="SetTitle method" Url="html/71edf666-6ebf-aa2f-a0bd-d6f789c3e5e5.htm" />
+  <HelpKINode Title="SetUserData method" Url="html/748f91c0-7285-b7fb-4533-89cdb26733a9.htm" />
+  <HelpKINode Title="SetUserID method" Url="html/c9e509f0-e529-8c6d-0aa9-72b7abb2f3ed.htm" />
+  <HelpKINode Title="SetWebsite method" Url="html/053f69d2-df92-b085-df89-994fc966aa8c.htm" />
+  <HelpKINode Title="SetWoonplaats method" Url="html/5ca07ff9-5c8d-842b-9ff8-4d2032df722a.htm" />
+  <HelpKINode Title="SetYahoo method" Url="html/0c7d4a82-1757-c159-16d9-2796b2ef2eb5.htm" />
+  <HelpKINode Title="Topic interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm" />
+  <HelpKINode Title="Topic interface" Url="html/cedc37a2-23d2-243a-bcb0-bf73d1233b68.htm" />
+  <HelpKINode Title="Topic interface">
+    <HelpKINode Title="about Topic interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm" />
+    <HelpKINode Title="all members" Url="html/cedc37a2-23d2-243a-bcb0-bf73d1233b68.htm" />
+    <HelpKINode Title="methods" Url="html/d175daa5-a934-9c9e-4bfb-9e1a6baf0052.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Topic.GetAuthor method" Url="html/000e450f-72e3-8607-2bfa-46ec6d7e50df.htm" />
+  <HelpKINode Title="Topic.GetTitle method" Url="html/57852c09-8b6a-1a94-014a-7127a47edabd.htm" />
+  <HelpKINode Title="Topic.SetTitle method" Url="html/71edf666-6ebf-aa2f-a0bd-d6f789c3e5e5.htm" />
+  <HelpKINode Title="UnableToConnectException class" Url="html/0a95df96-3c78-c626-d010-74758bbef823.htm" />
+  <HelpKINode Title="UnableToConnectException class" Url="html/4af8066e-f183-829d-6bfd-1a1488e51cc5.htm" />
+  <HelpKINode Title="UnableToConnectException class">
+    <HelpKINode Title="about UnableToConnectException class" Url="html/4af8066e-f183-829d-6bfd-1a1488e51cc5.htm" />
+    <HelpKINode Title="all members" Url="html/0a95df96-3c78-c626-d010-74758bbef823.htm" />
+    <HelpKINode Title="constructor" Url="html/9b8f7a4f-c7da-7eff-fb1b-812cfa7c046a.htm" />
+    <HelpKINode Title="events" Url="html/57636894-953c-38ec-d627-44527f730d27.htm" />
+    <HelpKINode Title="methods" Url="html/cada60f7-b88f-4949-c47a-eaf2ff30df42.htm" />
+    <HelpKINode Title="properties" Url="html/0f1132a3-c76b-9003-467b-3d39d31e3cb4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UnableToConnectException.UnableToConnectException constructor" Url="html/9b8f7a4f-c7da-7eff-fb1b-812cfa7c046a.htm" />
+  <HelpKINode Title="UnableToSaveUserException class" Url="html/d9b5aabf-789e-a843-b226-1d4ea2469298.htm" />
+  <HelpKINode Title="UnableToSaveUserException class" Url="html/e1727827-6bb8-4ea9-4faf-e615546d57c3.htm" />
+  <HelpKINode Title="UnableToSaveUserException class">
+    <HelpKINode Title="about UnableToSaveUserException class" Url="html/e1727827-6bb8-4ea9-4faf-e615546d57c3.htm" />
+    <HelpKINode Title="all members" Url="html/d9b5aabf-789e-a843-b226-1d4ea2469298.htm" />
+    <HelpKINode Title="constructor" Url="html/a088d61f-d478-01b8-5506-e9ce3b9662e2.htm" />
+    <HelpKINode Title="events" Url="html/a7fdabd7-eafb-8e3b-27e3-7b9cf9047949.htm" />
+    <HelpKINode Title="methods" Url="html/b817d084-d516-d981-770f-64de6f2d000a.htm" />
+    <HelpKINode Title="properties" Url="html/ad4b06c3-9c06-1d00-4db0-07360e3ae250.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UnableToSaveUserException.UnableToSaveUserException constructor" Url="html/a088d61f-d478-01b8-5506-e9ce3b9662e2.htm" />
+  <HelpKINode Title="UserNotLoggedInException class" Url="html/5961971f-e457-a41a-0b9c-73a7313f5a8b.htm" />
+  <HelpKINode Title="UserNotLoggedInException class" Url="html/762132dd-afab-ca41-ce0e-e6c7577ccb52.htm" />
+  <HelpKINode Title="UserNotLoggedInException class">
+    <HelpKINode Title="about UserNotLoggedInException class" Url="html/5961971f-e457-a41a-0b9c-73a7313f5a8b.htm" />
+    <HelpKINode Title="all members" Url="html/762132dd-afab-ca41-ce0e-e6c7577ccb52.htm" />
+    <HelpKINode Title="constructor" Url="html/9295ba74-983d-2947-1e8a-c218ade28d15.htm" />
+    <HelpKINode Title="events" Url="html/f31dea51-ad2a-badc-d754-508b36c374e6.htm" />
+    <HelpKINode Title="methods" Url="html/f4b05aac-1734-43e5-47c0-5cf1912cdd19.htm" />
+    <HelpKINode Title="properties" Url="html/6a712aa9-1bff-9f32-001b-62520dd2b386.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserNotLoggedInException.UserNotLoggedInException constructor" Url="html/9295ba74-983d-2947-1e8a-c218ade28d15.htm" />
+</HelpKI>
