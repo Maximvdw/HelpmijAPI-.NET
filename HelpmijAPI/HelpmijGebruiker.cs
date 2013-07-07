@@ -23,6 +23,7 @@ using System.Net;
 using System.Drawing;
 using System.IO;
 using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.gebruiker.exceptions;
 
 namespace mvdw.helpmij.gebruiker
 {

@@ -4,9 +4,9 @@
         <name>HelpmijAPI</name>
     </assembly>
     <members>
-        <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
+        <member name="T:mvdw.helpmij.forum.TopicReader">
             <summary>
-            Laad en save gebruikersintellingen
+            Helpmij Topic Reader
             </summary>
         </member>
         <member name="T:mvdw.helpmij.HelpmijData">
@@ -424,6 +424,104 @@
             Dropdown DATA - Suffix
             </summary>
         </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic,System.Net.CookieContainer)">
+            <summary>
+            Verkrijg de Topic data
+            </summary>
+            <param name="topic">Het topic om te saven</param>
+            <param name="cookies">Eventuele cookies</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic)">
+            <summary>
+            Verkrijg de Topic data
+            </summary>
+            <param name="topic">Het topic om te saven</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetAuthor(System.String)">
+            <summary>
+            Verkrijg de auteur van het topic
+            </summary>
+            <param name="source">De Broncode</param>
+            <returns>Gebruiker - Auteur</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTitle(System.String)">
+            <summary>
+            Verkrijg de titel
+            </summary>
+            <param name="source">De broncode</param>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetKeywords(System.String)">
+            <summary>
+            Verkrijg de keywords
+            </summary>
+            <param name="source">De broncode</param>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.HomepageTopic">
+            <summary>
+            Helpmij HomepageTopic
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetTitle">
+            <summary>
+            Verkrijg de Titel van het topic
+            </summary>
+            <returns>String - Title</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetTitle(System.String)">
+            <summary>
+            Set de Titel van het topic
+            </summary>
+            <param name="title">String - Title</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetURL">
+            <summary>
+            Verkrijg de URL van het topic
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetURL(System.String)">
+            <summary>
+            Set de URL van het topic
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetHour">
+            <summary>
+            Verkrijg het uur waarop de topic is aangemaakt
+            </summary>
+            <returns>int- Uur</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetHour(System.Int32)">
+            <summary>
+            Set het uur waarop de topic is aangemaakt
+            </summary>
+            <param name="hour">int - Uur</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetMinute">
+            <summary>
+            Verkrijg de minuut waarop het topic is aangemaakt
+            </summary>
+            <returns>int - Minuten</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetMinute(System.Int32)">
+            <summary>
+            Set het tijdstip waarop het topic is aangemaakt
+            </summary>
+            <param name="minute">int - Minuten</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetTopic">
+            <summary>
+            Zet de HomepageTopic om naar een Topic
+            </summary>
+            <returns>Topic</returns>
+        </member>
+        <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
+            <summary>
+            Laad en save gebruikersintellingen
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
             Verkrijg de gebruikers data, en save het
@@ -456,6 +554,177 @@
             <param name="end">De achterliggende string</param>
             <returns>Alle gevonden resultaten</returns>
         </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijTopic">
+            <summary>
+            Helpmij Topic
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.Topic">
+            <summary>
+            Helpmij Topic
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.GetAuthor">
+            <summary>
+            Verkrijg de Auteur van het topic
+            </summary>
+            <returns>Gebruiker - Auteru</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.SetAuthor(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de Auteur van het topic
+            </summary>
+            <param name="user">Gebruiker - Auteur</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.GetHTMLSource">
+            <summary>
+            Verkrijg de HTML source van de webpagina
+            </summary>
+            <returns>String - HTML source</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.SetHTMLSource(System.String)">
+            <summary>
+            Set de HTML source van de webpagina
+            </summary>
+            <param name="source">String - HTML source</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.GetKeywords">
+            <summary>
+            Verkrijg de keywords van het topic
+            </summary>
+            <returns>Lijst met keywords</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.SetKeywords(System.Collections.Generic.List{System.String})">
+            <summary>
+            Set de keywords van het topic
+            </summary>
+            <param name="keywords"></param>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.title">
+            <summary>
+            Topic Titel
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.author">
+            <summary>
+            Topic Auteur
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.url">
+            <summary>
+            Topic URL
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.hour">
+            <summary>
+            Aangemaakt op UUR
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.minute">
+            <summary>
+            Aangemaakt op Minuut
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.source">
+            <summary>
+            HTML source
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.keywords">
+            <summary>
+            Topic Keywords
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTopic">
+            <summary>
+            Zet de HomepageTopic om naar een Topic
+            </summary>
+            <returns>Topic</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTitle">
+            <summary>
+            Verkrijg de Titel van het topic
+            </summary>
+            <returns>String - Title</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetTitle(System.String)">
+            <summary>
+            Set de Titel van het topic
+            </summary>
+            <param name="title">String - Title</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetURL">
+            <summary>
+            Verkrijg de URL van het topic
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetURL(System.String)">
+            <summary>
+            Set de URL van het topic
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetHour">
+            <summary>
+            Verkrijg het uur waarop de topic is aangemaakt
+            </summary>
+            <returns>int- Uur</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetHour(System.Int32)">
+            <summary>
+            Set het uur waarop de topic is aangemaakt
+            </summary>
+            <param name="hour">int - Uur</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetMinute">
+            <summary>
+            Verkrijg de minuut waarop het topic is aangemaakt
+            </summary>
+            <returns>int - Minuten</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetMinute(System.Int32)">
+            <summary>
+            Set het tijdstip waarop het topic is aangemaakt
+            </summary>
+            <param name="minute">int - Minuten</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetAuthor">
+            <summary>
+            Verkrijg de Auteur van het topic
+            </summary>
+            <returns>Gebruiker - Auteru</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetAuthor(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de Auteur van het topic
+            </summary>
+            <param name="user">Gebruiker - Auteur</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetHTMLSource">
+            <summary>
+            Verkrijg de HTML source van de webpagina
+            </summary>
+            <returns>String - HTML source</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetHTMLSource(System.String)">
+            <summary>
+            Set de HTML source van de webpagina
+            </summary>
+            <param name="source">String - HTML source</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetKeywords">
+            <summary>
+            Verkrijg de keywords van het topic
+            </summary>
+            <returns>Lijst met keywords</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetKeywords(System.Collections.Generic.List{System.String})">
+            <summary>
+            Set de keywords van het topic
+            </summary>
+            <param name="keywords"></param>
+        </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijLogin">
             <summary>
             Aanmelden op Helpmij.nl
@@ -468,7 +737,7 @@
             <param name="username">Helpmij Gebruikersnaam</param>
             <param name="passwordMD5">Wachwoord MD5 Hash</param>
             <returns>int - ID</returns>
-            <exception cref="T:mvdw.helpmijapi.gebruiker.CredentialsWrongException">Foutieve inlog gegevens</exception>
+            <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">Foutieve inlog gegevens</exception>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.GebruikerData">
             <summary>
@@ -775,149 +1044,74 @@
             <param name="str">De input</param>
             <returns>String - MD5 hash</returns>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.UnableToConnectException">
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException">
             <summary>
             Unable to connect to helpmij
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.UnableToConnectException.#ctor(System.String)">
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException.#ctor(System.String)">
             <summary>
             Unable to connect to helpmij
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.UnableToSaveUserException">
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException">
             <summary>
             Unable to save user Exception
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.UnableToSaveUserException.#ctor(System.String)">
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException.#ctor(System.String)">
             <summary>
             Unable to save the user
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.CredentialsWrongException">
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">
             <summary>
             Credentials Wrong Exception
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.CredentialsWrongException.#ctor(System.String)">
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException.#ctor(System.String)">
             <summary>
             Credentials are wrong
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.UserNotLoggedInException">
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException">
             <summary>
             User Not logged in
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.UserNotLoggedInException.#ctor(System.String)">
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException.#ctor(System.String)">
             <summary>
             User is not logged in
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.forum.Topic">
+        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerPrivacy">
             <summary>
-            Helpmij Topic
+            Gebruikers Privacy
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.forum.HomepageTopic">
+        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.VERBERG_LEEFTIJD_EN_GEBOORTEDATUM">
             <summary>
-            Helpmij HomepageTopic
+            Verberg de leeftijd en geboortedatum
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetTitle">
+        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD">
             <summary>
-            Verkrijg de Titel van het topic
+            Toon enkel de leeftijd
             </summary>
-            <returns>String - Title</returns>
         </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetTitle(System.String)">
+        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_GEBOORTEDAG_EN_MAAND">
             <summary>
-            Set de Titel van het topic
+            Toon enkel de geboortedag en maand
             </summary>
-            <param name="title">String - Title</param>
         </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetURL">
+        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD_EN_GEBOORTEDATUM">
             <summary>
-            Verkrijg de URL van het topic
+            Toon de leeftijd en de geboortedatum
             </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetURL(System.String)">
-            <summary>
-            Set de URL van het topic
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetHour">
-            <summary>
-            Verkrijg het uur waarop de topic is aangemaakt
-            </summary>
-            <returns>int- Uur</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetHour(System.Int32)">
-            <summary>
-            Set het uur waarop de topic is aangemaakt
-            </summary>
-            <param name="hour">int - Uur</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetMinute">
-            <summary>
-            Verkrijg de minuut waarop het topic is aangemaakt
-            </summary>
-            <returns>int - Minuten</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetMinute(System.Int32)">
-            <summary>
-            Set het tijdstip waarop het topic is aangemaakt
-            </summary>
-            <param name="minute">int - Minuten</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetTopic">
-            <summary>
-            Zet de HomepageTopic om naar een Topic
-            </summary>
-            <returns>Topic</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.GetAuthor">
-            <summary>
-            Verkrijg de Auteur van het topic
-            </summary>
-            <returns>Gebruiker - Auteru</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.SetAuthor(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Set de Auteur van het topic
-            </summary>
-            <param name="user">Gebruiker - Auteur</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.GetHTMLSource">
-            <summary>
-            Verkrijg de HTML source van de webpagina
-            </summary>
-            <returns>String - HTML source</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.SetHTMLSource(System.String)">
-            <summary>
-            Set de HTML source van de webpagina
-            </summary>
-            <param name="source">String - HTML source</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.GetKeywords">
-            <summary>
-            Verkrijg de keywords van het topic
-            </summary>
-            <returns>Lijst met keywords</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Topic.SetKeywords(System.Collections.Generic.List{System.String})">
-            <summary>
-            Set de keywords van het topic
-            </summary>
-            <param name="keywords"></param>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
@@ -983,6 +1177,49 @@
             <summary>
             Refresh Homepage cache
             </summary>
+        </member>
+        <member name="T:mvdw.helpmij.homepage.HomepageTopics">
+            <summary>
+            Helpmij Homepage topics
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.homepage.HomepageTopics.source">
+            <summary>
+            Cache source code
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.homepage.HomepageTopics.user">
+            <summary>
+            Cache gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache">
+            <summary>
+            Refresh the source cache
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Refresh the source cache
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetNewTopics">
+            <summary>
+            Verkrijg de laatste nieuwe topics van de site
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics">
+            <summary>
+            Verkrijg de laatste onbeantwoorde topics van de site
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Verkrijg de laatste vragen van de gebruiker
+            </summary>
+            <returns>Lijst met topics</returns>
         </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruiker">
             <summary>
@@ -1123,7 +1360,7 @@
             <summary>
             Sla de wijzigingen op
             </summary>
-            <exception cref="T:mvdw.helpmijapi.gebruiker.UserNotLoggedInException">Wanneer cookies null zijn</exception>
+            <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException">Wanneer cookies null zijn</exception>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserID">
             <summary>
@@ -1397,243 +1634,6 @@
             <summary>
             Refresh de gegevens
             </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerPrivacy">
-            <summary>
-            Gebruikers Privacy
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.VERBERG_LEEFTIJD_EN_GEBOORTEDATUM">
-            <summary>
-            Verberg de leeftijd en geboortedatum
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD">
-            <summary>
-            Toon enkel de leeftijd
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_GEBOORTEDAG_EN_MAAND">
-            <summary>
-            Toon enkel de geboortedag en maand
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD_EN_GEBOORTEDATUM">
-            <summary>
-            Toon de leeftijd en de geboortedatum
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijTopic">
-            <summary>
-            Helpmij Topic
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.title">
-            <summary>
-            Topic Titel
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.author">
-            <summary>
-            Topic Auteur
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.url">
-            <summary>
-            Topic URL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.hour">
-            <summary>
-            Aangemaakt op UUR
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.minute">
-            <summary>
-            Aangemaakt op Minuut
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.source">
-            <summary>
-            HTML source
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijTopic.keywords">
-            <summary>
-            Topic Keywords
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTopic">
-            <summary>
-            Zet de HomepageTopic om naar een Topic
-            </summary>
-            <returns>Topic</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTitle">
-            <summary>
-            Verkrijg de Titel van het topic
-            </summary>
-            <returns>String - Title</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetTitle(System.String)">
-            <summary>
-            Set de Titel van het topic
-            </summary>
-            <param name="title">String - Title</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetURL">
-            <summary>
-            Verkrijg de URL van het topic
-            </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetURL(System.String)">
-            <summary>
-            Set de URL van het topic
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetHour">
-            <summary>
-            Verkrijg het uur waarop de topic is aangemaakt
-            </summary>
-            <returns>int- Uur</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetHour(System.Int32)">
-            <summary>
-            Set het uur waarop de topic is aangemaakt
-            </summary>
-            <param name="hour">int - Uur</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetMinute">
-            <summary>
-            Verkrijg de minuut waarop het topic is aangemaakt
-            </summary>
-            <returns>int - Minuten</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetMinute(System.Int32)">
-            <summary>
-            Set het tijdstip waarop het topic is aangemaakt
-            </summary>
-            <param name="minute">int - Minuten</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetAuthor">
-            <summary>
-            Verkrijg de Auteur van het topic
-            </summary>
-            <returns>Gebruiker - Auteru</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetAuthor(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Set de Auteur van het topic
-            </summary>
-            <param name="user">Gebruiker - Auteur</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetHTMLSource">
-            <summary>
-            Verkrijg de HTML source van de webpagina
-            </summary>
-            <returns>String - HTML source</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetHTMLSource(System.String)">
-            <summary>
-            Set de HTML source van de webpagina
-            </summary>
-            <param name="source">String - HTML source</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetKeywords">
-            <summary>
-            Verkrijg de keywords van het topic
-            </summary>
-            <returns>Lijst met keywords</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetKeywords(System.Collections.Generic.List{System.String})">
-            <summary>
-            Set de keywords van het topic
-            </summary>
-            <param name="keywords"></param>
-        </member>
-        <member name="T:mvdw.helpmij.homepage.HomepageTopics">
-            <summary>
-            Helpmij Homepage topics
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.homepage.HomepageTopics.source">
-            <summary>
-            Cache source code
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.homepage.HomepageTopics.user">
-            <summary>
-            Cache gebruiker
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache">
-            <summary>
-            Refresh the source cache
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Refresh the source cache
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetNewTopics">
-            <summary>
-            Verkrijg de laatste nieuwe topics van de site
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics">
-            <summary>
-            Verkrijg de laatste onbeantwoorde topics van de site
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Verkrijg de laatste vragen van de gebruiker
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="T:mvdw.helpmij.forum.TopicReader">
-            <summary>
-            Helpmij Topic Reader
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic,System.Net.CookieContainer)">
-            <summary>
-            Verkrijg de Topic data
-            </summary>
-            <param name="topic">Het topic om te saven</param>
-            <param name="cookies">Eventuele cookies</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic)">
-            <summary>
-            Verkrijg de Topic data
-            </summary>
-            <param name="topic">Het topic om te saven</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetAuthor(System.String)">
-            <summary>
-            Verkrijg de auteur van het topic
-            </summary>
-            <param name="source">De Broncode</param>
-            <returns>Gebruiker - Auteur</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTitle(System.String)">
-            <summary>
-            Verkrijg de titel
-            </summary>
-            <param name="source">De broncode</param>
-            <returns>String - Titel</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetKeywords(System.String)">
-            <summary>
-            Verkrijg de keywords
-            </summary>
-            <param name="source">De broncode</param>
-            <returns>String - Titel</returns>
         </member>
     </members>
 </doc>

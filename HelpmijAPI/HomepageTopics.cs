@@ -25,6 +25,7 @@ using mvdw.helpmijapi.forum;
 using mvdw.helpmij.utils;
 using mvdw.helpmij.forum;
 using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.gebruiker.exceptions;
 
 namespace mvdw.helpmij.homepage
 {
@@ -47,13 +48,21 @@ namespace mvdw.helpmij.homepage
         /// </summary>
         public static void RefreshCache()
         {
-            // Stel de URL samen
-            String url = siteURL;
-            // Maak een nieuwe cookiecontainer
-            CookieContainer cookies = new CookieContainer();
-            HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
-            // Zet de gebruiker op null
-            user = null;
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Stel de URL samen
+                String url = siteURL;
+                // Maak een nieuwe cookiecontainer
+                CookieContainer cookies = new CookieContainer();
+                HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
+                // Zet de gebruiker op null
+                user = null;
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
         }
 
         /// <summary>
@@ -61,13 +70,21 @@ namespace mvdw.helpmij.homepage
         /// </summary>
         public static void RefreshCache(Gebruiker user)
         {
-            // Stel de URL samen
-            String url = siteURL;
-            // Maak een nieuwe cookiecontainer
-            CookieContainer cookies = user.GetCookies();
-            HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
-            // Save de gebruiker
-            HomepageTopics.user = user;
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Stel de URL samen
+                String url = siteURL;
+                // Maak een nieuwe cookiecontainer
+                CookieContainer cookies = user.GetCookies();
+                HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
+                // Save de gebruiker
+                HomepageTopics.user = user;
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
         }
 
         /// <summary>

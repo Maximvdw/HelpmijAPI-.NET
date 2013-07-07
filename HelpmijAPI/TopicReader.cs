@@ -25,6 +25,7 @@ using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmij;
 using mvdw.helpmij.utils;
 using mvdw.helpmij.gebruiker;
+using mvdw.helpmijapi.gebruiker.exceptions;
 using mvdw.helpmijapi.forum;
 
 namespace mvdw.helpmij.forum
@@ -41,11 +42,19 @@ namespace mvdw.helpmij.forum
         /// <param name="cookies">Eventuele cookies</param>
         public static void GetTopicData(Topic topic, CookieContainer cookies)
         {
-            // Verkrijg de sourcecode
-            String source = UtilsHTTP.GetSource(topic.GetURL(), cookies);
-            topic.SetAuthor(GetAuthor(source)); // AUTHEUR
-            topic.SetTitle(GetTitle(source)); // TITEL
-            topic.SetKeywords(GetKeywords(source)); // KEYWORDS
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Verkrijg de sourcecode
+                String source = UtilsHTTP.GetSource(topic.GetURL(), cookies);
+                topic.SetAuthor(GetAuthor(source)); // AUTHEUR
+                topic.SetTitle(GetTitle(source)); // TITEL
+                topic.SetKeywords(GetKeywords(source)); // KEYWORDS
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
         }
 
         /// <summary>
