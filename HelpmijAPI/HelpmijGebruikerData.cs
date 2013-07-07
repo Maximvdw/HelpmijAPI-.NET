@@ -193,8 +193,28 @@ namespace mvdw.helpmij.gebruiker
         }
         #endregion
 
-        public static void GetSignature()
+        /// <summary>
+        /// Verkrijg de handtekening gegevens
+        /// </summary>
+        /// <param name="userHelpmij">HelpmijGebruiker</param>
+        public static void GetSignature(HelpmijGebruiker userHelpmij)
         {
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Stel de URL samen
+                String url = siteURL + privateProfile;
+                // Verkrijg de gebruikers ID
+                int id = userHelpmij.GetUserID();
+                if (id != -1)
+                {
+                    // Verkrijg de source code
+                }
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
         }
     }
 }

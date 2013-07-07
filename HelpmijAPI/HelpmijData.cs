@@ -35,7 +35,7 @@ namespace mvdw.helpmij
         /// <summary>
         /// Publieke gebruikers gegevens
         /// </summary>
-        public static String privateProfile = @"/forum/profile.php";
+        public static String privateProfile = @"/forum/profile.php?do=editprofile";
         /// <summary>
         /// POST argument van de update acite
         /// </summary>
@@ -92,6 +92,10 @@ namespace mvdw.helpmij
         /// Patch naar login php file
         /// </summary>
         public static String loginPHP = @"/forum/login.php";
+        /// <summary>
+        /// Patch naar de signature php file
+        /// </summary>
+        public static String signaturePHP = @"/forum/profile.php?do=editsignature";
         /// <summary>
         /// De prefix van de javascript var met de userid
         /// </summary>

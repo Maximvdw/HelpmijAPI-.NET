@@ -94,6 +94,11 @@
             Patch naar login php file
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signaturePHP">
+            <summary>
+            Patch naar de signature php file
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.HelpmijData.varidPrefix">
             <summary>
             De prefix van de javascript var met de userid
@@ -403,6 +408,12 @@
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.SetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
             Save de instellingen op Helpmij
+            </summary>
+            <param name="userHelpmij">HelpmijGebruiker</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetSignature(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
+            <summary>
+            Verkrijg de handtekening gegevens
             </summary>
             <param name="userHelpmij">HelpmijGebruiker</param>
         </member>
