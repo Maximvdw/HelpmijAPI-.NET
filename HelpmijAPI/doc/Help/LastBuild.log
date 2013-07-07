@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="1.9.6.0" projectFile="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\DocumentationHelpmijAPI.shfbproj" started="7-7-2013 02:26:54">
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.6.0" projectFile="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\DocumentationHelpmijAPI.shfbproj" started="7-7-2013 21:45:17">
 <buildStep step="Initializing">
 Finding tools...
 Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
@@ -19,11 +19,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Engels (Verenigde Staten))...
-    Last step completed in 00:00:00.0070
+    Last step completed in 00:00:00.2038
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0040
+    Last step completed in 00:00:00.0699
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -31,22 +31,22 @@ Generating reflection information...
   MRefBuilder (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Loaded 1 assemblies for reflection and 1 dependency assemblies.
-  Info: Wrote information on 3 namespaces, 8 types, and 58 members
+  Info: Wrote information on 3 namespaces, 10 types, and 78 members
   XslTransform (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
-    Last step completed in 00:00:02.6648
+    Last step completed in 00:00:05.8691
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0020
+    Last step completed in 00:00:00.0270
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     0 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.0390
+    Last step completed in 00:00:00.0580
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -58,12 +58,12 @@ Transforming reflection output...
   XslTransform (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-    Last step completed in 00:00:01.9483
+    Last step completed in 00:00:02.4140
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0150
+    Last step completed in 00:00:00.0240
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -455,16 +455,16 @@ C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding -&gt; C:\Users\M
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-instrumentedLink.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-instrumentedLink.xslt
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-languageSpecificText.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-languageSpecificText.xslt
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-codesnippet.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-codesnippet.xslt
-    Last step completed in 00:00:00.9521
+    Last step completed in 00:00:02.3968
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0068
+    Last step completed in 00:00:00.0310
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0030
+    Last step completed in 00:00:00.0040
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
@@ -473,17 +473,17 @@ Generating intermediate table of contents file...
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.7512
+    Last step completed in 00:00:00.8077
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0140
+    Last step completed in 00:00:00.3029
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\sandcastle.config
-    Last step completed in 00:00:00.0500
+    Last step completed in 00:00:00.2852
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -494,31 +494,21 @@ Building reference help topics...
   Info: Processing topics...
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.forum] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.forum.Topic.GetAuthor] Missing &lt;returns&gt; documentation
+  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.forum.Topic.SetKeywords(System.Collections.Generic.List{{System.String}})] Missing &lt;param name=&quot;keywords&quot;/&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.gebruiker] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.CredentialsWrongException.#ctor(System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.CredentialsWrongException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.CredentialsWrongException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;inner&quot;/&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData] Missing &lt;returns&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.Gebruiker.SetCookies(System.Net.CookieContainer)] Missing &lt;param name=&quot;container&quot;/&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.GebruikerData.SetBirthday(System.DateTime)] Missing &lt;param name=&quot;birthday&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToConnectException.#ctor(System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToConnectException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToConnectException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;inner&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToSaveUserException.#ctor(System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToSaveUserException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UnableToSaveUserException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;inner&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UserNotLoggedInException.#ctor(System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UserNotLoggedInException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;message&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.UserNotLoggedInException.#ctor(System.String,System.Exception)] Missing &lt;param name=&quot;inner&quot;/&gt; documentation
-  Info: Processed 97 topics
-    Last step completed in 00:02:08.7717
+  Info: Processed 120 topics
+    Last step completed in 00:02:35.1296
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:00.0120
+    Ignoring read-only/hidden file C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Thumbs.db
+    Did not delete folder &#39;C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\icons&#39; as it contains read-only or hidden folders/files
+    Last step completed in 00:00:00.1361
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -530,21 +520,21 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1
-Processed 97 HTML files
+Processed 120 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\HelpmijAPI-Docs.hhk
 Saving HTML Help 1 table of contents to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\HelpmijAPI-Docs.hhc
 
 Processing website files in C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\Website
-Processed 97 HTML files
+Processed 120 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\WebKI.xml
 Saving website table of contents to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\WebTOC.xml
-    Last step completed in 00:00:01.0519
+    Last step completed in 00:00:01.5573
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
-    Last step completed in 00:00:00.0050
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1 index file...
@@ -552,7 +542,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0312
+    Last step completed in 00:00:00.0210
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -569,11 +559,11 @@ Compiling HTML Help 1 file...
   
   Compile time: 0 minutes, 4 seconds
   
-  99	Topics
+  122	Topics
   
-  1,112	Local links
+  1,432	Local links
   
-  585	Internet links
+  682	Internet links
   
   0	Graphics
   
@@ -581,11 +571,11 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1\HelpmijAPI-Docs.chm, 163,379 bytes
+  Created c:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1\HelpmijAPI-Docs.chm, 188,917 bytes
   
-  Compression decreased file by 860,939 bytes.
+  Compression decreased file by 1,076,637 bytes.
   
-    Last step completed in 00:00:05.3717
+    Last step completed in 00:00:05.9888
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -594,22 +584,23 @@ Generating website table of contents file...
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
-    Last step completed in 00:00:01.0918
+    Last step completed in 00:00:01.4518
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 100 files
-Copied 194 files for the website content
-    Last step completed in 00:00:00.5734
+Copied 200 files
+Copied 217 files for the website content
+    Last step completed in 00:00:00.6853
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.7126
+    Last step completed in 00:00:00.9664
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 07-07-2013 02:29 .  Total time: 00:02:24,2676
+Build completed successfully at 07-07-2013 09:48 .  Total time: 00:02:59,0173
 
 </buildStep>
 </shfbBuild>

@@ -1,41 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="d330b278-fedc-4821-ad16-28911654ffca" Title="mvdw.helpmijapi Namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm">
-    <HelpTOCNode Id="303a8b53-3b4d-410e-a7bc-94cbb711d8a6" Title="Helpmij Class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm">
+  <HelpTOCNode Id="1b182bb5-120f-4818-b16e-f494ac6b68a9" Title="mvdw.helpmijapi Namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm">
+    <HelpTOCNode Id="08f8b3df-3a7e-4f55-b2dc-17bee5f2ae90" Title="Helpmij Class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm">
       <HelpTOCNode Title="Helpmij Members" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
       <HelpTOCNode Title="Helpmij Constructor " Url="html/b9c5b112-2f2d-fcc3-2464-885aaf56ddf3.htm" />
-      <HelpTOCNode Id="e048a3a3-f67c-43ec-821d-2505566efd91" Title="Helpmij Methods" Url="html/2e91ce71-7f70-edab-b5ff-825457f560a8.htm">
+      <HelpTOCNode Id="5ff6020d-0a14-48e5-bc6b-daf53cd91384" Title="Helpmij Methods" Url="html/2e91ce71-7f70-edab-b5ff-825457f560a8.htm">
+        <HelpTOCNode Title="GetNewTopics Method " Url="html/49d1e779-a178-87b2-a4ff-ed51f00b8236.htm" />
+        <HelpTOCNode Title="GetUnansweredTopics Method " Url="html/1b3cd944-d375-21d0-29fd-4dfc637af789.htm" />
         <HelpTOCNode Title="GetUser Method " Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
         <HelpTOCNode Title="Login Method " Url="html/1f5b1808-aa67-3072-4e04-a408cfbc4fb0.htm" />
+        <HelpTOCNode Title="RefreshCache Method " Url="html/c940a9be-184b-d668-cd15-a237861017b6.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="b2bcfe1d-7aec-4773-b6a6-1d825914af44" Title="mvdw.helpmijapi.forum Namespace" Url="html/132a562e-2f68-0f9d-f3a8-8db722543a1a.htm">
-    <HelpTOCNode Id="570da283-43fd-4753-90b3-9af322aa33ad" Title="Topic Interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm">
+  <HelpTOCNode Id="b317f5cb-9415-4553-a168-bd1f9e433a38" Title="mvdw.helpmijapi.forum Namespace" Url="html/132a562e-2f68-0f9d-f3a8-8db722543a1a.htm">
+    <HelpTOCNode Id="743f2116-ebd1-4e88-92c5-c20d160fc387" Title="HomepageTopic Interface" Url="html/c2e949cf-5c77-c84c-3524-f229c58b127e.htm">
+      <HelpTOCNode Title="HomepageTopic Members" Url="html/de6ca2a0-52e2-ad77-9021-bfec746334d7.htm" />
+      <HelpTOCNode Id="5f9c57cf-9b6e-4e7f-8add-bd11d8fc66a8" Title="HomepageTopic Methods" Url="html/e5564b4e-d99b-366b-8de8-64a245a58e28.htm">
+        <HelpTOCNode Title="GetHour Method " Url="html/ab33f608-b2ae-a356-de60-cea09bb38ee9.htm" />
+        <HelpTOCNode Title="GetMinute Method " Url="html/d4b3e109-a37c-cadf-c1c9-33731edb6a36.htm" />
+        <HelpTOCNode Title="GetTitle Method " Url="html/187d9978-5106-9a08-fa90-cf0b556fdcda.htm" />
+        <HelpTOCNode Title="GetTopic Method " Url="html/949b79ff-4596-206d-5fa1-ed9265c18ef0.htm" />
+        <HelpTOCNode Title="GetURL Method " Url="html/45f24f0a-db6f-0b4e-78ab-357d24cf9777.htm" />
+        <HelpTOCNode Title="SetHour Method " Url="html/17d306e8-8f52-d7cc-5f42-dbad70efb006.htm" />
+        <HelpTOCNode Title="SetMinute Method " Url="html/86a09a94-33de-ae32-dedc-3d702cecff4b.htm" />
+        <HelpTOCNode Title="SetTitle Method " Url="html/341c5228-1bc7-2802-b292-eed2c9e9ca6b.htm" />
+        <HelpTOCNode Title="SetURL Method " Url="html/a971b1b5-c2d5-99da-95b5-0d1ad3c849d9.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0c3cedde-c13a-4813-82d2-2915a4d46a92" Title="Topic Interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm">
       <HelpTOCNode Title="Topic Members" Url="html/cedc37a2-23d2-243a-bcb0-bf73d1233b68.htm" />
-      <HelpTOCNode Id="f8505427-28b1-4b85-b77f-fee8e3b72b2a" Title="Topic Methods" Url="html/d175daa5-a934-9c9e-4bfb-9e1a6baf0052.htm">
+      <HelpTOCNode Id="8f705eba-600a-48de-a744-21b8e6b5a4f4" Title="Topic Methods" Url="html/d175daa5-a934-9c9e-4bfb-9e1a6baf0052.htm">
         <HelpTOCNode Title="GetAuthor Method " Url="html/000e450f-72e3-8607-2bfa-46ec6d7e50df.htm" />
-        <HelpTOCNode Title="GetTitle Method " Url="html/57852c09-8b6a-1a94-014a-7127a47edabd.htm" />
-        <HelpTOCNode Title="SetTitle Method " Url="html/71edf666-6ebf-aa2f-a0bd-d6f789c3e5e5.htm" />
+        <HelpTOCNode Title="GetHTMLSource Method " Url="html/58ebf515-4925-cab3-9f32-d8197bdd8d4a.htm" />
+        <HelpTOCNode Title="GetKeywords Method " Url="html/8f94c389-7bcc-69da-fbb4-d111b2598457.htm" />
+        <HelpTOCNode Title="SetAuthor Method " Url="html/78cfa425-50d7-fbdc-9b11-3d273a1d006c.htm" />
+        <HelpTOCNode Title="SetHTMLSource Method " Url="html/3cfe3043-7390-4763-62de-cc1e94577d1d.htm" />
+        <HelpTOCNode Title="SetKeywords Method " Url="html/55b414cb-1346-3892-ab76-03f4813936e5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="aa45c0da-09f5-45a8-9bdf-bab9a76889f4" Title="mvdw.helpmijapi.gebruiker Namespace" Url="html/4b163277-fa5c-c97f-bae1-1cc445fc0045.htm">
-    <HelpTOCNode Id="e5d32dfd-fa38-4fcf-b2ce-b358eeb127a9" Title="CredentialsWrongException Class" Url="html/76fac438-5e76-03c7-f969-19b13d70f1fc.htm">
+  <HelpTOCNode Id="4d880b5b-f406-4a03-aac2-d0fc0ed8a614" Title="mvdw.helpmijapi.gebruiker Namespace" Url="html/4b163277-fa5c-c97f-bae1-1cc445fc0045.htm">
+    <HelpTOCNode Id="868ce214-44a6-4902-bdc3-7c1fe4036651" Title="CredentialsWrongException Class" Url="html/76fac438-5e76-03c7-f969-19b13d70f1fc.htm">
       <HelpTOCNode Title="CredentialsWrongException Members" Url="html/5cff24c0-12a9-e43b-9bb1-154a4c3276b0.htm" />
-      <HelpTOCNode Id="af500575-3392-4ebb-8d37-e78e4535bc71" Title="CredentialsWrongException Constructor " Url="html/681ec440-76cb-4da3-1ce2-a46f0f257a17.htm">
-        <HelpTOCNode Title="CredentialsWrongException Constructor " Url="html/aa150508-b7fd-4cb7-e286-f0affc943eb5.htm" />
-        <HelpTOCNode Title="CredentialsWrongException Constructor (String)" Url="html/a811b274-bb1f-ad87-26c4-5ff4b457a4b8.htm" />
-        <HelpTOCNode Title="CredentialsWrongException Constructor (String, Exception)" Url="html/1043d8c8-961d-e1e8-33a8-953ebea75ea2.htm" />
-      </HelpTOCNode>
+      <HelpTOCNode Title="CredentialsWrongException Constructor " Url="html/a811b274-bb1f-ad87-26c4-5ff4b457a4b8.htm" />
       <HelpTOCNode Title="CredentialsWrongException Methods" Url="html/e486340a-df0f-df7e-fd01-d2f08b99dff7.htm" />
       <HelpTOCNode Title="CredentialsWrongException Properties" Url="html/2736273b-f20b-ed55-9635-3bb122009824.htm" />
       <HelpTOCNode Title="CredentialsWrongException Events" Url="html/675b1ae7-01c8-fc22-c5b3-8e9ae6949387.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="db17f514-78e5-4874-bc45-1c9127519331" Title="Gebruiker Interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm">
+    <HelpTOCNode Id="71b3a597-20dc-4fe1-b3df-c4bf0d751f14" Title="Gebruiker Interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm">
       <HelpTOCNode Title="Gebruiker Members" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
-      <HelpTOCNode Id="4887fe43-a3d7-4b5a-b604-a3f58ac6720c" Title="Gebruiker Methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm">
+      <HelpTOCNode Id="db342a9b-a7c5-441f-a0ca-9440eece8131" Title="Gebruiker Methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm">
         <HelpTOCNode Title="GetCookies Method " Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
         <HelpTOCNode Title="GetNickname Method " Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
         <HelpTOCNode Title="GetSecurityToken Method " Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
@@ -52,19 +68,23 @@
         <HelpTOCNode Title="SetUserID Method " Url="html/c9e509f0-e529-8c6d-0aa9-72b7abb2f3ed.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5c818c0e-6848-40b3-8fee-d69acd56b1a5" Title="GebruikerData Interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm">
+    <HelpTOCNode Id="aaec6ac1-ff99-4d1a-b22f-08bfff2b885b" Title="GebruikerData Interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm">
       <HelpTOCNode Title="GebruikerData Members" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
-      <HelpTOCNode Id="b5111005-21ab-4470-b418-04c315e17757" Title="GebruikerData Methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm">
+      <HelpTOCNode Id="8c4f0bae-a83d-4c5d-bcca-e4597bd3afa2" Title="GebruikerData Methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm">
         <HelpTOCNode Title="GetAIM Method " Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
         <HelpTOCNode Title="GetAvatar Method " Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
         <HelpTOCNode Title="GetAvatarUrl Method " Url="html/6a6e39ec-e287-61ee-f570-32885afefe7c.htm" />
         <HelpTOCNode Title="GetBeroep Method " Url="html/72d1518c-d92e-0856-7f41-113546b6a31e.htm" />
         <HelpTOCNode Title="GetBiografie Method " Url="html/6966208c-9990-6c1d-3899-0b773b64590c.htm" />
         <HelpTOCNode Title="GetBirthday Method " Url="html/e2535b7b-26e8-43bd-548d-02fb72dc4491.htm" />
+        <HelpTOCNode Title="GetBirthdayDay Method " Url="html/3da8b7f8-25f2-41cd-01fc-58512f3ab7bd.htm" />
+        <HelpTOCNode Title="GetBirthdayMonth Method " Url="html/58648523-c848-e159-2cfb-f442f544322b.htm" />
+        <HelpTOCNode Title="GetBirthdayYear Method " Url="html/066bbc46-f998-9564-dfae-126ced566031.htm" />
         <HelpTOCNode Title="GetHobbys Method " Url="html/aca0b7c1-4a0d-6a04-37cd-1d4c7729e452.htm" />
         <HelpTOCNode Title="GetICQ Method " Url="html/9758612b-66d4-4ff5-d114-9bce098a9f25.htm" />
         <HelpTOCNode Title="GetJabber Method " Url="html/08211c70-a52a-4ffb-5a67-5327fedc31e0.htm" />
         <HelpTOCNode Title="GetMSN Method " Url="html/3f545ac6-e663-de8f-de1b-feb79e1e7c05.htm" />
+        <HelpTOCNode Title="GetPrivacy Method " Url="html/ff4746b5-beea-8293-c943-b17a4f9d4a8d.htm" />
         <HelpTOCNode Title="GetSkype Method " Url="html/b7ecd30f-4e0b-04a9-b4b0-2212245c85b9.htm" />
         <HelpTOCNode Title="GetWebsite Method " Url="html/0ccacc37-04a7-fbb6-f848-3b22c86d5808.htm" />
         <HelpTOCNode Title="GetWoonplaats Method " Url="html/9fd3bbc9-65f3-8f21-9079-4688a9109425.htm" />
@@ -73,45 +93,48 @@
         <HelpTOCNode Title="SetBeroep Method " Url="html/9badec02-254b-3d66-09b7-a1b2e801cb63.htm" />
         <HelpTOCNode Title="SetBiografie Method " Url="html/6aa9c672-08ac-6ff6-fbfd-c4f28f716886.htm" />
         <HelpTOCNode Title="SetBirthday Method " Url="html/f9638a54-90cc-acd4-91f6-d6bded328a83.htm" />
+        <HelpTOCNode Title="SetBirthdayDay Method " Url="html/9ff8a6d2-58e7-ea57-bb85-bb69f6611b4e.htm" />
+        <HelpTOCNode Title="SetBirthdayMonth Method " Url="html/8d9ffe18-7dcc-2e76-bddf-c6211b4cd89c.htm" />
+        <HelpTOCNode Title="SetBirthdayYear Method " Url="html/d9c84ed1-bcbc-23e8-0537-451d55304e5b.htm" />
         <HelpTOCNode Title="SetHobbys Method " Url="html/38f43b8d-6a8f-2f90-f156-9da8b4454ec6.htm" />
         <HelpTOCNode Title="SetICQ Method " Url="html/2b30dc31-a2b0-8289-a891-59502509cc4e.htm" />
         <HelpTOCNode Title="SetJabber Method " Url="html/3912db9a-71ac-0196-064b-7cc8aed6f930.htm" />
         <HelpTOCNode Title="SetMSN Method " Url="html/e5056b74-3b46-b100-a521-946ff8215e2a.htm" />
+        <HelpTOCNode Title="SetPrivacy Method " Url="html/fe701c33-154e-09f5-5d2f-331f28acf570.htm" />
         <HelpTOCNode Title="SetSkype Method " Url="html/249ee2bb-6b12-7b2d-2d34-7556f1446af7.htm" />
         <HelpTOCNode Title="SetWebsite Method " Url="html/053f69d2-df92-b085-df89-994fc966aa8c.htm" />
         <HelpTOCNode Title="SetWoonplaats Method " Url="html/5ca07ff9-5c8d-842b-9ff8-4d2032df722a.htm" />
         <HelpTOCNode Title="SetYahoo Method " Url="html/0c7d4a82-1757-c159-16d9-2796b2ef2eb5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="82b869bd-5e8e-4924-8ce0-70c4b51ab231" Title="UnableToConnectException Class" Url="html/4af8066e-f183-829d-6bfd-1a1488e51cc5.htm">
-      <HelpTOCNode Title="UnableToConnectException Members" Url="html/0a95df96-3c78-c626-d010-74758bbef823.htm" />
-      <HelpTOCNode Id="e1e60dae-d366-42f2-a4f3-01c1b54749ad" Title="UnableToConnectException Constructor " Url="html/9b8f7a4f-c7da-7eff-fb1b-812cfa7c046a.htm">
-        <HelpTOCNode Title="UnableToConnectException Constructor " Url="html/10d491b8-dd5d-e966-86ca-c7aae7053089.htm" />
-        <HelpTOCNode Title="UnableToConnectException Constructor (String)" Url="html/9d4556a3-8cba-c82e-dab7-7da6c5a56494.htm" />
-        <HelpTOCNode Title="UnableToConnectException Constructor (String, Exception)" Url="html/ff684079-b121-8a05-2c48-c85c4ace207d.htm" />
+    <HelpTOCNode Id="25534714-73ab-408e-b2f8-ffb72ebc737e" Title="GebruikerPrivacy Class" Url="html/38b36e2e-8f22-028c-d9f2-60430a3dda41.htm">
+      <HelpTOCNode Title="GebruikerPrivacy Members" Url="html/d5034c03-160e-1f4b-78b5-4530e4f397cf.htm" />
+      <HelpTOCNode Title="GebruikerPrivacy Constructor " Url="html/12300a57-0952-d0dc-d401-cf6fed7634a1.htm" />
+      <HelpTOCNode Id="b8640a7e-daea-497d-89d5-9de0a809fb36" Title="GebruikerPrivacy Fields" Url="html/0a4683c2-ff3d-8bf9-ebc2-c676d6fa8346.htm">
+        <HelpTOCNode Title="TOON_GEBOORTEDAG_EN_MAAND Field" Url="html/fb9548a7-c2a3-fccd-5bd5-6b51b8740857.htm" />
+        <HelpTOCNode Title="TOON_LEEFTIJD Field" Url="html/41c2cb33-f335-510e-0860-8d57939112f5.htm" />
+        <HelpTOCNode Title="TOON_LEEFTIJD_EN_GEBOORTEDATUM Field" Url="html/0085bd4a-fbe6-637e-23bd-cc5e0c91051e.htm" />
+        <HelpTOCNode Title="VERBERG_LEEFTIJD_EN_GEBOORTEDATUM Field" Url="html/fb8fe351-0dba-add3-a524-824861be2d0d.htm" />
       </HelpTOCNode>
+      <HelpTOCNode Title="GebruikerPrivacy Methods" Url="html/f9779ff0-9a5e-a12e-981a-8bb36ef5a5c9.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4863cf9a-18be-4875-b4b0-b281f104a807" Title="UnableToConnectException Class" Url="html/4af8066e-f183-829d-6bfd-1a1488e51cc5.htm">
+      <HelpTOCNode Title="UnableToConnectException Members" Url="html/0a95df96-3c78-c626-d010-74758bbef823.htm" />
+      <HelpTOCNode Title="UnableToConnectException Constructor " Url="html/9d4556a3-8cba-c82e-dab7-7da6c5a56494.htm" />
       <HelpTOCNode Title="UnableToConnectException Methods" Url="html/cada60f7-b88f-4949-c47a-eaf2ff30df42.htm" />
       <HelpTOCNode Title="UnableToConnectException Properties" Url="html/0f1132a3-c76b-9003-467b-3d39d31e3cb4.htm" />
       <HelpTOCNode Title="UnableToConnectException Events" Url="html/57636894-953c-38ec-d627-44527f730d27.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="25dba8c9-42c3-4d24-bdd3-1a22e2b4262f" Title="UnableToSaveUserException Class" Url="html/e1727827-6bb8-4ea9-4faf-e615546d57c3.htm">
+    <HelpTOCNode Id="badb33f1-ab93-4fbd-915b-457825b2eb64" Title="UnableToSaveUserException Class" Url="html/e1727827-6bb8-4ea9-4faf-e615546d57c3.htm">
       <HelpTOCNode Title="UnableToSaveUserException Members" Url="html/d9b5aabf-789e-a843-b226-1d4ea2469298.htm" />
-      <HelpTOCNode Id="9e09db12-8a53-438f-aa87-412eea79b3c7" Title="UnableToSaveUserException Constructor " Url="html/a088d61f-d478-01b8-5506-e9ce3b9662e2.htm">
-        <HelpTOCNode Title="UnableToSaveUserException Constructor " Url="html/a102d87b-34ab-5259-6f8a-6e8a39864178.htm" />
-        <HelpTOCNode Title="UnableToSaveUserException Constructor (String)" Url="html/e71a61d6-dfb4-1f22-8508-a6ed6863154b.htm" />
-        <HelpTOCNode Title="UnableToSaveUserException Constructor (String, Exception)" Url="html/a8ded69f-afa6-a5b2-2c27-e54f166bc279.htm" />
-      </HelpTOCNode>
+      <HelpTOCNode Title="UnableToSaveUserException Constructor " Url="html/e71a61d6-dfb4-1f22-8508-a6ed6863154b.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Methods" Url="html/b817d084-d516-d981-770f-64de6f2d000a.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Properties" Url="html/ad4b06c3-9c06-1d00-4db0-07360e3ae250.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Events" Url="html/a7fdabd7-eafb-8e3b-27e3-7b9cf9047949.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="32acdaa7-26fa-44e5-a9c9-ad047af46ab8" Title="UserNotLoggedInException Class" Url="html/5961971f-e457-a41a-0b9c-73a7313f5a8b.htm">
+    <HelpTOCNode Id="3e29d688-2e3d-46f3-925f-38a18fe0417f" Title="UserNotLoggedInException Class" Url="html/5961971f-e457-a41a-0b9c-73a7313f5a8b.htm">
       <HelpTOCNode Title="UserNotLoggedInException Members" Url="html/762132dd-afab-ca41-ce0e-e6c7577ccb52.htm" />
-      <HelpTOCNode Id="45d13e64-0144-444e-99fe-79a89edc8e7d" Title="UserNotLoggedInException Constructor " Url="html/9295ba74-983d-2947-1e8a-c218ade28d15.htm">
-        <HelpTOCNode Title="UserNotLoggedInException Constructor " Url="html/e087e696-4236-ee37-00bb-8f81fe725575.htm" />
-        <HelpTOCNode Title="UserNotLoggedInException Constructor (String)" Url="html/99de580b-5c66-cea5-1add-8d8b7cc02bb2.htm" />
-        <HelpTOCNode Title="UserNotLoggedInException Constructor (String, Exception)" Url="html/2f9114f2-478d-f99d-da62-93c533f52533.htm" />
-      </HelpTOCNode>
+      <HelpTOCNode Title="UserNotLoggedInException Constructor " Url="html/99de580b-5c66-cea5-1add-8d8b7cc02bb2.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Methods" Url="html/f4b05aac-1734-43e5-47c0-5cf1912cdd19.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Properties" Url="html/6a712aa9-1bff-9f32-001b-62520dd2b386.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Events" Url="html/f31dea51-ad2a-badc-d754-508b36c374e6.htm" />
