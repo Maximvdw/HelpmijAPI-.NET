@@ -1635,5 +1635,15 @@
             Refresh de gegevens
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.Comment">
+            <summary>
+            Reacties op een Topic
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.Forum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
     </members>
 </doc>
