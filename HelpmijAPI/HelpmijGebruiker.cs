@@ -142,6 +142,7 @@ namespace mvdw.helpmij.gebruiker
             {
                 // Laad de instellingen van het online profiel
                 HelpmijGebruikerData.GetPrivateData(this);
+                HelpmijGebruikerData.GetSignature(this);
             }
             else
             {

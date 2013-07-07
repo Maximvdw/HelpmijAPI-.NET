@@ -177,6 +177,26 @@ namespace mvdw.helpmij
         /// </summary>
         public static String postSuffix = @"</blockquote>";
         /// <summary>
+        /// Signagure - Field
+        /// </summary>
+        public static String signagureField = "message";
+        /// <summary>
+        /// Signature HTML - prefix
+        /// </summary>
+        public static String signatureHTMLPrefix = @"restore preview postcontainer"">";
+        /// <summary>
+        /// Signature HTML - suffix
+        /// </summary>
+        public static String signatureHTMLSuffix = @"</blockquote>";
+        /// <summary>
+        /// Signature BB - Prefix
+        /// </summary>
+        public static String signatureBBPrefix = @"vB_Editor_001_editor"" name=""message"" rows=""8"" cols=""60"" tabindex=""1"">";
+        /// <summary>
+        /// Signature BB - Suffix
+        /// </summary>
+        public static String signatureBBSuffix = @"</textarea>";
+        /// <summary>
         /// Website DATA - Field
         /// </summary>
         public static String websiteField = "homepage";

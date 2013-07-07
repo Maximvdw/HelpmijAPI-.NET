@@ -199,6 +199,31 @@
             Suffix van een topic post
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signagureField">
+            <summary>
+            Signagure - Field
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signatureHTMLPrefix">
+            <summary>
+            Signature HTML - prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signatureHTMLSuffix">
+            <summary>
+            Signature HTML - suffix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signatureBBPrefix">
+            <summary>
+            Signature BB - Prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.signatureBBSuffix">
+            <summary>
+            Signature BB - Suffix
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.HelpmijData.websiteField">
             <summary>
             Website DATA - Field

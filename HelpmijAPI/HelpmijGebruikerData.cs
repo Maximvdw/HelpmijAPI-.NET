@@ -202,12 +202,25 @@ namespace mvdw.helpmij.gebruiker
             if (UtilsHTTP.IsInternetAvailable())
             {
                 // Stel de URL samen
-                String url = siteURL + privateProfile;
+                String url = siteURL + signaturePHP;
                 // Verkrijg de gebruikers ID
                 int id = userHelpmij.GetUserID();
                 if (id != -1)
                 {
                     // Verkrijg de source code
+                    String source = UtilsHTTP.GetSource(url, userHelpmij.GetCookies());
+                    try
+                    {
+                        userHelpmij.signatureHTML = UtilsString.GetSubStrings(source,
+                            signatureHTMLPrefix, signatureHTMLSuffix)[0]; // Signature HTML
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        userHelpmij.signatureBB = UtilsString.GetSubStrings(source,
+                            signatureBBPrefix, signatureBBSuffix)[0]; // Signature BB
+                    }
+                    catch (Exception) { }
                 }
             }
             else
