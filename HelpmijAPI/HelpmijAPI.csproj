@@ -23,6 +23,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\HelpmijAPI.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <LangVersion>3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,34 +43,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chat.cs" />
-    <Compile Include="ChatEvents.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="Forum.cs" />
-    <Compile Include="ForumExceptions.cs" />
-    <Compile Include="Gebruiker.cs" />
-    <Compile Include="GebruikerData.cs" />
-    <Compile Include="GebruikerExceptions.cs" />
-    <Compile Include="GebruikerPrivacy.cs" />
-    <Compile Include="Helpmij.cs" />
-    <Compile Include="HelpmijChat.cs" />
-    <Compile Include="HelpmijComment.cs" />
-    <Compile Include="HelpmijData.cs" />
-    <Compile Include="HelpmijForum.cs" />
-    <Compile Include="HelpmijGebruiker.cs" />
-    <Compile Include="HelpmijGebruikerData.cs">
+    <Compile Include="src\mvdw\helpmijapi\chat\Chat.cs" />
+    <Compile Include="src\mvdw\helpmijapi\chat\ChatEvents.cs" />
+    <Compile Include="src\mvdw\helpmijapi\forum\Comment.cs" />
+    <Compile Include="src\mvdw\helpmijapi\forum\Forum.cs" />
+    <Compile Include="src\mvdw\helpmijapi\forum\exceptions\ForumExceptions.cs" />
+    <Compile Include="src\mvdw\helpmijapi\gebruiker\Gebruiker.cs" />
+    <Compile Include="src\mvdw\helpmijapi\gebruiker\GebruikerData.cs" />
+    <Compile Include="src\mvdw\helpmijapi\gebruiker\exceptions\GebruikerExceptions.cs" />
+    <Compile Include="src\mvdw\helpmijapi\gebruiker\GebruikerPrivacy.cs" />
+    <Compile Include="src\mvdw\helpmijapi\Helpmij.cs" />
+    <Compile Include="src\mvdw\helpmij\chat\HelpmijChat.cs" />
+    <Compile Include="src\mvdw\helpmij\forum\HelpmijComment.cs" />
+    <Compile Include="src\mvdw\helpmij\HelpmijData.cs" />
+    <Compile Include="src\mvdw\helpmij\forum\HelpmijForum.cs" />
+    <Compile Include="src\mvdw\helpmij\gebruiker\HelpmijGebruiker.cs" />
+    <Compile Include="src\mvdw\helpmij\gebruiker\HelpmijGebruikerData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HelpmijLogin.cs" />
-    <Compile Include="HelpmijTopic.cs" />
-    <Compile Include="HomepageTopic.cs" />
-    <Compile Include="HomepageTopics.cs" />
+    <Compile Include="src\mvdw\helpmij\gebruiker\HelpmijLogin.cs" />
+    <Compile Include="src\mvdw\helpmij\forum\\HelpmijTopic.cs" />
+    <Compile Include="src\mvdw\helpmijapi\forum\HomepageTopic.cs" />
+    <Compile Include="src\mvdw\helpmij\forum\HomepageTopics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Topic.cs" />
-    <Compile Include="TopicReader.cs" />
-    <Compile Include="UtilsEncryption.cs" />
-    <Compile Include="UtilsHTTP.cs" />
-    <Compile Include="UtilsString.cs" />
+    <Compile Include="src\mvdw\helpmijapi\forum\Topic.cs" />
+    <Compile Include="src\mvdw\helpmij\forum\TopicReader.cs" />
+    <Compile Include="src\mvdw\helpmij\utils\UtilsEncryption.cs" />
+    <Compile Include="src\mvdw\helpmij\utils\UtilsHTTP.cs" />
+    <Compile Include="src\mvdw\helpmij\utils\UtilsString.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
