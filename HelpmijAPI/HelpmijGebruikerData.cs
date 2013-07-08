@@ -194,6 +194,8 @@ namespace mvdw.helpmij.gebruiker
         }
         #endregion
 
+        /* Prive Gegevens van de Signature van de gebruiker */
+        #region Prive Signature Data
         /// <summary>
         /// Verkrijg de handtekening gegevens
         /// </summary>
@@ -220,6 +222,38 @@ namespace mvdw.helpmij.gebruiker
                     {
                         userHelpmij.signatureBB = UtilsString.GetSubStrings(source,
                             signatureBBPrefix, signatureBBSuffix)[0]; // Signature BB
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// Verkrijg de publieke data van de gebruiker
+        /// </summary>
+        /// <param name="userHelpmij">Helpmij Gebruiker</param>
+        public static void GetPublicData(HelpmijGebruiker userHelpmij)
+        {
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Stel de URL samen
+                String url = siteURL + signaturePHP;
+                // Verkrijg de gebruikers ID
+                int id = userHelpmij.GetUserID();
+                if (id != -1)
+                {
+                    // Verkrijg de source code
+                    String source = UtilsHTTP.GetSource(url, userHelpmij.GetCookies());
+                    try
+                    {
+                        userHelpmij.signatureHTML = UtilsString.GetSubStrings(source,
+                            signatureHTMLPrefix, signatureHTMLSuffix)[0]; // Signature HTML
                     }
                     catch (Exception) { }
                 }

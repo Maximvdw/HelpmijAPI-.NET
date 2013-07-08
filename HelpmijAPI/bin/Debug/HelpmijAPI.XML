@@ -199,6 +199,16 @@
             Suffix van een topic post
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.HelpmijData.registratedPrefix">
+            <summary>
+            Prefix van de gebruikers registratie
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.registratedSuffix">
+            <summary>
+            Suffix van de gebruikers registratie
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.HelpmijData.signagureField">
             <summary>
             Signagure - Field
@@ -539,6 +549,12 @@
             Verkrijg de handtekening gegevens
             </summary>
             <param name="userHelpmij">HelpmijGebruiker</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPublicData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
+            <summary>
+            Verkrijg de publieke data van de gebruiker
+            </summary>
+            <param name="userHelpmij">Helpmij Gebruiker</param>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsString">
             <summary>
@@ -1141,29 +1157,54 @@
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerPrivacy">
+        <member name="T:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy">
             <summary>
-            Gebruikers Privacy
+            Leeftijd privacy
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.VERBERG_LEEFTIJD_EN_GEBOORTEDATUM">
+        <member name="F:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy.VERBERG_LEEFTIJD_EN_GEBOORTEDATUM">
             <summary>
             Verberg de leeftijd en geboortedatum
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD">
+        <member name="F:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy.TOON_LEEFTIJD">
             <summary>
             Toon enkel de leeftijd
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_GEBOORTEDAG_EN_MAAND">
+        <member name="F:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy.TOON_GEBOORTEDAG_EN_MAAND">
             <summary>
             Toon enkel de geboortedag en maand
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.GebruikerPrivacy.TOON_LEEFTIJD_EN_GEBOORTEDATUM">
+        <member name="F:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy.TOON_LEEFTIJD_EN_GEBOORTEDATUM">
             <summary>
             Toon de leeftijd en de geboortedatum
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.ContactPrivacy">
+            <summary>
+            Contact privacy
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.ContactPrivacy.IEDEREEN">
+            <summary>
+            Laat iedereen toe om jou te contacteren
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.ContactPrivacy.GEREGISTREERDE_GEBRUIKERS">
+            <summary>
+            Laat enkel geregistreerde gebruikers toe jou te contacteren
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.ContactPrivacy.CONTACTEN">
+            <summary>
+            Laat enkel contacten toe te contacteren
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.ContactPrivacy.VRIEDNEN">
+            <summary>
+            Laat enkel vrienden toe te contacteren
             </summary>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
@@ -1198,6 +1239,14 @@
             <summary>
             Helpmij Aplication Interface
             </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.LoginMD5(System.String,System.String)">
+            <summary>
+            Aanmelden op Helpmij.nl
+            </summary>
+            <param name="username">Helpmij gebruikersnaam</param>
+            <param name="passwordMD5">MD5 Hash van wachtwoord</param>
+            <returns>Gebruiker</returns>
         </member>
         <member name="M:mvdw.helpmijapi.Helpmij.Login(System.String,System.String)">
             <summary>
@@ -1402,6 +1451,21 @@
         <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.signatureHTML">
             <summary>
             Signature HTML code
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.registrationYear">
+            <summary>
+            Registratie jaar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.registrationMonth">
+            <summary>
+            Registratie maand
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.registrationDay">
+            <summary>
+            Registratie dag
             </summary>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserData">

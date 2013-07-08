@@ -177,6 +177,14 @@ namespace mvdw.helpmij
         /// </summary>
         public static String postSuffix = @"</blockquote>";
         /// <summary>
+        /// Prefix van de gebruikers registratie
+        /// </summary>
+        public static String registratedPrefix = @"<dt>Geregistreerd</dt>.*?<dd>  ";
+        /// <summary>
+        /// Suffix van de gebruikers registratie
+        /// </summary>
+        public static String registratedSuffix = @"</dd>";
+        /// <summary>
         /// Signagure - Field
         /// </summary>
         public static String signagureField = "message";

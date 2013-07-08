@@ -36,7 +36,7 @@ namespace mvdw.helpmijapi
         /// Aanmelden op Helpmij.nl
         /// </summary>
         /// <param name="username">Helpmij gebruikersnaam</param>
-        /// <param name="password">MD5 Hash van wachtwoord</param>
+        /// <param name="passwordMD5">MD5 Hash van wachtwoord</param>
         /// <returns>Gebruiker</returns>
         public static Gebruiker LoginMD5(String username, String passwordMD5)
         {

@@ -24,25 +24,48 @@ using System.Text;
 namespace mvdw.helpmijapi.gebruiker
 {
     /// <summary>
-    /// Gebruikers Privacy
+    /// Leeftijd privacy
     /// </summary>
-    public class GebruikerPrivacy
+    public enum LeeftijdPrivacy
     {
         /// <summary>
         /// Verberg de leeftijd en geboortedatum
         /// </summary>
-        public static int VERBERG_LEEFTIJD_EN_GEBOORTEDATUM = 0;
+        VERBERG_LEEFTIJD_EN_GEBOORTEDATUM = 0,
         /// <summary>
         /// Toon enkel de leeftijd
         /// </summary>
-        public static int TOON_LEEFTIJD = 1;
+        TOON_LEEFTIJD = 1,
         /// <summary>
         /// Toon enkel de geboortedag en maand
         /// </summary>
-        public static int TOON_GEBOORTEDAG_EN_MAAND = 2;
+        TOON_GEBOORTEDAG_EN_MAAND = 2,
         /// <summary>
         /// Toon de leeftijd en de geboortedatum
         /// </summary>
-        public static int TOON_LEEFTIJD_EN_GEBOORTEDATUM = 3;
+        TOON_LEEFTIJD_EN_GEBOORTEDATUM = 3
+    }
+
+    /// <summary>
+    /// Contact privacy
+    /// </summary>
+    public enum ContactPrivacy
+    {
+        /// <summary>
+        /// Laat iedereen toe om jou te contacteren
+        /// </summary>
+        IEDEREEN = 0,
+        /// <summary>
+        /// Laat enkel geregistreerde gebruikers toe jou te contacteren
+        /// </summary>
+        GEREGISTREERDE_GEBRUIKERS = 1,
+        /// <summary>
+        /// Laat enkel contacten toe te contacteren
+        /// </summary>
+        CONTACTEN = 2,
+        /// <summary>
+        /// Laat enkel vrienden toe te contacteren
+        /// </summary>
+        VRIEDNEN = 3
     }
 }

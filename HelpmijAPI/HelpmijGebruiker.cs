@@ -132,6 +132,18 @@ namespace mvdw.helpmij.gebruiker
         /// Signature HTML code
         /// </summary>
         public String signatureHTML = null;
+        /// <summary>
+        /// Registratie jaar
+        /// </summary>
+        public int registrationYear = -1;
+        /// <summary>
+        /// Registratie maand
+        /// </summary>
+        public int registrationMonth = -1;
+        /// <summary>
+        /// Registratie dag
+        /// </summary>
+        public int registrationDay = -1;
 
 
         /// <summary>
@@ -142,13 +154,14 @@ namespace mvdw.helpmij.gebruiker
             if (GetCookies() != null)
             {
                 // Laad de instellingen van het online profiel
+                HelpmijGebruikerData.GetPublicData(this); // Bevat apparte gegevens
                 HelpmijGebruikerData.GetPrivateData(this);
                 HelpmijGebruikerData.GetSignature(this);
             }
             else
             {
                 // Laad publieke instellingen
-
+                HelpmijGebruikerData.GetPublicData(this);
             }
             return this;
         }
