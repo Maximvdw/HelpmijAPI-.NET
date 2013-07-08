@@ -26,7 +26,7 @@ namespace mvdw.helpmij.utils
     /// <summary>
     /// Encryptie Utilities
     /// </summary>
-    class UtilsEncryption
+    internal class UtilsEncryption
     {
         /// <summary>
         /// Verkrijg een MD5 hash van een String

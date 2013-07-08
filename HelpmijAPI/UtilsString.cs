@@ -26,7 +26,7 @@ namespace mvdw.helpmij.utils
     /// <summary>
     /// String Utilities
     /// </summary>
-    class UtilsString
+    internal class UtilsString
     {
         /// <summary>
         /// Verkrijg een string tussen twee andere strings

@@ -105,7 +105,7 @@ namespace mvdw.helpmij.gebruiker
                     try
                     {
                         userHelpmij.hobbys = // Hobby's
-                            UtilsString.GetSubStrings(source, biografiePrefix, biografieSuffix)[0];
+                            UtilsString.GetSubStrings(source, hobbysPrefix, hobbysSuffix)[0];
                     }
                     catch (Exception) { }
                     try

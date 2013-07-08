@@ -1874,6 +1874,11 @@
             Laatste Activiteit
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.userRank">
+            <summary>
+            Gebruikers Rank
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.totalPosts">
             <summary>
             Totaal aantal posts

@@ -164,6 +164,9 @@ namespace mvdw.helpmij.gebruiker
         /// Laatste Activiteit
         /// </summary>
         public DateTime lastactivityDate = DateTime.MinValue;
+        /// <summary>
+        /// Gebruikers Rank
+        /// </summary>
         public String userRank = null;
         /// <summary>
         /// Totaal aantal posts

@@ -28,7 +28,7 @@ namespace mvdw.helpmij.utils
     /// <summary>
     /// HTTP Utilities
     /// </summary>
-    class UtilsHTTP
+    internal class UtilsHTTP
     {
         /// <summary>
         /// Controlleer of er verbinding is met www.helpmij.nl
