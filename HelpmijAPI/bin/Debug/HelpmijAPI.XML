@@ -600,6 +600,18 @@
             </summary>
             <param name="keywords"></param>
         </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.GetComments">
+            <summary>
+            Verkrijg alle comments
+            </summary>
+            <returns>List met Comments</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.SetComments(System.Collections.Generic.List{mvdw.helpmijapi.forum.Comment})">
+            <summary>
+            Set alle comments
+            </summary>
+            <param name="comments">List met Comments</param>
+        </member>
         <member name="F:mvdw.helpmij.forum.HelpmijTopic.title">
             <summary>
             Topic Titel
@@ -633,6 +645,11 @@
         <member name="F:mvdw.helpmij.forum.HelpmijTopic.keywords">
             <summary>
             Topic Keywords
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.comments">
+            <summary>
+            Topic comments
             </summary>
         </member>
         <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTopic">
@@ -724,6 +741,18 @@
             Set de keywords van het topic
             </summary>
             <param name="keywords"></param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetComments">
+            <summary>
+            Verkrijg alle comments
+            </summary>
+            <returns>List met Comments</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetComments(System.Collections.Generic.List{mvdw.helpmijapi.forum.Comment})">
+            <summary>
+            Set alle comments
+            </summary>
+            <param name="comments">List met Comments</param>
         </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijLogin">
             <summary>
@@ -1635,14 +1664,24 @@
             Refresh de gegevens
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.Comment">
+        <member name="T:mvdw.helpmijapi.forum.Comment">
             <summary>
             Reacties op een Topic
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.Forum">
+        <member name="T:mvdw.helpmijapi.forum.Forum">
             <summary>
             Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijForum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijComment">
+            <summary>
+            Reacties op een Topic
             </summary>
         </member>
     </members>

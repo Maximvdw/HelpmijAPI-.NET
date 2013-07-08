@@ -64,5 +64,17 @@ namespace mvdw.helpmijapi.forum
         /// </summary>
         /// <param name="keywords"></param>
         void SetKeywords(List<String> keywords);
+
+        /// <summary>
+        /// Verkrijg alle comments
+        /// </summary>
+        /// <returns>List met Comments</returns>
+        List<Comment> GetComments();
+
+        /// <summary>
+        /// Set alle comments
+        /// </summary>
+        /// <param name="comments">List met Comments</param>
+        void SetComments(List<Comment> comments);
     }
 }

@@ -48,7 +48,9 @@
     <Compile Include="GebruikerExceptions.cs" />
     <Compile Include="GebruikerPrivacy.cs" />
     <Compile Include="Helpmij.cs" />
+    <Compile Include="HelpmijComment.cs" />
     <Compile Include="HelpmijData.cs" />
+    <Compile Include="HelpmijForum.cs" />
     <Compile Include="HelpmijGebruiker.cs" />
     <Compile Include="HelpmijGebruikerData.cs">
       <SubType>Code</SubType>

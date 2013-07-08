@@ -58,6 +58,10 @@ namespace mvdw.helpmij.forum
         /// Topic Keywords
         /// </summary>
         public List<String> keywords = new List<String>();
+        /// <summary>
+        /// Topic comments
+        /// </summary>
+        public List<Comment> comments = new List<Comment>();
 
 
         /// <summary>
@@ -194,6 +198,24 @@ namespace mvdw.helpmij.forum
         public void SetKeywords(List<String> keywords)
         {
             this.keywords = keywords;
+        }
+
+        /// <summary>
+        /// Verkrijg alle comments
+        /// </summary>
+        /// <returns>List met Comments</returns>
+        public List<Comment> GetComments()
+        {
+            return comments;
+        }
+
+        /// <summary>
+        /// Set alle comments
+        /// </summary>
+        /// <param name="comments">List met Comments</param>
+        public void SetComments(List<Comment> comments)
+        {
+            this.comments = comments;
         }
     }
 }
