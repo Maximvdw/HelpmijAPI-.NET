@@ -231,5 +231,29 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <param name="woonplaats">String - Woonplaats</param>
         void SetWoonplaats(String woonplaats);
+
+        /// <summary>
+        /// Verkrijg de HTML versie van de handtekening
+        /// </summary>
+        /// <returns>String - Handtekening</returns>
+        String GetSignatureHTML();
+
+        /// <summary>
+        /// Set de HTML versie van de handtekening
+        /// </summary>
+        /// <param name="signature">String - Handtekening</param>
+        void SetSignatureHTML(String signature);
+
+        /// <summary>
+        /// Verkrijg de BB code van de handtekening
+        /// </summary>
+        /// <returns>String - Handtekening</returns>
+        String GetSignatureBB();
+
+        /// <summary>
+        /// Set de BB code van de handtekening
+        /// </summary>
+        /// <param name="signature">String - Handtekening</param>
+        void SetSignatureBB(String signature);
     }
 }

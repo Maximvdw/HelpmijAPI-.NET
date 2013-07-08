@@ -1061,6 +1061,30 @@
             </summary>
             <param name="woonplaats">String - Woonplaats</param>
         </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetSignatureHTML">
+            <summary>
+            Verkrijg de HTML versie van de handtekening
+            </summary>
+            <returns>String - Handtekening</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetSignatureHTML(System.String)">
+            <summary>
+            Set de HTML versie van de handtekening
+            </summary>
+            <param name="signature">String - Handtekening</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetSignatureBB">
+            <summary>
+            Verkrijg de BB code van de handtekening
+            </summary>
+            <returns>String - Handtekening</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetSignatureBB(System.String)">
+            <summary>
+            Set de BB code van de handtekening
+            </summary>
+            <param name="signature">String - Handtekening</param>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsEncryption">
             <summary>
             Encryptie Utilities
@@ -1658,6 +1682,30 @@
             Set de Woonplaats van de gebruiker
             </summary>
             <param name="woonplaats">String - Woonplaats</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetSignatureHTML">
+            <summary>
+            Verkrijg de HTML versie van de handtekening
+            </summary>
+            <returns>String - Handtekening</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetSignatureHTML(System.String)">
+            <summary>
+            Set de HTML versie van de handtekening
+            </summary>
+            <param name="signature">String - Handtekening</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetSignatureBB">
+            <summary>
+            Verkrijg de BB code van de handtekening
+            </summary>
+            <returns>String - Handtekening</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetSignatureBB(System.String)">
+            <summary>
+            Set de BB code van de handtekening
+            </summary>
+            <param name="signature">String - Handtekening</param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.refreshData">
             <summary>

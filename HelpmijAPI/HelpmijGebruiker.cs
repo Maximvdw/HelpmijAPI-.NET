@@ -582,6 +582,42 @@ namespace mvdw.helpmij.gebruiker
         }
 
         /// <summary>
+        /// Verkrijg de HTML versie van de handtekening
+        /// </summary>
+        /// <returns>String - Handtekening</returns>
+        public String GetSignatureHTML()
+        {
+            return signatureHTML;
+        }
+
+        /// <summary>
+        /// Set de HTML versie van de handtekening
+        /// </summary>
+        /// <param name="signature">String - Handtekening</param>
+        public void SetSignatureHTML(String signature)
+        {
+            this.signatureHTML = signature;
+        }
+
+        /// <summary>
+        /// Verkrijg de BB code van de handtekening
+        /// </summary>
+        /// <returns>String - Handtekening</returns>
+        public String GetSignatureBB()
+        {
+            return signatureBB;
+        }
+
+        /// <summary>
+        /// Set de BB code van de handtekening
+        /// </summary>
+        /// <param name="signature">String - Handtekening</param>
+        public void SetSignatureBB(String signature)
+        {
+            this.signatureBB = signature;
+        }
+
+        /// <summary>
         /// Refresh de gegevens
         /// </summary>
         public void refreshData()
