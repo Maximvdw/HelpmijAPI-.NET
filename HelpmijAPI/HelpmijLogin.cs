@@ -30,7 +30,7 @@ namespace mvdw.helpmij.gebruiker
     /// <summary>
     /// Aanmelden op Helpmij.nl
     /// </summary>
-    class HelpmijLogin : HelpmijData
+    internal class HelpmijLogin : HelpmijData
     {
         /// <summary>
         /// Aanmelden op Helpmij.nl

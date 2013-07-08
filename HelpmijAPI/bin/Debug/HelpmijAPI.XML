@@ -1656,6 +1656,13 @@
             </summary>
             <returns>List Topic - Topics</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetChat(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Verbind met chat.helpmij.nl
+            </summary>
+            <param name="user">Gebruiker</param>
+            <returns>Chat instantie</returns>
+        </member>
         <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
             <summary>
             Refresh Homepage cache
@@ -2350,6 +2357,71 @@
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.refreshData">
             <summary>
             Refresh de gegevens
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.chat.HelpmijChat">
+            <summary>
+            Helpmij.nl Chat integratie
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.Chat">
+            <summary>
+            Helpmij.nl Chat
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Connecteer met chat.helpmij.nl
+            </summary>
+            <param name="user">Gebruiker</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SendMessage(System.String)">
+            <summary>
+            Zend een bericht in de chat
+            </summary>
+            <param name="message">String - Bericht</param>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.user">
+            <summary>
+            Chat gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Connecteer met Helpmij.nl Chat
+            </summary>
+            <param name="user">Ingelogde gebruiker</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.SendMessage(System.String)">
+            <summary>
+            Zend een bericht in de chat
+            </summary>
+            <param name="message">String - Bericht</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventHandler">
+            <summary>
+            Event Handler
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventArgs">
+            <summary>
+            Triggered als een Gebruiker de chat joined
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.user">
+            <summary>
+            De gebruiker die joined
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Triggered als een Gebruiker de chat joined
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedListener">
+            <summary>
+            Triggered als een Gebruiker de chat joined
             </summary>
         </member>
     </members>

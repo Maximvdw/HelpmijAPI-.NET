@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chat.cs" />
+    <Compile Include="ChatEvents.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Forum.cs" />
     <Compile Include="ForumExceptions.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="GebruikerExceptions.cs" />
     <Compile Include="GebruikerPrivacy.cs" />
     <Compile Include="Helpmij.cs" />
+    <Compile Include="HelpmijChat.cs" />
     <Compile Include="HelpmijComment.cs" />
     <Compile Include="HelpmijData.cs" />
     <Compile Include="HelpmijForum.cs" />

@@ -24,6 +24,8 @@ using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmij.gebruiker;
 using mvdw.helpmij.homepage;
 using mvdw.helpmijapi.forum;
+using mvdw.helpmijapi.chat;
+using mvdw.helpmij.chat;
 
 namespace mvdw.helpmijapi
 {
@@ -85,6 +87,18 @@ namespace mvdw.helpmijapi
         public static List<HomepageTopic> GetUnansweredTopics()
         {
             return HomepageTopics.GetUnansweredTopics();
+        }
+
+        /// <summary>
+        /// Verbind met chat.helpmij.nl
+        /// </summary>
+        /// <param name="user">Gebruiker</param>
+        /// <returns>Chat instantie</returns>
+        public static Chat GetChat(Gebruiker user)
+        {
+            Chat chat = new HelpmijChat();
+            chat.Connect(user);
+            return chat;
         }
 
         /// <summary>
