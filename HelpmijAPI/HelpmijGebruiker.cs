@@ -30,7 +30,7 @@ namespace mvdw.helpmij.gebruiker
     /// <summary>
     /// Verkrijg Gebruiker Identificatie
     /// </summary>
-    class HelpmijGebruiker : GebruikerData
+    internal class HelpmijGebruiker : GebruikerData
     {
         /// <summary>
         /// User ID
@@ -71,7 +71,7 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Gebruikers privacy
         /// </summary>
-        public int privacy = -1;
+        public int agePrivacy = -1;
         /// <summary>
         /// Gebruikers website
         /// </summary>
@@ -144,7 +144,76 @@ namespace mvdw.helpmij.gebruiker
         /// Registratie dag
         /// </summary>
         public int registrationDay = -1;
+        /// <summary>
+        /// Registratie datum
+        /// </summary>
+        public DateTime registrationDate = DateTime.MinValue;
+        /// <summary>
+        /// Laatste Activiteit
+        /// </summary>
+        public int lastactivityYear = -1;
+        /// <summary>
+        /// Laatste Activiteit
+        /// </summary>
+        public int lastactivityMonth = -1;
+        /// <summary>
+        /// Laatste Activiteit
+        /// </summary>
+        public int lastactivityDay = -1;
+        /// <summary>
+        /// Laatste Activiteit
+        /// </summary>
+        public DateTime lastactivityDate = DateTime.MinValue;
+        public String userRank = null;
+        /// <summary>
+        /// Totaal aantal posts
+        /// </summary>
+        public int totalPosts = -1;
+        /// <summary>
+        /// Gemiddeld aantal posts per dag
+        /// </summary>
+        public int postEaDay = -1;
+        /// <summary>
+        /// Gebruikers Profiel
+        /// </summary>
+        public String profileURL = null;
 
+
+        /// <summary>
+        /// Controlleer of een variabele geset is
+        /// </summary>
+        /// <param name="var">Variabele</param>
+        private void CheckVariable(Object var)
+        {
+            if (var is int)
+            {
+                if ((int)var != -1)
+                {
+                    return;
+                }
+            }
+            else if (var is String)
+            {
+                if ((String)var != null)
+                {
+                    return;
+                }
+            }
+            else if (var is DateTime)
+            {
+                if ((DateTime)var != DateTime.MinValue)
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+            // Foutmedling
+            throw new UserDataNotFound(
+                "De gegevens voor de gebruiker zijn niet gevonden!");
+        }
 
         /// <summary>
         /// Verkrijg GebruikersData
@@ -190,6 +259,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>int - ID</returns>
         public int GetUserID()
         {
+            CheckVariable(userID);
             return userID;
         }
 
@@ -217,6 +287,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="sectoken">String - Security Token</param>
         public void SetSecurityToken(String sectoken)
         {
+            CheckVariable(sectoken);
             this.sectoken = sectoken;
         }
 
@@ -252,6 +323,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>String - URL naar avatar</returns>
         public String GetAvatarUrl()
         {
+            CheckVariable(avatarUrl);
             return avatarUrl;
         }
 
@@ -261,6 +333,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>Image - Avatar</returns>
         public Image GetAvatar()
         {
+            CheckVariable(avatarUrl);
             // Stream the image from the url
             var request = WebRequest.Create(avatarUrl);
             using (var response = request.GetResponse())
@@ -276,6 +349,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>CookieContainer - Cookies</returns>
         public CookieContainer GetCookies()
         {
+            CheckVariable(cookies);
             return cookies;
         }
 
@@ -285,6 +359,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="container"></param>
         public void SetCookies(CookieContainer container)
         {
+            CheckVariable(container);
             cookies = container;
         }
 
@@ -312,6 +387,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>DateTime - Geboortedatum</returns>
         public DateTime GetBirthday()
         {
+            CheckVariable(birthday);
             return birthday;
         }
 
@@ -330,6 +406,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>int - Dag</returns>
         public int GetBirthdayDay()
         {
+            CheckVariable(birthday_dd);
             return birthday_dd;
         }
 
@@ -348,6 +425,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>int - Maand</returns>
         public int GetBirthdayMonth()
         {
+            CheckVariable(birthday_MM);
             return birthday_MM;
         }
 
@@ -366,6 +444,7 @@ namespace mvdw.helpmij.gebruiker
         /// <returns>int - Jaar</returns>
         public int GetBirthdayYear()
         {
+            CheckVariable(birthday_yyyy);
             return birthday_yyyy;
         }
 
@@ -382,9 +461,10 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de privacy instellingen omtrend de leeftijd
         /// </summary>
         /// <returns>int - Gebruiker Privacy</returns>
-        public int GetPrivacy()
+        public int GetAgePrivacy()
         {
-            return privacy;
+            CheckVariable(agePrivacy);
+            return agePrivacy;
         }
 
         /// <summary>
@@ -393,7 +473,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="privacy">int - GebruikerPrivacy</param>
         public void SetPrivacy(int privacy)
         {
-            this.privacy = privacy;
+            this.agePrivacy = privacy;
         }
 
         /// <summary>
@@ -628,6 +708,210 @@ namespace mvdw.helpmij.gebruiker
         public void SetSignatureBB(String signature)
         {
             this.signatureBB = signature;
+        }
+
+        /// <summary>
+        /// Verkrijg de registratiedatum
+        /// </summary>
+        /// <returns>DateTime - Registratie</returns>
+        public DateTime GetRegistrationDate()
+        {
+            return registrationDate;
+        }
+
+        /// <summary>
+        /// Set de registratiedatum
+        /// </summary>
+        /// <param name="registration">DateTime - Registratie</param>
+        public void SetRegistrationDate(DateTime registration)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg het jaar van de registratie
+        /// </summary>
+        /// <returns>int - Jaar</returns>
+        public int GetRegistrationYear()
+        {
+            return registrationYear;
+        }
+
+        /// <summary>
+        /// Set het jaar van de registratie
+        /// </summary>
+        /// <param name="year">int - Jaar</param>
+        public void SetRegistrationYear(int year)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de maand van de registratie
+        /// </summary>
+        /// <returns>int - Maand</returns>
+        public int GetRegistrationMonth()
+        {
+            return registrationMonth;
+        }
+
+        /// <summary>
+        /// Set de maand van de registratie
+        /// </summary>
+        /// <param name="month">int - Maand</param>
+        public void SetRegistrationMonth(int month)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de dag van de registratie
+        /// </summary>
+        /// <returns>int - Dag</returns>
+        public int GetRegistrationDay()
+        {
+            return registrationDay;
+        }
+
+        /// <summary>
+        /// Set de dag van de registratie
+        /// </summary>
+        /// <param name="day"></param>
+        public void SetRegistrationDay(int day)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg het tijdstip van de laatste activiteit
+        /// </summary>
+        /// <returns>DateTime - Laatste Activiteit</returns>
+        public DateTime GetLastactivity()
+        {
+            return lastactivityDate;
+        }
+
+        /// <summary>
+        /// Set het tijdstip van de laatste activiteit
+        /// </summary>
+        /// <param name="date"></param>
+        public void SetLastactivity(DateTime date)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg het jaar van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Jaar</returns>
+        public int GetLastactivityYear()
+        {
+            return lastactivityYear;
+        }
+
+        /// <summary>
+        /// Set het jaar van de laatste activiteit
+        /// </summary>
+        /// <param name="year">int - Jaar</param>
+        public void SetLastactivityYear(int year)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de maand van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Maand</returns>
+        public int GetLastactivityMonth()
+        {
+            return lastactivityMonth;
+        }
+
+        /// <summary>
+        /// Set de maand van de laatste activiteit
+        /// </summary>
+        /// <param name="month">int - Maand</param>
+        public void SetLastactivityMonth(int month)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de dag van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Dag</returns>
+        public int GetLastactivityDay()
+        {
+            return lastactivityDay;
+        }
+
+        /// <summary>
+        /// Set de dag van de laatste activiteit
+        /// </summary>
+        /// <param name="day"></param>
+        public void SetLastactivityDay(int day)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de gebruikers rank
+        /// </summary>
+        /// <returns>String - Rank</returns>
+        public String GetUserRank()
+        {
+            return userRank;
+        }
+
+        /// <summary>
+        /// Set de gebruikers rank
+        /// </summary>
+        /// <param name="rank">String - Rank</param>
+        public void SetUserRank(String rank)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg het aantal reacties
+        /// </summary>
+        /// <returns>int - Posts</returns>
+        public int GetTotalPosts()
+        {
+            return totalPosts;
+        }
+
+        /// <summary>
+        /// Set het totaal aantal posts
+        /// </summary>
+        /// <param name="posts">int - Posts</param>
+        public void SetTotalPosts(int posts)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg het gemiddeld aantal berichten per dag
+        /// </summary>
+        /// <returns>int - Berichten per dag</returns>
+        public int GetPostsEachDay()
+        {
+            return postEaDay;
+        }
+
+        /// <summary>
+        /// Set het gemiddeld aantal berichten per dag
+        /// </summary>
+        /// <param name="posts">int - Berichten per dag</param>
+        public void SetPostsEachDay(int posts)
+        {
+        }
+
+        /// <summary>
+        /// Verkrijg de publieke profiel URL
+        /// </summary>
+        /// <returns>String - URL</returns>
+        public String GetPublicProfileURL()
+        {
+            return profileURL;
+        }
+
+        /// <summary>
+        /// Set de publieke profile URL
+        /// </summary>
+        /// <param name="url">String - URL</param>
+        public void SetPublicProfileURL(String url)
+        {
         }
 
         /// <summary>

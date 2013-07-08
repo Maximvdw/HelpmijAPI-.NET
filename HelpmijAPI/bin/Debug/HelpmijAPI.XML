@@ -814,6 +814,178 @@
             </summary>
             <param name="comments">List met Comments</param>
         </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijForum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.Forum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.hasSubForums">
+            <summary>
+            Forums heeft subforums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.subForums">
+            <summary>
+            Sub forums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.url">
+            <summary>
+            Forum URL
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.id">
+            <summary>
+            Forum ID
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.title">
+            <summary>
+            Forum Title
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.topics">
+            <summary>
+            Forum Topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
+        </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijLogin">
             <summary>
             Aanmelden op Helpmij.nl
@@ -977,7 +1149,7 @@
             </summary>
             <param name="year">int - Year</param>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetPrivacy">
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetAgePrivacy">
             <summary>
             Verkrijg de privacy instellingen omtrend de leeftijd
             </summary>
@@ -1145,6 +1317,160 @@
             </summary>
             <param name="signature">String - Handtekening</param>
         </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetRegistrationDate">
+            <summary>
+            Verkrijg de registratiedatum
+            </summary>
+            <returns>DateTime - Registratie</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetRegistrationDate(System.DateTime)">
+            <summary>
+            Set de registratiedatum
+            </summary>
+            <param name="registration">DateTime - Registratie</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetRegistrationYear">
+            <summary>
+            Verkrijg het jaar van de registratie
+            </summary>
+            <returns>int - Jaar</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetRegistrationYear(System.Int32)">
+            <summary>
+            Set het jaar van de registratie
+            </summary>
+            <param name="year">int - Jaar</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetRegistrationMonth">
+            <summary>
+            Verkrijg de maand van de registratie
+            </summary>
+            <returns>int - Maand</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetRegistrationMonth(System.Int32)">
+            <summary>
+            Set de maand van de registratie
+            </summary>
+            <param name="month">int - Maand</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetRegistrationDay">
+            <summary>
+            Verkrijg de dag van de registratie
+            </summary>
+            <returns>int - Dag</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetRegistrationDay(System.Int32)">
+            <summary>
+            Set de dag van de registratie
+            </summary>
+            <param name="dag"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetLastactivity">
+            <summary>
+            Verkrijg het tijdstip van de laatste activiteit
+            </summary>
+            <returns>DateTime - Laatste Activiteit</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivity(System.DateTime)">
+            <summary>
+            Set het tijdstip van de laatste activiteit
+            </summary>
+            <param name="date"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetLastactivityYear">
+            <summary>
+            Verkrijg het jaar van de laatste activiteit
+            </summary>
+            <returns>int - Jaar</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivityYear(System.Int32)">
+            <summary>
+            Set het jaar van de laatste activiteit
+            </summary>
+            <param name="year">int - Jaar</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetLastactivityMonth">
+            <summary>
+            Verkrijg de maand van de laatste activiteit
+            </summary>
+            <returns>int - Maand</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivityMonth(System.Int32)">
+            <summary>
+            Set de maand van de laatste activiteit
+            </summary>
+            <param name="month">int - Maand</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetLastactivityDay">
+            <summary>
+            Verkrijg de dag van de laatste activiteit
+            </summary>
+            <returns>int - Dag</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivityDay(System.Int32)">
+            <summary>
+            Set de dag van de laatste activiteit
+            </summary>
+            <param name="dag"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetUserRank">
+            <summary>
+            Verkrijg de gebruikers rank
+            </summary>
+            <returns>String - Rank</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetUserRank(System.String)">
+            <summary>
+            Set de gebruikers rank
+            </summary>
+            <param name="rank">String - Rank</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetTotalPosts">
+            <summary>
+            Verkrijg het aantal reacties
+            </summary>
+            <returns>int - Posts</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetTotalPosts(System.Int32)">
+            <summary>
+            Set het totaal aantal posts
+            </summary>
+            <param name="posts">int - Posts</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetPostsEachDay">
+            <summary>
+            Verkrijg het gemiddeld aantal berichten per dag
+            </summary>
+            <returns>int - Berichten per dag</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetPostsEachDay(System.Int32)">
+            <summary>
+            Set het gemiddeld aantal berichten per dag
+            </summary>
+            <param name="posts">int - Berichten per dag</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetPublicProfileURL">
+            <summary>
+            Verkrijg de publieke profiel URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetPublicProfileURL(System.String)">
+            <summary>
+            Set de publieke profile URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijComment">
+            <summary>
+            Reacties op een Topic
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.Comment">
+            <summary>
+            Reacties op een Topic
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsEncryption">
             <summary>
             Encryptie Utilities
@@ -1198,6 +1524,17 @@
         <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException.#ctor(System.String)">
             <summary>
             User is not logged in
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound">
+            <summary>
+            Instelling niet gevonden
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound.#ctor(System.String)">
+            <summary>
+            User Data is not found
             </summary>
             <param name="message">Error Message</param>
         </member>
@@ -1417,7 +1754,7 @@
             Gebruiker verjaardag
             </summary>
         </member>
-        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.privacy">
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.agePrivacy">
             <summary>
             Gebruikers privacy
             </summary>
@@ -1511,6 +1848,52 @@
             <summary>
             Registratie dag
             </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.registrationDate">
+            <summary>
+            Registratie datum
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.lastactivityYear">
+            <summary>
+            Laatste Activiteit
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.lastactivityMonth">
+            <summary>
+            Laatste Activiteit
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.lastactivityDay">
+            <summary>
+            Laatste Activiteit
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.lastactivityDate">
+            <summary>
+            Laatste Activiteit
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.totalPosts">
+            <summary>
+            Totaal aantal posts
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.postEaDay">
+            <summary>
+            Gemiddeld aantal posts per dag
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.profileURL">
+            <summary>
+            Gebruikers Profiel
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.CheckVariable(System.Object)">
+            <summary>
+            Controlleer of een variabele geset is
+            </summary>
+            <param name="var">Variabele</param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserData">
             <summary>
@@ -1647,7 +2030,7 @@
             </summary>
             <param name="year">int - Year</param>
         </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetPrivacy">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetAgePrivacy">
             <summary>
             Verkrijg de privacy instellingen omtrend de leeftijd
             </summary>
@@ -1815,191 +2198,153 @@
             </summary>
             <param name="signature">String - Handtekening</param>
         </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetRegistrationDate">
+            <summary>
+            Verkrijg de registratiedatum
+            </summary>
+            <returns>DateTime - Registratie</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetRegistrationDate(System.DateTime)">
+            <summary>
+            Set de registratiedatum
+            </summary>
+            <param name="registration">DateTime - Registratie</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetRegistrationYear">
+            <summary>
+            Verkrijg het jaar van de registratie
+            </summary>
+            <returns>int - Jaar</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetRegistrationYear(System.Int32)">
+            <summary>
+            Set het jaar van de registratie
+            </summary>
+            <param name="year">int - Jaar</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetRegistrationMonth">
+            <summary>
+            Verkrijg de maand van de registratie
+            </summary>
+            <returns>int - Maand</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetRegistrationMonth(System.Int32)">
+            <summary>
+            Set de maand van de registratie
+            </summary>
+            <param name="month">int - Maand</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetRegistrationDay">
+            <summary>
+            Verkrijg de dag van de registratie
+            </summary>
+            <returns>int - Dag</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetRegistrationDay(System.Int32)">
+            <summary>
+            Set de dag van de registratie
+            </summary>
+            <param name="day"></param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetLastactivity">
+            <summary>
+            Verkrijg het tijdstip van de laatste activiteit
+            </summary>
+            <returns>DateTime - Laatste Activiteit</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetLastactivity(System.DateTime)">
+            <summary>
+            Set het tijdstip van de laatste activiteit
+            </summary>
+            <param name="date"></param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetLastactivityYear">
+            <summary>
+            Verkrijg het jaar van de laatste activiteit
+            </summary>
+            <returns>int - Jaar</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetLastactivityYear(System.Int32)">
+            <summary>
+            Set het jaar van de laatste activiteit
+            </summary>
+            <param name="year">int - Jaar</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetLastactivityMonth">
+            <summary>
+            Verkrijg de maand van de laatste activiteit
+            </summary>
+            <returns>int - Maand</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetLastactivityMonth(System.Int32)">
+            <summary>
+            Set de maand van de laatste activiteit
+            </summary>
+            <param name="month">int - Maand</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetLastactivityDay">
+            <summary>
+            Verkrijg de dag van de laatste activiteit
+            </summary>
+            <returns>int - Dag</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetLastactivityDay(System.Int32)">
+            <summary>
+            Set de dag van de laatste activiteit
+            </summary>
+            <param name="day"></param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserRank">
+            <summary>
+            Verkrijg de gebruikers rank
+            </summary>
+            <returns>String - Rank</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetUserRank(System.String)">
+            <summary>
+            Set de gebruikers rank
+            </summary>
+            <param name="rank">String - Rank</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetTotalPosts">
+            <summary>
+            Verkrijg het aantal reacties
+            </summary>
+            <returns>int - Posts</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetTotalPosts(System.Int32)">
+            <summary>
+            Set het totaal aantal posts
+            </summary>
+            <param name="posts">int - Posts</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetPostsEachDay">
+            <summary>
+            Verkrijg het gemiddeld aantal berichten per dag
+            </summary>
+            <returns>int - Berichten per dag</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetPostsEachDay(System.Int32)">
+            <summary>
+            Set het gemiddeld aantal berichten per dag
+            </summary>
+            <param name="posts">int - Berichten per dag</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetPublicProfileURL">
+            <summary>
+            Verkrijg de publieke profiel URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetPublicProfileURL(System.String)">
+            <summary>
+            Set de publieke profile URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.refreshData">
             <summary>
             Refresh de gegevens
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.forum.Comment">
-            <summary>
-            Reacties op een Topic
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.forum.Forum">
-            <summary>
-            Helpmij.nl Forum
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.HasSubForums">
-            <summary>
-            Controlleer of de forum Subforums heeft
-            </summary>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetSubForums">
-            <summary>
-            Verkrijg de sub forums
-            </summary>
-            <returns>Lijst met Forums</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
-            <summary>
-            Set de sub forums
-            </summary>
-            <param name="forums">Lijst met forums</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetURL">
-            <summary>
-            Verkrijg de forum URL
-            </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetURL(System.String)">
-            <summary>
-            Set de forum URL
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetID">
-            <summary>
-            Verkrijg de forum ID
-            </summary>
-            <returns>int - ID</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetID(System.Int32)">
-            <summary>
-            Set de forum ID
-            </summary>
-            <param name="id">int - ID</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetTitle">
-            <summary>
-            Verkrijg de forum titel
-            </summary>
-            <returns>String - Titel</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetTitle(System.String)">
-            <summary>
-            Set de forum titel
-            </summary>
-            <param name="title">String - Titel</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetTopics">
-            <summary>
-            Verkrijg de topics in het forum
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
-            <summary>
-            Set de topics in het forum
-            </summary>
-            <param name="topics">Lijst met topics</param>
-        </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijForum">
-            <summary>
-            Helpmij.nl Forum
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.hasSubForums">
-            <summary>
-            Forums heeft subforums
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.subForums">
-            <summary>
-            Sub forums
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.url">
-            <summary>
-            Forum URL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.id">
-            <summary>
-            Forum ID
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.title">
-            <summary>
-            Forum Title
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.topics">
-            <summary>
-            Forum Topics
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.HasSubForums">
-            <summary>
-            Controlleer of de forum Subforums heeft
-            </summary>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetSubForums">
-            <summary>
-            Verkrijg de sub forums
-            </summary>
-            <returns>Lijst met Forums</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
-            <summary>
-            Set de sub forums
-            </summary>
-            <param name="forums">Lijst met forums</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetURL">
-            <summary>
-            Verkrijg de forum URL
-            </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetURL(System.String)">
-            <summary>
-            Set de forum URL
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetID">
-            <summary>
-            Verkrijg de forum ID
-            </summary>
-            <returns>int - ID</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetID(System.Int32)">
-            <summary>
-            Set de forum ID
-            </summary>
-            <param name="id">int - ID</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTitle">
-            <summary>
-            Verkrijg de forum titel
-            </summary>
-            <returns>String - Titel</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTitle(System.String)">
-            <summary>
-            Set de forum titel
-            </summary>
-            <param name="title">String - Titel</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTopics">
-            <summary>
-            Verkrijg de topics in het forum
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
-            <summary>
-            Set de topics in het forum
-            </summary>
-            <param name="topics">Lijst met topics</param>
-        </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijComment">
-            <summary>
-            Reacties op een Topic
             </summary>
         </member>
     </members>

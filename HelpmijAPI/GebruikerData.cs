@@ -92,7 +92,7 @@ namespace mvdw.helpmijapi.gebruiker
         /// Verkrijg de privacy instellingen omtrend de leeftijd
         /// </summary>
         /// <returns>Gebruiker Privacy</returns>
-        int GetPrivacy();
+        int GetAgePrivacy();
 
         /// <summary>
         /// Set de gebruikers privacy
@@ -255,5 +255,149 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <param name="signature">String - Handtekening</param>
         void SetSignatureBB(String signature);
+
+        /// <summary>
+        /// Verkrijg de registratiedatum
+        /// </summary>
+        /// <returns>DateTime - Registratie</returns>
+        DateTime GetRegistrationDate();
+
+        /// <summary>
+        /// Set de registratiedatum
+        /// </summary>
+        /// <param name="registration">DateTime - Registratie</param>
+        void SetRegistrationDate(DateTime registration);
+
+        /// <summary>
+        /// Verkrijg het jaar van de registratie
+        /// </summary>
+        /// <returns>int - Jaar</returns>
+        int GetRegistrationYear();
+
+        /// <summary>
+        /// Set het jaar van de registratie
+        /// </summary>
+        /// <param name="year">int - Jaar</param>
+        void SetRegistrationYear(int year);
+
+        /// <summary>
+        /// Verkrijg de maand van de registratie
+        /// </summary>
+        /// <returns>int - Maand</returns>
+        int GetRegistrationMonth();
+
+        /// <summary>
+        /// Set de maand van de registratie
+        /// </summary>
+        /// <param name="month">int - Maand</param>
+        void SetRegistrationMonth(int month);
+
+        /// <summary>
+        /// Verkrijg de dag van de registratie
+        /// </summary>
+        /// <returns>int - Dag</returns>
+        int GetRegistrationDay();
+
+        /// <summary>
+        /// Set de dag van de registratie
+        /// </summary>
+        /// <param name="dag"></param>
+        void SetRegistrationDay(int dag);
+
+        /// <summary>
+        /// Verkrijg het tijdstip van de laatste activiteit
+        /// </summary>
+        /// <returns>DateTime - Laatste Activiteit</returns>
+        DateTime GetLastactivity();
+
+        /// <summary>
+        /// Set het tijdstip van de laatste activiteit
+        /// </summary>
+        /// <param name="date"></param>
+        void SetLastactivity(DateTime date);
+
+        /// <summary>
+        /// Verkrijg het jaar van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Jaar</returns>
+        int GetLastactivityYear();
+
+        /// <summary>
+        /// Set het jaar van de laatste activiteit
+        /// </summary>
+        /// <param name="year">int - Jaar</param>
+        void SetLastactivityYear(int year);
+
+        /// <summary>
+        /// Verkrijg de maand van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Maand</returns>
+        int GetLastactivityMonth();
+
+        /// <summary>
+        /// Set de maand van de laatste activiteit
+        /// </summary>
+        /// <param name="month">int - Maand</param>
+        void SetLastactivityMonth(int month);
+
+        /// <summary>
+        /// Verkrijg de dag van de laatste activiteit
+        /// </summary>
+        /// <returns>int - Dag</returns>
+        int GetLastactivityDay();
+
+        /// <summary>
+        /// Set de dag van de laatste activiteit
+        /// </summary>
+        /// <param name="dag"></param>
+        void SetLastactivityDay(int dag);
+
+        /// <summary>
+        /// Verkrijg de gebruikers rank
+        /// </summary>
+        /// <returns>String - Rank</returns>
+        String GetUserRank();
+
+        /// <summary>
+        /// Set de gebruikers rank
+        /// </summary>
+        /// <param name="rank">String - Rank</param>
+        void SetUserRank(String rank);
+
+        /// <summary>
+        /// Verkrijg het aantal reacties
+        /// </summary>
+        /// <returns>int - Posts</returns>
+        int GetTotalPosts();
+
+        /// <summary>
+        /// Set het totaal aantal posts
+        /// </summary>
+        /// <param name="posts">int - Posts</param>
+        void SetTotalPosts(int posts);
+
+        /// <summary>
+        /// Verkrijg het gemiddeld aantal berichten per dag
+        /// </summary>
+        /// <returns>int - Berichten per dag</returns>
+        int GetPostsEachDay();
+
+        /// <summary>
+        /// Set het gemiddeld aantal berichten per dag
+        /// </summary>
+        /// <param name="posts">int - Berichten per dag</param>
+        void SetPostsEachDay(int posts);
+
+        /// <summary>
+        /// Verkrijg de publieke profiel URL
+        /// </summary>
+        /// <returns>String - URL</returns>
+        String GetPublicProfileURL();
+
+        /// <summary>
+        /// Set de publieke profile URL
+        /// </summary>
+        /// <param name="url">String - URL</param>
+        void SetPublicProfileURL(String url);
     }
 }

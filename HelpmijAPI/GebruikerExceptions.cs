@@ -83,4 +83,19 @@ namespace mvdw.helpmijapi.gebruiker.exceptions
         {
         }
     }
+
+    /// <summary>
+    /// Instelling niet gevonden
+    /// </summary>
+    public class UserDataNotFound : Exception
+    {
+        /// <summary>
+        /// User Data is not found
+        /// </summary>
+        /// <param name="message">Error Message</param>
+        public UserDataNotFound(string message)
+            : base(message)
+        {
+        }
+    }
 }
