@@ -77,6 +77,18 @@ namespace mvdw.helpmijapi.forum
         void SetMinute(int minute);
 
         /// <summary>
+        /// Verkrijg de Topic ID
+        /// </summary>
+        /// <returns>int - ID</returns>
+        int GetID();
+
+        /// <summary>
+        /// Set de Topic ID
+        /// </summary>
+        /// <param name="id">int - ID</param>
+        void SetID(int id);
+
+        /// <summary>
         /// Zet de HomepageTopic om naar een Topic
         /// </summary>
         /// <returns>Topic</returns>

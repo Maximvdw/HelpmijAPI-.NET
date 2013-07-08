@@ -177,6 +177,18 @@ namespace mvdw.helpmij
         /// </summary>
         public static String postSuffix = @"</blockquote>";
         /// <summary>
+        /// Prefix voor Forum data id-naam
+        /// </summary>
+        public static String forumPrefix = @"<a href=""forumdisplay.php/";
+        /// <summary>
+        /// Suffix voor Forum data id-naam zonder subforums
+        /// </summary>
+        public static String forumSuffix = @""">";
+        /// <summary>
+        /// Suffix voor Forum data id-naam met subforums
+        /// </summary>
+        public static String forumTopSuffix = @""" class=""forumtitle"">";
+        /// <summary>
         /// Prefix van de gebruikers registratie
         /// </summary>
         public static String registratedPrefix = @"<dt>Geregistreerd</dt>.*?<dd>  ";

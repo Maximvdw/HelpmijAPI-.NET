@@ -199,6 +199,21 @@
             Suffix van een topic post
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.HelpmijData.forumPrefix">
+            <summary>
+            Prefix voor Forum data id-naam
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.forumSuffix">
+            <summary>
+            Suffix voor Forum data id-naam zonder subforums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.forumTopSuffix">
+            <summary>
+            Suffix voor Forum data id-naam met subforums
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.HelpmijData.registratedPrefix">
             <summary>
             Prefix van de gebruikers registratie
@@ -521,6 +536,18 @@
             </summary>
             <param name="minute">int - Minuten</param>
         </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetID">
+            <summary>
+            Verkrijg de Topic ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.HomepageTopic.SetID(System.Int32)">
+            <summary>
+            Set de Topic ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
         <member name="M:mvdw.helpmijapi.forum.HomepageTopic.GetTopic">
             <summary>
             Zet de HomepageTopic om naar een Topic
@@ -668,6 +695,11 @@
             Topic comments
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijTopic.id">
+            <summary>
+            Topic ID
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetTopic">
             <summary>
             Zet de HomepageTopic om naar een Topic
@@ -757,6 +789,18 @@
             Set de keywords van het topic
             </summary>
             <param name="keywords"></param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetID">
+            <summary>
+            Verkrijg de Topic ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.SetID(System.Int32)">
+            <summary>
+            Set de Topic ID
+            </summary>
+            <param name="id">int - ID</param>
         </member>
         <member name="M:mvdw.helpmij.forum.HelpmijTopic.GetComments">
             <summary>
@@ -1786,10 +1830,172 @@
             Helpmij.nl Forum
             </summary>
         </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijForum">
             <summary>
             Helpmij.nl Forum
             </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.hasSubForums">
+            <summary>
+            Forums heeft subforums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.subForums">
+            <summary>
+            Sub forums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.url">
+            <summary>
+            Forum URL
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.id">
+            <summary>
+            Forum ID
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.title">
+            <summary>
+            Forum Title
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.topics">
+            <summary>
+            Forum Topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
         </member>
         <member name="T:mvdw.helpmij.forum.HelpmijComment">
             <summary>

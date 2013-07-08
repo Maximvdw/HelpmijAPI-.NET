@@ -62,6 +62,10 @@ namespace mvdw.helpmij.forum
         /// Topic comments
         /// </summary>
         public List<Comment> comments = new List<Comment>();
+        /// <summary>
+        /// Topic ID
+        /// </summary>
+        public int id = -1;
 
 
         /// <summary>
@@ -198,6 +202,24 @@ namespace mvdw.helpmij.forum
         public void SetKeywords(List<String> keywords)
         {
             this.keywords = keywords;
+        }
+
+        /// <summary>
+        /// Verkrijg de Topic ID
+        /// </summary>
+        /// <returns>int - ID</returns>
+        public int GetID()
+        {
+            return id;
+        }
+
+        /// <summary>
+        /// Set de Topic ID
+        /// </summary>
+        /// <param name="id">int - ID</param>
+        public void SetID(int id)
+        {
+            this.id = id;
         }
 
         /// <summary>
