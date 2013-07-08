@@ -55,5 +55,24 @@ namespace mvdw.helpmij.chat
             CookieContainer cookies = user.GetCookies();
             UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=006666", "http://chat.helpmij.nl/process.php",ref cookies);
         }
+
+        /// <summary>
+        /// Zend een commando naar de chat
+        /// </summary>
+        /// <param name="command">String - Commando</param>
+        public void SendCommand(String command)
+        {
+            CookieContainer cookies = user.GetCookies();
+            UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
+        }
+
+        /// <summary>
+        /// Forceer een update van de chat
+        /// </summary>
+        public void ForceUpdate()
+        {
+            CookieContainer cookies = user.GetCookies();
+            UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=0&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
+        }
     }
 }

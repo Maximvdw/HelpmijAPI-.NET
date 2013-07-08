@@ -22,5 +22,16 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="message">String - Bericht</param>
         void SendMessage(String message);
+
+        /// <summary>
+        /// Zend een commando naar de chat
+        /// </summary>
+        /// <param name="command">String - Commando</param>
+        void SendCommand(String command);
+
+        /// <summary>
+        /// Forceer een update van de chat
+        /// </summary>
+        void ForceUpdate();
     }
 }

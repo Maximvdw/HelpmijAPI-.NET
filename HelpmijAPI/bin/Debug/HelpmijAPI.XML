@@ -2381,6 +2381,17 @@
             </summary>
             <param name="message">String - Bericht</param>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SendCommand(System.String)">
+            <summary>
+            Zend een commando naar de chat
+            </summary>
+            <param name="command">String - Commando</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.ForceUpdate">
+            <summary>
+            Forceer een update van de chat
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.user">
             <summary>
             Chat gebruiker
@@ -2397,6 +2408,17 @@
             Zend een bericht in de chat
             </summary>
             <param name="message">String - Bericht</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.SendCommand(System.String)">
+            <summary>
+            Zend een commando naar de chat
+            </summary>
+            <param name="command">String - Commando</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.ForceUpdate">
+            <summary>
+            Forceer een update van de chat
+            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventHandler">
             <summary>
