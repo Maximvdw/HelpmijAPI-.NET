@@ -55,30 +55,21 @@ namespace mvdw.helpmij.gebruiker
 
                 // Verkrijg de broncode
                 String source = UtilsHTTP.GetPOSTSource(postData, url, ref cookies);
-                // Verkrijg de userID
-                try
+                // Verkrijg de USER ID
+                int id = int.Parse(UtilsString.GetSubStrings(source, varidPrefix, varidSuffix)[0]);
+                if (id == 0)
                 {
-                    // Verkrijg de USER ID
-                    int id = int.Parse(UtilsString.GetSubStrings(source, varidPrefix, varidSuffix)[0]);
-                    if (id == 0)
-                    {
-                        // Inloggen mislukt
-                        throw new CredentialsWrongException("Verkeerde gebruikersnaam of wachtwoord ingevoerd!");
-                    }
-                    else
-                    {
-                        Gebruiker user = new HelpmijGebruiker();
-                        user.SetCookies(cookies);
-                        user.SetUserID(id);
-                        user.SetNickname(username);
-                        user.SetOnline();
-                        return user; // Enkel cookies , id , nick en sectoken
-                    }
+                    // Inloggen mislukt
+                    throw new CredentialsWrongException("Verkeerde gebruikersnaam of wachtwoord ingevoerd!");
                 }
-                catch (Exception)
+                else
                 {
-                    // Error
-                    return null;
+                    Gebruiker user = new HelpmijGebruiker();
+                    user.SetCookies(cookies);
+                    user.SetUserID(id);
+                    user.SetNickname(username);
+                    user.SetOnline();
+                    return user; // Enkel cookies , id , nick en sectoken
                 }
             }
             else
