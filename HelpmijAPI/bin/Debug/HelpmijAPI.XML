@@ -69,6 +69,26 @@
             Helpmij.nl (Prefix/Suffix) Data
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.HelpmijData.chatPHP">
+            <summary>
+            Chat PHP file
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.chatURL">
+            <summary>
+            Helpmij Chat URL
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.chatSendMessage">
+            <summary>
+            Zend een bericht in de chat
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.chatGetState">
+            <summary>
+            Verkrijg de data van de chat sesise
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.HelpmijData.siteURL">
             <summary>
             Site URL (Helpmij)
@@ -528,6 +548,54 @@
             </summary>
             <param name="userHelpmij">Helpmij Gebruiker</param>
         </member>
+        <member name="T:mvdw.helpmij.utils.UtilsJSON">
+             <summary>
+             This class encodes and decodes JSON strings.
+             Spec. details, see http://www.json.org/
+            
+             JSON uses Arrays and Objects. These correspond here to the datatypes ArrayList and Hashtable.
+             All numbers are parsed to doubles.
+             </summary>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsJSON.JsonDecode(System.String)">
+            <summary>
+            Parses the string json into a value
+            </summary>
+            <param name="json">A JSON string.</param>
+            <returns>An ArrayList, a Hashtable, a double, a string, null, true, or false</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsJSON.JsonDecode(System.String,System.Boolean@)">
+            <summary>
+            Parses the string json into a value; and fills 'success' with the successfullness of the parse.
+            </summary>
+            <param name="json">A JSON string.</param>
+            <param name="success">Successful parse?</param>
+            <returns>An ArrayList, a Hashtable, a double, a string, null, true, or false</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsJSON.JsonEncode(System.Object)">
+            <summary>
+            Converts a Hashtable / ArrayList object into a JSON string
+            </summary>
+            <param name="json">A Hashtable / ArrayList</param>
+            <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.ChatMessage">
+            <summary>
+            Helpmij.nl Chat message
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetUser">
+            <summary>
+            Verkrijg de gebruiker die het bericht schreef
+            </summary>
+            <returns>Gebruiker</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetMessage">
+            <summary>
+            Verkrijg het bericht
+            </summary>
+            <returns>String - Message</returns>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
             HTTP Utilities
@@ -648,32 +716,6 @@
             Zet de HomepageTopic om naar een Topic
             </summary>
             <returns>Topic</returns>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventHandler">
-            <summary>
-            Event Handler
-            </summary>
-            <param name="e">Event arguments</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventArgs">
-            <summary>
-            Triggered als een Gebruiker de chat joined
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.user">
-            <summary>
-            De gebruiker die joined
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Triggered als een Gebruiker de chat joined
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedListener">
-            <summary>
-            Triggered als een Gebruiker de chat joined
-            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.Helpmij">
             <summary>
@@ -851,6 +893,23 @@
             </summary>
             <param name="topics">Lijst met topics</param>
         </member>
+        <member name="T:mvdw.helpmijapi.HelpmijAPI">
+            <summary>
+            Helpmij Aplication Interface
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetVersion">
+            <summary>
+            Verkrijg de API versie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetAuthor">
+            <summary>
+            Verkrijg de gebruiker die deze api maakte (Maximvdw)
+            </summary>
+            <returns>Gebruiker - Maximvdw</returns>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.Gebruiker">
             <summary>
             Verkrijg Gebruiker Identificatie
@@ -974,6 +1033,13 @@
             </summary>
             <param name="user">Gebruiker</param>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker,mvdw.helpmijapi.chat.events.ChatListener)">
+            <summary>
+            Connecteer met chat.helpmij.nl
+            </summary>
+            <param name="user">Gebruiker - user</param>
+            <param name="listener">ChatListener - Listener</param>
+        </member>
         <member name="M:mvdw.helpmijapi.chat.Chat.SendMessage(System.String)">
             <summary>
             Zend een bericht in de chat
@@ -990,6 +1056,12 @@
             <summary>
             Forceer een update van de chat
             </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.GetLastUpdate">
+            <summary>
+            Verkrijg de laatste update
+            </summary>
+            <returns>String - Laatste update</returns>
         </member>
         <member name="T:mvdw.helpmij.forum.HelpmijForum">
             <summary>
@@ -2423,6 +2495,23 @@
             Chat gebruiker
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.lastUpdate">
+            <summary>
+            Laatste update
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.listener">
+            <summary>
+            Chat listener
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker,mvdw.helpmijapi.chat.events.ChatListener)">
+            <summary>
+            Connecteer met Helpmij.nl Chat
+            </summary>
+            <param name="user">Ingelogde gebruiker</param>
+            <param name="listener">ChatListener - Listener</param>
+        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
             Connecteer met Helpmij.nl Chat
@@ -2446,22 +2535,58 @@
             Forceer een update van de chat
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.HelpmijAPI">
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.GetLastUpdate">
             <summary>
-            Helpmij Aplication Interface
+            Verkrijg de laatste update
+            </summary>
+            <returns>String - Laatste update</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatListener">
+            <summary>
+            Helpmij.nl Chat Listener
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetVersion">
+        <member name="T:mvdw.helpmijapi.chat.events.ChatJoinListener">
             <summary>
-            Verkrijg de API versie
+            Helpmij.nl Chat Join Listener
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetAuthor">
+        <member name="T:mvdw.helpmijapi.chat.events.ChatQuitListener">
             <summary>
-            Verkrijg de gebruiker die deze api maakte (Maximvdw)
+            Helpmij.nl Chat Quit Listener
             </summary>
-            <returns>Gebruiker - Maximvdw</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedListener">
+            <summary>
+            Helpmij.nl Chat Message Receieved Listener
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedListener.onChatReceived(mvdw.helpmijapi.chat.events.ChatReceivedArguments)">
+            <summary>
+            Word opgeroepen wanneer er een nieuw chat bericht is
+            </summary>
+            <param name="e">Event Argumenten</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedArguments">
+            <summary>
+            Helpmij.nl Chat Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedArguments.message">
+            <summary>
+            Received Chat message
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.#ctor(mvdw.helpmijapi.chat.ChatMessage)">
+            <summary>
+            Chat Message received
+            </summary>
+            <param name="message">ChatMessage - Message</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.GetChatMessage">
+            <summary>
+            Verkrijg een Chat Message
+            </summary>
         </member>
     </members>
 </doc>

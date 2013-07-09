@@ -22,23 +22,45 @@ using System.Linq;
 using System.Text;
 using mvdw.helpmijapi.gebruiker;
 
-namespace mvdw.helpmijapi.chat
+namespace mvdw.helpmijapi.chat.events
 {
     /// <summary>
-    /// Helpmij.nl Chat message
+    /// Helpmij.nl Chat Message Receieved Listener
     /// </summary>
-    public interface ChatMessage
+    public interface ChatReceivedListener
     {
         /// <summary>
-        /// Verkrijg de gebruiker die het bericht schreef
+        /// Word opgeroepen wanneer er een nieuw chat bericht is
         /// </summary>
-        /// <returns>Gebruiker</returns>
-        Gebruiker GetUser();
+        /// <param name="e">Event Argumenten</param>
+        void onChatReceived(ChatReceivedArguments e);
+    }
+
+    /// <summary>
+    /// Helpmij.nl Chat Arguments
+    /// </summary>
+    public class ChatReceivedArguments
+    {
+        /// <summary>
+        /// Received Chat message
+        /// </summary>
+        private ChatMessage message = null;
 
         /// <summary>
-        /// Verkrijg het bericht
+        /// Chat Message received
         /// </summary>
-        /// <returns>String - Message</returns>
-        String GetMessage();
+        /// <param name="message">ChatMessage - Message</param>
+        public ChatReceivedArguments(ChatMessage message)
+        {
+            this.message = message;
+        }
+
+        /// <summary>
+        /// Verkrijg een Chat Message
+        /// </summary>
+        public ChatMessage GetChatMessage()
+        {
+            return message;
+        }
     }
 }

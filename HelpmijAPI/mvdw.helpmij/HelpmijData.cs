@@ -29,6 +29,22 @@ namespace mvdw.helpmij
     internal class HelpmijData
     {
         /// <summary>
+        /// Chat PHP file
+        /// </summary>
+        public static String chatPHP = "/process.php";
+        /// <summary>
+        /// Helpmij Chat URL
+        /// </summary>
+        public static String chatURL = "http://chat.helpmij.nl";
+        /// <summary>
+        /// Zend een bericht in de chat
+        /// </summary>
+        public static String chatSendMessage = "function=send";
+        /// <summary>
+        /// Verkrijg de data van de chat sesise
+        /// </summary>
+        public static String chatGetState = "function=getState";
+        /// <summary>
         /// Site URL (Helpmij)
         /// </summary>
         public static String siteURL = @"http://www.helpmij.nl";

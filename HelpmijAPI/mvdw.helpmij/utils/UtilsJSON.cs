@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+ * Unofficial Helpmij.nl Aplication Interface
+ * Copyright (C) 2009 Maxim Van de Wynckel <Maximvdw> and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using System;
 using System.Collections;
 using System.Globalization;
 using System.Text;
@@ -12,7 +30,7 @@ namespace mvdw.helpmij.utils
     /// JSON uses Arrays and Objects. These correspond here to the datatypes ArrayList and Hashtable.
     /// All numbers are parsed to doubles.
     /// </summary>
-    public class JSON
+    public class UtilsJSON
     {
         public const int TOKEN_NONE = 0;
         public const int TOKEN_CURLY_OPEN = 1;
@@ -87,16 +105,16 @@ namespace mvdw.helpmij.utils
             while (!done)
             {
                 token = LookAhead(json, index);
-                if (token == JSON.TOKEN_NONE)
+                if (token == UtilsJSON.TOKEN_NONE)
                 {
                     success = false;
                     return null;
                 }
-                else if (token == JSON.TOKEN_COMMA)
+                else if (token == UtilsJSON.TOKEN_COMMA)
                 {
                     NextToken(json, ref index);
                 }
-                else if (token == JSON.TOKEN_CURLY_CLOSE)
+                else if (token == UtilsJSON.TOKEN_CURLY_CLOSE)
                 {
                     NextToken(json, ref index);
                     return table;
@@ -114,7 +132,7 @@ namespace mvdw.helpmij.utils
 
                     // :
                     token = NextToken(json, ref index);
-                    if (token != JSON.TOKEN_COLON)
+                    if (token != UtilsJSON.TOKEN_COLON)
                     {
                         success = false;
                         return null;
@@ -146,16 +164,16 @@ namespace mvdw.helpmij.utils
             while (!done)
             {
                 int token = LookAhead(json, index);
-                if (token == JSON.TOKEN_NONE)
+                if (token == UtilsJSON.TOKEN_NONE)
                 {
                     success = false;
                     return null;
                 }
-                else if (token == JSON.TOKEN_COMMA)
+                else if (token == UtilsJSON.TOKEN_COMMA)
                 {
                     NextToken(json, ref index);
                 }
-                else if (token == JSON.TOKEN_SQUARED_CLOSE)
+                else if (token == UtilsJSON.TOKEN_SQUARED_CLOSE)
                 {
                     NextToken(json, ref index);
                     break;
@@ -179,24 +197,24 @@ namespace mvdw.helpmij.utils
         {
             switch (LookAhead(json, index))
             {
-                case JSON.TOKEN_STRING:
+                case UtilsJSON.TOKEN_STRING:
                     return ParseString(json, ref index, ref success);
-                case JSON.TOKEN_NUMBER:
+                case UtilsJSON.TOKEN_NUMBER:
                     return ParseNumber(json, ref index, ref success);
-                case JSON.TOKEN_CURLY_OPEN:
+                case UtilsJSON.TOKEN_CURLY_OPEN:
                     return ParseObject(json, ref index, ref success);
-                case JSON.TOKEN_SQUARED_OPEN:
+                case UtilsJSON.TOKEN_SQUARED_OPEN:
                     return ParseArray(json, ref index, ref success);
-                case JSON.TOKEN_TRUE:
+                case UtilsJSON.TOKEN_TRUE:
                     NextToken(json, ref index);
                     return true;
-                case JSON.TOKEN_FALSE:
+                case UtilsJSON.TOKEN_FALSE:
                     NextToken(json, ref index);
                     return false;
-                case JSON.TOKEN_NULL:
+                case UtilsJSON.TOKEN_NULL:
                     NextToken(json, ref index);
                     return null;
-                case JSON.TOKEN_NONE:
+                case UtilsJSON.TOKEN_NONE:
                     break;
             }
 
@@ -359,7 +377,7 @@ namespace mvdw.helpmij.utils
 
             if (index == json.Length)
             {
-                return JSON.TOKEN_NONE;
+                return UtilsJSON.TOKEN_NONE;
             }
 
             char c = json[index];
@@ -367,17 +385,17 @@ namespace mvdw.helpmij.utils
             switch (c)
             {
                 case '{':
-                    return JSON.TOKEN_CURLY_OPEN;
+                    return UtilsJSON.TOKEN_CURLY_OPEN;
                 case '}':
-                    return JSON.TOKEN_CURLY_CLOSE;
+                    return UtilsJSON.TOKEN_CURLY_CLOSE;
                 case '[':
-                    return JSON.TOKEN_SQUARED_OPEN;
+                    return UtilsJSON.TOKEN_SQUARED_OPEN;
                 case ']':
-                    return JSON.TOKEN_SQUARED_CLOSE;
+                    return UtilsJSON.TOKEN_SQUARED_CLOSE;
                 case ',':
-                    return JSON.TOKEN_COMMA;
+                    return UtilsJSON.TOKEN_COMMA;
                 case '"':
-                    return JSON.TOKEN_STRING;
+                    return UtilsJSON.TOKEN_STRING;
                 case '0':
                 case '1':
                 case '2':
@@ -389,9 +407,9 @@ namespace mvdw.helpmij.utils
                 case '8':
                 case '9':
                 case '-':
-                    return JSON.TOKEN_NUMBER;
+                    return UtilsJSON.TOKEN_NUMBER;
                 case ':':
-                    return JSON.TOKEN_COLON;
+                    return UtilsJSON.TOKEN_COLON;
             }
             index--;
 
@@ -407,7 +425,7 @@ namespace mvdw.helpmij.utils
                     json[index + 4] == 'e')
                 {
                     index += 5;
-                    return JSON.TOKEN_FALSE;
+                    return UtilsJSON.TOKEN_FALSE;
                 }
             }
 
@@ -420,7 +438,7 @@ namespace mvdw.helpmij.utils
                     json[index + 3] == 'e')
                 {
                     index += 4;
-                    return JSON.TOKEN_TRUE;
+                    return UtilsJSON.TOKEN_TRUE;
                 }
             }
 
@@ -433,11 +451,11 @@ namespace mvdw.helpmij.utils
                     json[index + 3] == 'l')
                 {
                     index += 4;
-                    return JSON.TOKEN_NULL;
+                    return UtilsJSON.TOKEN_NULL;
                 }
             }
 
-            return JSON.TOKEN_NONE;
+            return UtilsJSON.TOKEN_NONE;
         }
 
         protected static bool SerializeValue(object value, StringBuilder builder)

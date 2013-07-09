@@ -46,7 +46,10 @@
   <ItemGroup>
     <Compile Include="mvdw.helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="mvdw.helpmijapi\chat\Chat.cs" />
-    <Compile Include="mvdw.helpmijapi\chat\ChatEvents.cs" />
+    <Compile Include="mvdw.helpmijapi\chat\events\ChatJoinListener.cs" />
+    <Compile Include="mvdw.helpmijapi\chat\events\ChatListener.cs" />
+    <Compile Include="mvdw.helpmijapi\chat\events\ChatQuitListener.cs" />
+    <Compile Include="mvdw.helpmijapi\chat\events\ChatReceivedListener.cs" />
     <Compile Include="mvdw.helpmijapi\forum\Comment.cs" />
     <Compile Include="mvdw.helpmijapi\forum\Forum.cs" />
     <Compile Include="mvdw.helpmijapi\forum\exceptions\ForumExceptions.cs" />
@@ -56,6 +59,8 @@
     <Compile Include="mvdw.helpmijapi\gebruiker\GebruikerPrivacy.cs" />
     <Compile Include="mvdw.helpmijapi\Helpmij.cs" />
     <Compile Include="mvdw.helpmijapi\HelpmijAPI.cs" />
+    <Compile Include="mvdw.helpmij\chat\HelpmijChatMessage.cs" />
+    <Compile Include="mvdw.helpmij\utils\UtilsJSON.cs" />
     <Compile Include="mvdw.helpmij\chat\HelpmijChat.cs" />
     <Compile Include="mvdw.helpmij\forum\HelpmijComment.cs" />
     <Compile Include="mvdw.helpmij\HelpmijData.cs" />
@@ -74,6 +79,9 @@
     <Compile Include="mvdw.helpmij\utils\UtilsEncryption.cs" />
     <Compile Include="mvdw.helpmij\utils\UtilsHTTP.cs" />
     <Compile Include="mvdw.helpmij\utils\UtilsString.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mvdw.helpmijapi\chat\exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

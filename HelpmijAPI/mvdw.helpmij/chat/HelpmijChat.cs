@@ -21,9 +21,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
+using System.Collections;
 using mvdw.helpmij.utils;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.chat.events;
 
 namespace mvdw.helpmij.chat
 {
@@ -36,6 +38,25 @@ namespace mvdw.helpmij.chat
         /// Chat gebruiker
         /// </summary>
         public Gebruiker user = null;
+        /// <summary>
+        /// Laatste update
+        /// </summary>
+        public String lastUpdate = null;
+        /// <summary>
+        /// Chat listener
+        /// </summary>
+        public ChatListener listener = null;
+
+        /// <summary>
+        /// Connecteer met Helpmij.nl Chat
+        /// </summary>
+        /// <param name="user">Ingelogde gebruiker</param>
+        /// <param name="listener">ChatListener - Listener</param>
+        public void Connect(Gebruiker user, ChatListener listener)
+        {
+            this.listener = listener;
+            Connect(user);
+        }
 
         /// <summary>
         /// Connecteer met Helpmij.nl Chat
@@ -44,6 +65,13 @@ namespace mvdw.helpmij.chat
         public void Connect(Gebruiker user)
         {
             this.user = user;
+            CookieContainer cookies = user.GetCookies();
+            // Verkrijg de JSON data
+            String jsonData = UtilsHTTP.GetPOSTSource(chatGetState
+                , chatURL + chatPHP, ref cookies);
+            Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+            Object smilies = data["smilies"];
+            lastUpdate = (String)data["lastupdate"];
         }
 
         /// <summary>
@@ -63,7 +91,9 @@ namespace mvdw.helpmij.chat
         public void SendCommand(String command)
         {
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
+            String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
+            Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+            lastUpdate = (String)data["lastupdate"];
         }
 
         /// <summary>
@@ -72,7 +102,19 @@ namespace mvdw.helpmij.chat
         public void ForceUpdate()
         {
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=0&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
+            String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=" +
+                lastUpdate + "&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
+            Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+            String[] textData = (String[])data["text"];
+        }
+
+        /// <summary>
+        /// Verkrijg de laatste update
+        /// </summary>
+        /// <returns>String - Laatste update</returns>
+        public String GetLastUpdate()
+        {
+            return lastUpdate;
         }
     }
 }

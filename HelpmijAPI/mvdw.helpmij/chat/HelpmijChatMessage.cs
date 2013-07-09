@@ -20,39 +20,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using mvdw.helpmijapi.gebruiker;
 
-namespace mvdw.helpmijapi.chat.events
+namespace mvdw.helpmij.chat
 {
-    /// <summary>
-    /// Event Handler
-    /// </summary>
-    /// <param name="e">Event arguments</param>
-    public delegate void UserJoinedEventHandler(UserJoinedEventArgs e);
-
-    /// <summary>
-    /// Triggered als een Gebruiker de chat joined
-    /// </summary>
-    public class UserJoinedEventArgs : EventArgs
-    {
-        /// <summary>
-        /// De gebruiker die joined
-        /// </summary>
-        public readonly Gebruiker user = null;
-
-        /// <summary>
-        /// Triggered als een Gebruiker de chat joined
-        /// </summary>
-        public UserJoinedEventArgs(Gebruiker user)
-        {
-            this.user = user;
-        }
-    }
-
-    /// <summary>
-    /// Triggered als een Gebruiker de chat joined
-    /// </summary>
-    public class UserJoinedListener
+    internal class HelpmijChatMessage
     {
     }
 }

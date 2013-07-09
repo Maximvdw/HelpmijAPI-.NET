@@ -20,25 +20,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using mvdw.helpmijapi.gebruiker;
 
-namespace mvdw.helpmijapi.chat
+namespace mvdw.helpmijapi.chat.events
 {
     /// <summary>
-    /// Helpmij.nl Chat message
+    /// Helpmij.nl Chat Listener
     /// </summary>
-    public interface ChatMessage
+    public interface ChatListener : ChatJoinListener, ChatQuitListener , ChatReceivedListener
     {
-        /// <summary>
-        /// Verkrijg de gebruiker die het bericht schreef
-        /// </summary>
-        /// <returns>Gebruiker</returns>
-        Gebruiker GetUser();
 
-        /// <summary>
-        /// Verkrijg het bericht
-        /// </summary>
-        /// <returns>String - Message</returns>
-        String GetMessage();
     }
 }
