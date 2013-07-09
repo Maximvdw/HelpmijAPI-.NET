@@ -2446,5 +2446,22 @@
             Forceer een update van de chat
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.HelpmijAPI">
+            <summary>
+            Helpmij Aplication Interface
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetVersion">
+            <summary>
+            Verkrijg de API versie
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetAuthor">
+            <summary>
+            Verkrijg de gebruiker die deze api maakte (Maximvdw)
+            </summary>
+            <returns>Gebruiker - Maximvdw</returns>
+        </member>
     </members>
 </doc>

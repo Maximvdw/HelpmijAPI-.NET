@@ -23,7 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\HelpmijAPI.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>lib\Newtonsoft.Json\Newtonsoft.Json.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
     <LangVersion>3</LangVersion>
     <RunCodeAnalysis>true</RunCodeAnalysis>
@@ -55,6 +55,7 @@
     <Compile Include="mvdw.helpmijapi\gebruiker\exceptions\GebruikerExceptions.cs" />
     <Compile Include="mvdw.helpmijapi\gebruiker\GebruikerPrivacy.cs" />
     <Compile Include="mvdw.helpmijapi\Helpmij.cs" />
+    <Compile Include="mvdw.helpmijapi\HelpmijAPI.cs" />
     <Compile Include="mvdw.helpmij\chat\HelpmijChat.cs" />
     <Compile Include="mvdw.helpmij\forum\HelpmijComment.cs" />
     <Compile Include="mvdw.helpmij\HelpmijData.cs" />
