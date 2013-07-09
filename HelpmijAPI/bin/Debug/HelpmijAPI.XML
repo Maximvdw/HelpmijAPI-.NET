@@ -4,9 +4,64 @@
         <name>HelpmijAPI</name>
     </assembly>
     <members>
-        <member name="T:mvdw.helpmij.forum.TopicReader">
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException">
             <summary>
-            Helpmij Topic Reader
+            Unable to connect to helpmij
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException.#ctor(System.String)">
+            <summary>
+            Unable to connect to helpmij
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException">
+            <summary>
+            Unable to save user Exception
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException.#ctor(System.String)">
+            <summary>
+            Unable to save the user
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">
+            <summary>
+            Credentials Wrong Exception
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException.#ctor(System.String)">
+            <summary>
+            Credentials are wrong
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException">
+            <summary>
+            User Not logged in
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException.#ctor(System.String)">
+            <summary>
+            User is not logged in
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound">
+            <summary>
+            Instelling niet gevonden
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound.#ctor(System.String)">
+            <summary>
+            User Data is not found
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
+            <summary>
+            Laad en save gebruikersintellingen
             </summary>
         </member>
         <member name="T:mvdw.helpmij.HelpmijData">
@@ -449,39 +504,79 @@
             Dropdown DATA - Suffix
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic,System.Net.CookieContainer)">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
-            Verkrijg de Topic data
+            Verkrijg de gebruikers data, en save het
             </summary>
-            <param name="topic">Het topic om te saven</param>
-            <param name="cookies">Eventuele cookies</param>
+            <param name="userHelpmij">HelpmijGebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic)">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.SetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
-            Verkrijg de Topic data
+            Save de instellingen op Helpmij
             </summary>
-            <param name="topic">Het topic om te saven</param>
+            <param name="userHelpmij">HelpmijGebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetAuthor(System.String)">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetSignature(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
-            Verkrijg de auteur van het topic
+            Verkrijg de handtekening gegevens
             </summary>
-            <param name="source">De Broncode</param>
-            <returns>Gebruiker - Auteur</returns>
+            <param name="userHelpmij">HelpmijGebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetTitle(System.String)">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPublicData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
-            Verkrijg de titel
+            Verkrijg de publieke data van de gebruiker
             </summary>
-            <param name="source">De broncode</param>
-            <returns>String - Titel</returns>
+            <param name="userHelpmij">Helpmij Gebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.forum.TopicReader.GetKeywords(System.String)">
+        <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
-            Verkrijg de keywords
+            HTTP Utilities
             </summary>
-            <param name="source">De broncode</param>
-            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsHTTP.IsInternetAvailable">
+            <summary>
+            Controlleer of er verbinding is met www.helpmij.nl
+            </summary>
+            <returns>Boolean - True bij verbinding</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsHTTP.GetPOSTSource(System.String,System.String,System.Net.CookieContainer@)">
+            <summary>
+            Verkrijg de source code van een webpage
+            </summary>
+            <param name="postData">POST data</param>
+            <param name="url">De url</param>
+            <param name="cookies">De cookies</param>
+            <returns>String - Broncode</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsHTTP.GetSource(System.String,System.Net.CookieContainer)">
+            <summary>
+            Verkrijg de source code van een webpage
+            </summary>
+            <param name="url">De url</param>
+            <param name="cookies">De cookies</param>
+            <returns>String - Broncode</returns>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijComment">
+            <summary>
+            Reacties op een Topic
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.Comment">
+            <summary>
+            Reacties op een Topic
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.utils.UtilsEncryption">
+            <summary>
+            Encryptie Utilities
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsEncryption.GetMD5Hash(System.String)">
+            <summary>
+            Verkrijg een MD5 hash van een String
+            </summary>
+            <param name="str">De input</param>
+            <returns>String - MD5 hash</returns>
         </member>
         <member name="T:mvdw.helpmijapi.forum.HomepageTopic">
             <summary>
@@ -554,52 +649,82 @@
             </summary>
             <returns>Topic</returns>
         </member>
-        <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventHandler">
             <summary>
-            Laad en save gebruikersintellingen
+            Event Handler
+            </summary>
+            <param name="e">Event arguments</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventArgs">
+            <summary>
+            Triggered als een Gebruiker de chat joined
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
+        <member name="F:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.user">
             <summary>
-            Verkrijg de gebruikers data, en save het
-            </summary>
-            <param name="userHelpmij">HelpmijGebruiker</param>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.SetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
-            <summary>
-            Save de instellingen op Helpmij
-            </summary>
-            <param name="userHelpmij">HelpmijGebruiker</param>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetSignature(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
-            <summary>
-            Verkrijg de handtekening gegevens
-            </summary>
-            <param name="userHelpmij">HelpmijGebruiker</param>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPublicData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
-            <summary>
-            Verkrijg de publieke data van de gebruiker
-            </summary>
-            <param name="userHelpmij">Helpmij Gebruiker</param>
-        </member>
-        <member name="T:mvdw.helpmij.utils.UtilsString">
-            <summary>
-            String Utilities
+            De gebruiker die joined
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsString.GetSubStrings(System.String,System.String,System.String)">
+        <member name="M:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
-            Verkrijg een string tussen twee andere strings
+            Triggered als een Gebruiker de chat joined
             </summary>
-            <param name="input">De input string</param>
-            <param name="start">De voorgaande string</param>
-            <param name="end">De achterliggende string</param>
-            <returns>Alle gevonden resultaten</returns>
         </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijTopic">
+        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedListener">
             <summary>
-            Helpmij Topic
+            Triggered als een Gebruiker de chat joined
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.Helpmij">
+            <summary>
+            Helpmij Aplication Interface
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.LoginMD5(System.String,System.String)">
+            <summary>
+            Aanmelden op Helpmij.nl
+            </summary>
+            <param name="username">Helpmij gebruikersnaam</param>
+            <param name="passwordMD5">MD5 Hash van wachtwoord</param>
+            <returns>Gebruiker</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.Login(System.String,System.String)">
+            <summary>
+            Aanmelden op Helpmij.nl
+            </summary>
+            <param name="username">Helpmij gebruikersnaam</param>
+            <param name="password">Zuiver wachtwoord</param>
+            <returns>Gebruiker</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetUser(System.Int32)">
+            <summary>
+            Verkrijg een gebruikers met zijn ID
+            </summary>
+            <param name="ID">Gebruikers ID</param>
+            <returns>Gebruikers</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetNewTopics">
+            <summary>
+            Verkrijg een lijst met de nieuwe topics op de site
+            </summary>
+            <returns>List Topic - Topics</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetUnansweredTopics">
+            <summary>
+            Verkrijg een lijst met de nieuwe onbeantwoorde topics op de site
+            </summary>
+            <returns>List Topic - Topics</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetChat(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Verbind met chat.helpmij.nl
+            </summary>
+            <param name="user">Gebruiker</param>
+            <returns>Chat instantie</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
+            <summary>
+            Refresh Homepage cache
             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.forum.Topic">
@@ -654,6 +779,323 @@
             Set alle comments
             </summary>
             <param name="comments">List met Comments</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.Forum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Forum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.Gebruiker">
+            <summary>
+            Verkrijg Gebruiker Identificatie
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetNickname">
+            <summary>
+            Verkrijg de NickName
+            </summary>
+            <returns>String - Nickname</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetNickname(System.String)">
+            <summary>
+            Set de gebruiker Nickname
+            </summary>
+            <param name="nickname">String - Nickname</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserID">
+            <summary>
+            Verkrijg de Gebruikers ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetUserID(System.Int32)">
+            <summary>
+            Set de gebruikers ID
+            </summary>
+            <param name="ID">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetSecurityToken">
+            <summary>
+            Verkrijg de Security token
+            </summary>
+            <returns>String - Security Token</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetSecurityToken(System.String)">
+            <summary>
+            Set de gebruikers ID
+            </summary>
+            <param name="sectoken">String - Security Token</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.IsOnline">
+            <summary>
+            Verkrijg of de gebruiker online is
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetOnline">
+            <summary>
+            Set de gebruiker online
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetOffline">
+            <summary>
+            Set de gebruiker offline
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetCookies">
+            <summary>
+            Verkrijg de cookies van de sessie
+            </summary>
+            <returns>CookieContainer - Cookies</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetCookies(System.Net.CookieContainer)">
+            <summary>
+            Set de ccokies van de sessie
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData">
+            <summary>
+            Verkrijg GebruikersData
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetUserData">
+            <summary>
+            Sla de wijzigingen op
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.refreshData">
+            <summary>
+            Refresh de gegevens
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.utils.UtilsString">
+            <summary>
+            String Utilities
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsString.GetSubStrings(System.String,System.String,System.String)">
+            <summary>
+            Verkrijg een string tussen twee andere strings
+            </summary>
+            <param name="input">De input string</param>
+            <param name="start">De voorgaande string</param>
+            <param name="end">De achterliggende string</param>
+            <returns>Alle gevonden resultaten</returns>
+        </member>
+        <member name="T:mvdw.helpmij.gebruiker.HelpmijLogin">
+            <summary>
+            Aanmelden op Helpmij.nl
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijLogin.Login(System.String,System.String)">
+            <summary>
+            Aanmelden op Helpmij.nl
+            </summary>
+            <param name="username">Helpmij Gebruikersnaam</param>
+            <param name="passwordMD5">Wachwoord MD5 Hash</param>
+            <returns>int - ID</returns>
+            <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">Foutieve inlog gegevens</exception>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.Chat">
+            <summary>
+            Helpmij.nl Chat
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Connecteer met chat.helpmij.nl
+            </summary>
+            <param name="user">Gebruiker</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SendMessage(System.String)">
+            <summary>
+            Zend een bericht in de chat
+            </summary>
+            <param name="message">String - Bericht</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SendCommand(System.String)">
+            <summary>
+            Zend een commando naar de chat
+            </summary>
+            <param name="command">String - Commando</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.ForceUpdate">
+            <summary>
+            Forceer een update van de chat
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijForum">
+            <summary>
+            Helpmij.nl Forum
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.hasSubForums">
+            <summary>
+            Forums heeft subforums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.subForums">
+            <summary>
+            Sub forums
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.url">
+            <summary>
+            Forum URL
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.id">
+            <summary>
+            Forum ID
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.title">
+            <summary>
+            Forum Title
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijForum.topics">
+            <summary>
+            Forum Topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.HasSubForums">
+            <summary>
+            Controlleer of de forum Subforums heeft
+            </summary>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetSubForums">
+            <summary>
+            Verkrijg de sub forums
+            </summary>
+            <returns>Lijst met Forums</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
+            <summary>
+            Set de sub forums
+            </summary>
+            <param name="forums">Lijst met forums</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetURL">
+            <summary>
+            Verkrijg de forum URL
+            </summary>
+            <returns>String - URL</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetURL(System.String)">
+            <summary>
+            Set de forum URL
+            </summary>
+            <param name="url">String - URL</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetID">
+            <summary>
+            Verkrijg de forum ID
+            </summary>
+            <returns>int - ID</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetID(System.Int32)">
+            <summary>
+            Set de forum ID
+            </summary>
+            <param name="id">int - ID</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTitle">
+            <summary>
+            Verkrijg de forum titel
+            </summary>
+            <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTitle(System.String)">
+            <summary>
+            Set de forum titel
+            </summary>
+            <param name="title">String - Titel</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTopics">
+            <summary>
+            Verkrijg de topics in het forum
+            </summary>
+            <returns>Lijst met topics</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
+            <summary>
+            Set de topics in het forum
+            </summary>
+            <param name="topics">Lijst met topics</param>
+        </member>
+        <member name="T:mvdw.helpmij.forum.HelpmijTopic">
+            <summary>
+            Helpmij Topic
+            </summary>
         </member>
         <member name="F:mvdw.helpmij.forum.HelpmijTopic.title">
             <summary>
@@ -814,279 +1256,9 @@
             </summary>
             <param name="comments">List met Comments</param>
         </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijForum">
-            <summary>
-            Helpmij.nl Forum
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.forum.Forum">
-            <summary>
-            Helpmij.nl Forum
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.HasSubForums">
-            <summary>
-            Controlleer of de forum Subforums heeft
-            </summary>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetSubForums">
-            <summary>
-            Verkrijg de sub forums
-            </summary>
-            <returns>Lijst met Forums</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
-            <summary>
-            Set de sub forums
-            </summary>
-            <param name="forums">Lijst met forums</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetURL">
-            <summary>
-            Verkrijg de forum URL
-            </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetURL(System.String)">
-            <summary>
-            Set de forum URL
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetID">
-            <summary>
-            Verkrijg de forum ID
-            </summary>
-            <returns>int - ID</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetID(System.Int32)">
-            <summary>
-            Set de forum ID
-            </summary>
-            <param name="id">int - ID</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetTitle">
-            <summary>
-            Verkrijg de forum titel
-            </summary>
-            <returns>String - Titel</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetTitle(System.String)">
-            <summary>
-            Set de forum titel
-            </summary>
-            <param name="title">String - Titel</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.GetTopics">
-            <summary>
-            Verkrijg de topics in het forum
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.Forum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
-            <summary>
-            Set de topics in het forum
-            </summary>
-            <param name="topics">Lijst met topics</param>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.hasSubForums">
-            <summary>
-            Forums heeft subforums
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.subForums">
-            <summary>
-            Sub forums
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.url">
-            <summary>
-            Forum URL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.id">
-            <summary>
-            Forum ID
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.title">
-            <summary>
-            Forum Title
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.forum.HelpmijForum.topics">
-            <summary>
-            Forum Topics
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.HasSubForums">
-            <summary>
-            Controlleer of de forum Subforums heeft
-            </summary>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetSubForums">
-            <summary>
-            Verkrijg de sub forums
-            </summary>
-            <returns>Lijst met Forums</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetSubForums(System.Collections.Generic.List{mvdw.helpmijapi.forum.Forum})">
-            <summary>
-            Set de sub forums
-            </summary>
-            <param name="forums">Lijst met forums</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetURL">
-            <summary>
-            Verkrijg de forum URL
-            </summary>
-            <returns>String - URL</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetURL(System.String)">
-            <summary>
-            Set de forum URL
-            </summary>
-            <param name="url">String - URL</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetID">
-            <summary>
-            Verkrijg de forum ID
-            </summary>
-            <returns>int - ID</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetID(System.Int32)">
-            <summary>
-            Set de forum ID
-            </summary>
-            <param name="id">int - ID</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTitle">
-            <summary>
-            Verkrijg de forum titel
-            </summary>
-            <returns>String - Titel</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTitle(System.String)">
-            <summary>
-            Set de forum titel
-            </summary>
-            <param name="title">String - Titel</param>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.GetTopics">
-            <summary>
-            Verkrijg de topics in het forum
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.forum.HelpmijForum.SetTopics(System.Collections.Generic.List{mvdw.helpmijapi.forum.Topic})">
-            <summary>
-            Set de topics in het forum
-            </summary>
-            <param name="topics">Lijst met topics</param>
-        </member>
-        <member name="T:mvdw.helpmij.gebruiker.HelpmijLogin">
-            <summary>
-            Aanmelden op Helpmij.nl
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijLogin.Login(System.String,System.String)">
-            <summary>
-            Aanmelden op Helpmij.nl
-            </summary>
-            <param name="username">Helpmij Gebruikersnaam</param>
-            <param name="passwordMD5">Wachwoord MD5 Hash</param>
-            <returns>int - ID</returns>
-            <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">Foutieve inlog gegevens</exception>
-        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.GebruikerData">
             <summary>
             Verkrijg Gebruiker data
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.Gebruiker">
-            <summary>
-            Verkrijg Gebruiker Identificatie
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetNickname">
-            <summary>
-            Verkrijg de NickName
-            </summary>
-            <returns>String - Nickname</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetNickname(System.String)">
-            <summary>
-            Set de gebruiker Nickname
-            </summary>
-            <param name="nickname">String - Nickname</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserID">
-            <summary>
-            Verkrijg de Gebruikers ID
-            </summary>
-            <returns>int - ID</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetUserID(System.Int32)">
-            <summary>
-            Set de gebruikers ID
-            </summary>
-            <param name="ID">int - ID</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetSecurityToken">
-            <summary>
-            Verkrijg de Security token
-            </summary>
-            <returns>String - Security Token</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetSecurityToken(System.String)">
-            <summary>
-            Set de gebruikers ID
-            </summary>
-            <param name="sectoken">String - Security Token</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.IsOnline">
-            <summary>
-            Verkrijg of de gebruiker online is
-            </summary>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetOnline">
-            <summary>
-            Set de gebruiker online
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetOffline">
-            <summary>
-            Set de gebruiker offline
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetCookies">
-            <summary>
-            Verkrijg de cookies van de sessie
-            </summary>
-            <returns>CookieContainer - Cookies</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetCookies(System.Net.CookieContainer)">
-            <summary>
-            Set de ccokies van de sessie
-            </summary>
-            <param name="container"></param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData">
-            <summary>
-            Verkrijg GebruikersData
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetUserData">
-            <summary>
-            Sla de wijzigingen op
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.refreshData">
-            <summary>
-            Refresh de gegevens
             </summary>
         </member>
         <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetAvatarUrl">
@@ -1461,82 +1633,48 @@
             </summary>
             <param name="url">String - URL</param>
         </member>
-        <member name="T:mvdw.helpmij.forum.HelpmijComment">
+        <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
-            Reacties op een Topic
+            Helpmij Homepage topics
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.forum.Comment">
+        <member name="F:mvdw.helpmij.homepage.HomepageTopics.source">
             <summary>
-            Reacties op een Topic
+            Cache source code
             </summary>
         </member>
-        <member name="T:mvdw.helpmij.utils.UtilsEncryption">
+        <member name="F:mvdw.helpmij.homepage.HomepageTopics.user">
             <summary>
-            Encryptie Utilities
+            Cache gebruiker
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsEncryption.GetMD5Hash(System.String)">
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache">
             <summary>
-            Verkrijg een MD5 hash van een String
-            </summary>
-            <param name="str">De input</param>
-            <returns>String - MD5 hash</returns>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException">
-            <summary>
-            Unable to connect to helpmij
+            Refresh the source cache
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException.#ctor(System.String)">
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
-            Unable to connect to helpmij
-            </summary>
-            <param name="message">Error Message</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException">
-            <summary>
-            Unable to save user Exception
+            Refresh the source cache
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UnableToSaveUserException.#ctor(System.String)">
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetNewTopics">
             <summary>
-            Unable to save the user
+            Verkrijg de laatste nieuwe topics van de site
             </summary>
-            <param name="message">Error Message</param>
+            <returns>Lijst met topics</returns>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics">
             <summary>
-            Credentials Wrong Exception
+            Verkrijg de laatste onbeantwoorde topics van de site
             </summary>
+            <returns>Lijst met topics</returns>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException.#ctor(System.String)">
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
-            Credentials are wrong
+            Verkrijg de laatste vragen van de gebruiker
             </summary>
-            <param name="message">Error Message</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException">
-            <summary>
-            User Not logged in
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserNotLoggedInException.#ctor(System.String)">
-            <summary>
-            User is not logged in
-            </summary>
-            <param name="message">Error Message</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound">
-            <summary>
-            Instelling niet gevonden
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.exceptions.UserDataNotFound.#ctor(System.String)">
-            <summary>
-            User Data is not found
-            </summary>
-            <param name="message">Error Message</param>
+            <returns>Lijst met topics</returns>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy">
             <summary>
@@ -1588,128 +1726,44 @@
             Laat enkel vrienden toe te contacteren
             </summary>
         </member>
-        <member name="T:mvdw.helpmij.utils.UtilsHTTP">
+        <member name="T:mvdw.helpmij.forum.TopicReader">
             <summary>
-            HTTP Utilities
+            Helpmij Topic Reader
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsHTTP.IsInternetAvailable">
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic,System.Net.CookieContainer)">
             <summary>
-            Controlleer of er verbinding is met www.helpmij.nl
+            Verkrijg de Topic data
             </summary>
-            <returns>Boolean - True bij verbinding</returns>
+            <param name="topic">Het topic om te saven</param>
+            <param name="cookies">Eventuele cookies</param>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsHTTP.GetPOSTSource(System.String,System.String,System.Net.CookieContainer@)">
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic)">
             <summary>
-            Verkrijg de source code van een webpage
+            Verkrijg de Topic data
             </summary>
-            <param name="postData">POST data</param>
-            <param name="url">De url</param>
-            <param name="cookies">De cookies</param>
-            <returns>String - Broncode</returns>
+            <param name="topic">Het topic om te saven</param>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsHTTP.GetSource(System.String,System.Net.CookieContainer)">
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetAuthor(System.String)">
             <summary>
-            Verkrijg de source code van een webpage
+            Verkrijg de auteur van het topic
             </summary>
-            <param name="url">De url</param>
-            <param name="cookies">De cookies</param>
-            <returns>String - Broncode</returns>
+            <param name="source">De Broncode</param>
+            <returns>Gebruiker - Auteur</returns>
         </member>
-        <member name="T:mvdw.helpmijapi.Helpmij">
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetTitle(System.String)">
             <summary>
-            Helpmij Aplication Interface
+            Verkrijg de titel
             </summary>
+            <param name="source">De broncode</param>
+            <returns>String - Titel</returns>
         </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.LoginMD5(System.String,System.String)">
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetKeywords(System.String)">
             <summary>
-            Aanmelden op Helpmij.nl
+            Verkrijg de keywords
             </summary>
-            <param name="username">Helpmij gebruikersnaam</param>
-            <param name="passwordMD5">MD5 Hash van wachtwoord</param>
-            <returns>Gebruiker</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.Login(System.String,System.String)">
-            <summary>
-            Aanmelden op Helpmij.nl
-            </summary>
-            <param name="username">Helpmij gebruikersnaam</param>
-            <param name="password">Zuiver wachtwoord</param>
-            <returns>Gebruiker</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.GetUser(System.Int32)">
-            <summary>
-            Verkrijg een gebruikers met zijn ID
-            </summary>
-            <param name="ID">Gebruikers ID</param>
-            <returns>Gebruikers</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.GetNewTopics">
-            <summary>
-            Verkrijg een lijst met de nieuwe topics op de site
-            </summary>
-            <returns>List Topic - Topics</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.GetUnansweredTopics">
-            <summary>
-            Verkrijg een lijst met de nieuwe onbeantwoorde topics op de site
-            </summary>
-            <returns>List Topic - Topics</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.GetChat(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Verbind met chat.helpmij.nl
-            </summary>
-            <param name="user">Gebruiker</param>
-            <returns>Chat instantie</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
-            <summary>
-            Refresh Homepage cache
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmij.homepage.HomepageTopics">
-            <summary>
-            Helpmij Homepage topics
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.homepage.HomepageTopics.source">
-            <summary>
-            Cache source code
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.homepage.HomepageTopics.user">
-            <summary>
-            Cache gebruiker
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache">
-            <summary>
-            Refresh the source cache
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Refresh the source cache
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetNewTopics">
-            <summary>
-            Verkrijg de laatste nieuwe topics van de site
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics">
-            <summary>
-            Verkrijg de laatste onbeantwoorde topics van de site
-            </summary>
-            <returns>Lijst met topics</returns>
-        </member>
-        <member name="M:mvdw.helpmij.homepage.HomepageTopics.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Verkrijg de laatste vragen van de gebruiker
-            </summary>
-            <returns>Lijst met topics</returns>
+            <param name="source">De broncode</param>
+            <returns>String - Titel</returns>
         </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruiker">
             <summary>
@@ -2364,34 +2418,6 @@
             Helpmij.nl Chat integratie
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.chat.Chat">
-            <summary>
-            Helpmij.nl Chat
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Connecteer met chat.helpmij.nl
-            </summary>
-            <param name="user">Gebruiker</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.SendMessage(System.String)">
-            <summary>
-            Zend een bericht in de chat
-            </summary>
-            <param name="message">String - Bericht</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.SendCommand(System.String)">
-            <summary>
-            Zend een commando naar de chat
-            </summary>
-            <param name="command">String - Commando</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.ForceUpdate">
-            <summary>
-            Forceer een update van de chat
-            </summary>
-        </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.user">
             <summary>
             Chat gebruiker
@@ -2418,32 +2444,6 @@
         <member name="M:mvdw.helpmij.chat.HelpmijChat.ForceUpdate">
             <summary>
             Forceer een update van de chat
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventHandler">
-            <summary>
-            Event Handler
-            </summary>
-            <param name="e">Event arguments</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedEventArgs">
-            <summary>
-            Triggered als een Gebruiker de chat joined
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.user">
-            <summary>
-            De gebruiker die joined
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.UserJoinedEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Triggered als een Gebruiker de chat joined
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.UserJoinedListener">
-            <summary>
-            Triggered als een Gebruiker de chat joined
             </summary>
         </member>
     </members>
