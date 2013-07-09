@@ -75,13 +75,24 @@ namespace mvdw.helpmij.chat
         }
 
         /// <summary>
+        /// Registreer een chat listener
+        /// </summary>
+        /// <param name="listener">ChatListener</param>
+        public void RegisterListener(ChatListener listener)
+        {
+            this.listener = listener;
+        }
+
+
+        /// <summary>
         /// Zend een bericht in de chat
         /// </summary>
         /// <param name="message">String - Bericht</param>
         public void SendMessage(String message)
         {
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=006666", "http://chat.helpmij.nl/process.php",ref cookies);
+            UtilsHTTP.GetPOSTSource(chatSendMessage + message + "&color=006666", chatURL + chatPHP,ref cookies);
+            listener.onChatReceived(null);
         }
 
         /// <summary>

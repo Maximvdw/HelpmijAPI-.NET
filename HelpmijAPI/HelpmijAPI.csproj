@@ -8,7 +8,7 @@
     <ProjectGuid>{57063FE1-3705-4321-B775-76277A2F2B6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mvdw.helpmijapi</RootNamespace>
+    <RootNamespace>mvdw</RootNamespace>
     <AssemblyName>HelpmijAPI</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -39,7 +39,7 @@ namespace mvdw.helpmij
         /// <summary>
         /// Zend een bericht in de chat
         /// </summary>
-        public static String chatSendMessage = "function=send";
+        public static String chatSendMessage = "function=send&message=";
         /// <summary>
         /// Verkrijg de data van de chat sesise
         /// </summary>
