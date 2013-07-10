@@ -32,7 +32,7 @@ namespace mvdw.helpmij.chat
     /// <summary>
     /// Helpmij.nl Chat integratie
     /// </summary>
-    internal class HelpmijChat : HelpmijData , Chat
+    internal class HelpmijChat : HelpmijData, Chat
     {
         /// <summary>
         /// Chat gebruiker
@@ -54,7 +54,7 @@ namespace mvdw.helpmij.chat
         /// <param name="listener">ChatListener - Listener</param>
         public void Connect(Gebruiker user, ChatListener listener)
         {
-            this.listener = listener;
+            RegisterListener(listener);
             Connect(user);
         }
 
@@ -81,6 +81,7 @@ namespace mvdw.helpmij.chat
         public void RegisterListener(ChatListener listener)
         {
             this.listener = listener;
+            new HelpmijChatListener(listener);
         }
 
 
@@ -91,7 +92,7 @@ namespace mvdw.helpmij.chat
         public void SendMessage(String message)
         {
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource(chatSendMessage + message + "&color=006666", chatURL + chatPHP,ref cookies);
+            UtilsHTTP.GetPOSTSource(chatSendMessage + message + "&color=006666", chatURL + chatPHP, ref cookies);
             listener.onChatReceived(null);
         }
 
@@ -105,6 +106,18 @@ namespace mvdw.helpmij.chat
             String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
             lastUpdate = (String)data["lastupdate"];
+            String[] msgtext = (String[])data["text"];
+            List<ChatMessage> messages = new List<ChatMessage>();
+            if (msgtext != null)
+            {
+                foreach (String msg in msgtext)
+                {
+                    ChatMessage cm = new HelpmijChatMessage();
+                    cm.SetMessage(msg);
+                    messages.Add(cm);
+                }
+                listener.onChatReceived(new ChatReceivedArguments(messages));
+            }
         }
 
         /// <summary>
@@ -114,9 +127,20 @@ namespace mvdw.helpmij.chat
         {
             CookieContainer cookies = user.GetCookies();
             String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=" +
-                lastUpdate + "&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
+                lastUpdate + "&lastquoteupdate=", "http://chat.helpmij.nl/process.php", ref cookies);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
-            String[] textData = (String[])data["text"];
+            String[] msgtext = (String[])data["text"];
+            List<ChatMessage> messages = new List<ChatMessage>();
+            if (msgtext != null)
+            {
+                foreach (String msg in msgtext)
+                {
+                    ChatMessage cm = new HelpmijChatMessage();
+                    cm.SetMessage(msg);
+                    messages.Add(cm);
+                }
+                listener.onChatReceived(new ChatReceivedArguments(messages));
+            }
         }
 
         /// <summary>

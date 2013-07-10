@@ -1846,11 +1846,23 @@
             </summary>
             <returns>Gebruiker</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker die het bericht schreef
+            </summary>
+            <param name="user">Gebruiker - Auteur</param>
+        </member>
         <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetMessage">
             <summary>
             Verkrijg het bericht
             </summary>
             <returns>String - Message</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.SetMessage(System.String)">
+            <summary>
+            Set het bericht dat de gebruiker schreef
+            </summary>
+            <param name="message">String - message</param>
         </member>
         <member name="T:mvdw.helpmij.forum.HelpmijTopic">
             <summary>
@@ -2449,21 +2461,60 @@
             Helpmij.nl Chat Arguments
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedArguments.message">
+        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedArguments.messages">
             <summary>
             Received Chat message
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.#ctor(mvdw.helpmijapi.chat.ChatMessage)">
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.#ctor(System.Collections.Generic.List{mvdw.helpmijapi.chat.ChatMessage})">
             <summary>
             Chat Message received
             </summary>
-            <param name="message">ChatMessage - Message</param>
+            <param name="messages">ChatMessage - Message</param>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.GetChatMessage">
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.GetChatMessages">
             <summary>
             Verkrijg een Chat Message
             </summary>
+        </member>
+        <member name="T:mvdw.helpmij.chat.HelpmijChatMessage">
+            <summary>
+            Helpmij.nl Chat bericht
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatMessage.user">
+            <summary>
+            Helpmij Gebruiker
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatMessage.message">
+            <summary>
+            Het verzonden bericht
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetUser">
+            <summary>
+            Verkrijg de gebruiker die het bericht schreef
+            </summary>
+            <returns>Gebruiker</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker die het bericht schreef
+            </summary>
+            <param name="user">Gebruiker - Auteur</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetMessage">
+            <summary>
+            Verkrijg het bericht
+            </summary>
+            <returns>String - Message</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.SetMessage(System.String)">
+            <summary>
+            Set het bericht dat de gebruiker schreef
+            </summary>
+            <param name="message">String - message</param>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsString">
             <summary>
@@ -2598,6 +2649,32 @@
         <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
             <summary>
             Refresh Homepage cache
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.chat.HelpmijChatListener">
+            <summary>
+            Helpmij Chat Listener
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateInterval">
+            <summary>
+            Update Interval
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateFlag">
+            <summary>
+            Set to true to stop updating
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.#ctor(mvdw.helpmijapi.chat.events.ChatListener)">
+            <summary>
+            Start de chatlistener
+            </summary>
+            <param name="listener">Chat Listener</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.StopListener">
+            <summary>
+            Stop de chat listener
             </summary>
         </member>
     </members>

@@ -21,46 +21,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.chat;
+using mvdw.helpmijapi.chat.events;
 
-namespace mvdw.helpmijapi.chat.events
+namespace mvdw.helpmij.chat
 {
     /// <summary>
-    /// Helpmij.nl Chat Message Receieved Listener
+    /// Helpmij Chat Listener
     /// </summary>
-    public interface ChatReceivedListener
+    internal class HelpmijChatListener
     {
         /// <summary>
-        /// Word opgeroepen wanneer er een nieuw chat bericht is
+        /// Update Interval
         /// </summary>
-        /// <param name="e">Event Argumenten</param>
-        void onChatReceived(ChatReceivedArguments e);
-    }
-
-    /// <summary>
-    /// Helpmij.nl Chat Arguments
-    /// </summary>
-    public class ChatReceivedArguments
-    {
+        public int updateInterval = 1000;
         /// <summary>
-        /// Received Chat message
+        /// Set to true to stop updating
         /// </summary>
-        private List<ChatMessage> messages = new List<ChatMessage>();
+        public Boolean updateFlag = false;
 
         /// <summary>
-        /// Chat Message received
+        /// Start de chatlistener
         /// </summary>
-        /// <param name="messages">ChatMessage - Message</param>
-        public ChatReceivedArguments(List<ChatMessage> messages)
+        /// <param name="listener">Chat Listener</param>
+        public HelpmijChatListener(ChatListener listener)
         {
-            this.messages = messages;
+            if (listener is ChatQuitListener)
+            {
+                // ChatQuitListener
+
+            }
+            else if (listener is ChatJoinListener)
+            {
+                // ChatJoinListener
+
+            }
+            else if (listener is ChatReceivedListener)
+            {
+                // ChatReceivedListener
+
+            }
+            else
+            {
+                // ChatListener
+
+            }
         }
 
         /// <summary>
-        /// Verkrijg een Chat Message
+        /// Stop de chat listener
         /// </summary>
-        public List<ChatMessage> GetChatMessages()
+        public void StopListener()
         {
-            return messages;
+            updateFlag = false;
         }
     }
 }

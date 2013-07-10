@@ -36,9 +36,21 @@ namespace mvdw.helpmijapi.chat
         Gebruiker GetUser();
 
         /// <summary>
+        /// Set de gebruiker die het bericht schreef
+        /// </summary>
+        /// <param name="user">Gebruiker - Auteur</param>
+        void SetUser(Gebruiker user);
+
+        /// <summary>
         /// Verkrijg het bericht
         /// </summary>
         /// <returns>String - Message</returns>
         String GetMessage();
+
+        /// <summary>
+        /// Set het bericht dat de gebruiker schreef
+        /// </summary>
+        /// <param name="message">String - message</param>
+        void SetMessage(String message);
     }
 }

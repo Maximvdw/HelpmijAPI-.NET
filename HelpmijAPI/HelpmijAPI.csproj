@@ -59,6 +59,7 @@
     <Compile Include="helpmijapi\gebruiker\GebruikerPrivacy.cs" />
     <Compile Include="helpmijapi\Helpmij.cs" />
     <Compile Include="helpmijapi\HelpmijAPI.cs" />
+    <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />

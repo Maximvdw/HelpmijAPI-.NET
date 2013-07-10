@@ -20,10 +20,59 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using mvdw.helpmijapi.chat;
+using mvdw.helpmijapi.gebruiker;
 
 namespace mvdw.helpmij.chat
 {
-    internal class HelpmijChatMessage
+    /// <summary>
+    /// Helpmij.nl Chat bericht
+    /// </summary>
+    internal class HelpmijChatMessage : ChatMessage
     {
+        /// <summary>
+        /// Helpmij Gebruiker
+        /// </summary>
+        public Gebruiker user = null;
+        /// <summary>
+        /// Het verzonden bericht
+        /// </summary>
+        public String message = null;
+
+        /// <summary>
+        /// Verkrijg de gebruiker die het bericht schreef
+        /// </summary>
+        /// <returns>Gebruiker</returns>
+        public Gebruiker GetUser()
+        {
+            return user;
+        }
+
+        /// <summary>
+        /// Set de gebruiker die het bericht schreef
+        /// </summary>
+        /// <param name="user">Gebruiker - Auteur</param>
+        public void SetUser(Gebruiker user)
+        {
+            this.user = user;
+        }
+
+        /// <summary>
+        /// Verkrijg het bericht
+        /// </summary>
+        /// <returns>String - Message</returns>
+        public String GetMessage()
+        {
+            return message;
+        }
+
+        /// <summary>
+        /// Set het bericht dat de gebruiker schreef
+        /// </summary>
+        /// <param name="message">String - message</param>
+        public void SetMessage(String message)
+        {
+            this.message = message;
+        }
     }
 }
