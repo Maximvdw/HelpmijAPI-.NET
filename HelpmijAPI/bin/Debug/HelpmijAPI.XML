@@ -11,7 +11,57 @@
         </member>
         <member name="T:mvdw.helpmij.HelpmijData">
             <summary>
-            Helpmij.nl (Prefix/Suffix) Data
+            Helpmij.nl Constant Variables
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messagePrefix">
+            <summary>
+            Chat message Prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageSuffix">
+            <summary>
+            Chat message Suffix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageUsernamePrefix">
+            <summary>
+            Chat message Username prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageUsernameSuffix">
+            <summary>
+            Chat message Username suffix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageTimePrefix">
+            <summary>
+            Chat message Time prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageTimeSuffix">
+            <summary>
+            Chat message Time suffix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageColorPrefix">
+            <summary>
+            Chat message Color Prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageColorSuffix">
+            <summary>
+            Chat message Color Suffix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageIDPrefix">
+            <summary>
+            Chat message ID Prefix
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijData.messageIDSuffix">
+            <summary>
+            Chat message ID Suffix
             </summary>
         </member>
         <member name="F:mvdw.helpmij.HelpmijData.chatPHP">
@@ -2401,6 +2451,32 @@
             Laat enkel vrienden toe te contacteren
             </summary>
         </member>
+        <member name="T:mvdw.helpmij.chat.HelpmijChatListener">
+            <summary>
+            Helpmij Chat Listener
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateInterval">
+            <summary>
+            Update Interval
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateFlag">
+            <summary>
+            Set to true to stop updating
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.#ctor(mvdw.helpmijapi.chat.events.ChatListener)">
+            <summary>
+            Start de chatlistener
+            </summary>
+            <param name="listener">Chat Listener</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.StopListener">
+            <summary>
+            Stop de chat listener
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException">
             <summary>
             Unable to connect to helpmij
@@ -2649,32 +2725,6 @@
         <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
             <summary>
             Refresh Homepage cache
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmij.chat.HelpmijChatListener">
-            <summary>
-            Helpmij Chat Listener
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateInterval">
-            <summary>
-            Update Interval
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateFlag">
-            <summary>
-            Set to true to stop updating
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.#ctor(mvdw.helpmijapi.chat.events.ChatListener)">
-            <summary>
-            Start de chatlistener
-            </summary>
-            <param name="listener">Chat Listener</param>
-        </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.StopListener">
-            <summary>
-            Stop de chat listener
             </summary>
         </member>
     </members>

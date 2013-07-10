@@ -24,10 +24,50 @@ using System.Text;
 namespace mvdw.helpmij
 {
     /// <summary>
-    /// Helpmij.nl (Prefix/Suffix) Data
+    /// Helpmij.nl Constant Variables
     /// </summary>
     internal class HelpmijData
     {
+        /// <summary>
+        /// Chat message Prefix
+        /// </summary>
+        public static String messagePrefix = @"</span>";
+        /// <summary>
+        /// Chat message Suffix
+        /// </summary>
+        public static String messageSuffix = @"</li>";
+        /// <summary>
+        /// Chat message Username prefix
+        /// </summary>
+        public static String messageUsernamePrefix = @"<span class=""user"">";
+        /// <summary>
+        /// Chat message Username suffix
+        /// </summary>
+        public static String messageUsernameSuffix = @"</span>";
+        /// <summary>
+        /// Chat message Time prefix
+        /// </summary>
+        public static String messageTimePrefix = @"<span class=""time"">[";
+        /// <summary>
+        /// Chat message Time suffix
+        /// </summary>
+        public static String messageTimeSuffix = @"]</span>";
+        /// <summary>
+        /// Chat message Color Prefix
+        /// </summary>
+        public static String messageColorPrefix = @"color: ";
+        /// <summary>
+        /// Chat message Color Suffix
+        /// </summary>
+        public static String messageColorSuffix = @""">";
+        /// <summary>
+        /// Chat message ID Prefix
+        /// </summary>
+        public static String messageIDPrefix = @"<lid id=""";
+        /// <summary>
+        /// Chat message ID Suffix
+        /// </summary>
+        public static String messageIDSuffix = @""" style=""color:";
         /// <summary>
         /// Chat PHP file
         /// </summary>

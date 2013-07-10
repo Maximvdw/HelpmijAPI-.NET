@@ -106,15 +106,25 @@ namespace mvdw.helpmij.chat
             String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
             lastUpdate = (String)data["lastupdate"];
-            String[] msgtext = (String[])data["text"];
+            ArrayList msgtext = (ArrayList)data["text"];
             List<ChatMessage> messages = new List<ChatMessage>();
             if (msgtext != null)
             {
-                foreach (String msg in msgtext)
+                foreach (String msgdat in msgtext)
                 {
-                    ChatMessage cm = new HelpmijChatMessage();
-                    cm.SetMessage(msg);
-                    messages.Add(cm);
+                    try
+                    {
+                        String username = UtilsString.GetSubStrings(msgdat,
+                            messageUsernamePrefix, messageUsernameSuffix)[0];
+                        String message = UtilsString.GetSubStrings(msgdat,
+                            username + messagePrefix, messageSuffix)[0];
+                        ChatMessage cm = new HelpmijChatMessage();
+                        cm.SetMessage(message);
+                        messages.Add(cm);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
                 listener.onChatReceived(new ChatReceivedArguments(messages));
             }
@@ -127,9 +137,9 @@ namespace mvdw.helpmij.chat
         {
             CookieContainer cookies = user.GetCookies();
             String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=" +
-                lastUpdate + "&lastquoteupdate=", "http://chat.helpmij.nl/process.php", ref cookies);
+                lastUpdate + "&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
-            String[] msgtext = (String[])data["text"];
+            ArrayList msgtext = (ArrayList)data["text"];
             List<ChatMessage> messages = new List<ChatMessage>();
             if (msgtext != null)
             {
