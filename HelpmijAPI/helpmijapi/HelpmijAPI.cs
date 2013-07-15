@@ -19,8 +19,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Net;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmij.gebruiker;
+using mvdw.helpmij;
 
 namespace mvdw.helpmijapi
 {
@@ -45,6 +47,47 @@ namespace mvdw.helpmijapi
         public static Gebruiker GetAuthor()
         {
             return Helpmij.GetUser(137609);
+        }
+
+        /// <summary>
+        /// Configureer een proxy server
+        /// </summary>
+        /// <param name="url">De URL van de proxy server</param>
+        /// <param name="port">De poort van de proxy server</param>
+        public static void SetProxy(String url, int port)
+        {
+            IWebProxy proxyServer = new WebProxy(url, port);
+            HelpmijConfig.proxyServer = proxyServer;
+        }
+
+        /// <summary>
+        /// Configureer een proxy server
+        /// </summary>
+        /// <param name="url">De URL van de proxy server</param>
+        /// <param name="port">De poort van de proxy server</param>
+        /// <param name="username">Username voor proxy</param>
+        /// <param name="password">Wachtwoord voor proxy</param>
+        public static void SetProxy(String url, int port, String username, String password)
+        {
+            ICredentials credentials = new NetworkCredential(username, password);
+            IWebProxy proxyServer = new WebProxy(url + ":" + port, true, null, credentials);
+            HelpmijConfig.proxyServer = proxyServer;
+        }
+
+        /// <summary>
+        /// Stop het gebruik van de proxy server
+        /// </summary>
+        public static void DisableProxy()
+        {
+            HelpmijConfig.proxy = false; // Zet proxy op af
+        }
+
+        /// <summary>
+        /// Gebruik een proxy server
+        /// </summary>
+        public static void EnableProxy()
+        {
+            HelpmijConfig.proxy = true; // Zet proxy op aan
         }
     }
 }

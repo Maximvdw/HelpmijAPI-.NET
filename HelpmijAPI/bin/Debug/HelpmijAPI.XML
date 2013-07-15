@@ -2391,6 +2391,32 @@
             </summary>
             <returns>Gebruiker - Maximvdw</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.SetProxy(System.String,System.Int32)">
+            <summary>
+            Configureer een proxy server
+            </summary>
+            <param name="url">De URL van de proxy server</param>
+            <param name="port">De poort van de proxy server</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.SetProxy(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Configureer een proxy server
+            </summary>
+            <param name="url">De URL van de proxy server</param>
+            <param name="port">De poort van de proxy server</param>
+            <param name="username">Username voor proxy</param>
+            <param name="password">Wachtwoord voor proxy</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.DisableProxy">
+            <summary>
+            Stop het gebruik van de proxy server
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.EnableProxy">
+            <summary>
+            Gebruik een proxy server
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijComment">
             <summary>
             Reacties op een Topic
@@ -2725,6 +2751,21 @@
         <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
             <summary>
             Refresh Homepage cache
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmij.HelpmijConfig">
+            <summary>
+            Helpmij API Configuratie
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijConfig.proxy">
+            <summary>
+            Defineer of de proxy server enabled is
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijConfig.proxyServer">
+            <summary>
+            Proxy server instellingen
             </summary>
         </member>
     </members>

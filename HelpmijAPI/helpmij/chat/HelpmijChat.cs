@@ -26,6 +26,7 @@ using mvdw.helpmij.utils;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmijapi.chat.events;
+using mvdw.helpmij.gebruiker;
 
 namespace mvdw.helpmij.chat
 {
@@ -119,7 +120,10 @@ namespace mvdw.helpmij.chat
                         String message = UtilsString.GetSubStrings(msgdat,
                             username + messagePrefix, messageSuffix)[0];
                         ChatMessage cm = new HelpmijChatMessage();
+                        Gebruiker chatUser = new HelpmijGebruiker();
+                        chatUser.SetNickname(username);
                         cm.SetMessage(message);
+                        cm.SetUser(chatUser);
                         messages.Add(cm);
                     }
                     catch (Exception)
