@@ -2632,6 +2632,21 @@
             <param name="end">De achterliggende string</param>
             <returns>Alle gevonden resultaten</returns>
         </member>
+        <member name="T:mvdw.helpmij.HelpmijConfig">
+            <summary>
+            Helpmij API Configuratie
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijConfig.proxy">
+            <summary>
+            Defineer of de proxy server enabled is
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.HelpmijConfig.proxyServer">
+            <summary>
+            Proxy server instellingen
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsEncryption">
             <summary>
             Encryptie Utilities
@@ -2753,20 +2768,56 @@
             Refresh Homepage cache
             </summary>
         </member>
-        <member name="T:mvdw.helpmij.HelpmijConfig">
+        <member name="T:mvdw.helpmijapi.artwork.LogoType">
             <summary>
-            Helpmij API Configuratie
+            Helpmij Logo type
             </summary>
         </member>
-        <member name="F:mvdw.helpmij.HelpmijConfig.proxy">
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.SMALL">
             <summary>
-            Defineer of de proxy server enabled is
+            Helpmij logo small
             </summary>
         </member>
-        <member name="F:mvdw.helpmij.HelpmijConfig.proxyServer">
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.LARGE">
             <summary>
-            Proxy server instellingen
+            Helpmij logo large
             </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_SMALL">
+            <summary>
+            Helpmij logo small enkel HM
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_LARGE">
+            <summary>
+            Helpmij logo large enkel HM
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.HelpmijLogo">
+            <summary>
+            Verkrijg artwork van het Helpmij Logo
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogo(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het normale Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogoXmas(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het kerst Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - kert Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetCurrentLogo(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het beste Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Current Logo</returns>
         </member>
     </members>
 </doc>

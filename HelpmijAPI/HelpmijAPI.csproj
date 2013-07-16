@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="helpmijapi\artwork\HelpmijLogo.cs" />
     <Compile Include="helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="helpmijapi\chat\Chat.cs" />
     <Compile Include="helpmijapi\chat\events\ChatJoinListener.cs" />

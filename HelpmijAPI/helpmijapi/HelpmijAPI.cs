@@ -37,7 +37,7 @@ namespace mvdw.helpmijapi
         /// <returns></returns>
         public static Version GetVersion()
         {
-            return null;
+            return Environment.Version;
         }
 
         /// <summary>
