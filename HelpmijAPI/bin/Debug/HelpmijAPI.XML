@@ -726,6 +726,26 @@
              All numbers are parsed to doubles.
              </summary>
         </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NONE">
+            <summary>
+            TOKEN None
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_CURLY_OPEN">
+            <summary>
+            TOKEN Curly Open
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_CURLY_CLOSE">
+            <summary>
+            TOKEN Curly Close
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NULL">
+            <summary>
+            Token Null
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.utils.UtilsJSON.JsonDecode(System.String)">
             <summary>
             Parses the string json into a value
@@ -2853,6 +2873,193 @@
         <member name="P:mvdw.Properties.Resources.Logo_SMALL">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs">
+            <summary>
+            Login Failed Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.error">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.#ctor(System.Exception)">
+            <summary>
+            Login Failed Event Argeuments
+            </summary>
+            <param name="error">Login Exception</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventHandler">
+            <summary>
+            Login Failed Event Handler
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs">
+            <summary>
+            Login Success Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.user">
+            <summary>
+            Gebruiker
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.userData">
+            <summary>
+            Gebruikers Data
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Login Success Event Argeuments
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.GebruikerData)">
+            <summary>
+            Login Success Event Argeuments
+            </summary>
+            <param name="user">GebruikerData - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUserData">
+            <summary>
+            Verkrijg de gebruiker data
+            </summary>
+            <returns>GebruikerData - Data</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - User</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventHandler">
+            <summary>
+            Login Success Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.frmLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.frmLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.frmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
+            <summary>
+            Helpmij.nl Login Interface
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.user">
+            <summary>
+            Helpmij Gebruiker
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.userData">
+            <summary>
+            Helpmij Gebruikers Data
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.passwordMD5">
+            <summary>
+            Hashed wachtwoord
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.storedCred">
+            <summary>
+            Herriner Mij aan
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventHandler">
+            <summary>
+            Login Failed Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventArgs">
+            <summary>
+            Login Failed Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventHandler">
+            <summary>
+            Login Success Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventArgs">
+            <summary>
+            Login Success Event Arguments
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.#ctor">
+            <summary>
+            Login User Interface
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Inloggen(System.Boolean)">
+            <summary>
+            Inloggen
+            </summary>
+            <param name="GetInfo">Verkrijg Gebruikers informatie</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Login(System.Boolean,System.String,System.String)">
+            <summary>
+            Meld de HM gebruiker aan
+            </summary>
+            <param name="GetInfo">Verkrijg gebruikers informatie</param>
+            <param name="username">Helpmij Gebruikersnaam</param>
+            <param name="password">Helpmij Wachtwoord</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtPassword_Click(System.Object,System.EventArgs)">
+            <summary>
+            Zet 'Herriner Mij?' af
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtUsername_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Zet 'Herriner Mij?' af
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginFailed">
+            <summary>
+            Event wanneer het inloggen mislukt
+            </summary>
+        </member>
+        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginSuccess">
+            <summary>
+            Event wanneer het inloggen gelukt is
             </summary>
         </member>
     </members>

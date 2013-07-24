@@ -115,7 +115,7 @@ namespace mvdw.helpmij
         /// <summary>
         /// Avatar URL Prefix
         /// </summary>
-        public static String avatarUrlPrefix = siteURL + @"/image.php?u=";
+        public static String avatarUrlPrefix = siteURL + @"/forum/image.php?u=";
         /// <summary>
         /// Error message prefix
         /// </summary>

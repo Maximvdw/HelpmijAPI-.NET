@@ -54,6 +54,7 @@
     <Compile Include="helpmijapi\forum\Comment.cs" />
     <Compile Include="helpmijapi\forum\Forum.cs" />
     <Compile Include="helpmijapi\forum\exceptions\ForumExceptions.cs" />
+    <Compile Include="helpmijapi\gebruiker\events\LoginSuccess.cs" />
     <Compile Include="helpmijapi\gebruiker\Gebruiker.cs" />
     <Compile Include="helpmijapi\gebruiker\GebruikerData.cs" />
     <Compile Include="helpmijapi\gebruiker\exceptions\GebruikerExceptions.cs" />
@@ -62,6 +63,19 @@
     <Compile Include="helpmijapi\HelpmijAPI.cs" />
     <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
+    <Compile Include="helpmijapi\gebruiker\events\LoginFailed.cs" />
+    <Compile Include="helpmijapi\gebruiker\gui\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\gebruiker\gui\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
+      <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />
@@ -87,14 +101,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="helpmijapi\gebruiker\gui\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
+      <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\Logo_LARGE.png" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +136,7 @@
   <ItemGroup>
     <None Include="Resources\Logo-HM_SMALL.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

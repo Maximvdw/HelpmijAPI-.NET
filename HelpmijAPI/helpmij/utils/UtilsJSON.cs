@@ -32,8 +32,17 @@ namespace mvdw.helpmij.utils
     /// </summary>
     public class UtilsJSON
     {
+        /// <summary>
+        /// TOKEN None
+        /// </summary>
         public const int TOKEN_NONE = 0;
+        /// <summary>
+        /// TOKEN Curly Open
+        /// </summary>
         public const int TOKEN_CURLY_OPEN = 1;
+        /// <summary>
+        /// TOKEN Curly Close
+        /// </summary>
         public const int TOKEN_CURLY_CLOSE = 2;
         public const int TOKEN_SQUARED_OPEN = 3;
         public const int TOKEN_SQUARED_CLOSE = 4;
@@ -43,6 +52,9 @@ namespace mvdw.helpmij.utils
         public const int TOKEN_NUMBER = 8;
         public const int TOKEN_TRUE = 9;
         public const int TOKEN_FALSE = 10;
+        /// <summary>
+        /// Token Null
+        /// </summary>
         public const int TOKEN_NULL = 11;
 
         private const int BUILDER_CAPACITY = 2000;
