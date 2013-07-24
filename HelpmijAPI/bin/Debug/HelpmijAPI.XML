@@ -2659,6 +2659,57 @@
             <param name="str">De input</param>
             <returns>String - MD5 hash</returns>
         </member>
+        <member name="T:mvdw.helpmijapi.artwork.LogoType">
+            <summary>
+            Helpmij Logo type
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.SMALL">
+            <summary>
+            Helpmij logo small
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.LARGE">
+            <summary>
+            Helpmij logo large
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_SMALL">
+            <summary>
+            Helpmij logo small enkel HM
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_LARGE">
+            <summary>
+            Helpmij logo large enkel HM
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.HelpmijLogo">
+            <summary>
+            Verkrijg artwork van het Helpmij Logo
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogo(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het normale Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogoXmas(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het kerst Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - kert Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetCurrentLogo(mvdw.helpmijapi.artwork.LogoType)">
+            <summary>
+            Verkrijg het beste Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Current Logo</returns>
+        </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
             Helpmij Homepage topics
@@ -2768,56 +2819,41 @@
             Refresh Homepage cache
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.artwork.LogoType">
+        <member name="T:mvdw.Properties.Resources">
             <summary>
-            Helpmij Logo type
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.SMALL">
+        <member name="P:mvdw.Properties.Resources.ResourceManager">
             <summary>
-            Helpmij logo small
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.LARGE">
+        <member name="P:mvdw.Properties.Resources.Culture">
             <summary>
-            Helpmij logo large
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_SMALL">
+        <member name="P:mvdw.Properties.Resources.Logo_HM_LARGE">
             <summary>
-            Helpmij logo small enkel HM
+              Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_LARGE">
+        <member name="P:mvdw.Properties.Resources.Logo_HM_SMALL">
             <summary>
-            Helpmij logo large enkel HM
+              Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="T:mvdw.helpmijapi.artwork.HelpmijLogo">
+        <member name="P:mvdw.Properties.Resources.Logo_LARGE">
             <summary>
-            Verkrijg artwork van het Helpmij Logo
+              Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogo(mvdw.helpmijapi.artwork.LogoType)">
+        <member name="P:mvdw.Properties.Resources.Logo_SMALL">
             <summary>
-            Verkrijg het normale Helpmij Logo
+              Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - Logo</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogoXmas(mvdw.helpmijapi.artwork.LogoType)">
-            <summary>
-            Verkrijg het kerst Helpmij Logo
-            </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - kert Logo</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetCurrentLogo(mvdw.helpmijapi.artwork.LogoType)">
-            <summary>
-            Verkrijg het beste Helpmij Logo
-            </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - Current Logo</returns>
         </member>
     </members>
 </doc>

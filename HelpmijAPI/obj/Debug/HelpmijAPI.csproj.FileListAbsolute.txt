@@ -5,3 +5,5 @@ C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.pdb
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll.CodeAnalysisLog.xml
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll.lastcodeanalysissucceeded
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.Properties.Resources.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.csproj.GenerateResource.Cache

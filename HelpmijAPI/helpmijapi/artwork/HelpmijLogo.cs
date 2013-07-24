@@ -65,13 +65,13 @@ namespace mvdw.helpmijapi.artwork
             switch (type)
             {
                 case LogoType.SMALL:
-                    break;
+                    return Properties.Resources.Logo_SMALL;
                 case LogoType.LARGE:
-                    break;
+                    return Properties.Resources.Logo_LARGE;
                 case LogoType.HM_SMALL:
-                    break;
+                    return Properties.Resources.Logo_HM_SMALL;
                 case LogoType.HM_LARGE:
-                    break;    
+                    return Properties.Resources.Logo_HM_LARGE;
             }
             return null; // Geen logo
         }

@@ -82,8 +82,30 @@
     <Compile Include="helpmij\utils\UtilsEncryption.cs" />
     <Compile Include="helpmij\utils\UtilsHTTP.cs" />
     <Compile Include="helpmij\utils\UtilsString.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_LARGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_SMALL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-HM_LARGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-HM_SMALL.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
