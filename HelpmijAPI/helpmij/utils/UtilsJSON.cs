@@ -30,7 +30,7 @@ namespace mvdw.helpmij.utils
     /// JSON uses Arrays and Objects. These correspond here to the datatypes ArrayList and Hashtable.
     /// All numbers are parsed to doubles.
     /// </summary>
-    public class UtilsJSON
+    internal class UtilsJSON
     {
         /// <summary>
         /// TOKEN None

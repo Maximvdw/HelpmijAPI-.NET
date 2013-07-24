@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
 
@@ -38,6 +39,14 @@ namespace mvdw.helpmij.chat
         /// Het verzonden bericht
         /// </summary>
         public String message = null;
+        /// <summary>
+        /// Bericht kleur
+        /// </summary>
+        public Color color = Color.Black;
+        /// <summary>
+        /// Chat bericht type
+        /// </summary>
+        public ChatMessageType type = ChatMessageType.Normal;
 
         /// <summary>
         /// Verkrijg de gebruiker die het bericht schreef
@@ -73,6 +82,42 @@ namespace mvdw.helpmij.chat
         public void SetMessage(String message)
         {
             this.message = message;
+        }
+
+        /// <summary>
+        /// Verkrijg de kleur van het bericht
+        /// </summary>
+        /// <returns>Color - Bericht</returns>
+        public Color GetColor()
+        {
+            return color;
+        }
+
+        /// <summary>
+        /// Set de kleur van het bericht
+        /// </summary>
+        /// <param name="color">Color - Bericht</param>
+        public void SetColor(Color color)
+        {
+            this.color = color;
+        }
+
+        /// <summary>
+        /// Verkrijg het type bericht
+        /// </summary>
+        /// <returns>ChatMessageType - Type</returns>
+        public ChatMessageType GetMessageType()
+        {
+            return type;
+        }
+
+        /// <summary>
+        /// Set het type bericht
+        /// </summary>
+        /// <param name="type">ChatMessageType - Type</param>
+        public void SetMessageType(ChatMessageType type)
+        {
+            this.type = type;
         }
     }
 }

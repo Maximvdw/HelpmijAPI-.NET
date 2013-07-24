@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using mvdw.helpmijapi.gebruiker;
 
 namespace mvdw.helpmijapi.chat
@@ -52,5 +53,42 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="message">String - message</param>
         void SetMessage(String message);
+
+        /// <summary>
+        /// Verkrijg de kleur van het bericht
+        /// </summary>
+        /// <returns>Color - Bericht</returns>
+        Color GetColor();
+
+        /// <summary>
+        /// Set de kleur van het bericht
+        /// </summary>
+        /// <param name="color">Color - Bericht</param>
+        void SetColor(Color color);
+
+        /// <summary>
+        /// Verkrijg het type bericht
+        /// </summary>
+        /// <returns>ChatMessageType - Type</returns>
+        ChatMessageType GetMessageType();
+
+        /// <summary>
+        /// Set het type bericht
+        /// </summary>
+        /// <param name="type">ChatMessageType - Type</param>
+        void SetMessageType(ChatMessageType type);
+    }
+
+    /// <summary>
+    /// Chat Message Types
+    /// </summary>
+    public enum ChatMessageType
+    {
+        Normal = 0,
+        PublicAt = 1,
+        Private = 2,
+        Login = 3,
+        Logout = 4,
+        Status = 5
     }
 }

@@ -605,6 +605,11 @@
             Laatste update
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.lastMessage">
+            <summary>
+            Laatste update
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.listener">
             <summary>
             Chat listener
@@ -677,6 +682,12 @@
             Word opgeroepen wanneer er een nieuw chat bericht is
             </summary>
             <param name="e">Event Argumenten</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.onChatReceivedInvoke">
+            <summary>
+            Chat Received Delegate
+            </summary>
+            <param name="e">Event Arguments</param>
         </member>
         <member name="T:mvdw.helpmij.forum.TopicReader">
             <summary>
@@ -1934,6 +1945,35 @@
             </summary>
             <param name="message">String - message</param>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetColor">
+            <summary>
+            Verkrijg de kleur van het bericht
+            </summary>
+            <returns>Color - Bericht</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.SetColor(System.Drawing.Color)">
+            <summary>
+            Set de kleur van het bericht
+            </summary>
+            <param name="color">Color - Bericht</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetMessageType">
+            <summary>
+            Verkrijg het type bericht
+            </summary>
+            <returns>ChatMessageType - Type</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.SetMessageType(mvdw.helpmijapi.chat.ChatMessageType)">
+            <summary>
+            Set het type bericht
+            </summary>
+            <param name="type">ChatMessageType - Type</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.ChatMessageType">
+            <summary>
+            Chat Message Types
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijTopic">
             <summary>
             Helpmij Topic
@@ -2614,6 +2654,16 @@
             Het verzonden bericht
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatMessage.color">
+            <summary>
+            Bericht kleur
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatMessage.type">
+            <summary>
+            Chat bericht type
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetUser">
             <summary>
             Verkrijg de gebruiker die het bericht schreef
@@ -2637,6 +2687,30 @@
             Set het bericht dat de gebruiker schreef
             </summary>
             <param name="message">String - message</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetColor">
+            <summary>
+            Verkrijg de kleur van het bericht
+            </summary>
+            <returns>Color - Bericht</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.SetColor(System.Drawing.Color)">
+            <summary>
+            Set de kleur van het bericht
+            </summary>
+            <param name="color">Color - Bericht</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetMessageType">
+            <summary>
+            Verkrijg het type bericht
+            </summary>
+            <returns>ChatMessageType - Type</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.SetMessageType(mvdw.helpmijapi.chat.ChatMessageType)">
+            <summary>
+            Set het type bericht
+            </summary>
+            <param name="type">ChatMessageType - Type</param>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsString">
             <summary>

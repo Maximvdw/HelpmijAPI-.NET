@@ -22,6 +22,8 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Collections;
+using System.Text.RegularExpressions;
+using System.Drawing;
 using mvdw.helpmij.utils;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
@@ -42,7 +44,11 @@ namespace mvdw.helpmij.chat
         /// <summary>
         /// Laatste update
         /// </summary>
-        public String lastUpdate = null;
+        public String lastUpdate = "0";
+        /// <summary>
+        /// Laatste update
+        /// </summary>
+        public String lastMessage = "0"; 
         /// <summary>
         /// Chat listener
         /// </summary>
@@ -75,6 +81,14 @@ namespace mvdw.helpmij.chat
             lastUpdate = (String)data["lastupdate"];
         }
 
+        public String FilterHTML(String input)
+        {
+            String output = input;
+            output = Regex.Replace(output, @"<[^>]*>", String.Empty);
+            output = output.Replace("&gt;", ">");
+            return output;
+        }
+        
         /// <summary>
         /// Registreer een chat listener
         /// </summary>
@@ -119,11 +133,31 @@ namespace mvdw.helpmij.chat
                             messageUsernamePrefix, messageUsernameSuffix)[0];
                         String message = UtilsString.GetSubStrings(msgdat,
                             username + messagePrefix, messageSuffix)[0];
+                        String colorStr = UtilsString.GetSubStrings(msgdat,
+                            messageColorPrefix, messageColorSuffix)[0];
+                        Color color = ColorTranslator.FromHtml(colorStr);
+                        ChatMessageType type = ChatMessageType.Normal;
+
+                        if (message.StartsWith(":"))
+                        {
+                            // Normal message
+                            message = message.Substring(2);
+                            type = ChatMessageType.Normal;
+                        }
+                        else
+                        {
+                            // Login message
+                            type = ChatMessageType.Login;
+                        }
+
+                        // Filter HTML
+                        message = FilterHTML(message);
                         ChatMessage cm = new HelpmijChatMessage();
                         Gebruiker chatUser = new HelpmijGebruiker();
                         chatUser.SetNickname(username);
                         cm.SetMessage(message);
                         cm.SetUser(chatUser);
+                        cm.SetColor(color);
                         messages.Add(cm);
                     }
                     catch (Exception)
@@ -141,7 +175,7 @@ namespace mvdw.helpmij.chat
         {
             CookieContainer cookies = user.GetCookies();
             String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=" +
-                lastUpdate + "&lastquoteupdate=0", "http://chat.helpmij.nl/process.php", ref cookies);
+                lastUpdate + "&lastquoteupdate=" + lastMessage, chatURL + chatPHP, ref cookies);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
             ArrayList msgtext = (ArrayList)data["text"];
             List<ChatMessage> messages = new List<ChatMessage>();

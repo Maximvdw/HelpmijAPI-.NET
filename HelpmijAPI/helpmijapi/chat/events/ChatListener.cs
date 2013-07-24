@@ -30,4 +30,10 @@ namespace mvdw.helpmijapi.chat.events
     {
 
     }
+
+    /// <summary>
+    /// Chat Received Delegate
+    /// </summary>
+    /// <param name="e">Event Arguments</param>
+    public delegate void onChatReceivedInvoke(ChatReceivedArguments e);
 }
