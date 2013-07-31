@@ -24,6 +24,7 @@ using System.Drawing;
 using System.IO;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmij.utils;
 
 namespace mvdw.helpmij.gebruiker
 {
@@ -32,6 +33,11 @@ namespace mvdw.helpmij.gebruiker
     /// </summary>
     internal class HelpmijGebruiker : GebruikerData
     {
+        /// <summary>
+        /// HM Gebruiker Data
+        /// </summary>
+        private static HMGebruikerData s = new HMGebruikerData();
+
         /// <summary>
         /// User ID
         /// </summary>
@@ -181,6 +187,23 @@ namespace mvdw.helpmij.gebruiker
         /// </summary>
         public String profileURL = null;
 
+
+        /// <summary>
+        /// Reset gebruiekrs wachtwoord
+        /// </summary>
+        /// <param name="email">String - Email</param>
+        public static void ResetPassword(String email)
+        {
+            try
+            {
+                CookieContainer cookies = new CookieContainer();
+                // Get Source
+                UtilsHTTP.GetPOSTSource(s.sendPassword + email, s.siteURL + s.loginPHP, ref cookies);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
 
         /// <summary>
         /// Controlleer of een variabele geset is

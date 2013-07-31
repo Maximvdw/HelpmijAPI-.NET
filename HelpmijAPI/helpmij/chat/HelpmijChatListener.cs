@@ -41,34 +41,6 @@ namespace mvdw.helpmij.chat
         public Boolean updateFlag = false;
 
         /// <summary>
-        /// Start de chatlistener
-        /// </summary>
-        /// <param name="listener">Chat Listener</param>
-        public HelpmijChatListener(ChatListener listener)
-        {
-            if (listener is ChatQuitListener)
-            {
-                // ChatQuitListener
-
-            }
-            else if (listener is ChatJoinListener)
-            {
-                // ChatJoinListener
-
-            }
-            else if (listener is ChatReceivedListener)
-            {
-                // ChatReceivedListener
-
-            }
-            else
-            {
-                // ChatListener
-
-            }
-        }
-
-        /// <summary>
         /// Stop de chat listener
         /// </summary>
         public void StopListener()

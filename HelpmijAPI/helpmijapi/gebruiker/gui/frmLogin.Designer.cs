@@ -1,4 +1,4 @@
-﻿namespace mvdw.helpmij.gebruiker
+﻿namespace mvdw.helpmijapi.gebruiker.gui
 {
     partial class frmLogin
     {
@@ -31,7 +31,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.uiHelpmijLogin1 = new mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin();
+            this.hmLogin = new mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +63,16 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "&Annuleren";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // uiHelpmijLogin1
+            // hmLogin
             // 
-            this.uiHelpmijLogin1.BackColor = System.Drawing.Color.Transparent;
-            this.uiHelpmijLogin1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiHelpmijLogin1.Location = new System.Drawing.Point(12, 105);
-            this.uiHelpmijLogin1.Name = "uiHelpmijLogin1";
-            this.uiHelpmijLogin1.Size = new System.Drawing.Size(243, 113);
-            this.uiHelpmijLogin1.TabIndex = 0;
+            this.hmLogin.BackColor = System.Drawing.Color.Transparent;
+            this.hmLogin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hmLogin.Location = new System.Drawing.Point(12, 105);
+            this.hmLogin.Name = "hmLogin";
+            this.hmLogin.Size = new System.Drawing.Size(243, 113);
+            this.hmLogin.TabIndex = 0;
             // 
             // frmLogin
             // 
@@ -81,12 +82,15 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.uiHelpmijLogin1);
+            this.Controls.Add(this.hmLogin);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Helpmij.nl Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -94,7 +98,7 @@
 
         #endregion
 
-        private helpmijapi.gebruiker.gui.uiHelpmijLogin uiHelpmijLogin1;
+        private helpmijapi.gebruiker.gui.uiHelpmijLogin hmLogin;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;

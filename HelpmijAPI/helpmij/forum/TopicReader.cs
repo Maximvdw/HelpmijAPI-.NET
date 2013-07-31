@@ -33,8 +33,13 @@ namespace mvdw.helpmij.forum
     /// <summary>
     /// Helpmij Topic Reader
     /// </summary>
-    internal class TopicReader : HelpmijData
+    internal class TopicReader
     {
+        /// <summary>
+        /// HM Forum Data Settings
+        /// </summary>
+        private static HMForumData s = new HMForumData();
+
         /// <summary>
         /// Verkrijg de Topic data
         /// </summary>
@@ -49,6 +54,7 @@ namespace mvdw.helpmij.forum
                 topic.SetAuthor(GetAuthor(source)); // AUTHEUR
                 topic.SetTitle(GetTitle(source)); // TITEL
                 topic.SetKeywords(GetKeywords(source)); // KEYWORDS
+                topic.SetComments(GetComments(source,cookies,topic)); // COMMENTS
             }
             else
             {
@@ -76,7 +82,7 @@ namespace mvdw.helpmij.forum
         private static Gebruiker GetAuthor(String source)
         {
             String usernameAndID = UtilsString.GetSubStrings(source,
-                memberPrefix, authorSuffix)[0];
+                s.memberPrefix, s.authorSuffix)[0];
             String[] data = usernameAndID.Split('-');
             String username = data[1];
             int id = int.Parse(data[0]);
@@ -97,7 +103,7 @@ namespace mvdw.helpmij.forum
         {
             // Verkrijg de titel
             String title = UtilsString.GetSubStrings(source,
-                titlePrefix, titleSuffix)[0];
+                s.titlePrefix, s.titleSuffix)[0];
             return title;
         }
 
@@ -110,7 +116,7 @@ namespace mvdw.helpmij.forum
         {
             // Verkrijg de titel
             String keywords_str = UtilsString.GetSubStrings(source,
-                metaKeywordPrefix, metaKeywordSuffix)[0];
+                s.metaKeywordPrefix, s.metaKeywordSuffix)[0];
             // Split met ', '
             String[] data = keywords_str.Split(',');
             List<String> output = new List<String>();
@@ -119,6 +125,41 @@ namespace mvdw.helpmij.forum
             }
             // Return het resultaat
             return output;
+        }
+
+        /// <summary>
+        /// Verkrijg de comments uit de source
+        /// </summary>
+        /// <param name="source">De broncode</param>
+        /// <param name="cookies">Cookies</param>
+        /// <param name="topic">Helpmij Topic</param>
+        /// <returns>Lijst met Comment</returns>
+        private static List<Comment> GetComments(String source, CookieContainer cookies, Topic topic)
+        {
+            // Doorloop de pagina's
+            String prevPage = source;
+            String curPage = "";
+            List<Comment> comments = new List<Comment>(); // Nieuwe lijst
+            int i = 2;
+            while (prevPage != curPage)
+            {
+                // Eerste keer
+                if (curPage == "")
+                    curPage = source;
+                prevPage = curPage; // Vorige pagina
+                // Haal informatie uit pagina
+                List<String> authors = UtilsString.GetSubStrings(curPage,
+                s.memberPrefix, s.memberSuffix); // Autheurs
+                List<String> bodyHtml = UtilsString.GetSubStrings(curPage,
+                s.commentBodyPrefix, s.commentBodySuffix); // Berichten
+
+                // Verkrijg nieuwe pagina
+                curPage = UtilsHTTP.GetSource(topic.GetURL() + s.pagePrefix + i.ToString(),cookies);
+                i += 1;
+            }
+
+            // Return het resultaat
+            return comments;
         }
     }
 }

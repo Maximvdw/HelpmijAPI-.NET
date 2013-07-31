@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mvdw.helpmij.gebruiker" GeneratedClassName="HMGebruikerData">
+  <Profiles />
+  <Settings>
+    <Setting Name="siteURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.helpmij.nl/</Value>
+    </Setting>
+    <Setting Name="loginPHP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">forum/login.php</Value>
+    </Setting>
+    <Setting Name="sendPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">do=emailpassword&amp;email=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

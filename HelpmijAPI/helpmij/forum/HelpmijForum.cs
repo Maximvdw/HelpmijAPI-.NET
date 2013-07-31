@@ -81,6 +81,7 @@ namespace mvdw.helpmij.forum
         /// <param name="forums">Lijst met forums</param>
         public void SetSubForums(List<Forum> forums)
         {
+            this.subForums = forums;
         }
 
         /// <summary>
@@ -98,6 +99,7 @@ namespace mvdw.helpmij.forum
         /// <param name="url">String - URL</param>
         public void SetURL(String url)
         {
+            this.url = url;
         }
 
         /// <summary>
@@ -115,6 +117,7 @@ namespace mvdw.helpmij.forum
         /// <param name="id">int - ID</param>
         public void SetID(int id)
         {
+            this.id = id;
         }
 
         /// <summary>
@@ -149,6 +152,7 @@ namespace mvdw.helpmij.forum
         /// <param name="topics">Lijst met topics</param>
         public void SetTopics(List<Topic> topics)
         {
+            this.topics = topics;
         }
     }
 }

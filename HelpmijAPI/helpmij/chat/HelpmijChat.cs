@@ -49,21 +49,7 @@ namespace mvdw.helpmij.chat
         /// Laatste update
         /// </summary>
         public String lastMessage = "0"; 
-        /// <summary>
-        /// Chat listener
-        /// </summary>
-        public ChatListener listener = null;
 
-        /// <summary>
-        /// Connecteer met Helpmij.nl Chat
-        /// </summary>
-        /// <param name="user">Ingelogde gebruiker</param>
-        /// <param name="listener">ChatListener - Listener</param>
-        public void Connect(Gebruiker user, ChatListener listener)
-        {
-            RegisterListener(listener);
-            Connect(user);
-        }
 
         /// <summary>
         /// Connecteer met Helpmij.nl Chat
@@ -81,22 +67,17 @@ namespace mvdw.helpmij.chat
             lastUpdate = (String)data["lastupdate"];
         }
 
+        /// <summary>
+        /// Filter HTML output
+        /// </summary>
+        /// <param name="input">String - Input</param>
+        /// <returns>String - Output</returns>
         public String FilterHTML(String input)
         {
             String output = input;
             output = Regex.Replace(output, @"<[^>]*>", String.Empty);
             output = output.Replace("&gt;", ">");
             return output;
-        }
-        
-        /// <summary>
-        /// Registreer een chat listener
-        /// </summary>
-        /// <param name="listener">ChatListener</param>
-        public void RegisterListener(ChatListener listener)
-        {
-            this.listener = listener;
-            new HelpmijChatListener(listener);
         }
 
 
@@ -108,7 +89,6 @@ namespace mvdw.helpmij.chat
         {
             CookieContainer cookies = user.GetCookies();
             UtilsHTTP.GetPOSTSource(chatSendMessage + message + "&color=006666", chatURL + chatPHP, ref cookies);
-            listener.onChatReceived(null);
         }
 
         /// <summary>
@@ -164,7 +144,6 @@ namespace mvdw.helpmij.chat
                     {
                     }
                 }
-                listener.onChatReceived(new ChatReceivedArguments(messages));
             }
         }
 
@@ -187,7 +166,6 @@ namespace mvdw.helpmij.chat
                     cm.SetMessage(msg);
                     messages.Add(cm);
                 }
-                listener.onChatReceived(new ChatReceivedArguments(messages));
             }
         }
 

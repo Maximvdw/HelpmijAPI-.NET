@@ -47,13 +47,16 @@
     <Compile Include="helpmijapi\artwork\HelpmijLogo.cs" />
     <Compile Include="helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="helpmijapi\chat\Chat.cs" />
-    <Compile Include="helpmijapi\chat\events\ChatJoinListener.cs" />
-    <Compile Include="helpmijapi\chat\events\ChatListener.cs" />
-    <Compile Include="helpmijapi\chat\events\ChatQuitListener.cs" />
-    <Compile Include="helpmijapi\chat\events\ChatReceivedListener.cs" />
+    <Compile Include="helpmijapi\chat\events\ChatReceivedEvent.cs" />
     <Compile Include="helpmijapi\forum\Comment.cs" />
     <Compile Include="helpmijapi\forum\Forum.cs" />
     <Compile Include="helpmijapi\forum\exceptions\ForumExceptions.cs" />
+    <Compile Include="helpmijapi\forum\gui\uiHompageTopics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\forum\gui\uiHompageTopics.Designer.cs">
+      <DependentUpon>uiHompageTopics.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\gebruiker\events\LoginSuccess.cs" />
     <Compile Include="helpmijapi\gebruiker\Gebruiker.cs" />
     <Compile Include="helpmijapi\gebruiker\GebruikerData.cs" />
@@ -75,6 +78,16 @@
     </Compile>
     <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpmij\forum\HMForumData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>HMForumData.settings</DependentUpon>
+    </Compile>
+    <Compile Include="helpmij\gebruiker\HMGebruikerData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>HMGebruikerData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
@@ -108,6 +121,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="helpmijapi\forum\gui\uiHompageTopics.resx">
+      <DependentUpon>uiHompageTopics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +137,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="helpmij\forum\HMForumData.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>HMForumData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="helpmij\gebruiker\HMGebruikerData.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>HMGebruikerData.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

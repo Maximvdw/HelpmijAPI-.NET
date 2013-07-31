@@ -197,34 +197,6 @@ namespace mvdw.helpmij
         /// </summary>
         public static String homepageTab3 = @"ui-tabs-panel"" id=""tab_latest_questions_3";
         /// <summary>
-        /// Prefix van Member id-naam
-        /// </summary>
-        public static String memberPrefix = @" href=""member.php/";
-        /// <summary>
-        /// Suffix van Member id-naam
-        /// </summary>
-        public static String memberSuffix = @""" title=";
-        /// <summary>
-        /// Suffix van Member Author id-naam
-        /// </summary>
-        public static String authorSuffix = "?s=";
-        /// <summary>
-        /// Prefix van een Topic Title
-        /// </summary>
-        public static String titlePrefix = "<title> ";
-        /// <summary>
-        /// Suffix van een Topic Title
-        /// </summary>
-        public static String titleSuffix = "</title>";
-        /// <summary>
-        /// Prefix van de Keywords
-        /// </summary>
-        public static String metaKeywordPrefix = @"<meta name=""keywords"" content=""";
-        /// <summary>
-        /// Suffix van de Keywords
-        /// </summary>
-        public static String metaKeywordSuffix = @""" />";
-        /// <summary>
         /// Prefix van een topic post
         /// </summary>
         public static String postPrefix = @"<blockquote class=""postcontent restore "">";

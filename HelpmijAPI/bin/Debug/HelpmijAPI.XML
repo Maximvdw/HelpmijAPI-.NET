@@ -4,6 +4,42 @@
         <name>HelpmijAPI</name>
     </assembly>
     <members>
+        <member name="T:mvdw.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.Logo_HM_LARGE">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.Logo_HM_SMALL">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.Logo_LARGE">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.Logo_SMALL">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
             <summary>
             Laad en save gebruikersintellingen
@@ -222,41 +258,6 @@
         <member name="F:mvdw.helpmij.HelpmijData.homepageTab3">
             <summary>
             Tab pagina met laatste topics van user
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.memberPrefix">
-            <summary>
-            Prefix van Member id-naam
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.memberSuffix">
-            <summary>
-            Suffix van Member id-naam
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.authorSuffix">
-            <summary>
-            Suffix van Member Author id-naam
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.titlePrefix">
-            <summary>
-            Prefix van een Topic Title
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.titleSuffix">
-            <summary>
-            Suffix van een Topic Title
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.metaKeywordPrefix">
-            <summary>
-            Prefix van de Keywords
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.metaKeywordSuffix">
-            <summary>
-            Suffix van de Keywords
             </summary>
         </member>
         <member name="F:mvdw.helpmij.HelpmijData.postPrefix">
@@ -559,19 +560,6 @@
             </summary>
             <param name="user">Gebruiker</param>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker,mvdw.helpmijapi.chat.events.ChatListener)">
-            <summary>
-            Connecteer met chat.helpmij.nl
-            </summary>
-            <param name="user">Gebruiker - user</param>
-            <param name="listener">ChatListener - Listener</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.RegisterListener(mvdw.helpmijapi.chat.events.ChatListener)">
-            <summary>
-            Registreer een chat listener
-            </summary>
-            <param name="listener">ChatListener</param>
-        </member>
         <member name="M:mvdw.helpmijapi.chat.Chat.SendMessage(System.String)">
             <summary>
             Zend een bericht in de chat
@@ -610,29 +598,18 @@
             Laatste update
             </summary>
         </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChat.listener">
-            <summary>
-            Chat listener
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker,mvdw.helpmijapi.chat.events.ChatListener)">
-            <summary>
-            Connecteer met Helpmij.nl Chat
-            </summary>
-            <param name="user">Ingelogde gebruiker</param>
-            <param name="listener">ChatListener - Listener</param>
-        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
             Connecteer met Helpmij.nl Chat
             </summary>
             <param name="user">Ingelogde gebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChat.RegisterListener(mvdw.helpmijapi.chat.events.ChatListener)">
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.FilterHTML(System.String)">
             <summary>
-            Registreer een chat listener
+            Filter HTML output
             </summary>
-            <param name="listener">ChatListener</param>
+            <param name="input">String - Input</param>
+            <returns>String - Output</returns>
         </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.SendMessage(System.String)">
             <summary>
@@ -657,41 +634,14 @@
             </summary>
             <returns>String - Laatste update</returns>
         </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatListener">
-            <summary>
-            Helpmij.nl Chat Listener
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatJoinListener">
-            <summary>
-            Helpmij.nl Chat Join Listener
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatQuitListener">
-            <summary>
-            Helpmij.nl Chat Quit Listener
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedListener">
-            <summary>
-            Helpmij.nl Chat Message Receieved Listener
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedListener.onChatReceived(mvdw.helpmijapi.chat.events.ChatReceivedArguments)">
-            <summary>
-            Word opgeroepen wanneer er een nieuw chat bericht is
-            </summary>
-            <param name="e">Event Argumenten</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.onChatReceivedInvoke">
-            <summary>
-            Chat Received Delegate
-            </summary>
-            <param name="e">Event Arguments</param>
-        </member>
         <member name="T:mvdw.helpmij.forum.TopicReader">
             <summary>
             Helpmij Topic Reader
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.TopicReader.s">
+            <summary>
+            HM Forum Data Settings
             </summary>
         </member>
         <member name="M:mvdw.helpmij.forum.TopicReader.GetTopicData(mvdw.helpmijapi.forum.Topic,System.Net.CookieContainer)">
@@ -727,6 +677,36 @@
             </summary>
             <param name="source">De broncode</param>
             <returns>String - Titel</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.GetComments(System.String,System.Net.CookieContainer,mvdw.helpmijapi.forum.Topic)">
+            <summary>
+            Verkrijg de comments uit de source
+            </summary>
+            <param name="source">De broncode</param>
+            <param name="cookies">Cookies</param>
+            <param name="topic">Helpmij Topic</param>
+            <returns>Lijst met Comment</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs">
+            <summary>
+            Login Failed Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.error">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.#ctor(System.Exception)">
+            <summary>
+            Login Failed Event Argeuments
+            </summary>
+            <param name="error">Login Exception</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventHandler">
+            <summary>
+            Login Failed Event Handler
+            </summary>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsJSON">
              <summary>
@@ -1273,6 +1253,11 @@
             </summary>
             <param name="url">String - URL</param>
         </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.s">
+            <summary>
+            HM Gebruiker Data
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.userID">
             <summary>
             User ID
@@ -1457,6 +1442,12 @@
             <summary>
             Gebruikers Profiel
             </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.ResetPassword(System.String)">
+            <summary>
+            Reset gebruiekrs wachtwoord
+            </summary>
+            <param name="email">String - Email</param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.CheckVariable(System.Object)">
             <summary>
@@ -1914,6 +1905,50 @@
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.refreshData">
             <summary>
             Refresh de gegevens
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs">
+            <summary>
+            Login Success Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.user">
+            <summary>
+            Gebruiker
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.userData">
+            <summary>
+            Gebruikers Data
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Login Success Event Argeuments
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.GebruikerData)">
+            <summary>
+            Login Success Event Argeuments
+            </summary>
+            <param name="user">GebruikerData - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUserData">
+            <summary>
+            Verkrijg de gebruiker data
+            </summary>
+            <returns>GebruikerData - Data</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - User</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventHandler">
+            <summary>
+            Login Success Event Handler
             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.chat.ChatMessage">
@@ -2487,6 +2522,81 @@
             Reacties op een Topic
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.gui.frmLogin">
+            <summary>
+            Helpmij Login GUI Form
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.frmLogin.getUserData">
+            <summary>
+            Verkrijg gebruikers data
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.frmLogin.user">
+            <summary>
+            Helpmij Gebruiker
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.frmLogin.userData">
+            <summary>
+            Helpmij GebruikerData
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.#ctor(System.Boolean)">
+            <summary>
+            Helpmij Login Gui Form
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.GetUserData">
+            <summary>
+            Verkrijg gebruikers gegevens
+            </summary>
+            <returns>GebruikerData</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.btnLogin_Click(System.Object,System.EventArgs)">
+            <summary>
+            Inloggen
+            </summary>
+            <param name="sender">Button</param>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Annuleren
+            </summary>
+            <param name="sender">Button</param>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.onLoginSuccess(System.Object,mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs)">
+            <summary>
+            On Login Success Event
+            </summary>
+            <param name="e">Event Arguments</param>
+            <param name="sender">Sender</param>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.frmLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.LeeftijdPrivacy">
             <summary>
             Leeftijd privacy
@@ -2552,12 +2662,6 @@
             Set to true to stop updating
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.#ctor(mvdw.helpmijapi.chat.events.ChatListener)">
-            <summary>
-            Start de chatlistener
-            </summary>
-            <param name="listener">Chat Listener</param>
-        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChatListener.StopListener">
             <summary>
             Stop de chat listener
@@ -2618,25 +2722,127 @@
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedArguments">
+        <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
             <summary>
-            Helpmij.nl Chat Arguments
+            Helpmij.nl Login Interface
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedArguments.messages">
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.getData">
             <summary>
-            Received Chat message
+            Verkrijg data bij het inloggen
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.#ctor(System.Collections.Generic.List{mvdw.helpmijapi.chat.ChatMessage})">
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.user">
             <summary>
-            Chat Message received
+            Helpmij Gebruiker
             </summary>
-            <param name="messages">ChatMessage - Message</param>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.GetChatMessages">
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.userData">
             <summary>
-            Verkrijg een Chat Message
+            Helpmij Gebruikers Data
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.passwordMD5">
+            <summary>
+            Hashed wachtwoord
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.storedCred">
+            <summary>
+            Herriner Mij aan
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventHandler">
+            <summary>
+            Login Failed Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventArgs">
+            <summary>
+            Login Failed Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventHandler">
+            <summary>
+            Login Success Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventArgs">
+            <summary>
+            Login Success Event Arguments
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.SetGetData(System.Boolean)">
+            <summary>
+            Set of data moet verkregen worden
+            </summary>
+            <param name="val">Value</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.#ctor">
+            <summary>
+            Login User Interface
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Inloggen(System.Boolean)">
+            <summary>
+            Inloggen
+            </summary>
+            <param name="GetInfo">Verkrijg Gebruikers informatie</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Login(System.Boolean,System.String,System.String)">
+            <summary>
+            Meld de HM gebruiker aan
+            </summary>
+            <param name="GetInfo">Verkrijg gebruikers informatie</param>
+            <param name="username">Helpmij Gebruikersnaam</param>
+            <param name="password">Helpmij Wachtwoord</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtPassword_Click(System.Object,System.EventArgs)">
+            <summary>
+            Zet 'Herriner Mij?' af
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtUsername_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Zet 'Herriner Mij?' af
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtPassword_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginFailed">
+            <summary>
+            Event wanneer het inloggen mislukt
+            </summary>
+        </member>
+        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginSuccess">
+            <summary>
+            Event wanneer het inloggen gelukt is
             </summary>
         </member>
         <member name="T:mvdw.helpmij.chat.HelpmijChatMessage">
@@ -2901,6 +3107,12 @@
             </summary>
             <returns>List Topic - Topics</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Verkrijg een lijst met de nieuwe onbeantwoorde topics van de gebruiker
+            </summary>
+            <returns>List Topic - Topics</returns>
+        </member>
         <member name="M:mvdw.helpmijapi.Helpmij.GetChat(mvdw.helpmijapi.gebruiker.Gebruiker)">
             <summary>
             Verbind met chat.helpmij.nl
@@ -2913,227 +3125,84 @@
             Refresh Homepage cache
             </summary>
         </member>
-        <member name="T:mvdw.Properties.Resources">
+        <member name="M:mvdw.helpmijapi.Helpmij.ResetPassword(System.String)">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+            Reset je Helpmij Gebruiker wachtwoord
+            </summary>
+            <param name="email">String - Email</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArguments">
+            <summary>
+            Chat Received Event Arguments
             </summary>
         </member>
-        <member name="P:mvdw.Properties.Resources.ResourceManager">
+        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+            Helpmij Hompage Topics User Interface
             </summary>
         </member>
-        <member name="P:mvdw.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:mvdw.Properties.Resources.Logo_HM_LARGE">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:mvdw.Properties.Resources.Logo_HM_SMALL">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:mvdw.Properties.Resources.Logo_LARGE">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:mvdw.Properties.Resources.Logo_SMALL">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs">
-            <summary>
-            Login Failed Event Arguments
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.error">
-            <summary>
-            Error message
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs.#ctor(System.Exception)">
-            <summary>
-            Login Failed Event Argeuments
-            </summary>
-            <param name="error">Login Exception</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventHandler">
-            <summary>
-            Login Failed Event Handler
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs">
-            <summary>
-            Login Success Event Arguments
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.user">
-            <summary>
-            Gebruiker
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.userData">
-            <summary>
-            Gebruikers Data
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Login Success Event Argeuments
-            </summary>
-            <param name="user">Gebruiker - User</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.#ctor(mvdw.helpmijapi.gebruiker.GebruikerData)">
-            <summary>
-            Login Success Event Argeuments
-            </summary>
-            <param name="user">GebruikerData - User</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUserData">
-            <summary>
-            Verkrijg de gebruiker data
-            </summary>
-            <returns>GebruikerData - Data</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs.GetUser">
-            <summary>
-            Verkrijg de gebruiker
-            </summary>
-            <returns>Gebruiker - User</returns>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventHandler">
-            <summary>
-            Login Success Event Handler
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.gebruiker.frmLogin.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.frmLogin.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:mvdw.helpmij.gebruiker.frmLogin.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
-            <summary>
-            Helpmij.nl Login Interface
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.user">
+        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.user">
             <summary>
             Helpmij Gebruiker
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.userData">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.#ctor">
             <summary>
-            Helpmij Gebruikers Data
+            Initialzeer de gebruikerscontrol
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.passwordMD5">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.GetUser">
             <summary>
-            Hashed wachtwoord
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - user</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadTopics">
+            <summary>
+            Laad Helpmij Hompage Topics
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.storedCred">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadNewTopics">
             <summary>
-            Herriner Mij aan
+            Laad nieuwe topics
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventHandler">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUnansweredTopics">
             <summary>
-            Login Failed Event Handler
+            Laad onbeantwoorde topics
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginFailedEventArgs">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUserTopics">
             <summary>
-            Login Failed Event Arguments
+            Laad gebruikers topics
             </summary>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventHandler">
-            <summary>
-            Login Success Event Handler
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.LoginSuccessEventArgs">
-            <summary>
-            Login Success Event Arguments
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.#ctor">
-            <summary>
-            Login User Interface
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Inloggen(System.Boolean)">
-            <summary>
-            Inloggen
-            </summary>
-            <param name="GetInfo">Verkrijg Gebruikers informatie</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Login(System.Boolean,System.String,System.String)">
-            <summary>
-            Meld de HM gebruiker aan
-            </summary>
-            <param name="GetInfo">Verkrijg gebruikers informatie</param>
-            <param name="username">Helpmij Gebruikersnaam</param>
-            <param name="password">Helpmij Wachtwoord</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtPassword_Click(System.Object,System.EventArgs)">
-            <summary>
-            Zet 'Herriner Mij?' af
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtUsername_TextChanged(System.Object,System.EventArgs)">
-            <summary>
-            Zet 'Herriner Mij?' af
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.components">
+        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.components">
             <summary> 
             Required designer variable.
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Dispose(System.Boolean)">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.Dispose(System.Boolean)">
             <summary> 
             Clean up any resources being used.
             </summary>
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.InitializeComponent">
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.InitializeComponent">
             <summary> 
             Required method for Designer support - do not modify 
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginFailed">
+        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics.InvokeTopicLoad">
             <summary>
-            Event wanneer het inloggen mislukt
-            </summary>
-        </member>
-        <member name="E:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.onLoginSuccess">
-            <summary>
-            Event wanneer het inloggen gelukt is
+            Topic Load Invoke
             </summary>
         </member>
     </members>

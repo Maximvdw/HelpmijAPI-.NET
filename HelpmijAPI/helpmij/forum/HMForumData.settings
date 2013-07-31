@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mvdw.helpmij.forum" GeneratedClassName="HMForumData">
+  <Profiles />
+  <Settings>
+    <Setting Name="pagePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"/page"</Value>
+    </Setting>
+    <Setting Name="memberPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@" href=""member.php/"</Value>
+    </Setting>
+    <Setting Name="memberSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@""" title="</Value>
+    </Setting>
+    <Setting Name="authorSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"?s="</Value>
+    </Setting>
+    <Setting Name="titlePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"&lt;title&gt; "</Value>
+    </Setting>
+    <Setting Name="titleSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"&lt;/title&gt;"</Value>
+    </Setting>
+    <Setting Name="metaKeywordPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"&lt;meta name=""keywords"" content="""</Value>
+    </Setting>
+    <Setting Name="metaKeywordSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> @""" /&gt;"</Value>
+    </Setting>
+    <Setting Name="commentBodyPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"&lt;blockquote class=""postcontent restore ""&gt;"</Value>
+    </Setting>
+    <Setting Name="commentBodySuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"&lt;/blockquote&gt;"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

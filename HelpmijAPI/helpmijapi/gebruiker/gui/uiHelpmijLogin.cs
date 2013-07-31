@@ -39,6 +39,10 @@ namespace mvdw.helpmijapi.gebruiker.gui
     public partial class uiHelpmijLogin : UserControl
     {
         /// <summary>
+        /// Verkrijg data bij het inloggen
+        /// </summary>
+        private Boolean getData = false;
+        /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
         private Gebruiker user = null;
@@ -79,6 +83,15 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// Login Success Event Arguments
         /// </summary>
         public static LoginSuccessEventArgs LoginSuccessEventArgs;
+
+        /// <summary>
+        /// Set of data moet verkregen worden
+        /// </summary>
+        /// <param name="val">Value</param>
+        public void SetGetData(Boolean val)
+        {
+            this.getData = val;
+        }
 
         /// <summary>
         /// Login User Interface
@@ -204,6 +217,19 @@ namespace mvdw.helpmijapi.gebruiker.gui
             if (storedCred == true)
             {
                 txtUsername.BackColor = Color.White;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Controlleer of het ENTER is
+            if (e.KeyData == Keys.Enter){
+                Inloggen(getData);
             }
         }
     }

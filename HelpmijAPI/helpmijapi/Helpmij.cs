@@ -90,6 +90,15 @@ namespace mvdw.helpmijapi
         }
 
         /// <summary>
+        /// Verkrijg een lijst met de nieuwe onbeantwoorde topics van de gebruiker
+        /// </summary>
+        /// <returns>List Topic - Topics</returns>
+        public static List<HomepageTopic> GetUnansweredTopics(Gebruiker user)
+        {
+            return HomepageTopics.GetUnansweredTopics(user);
+        }
+
+        /// <summary>
         /// Verbind met chat.helpmij.nl
         /// </summary>
         /// <param name="user">Gebruiker</param>
@@ -107,6 +116,15 @@ namespace mvdw.helpmijapi
         public static void RefreshCache()
         {
             HomepageTopics.RefreshCache();
+        }
+
+        /// <summary>
+        /// Reset je Helpmij Gebruiker wachtwoord
+        /// </summary>
+        /// <param name="email">String - Email</param>
+        public static void ResetPassword(String email)
+        {
+            HelpmijGebruiker.ResetPassword(email);
         }
     }
 }

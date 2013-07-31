@@ -24,17 +24,107 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using mvdw.helpmijapi.gebruiker.events;
+using mvdw.helpmijapi.gebruiker;
 
-namespace mvdw.helpmij.gebruiker
+namespace mvdw.helpmijapi.gebruiker.gui
 {
+    /// <summary>
+    /// Helpmij Login GUI Form
+    /// </summary>
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        /// <summary>
+        /// Verkrijg gebruikers data
+        /// </summary>
+        private Boolean getUserData = false;
+        /// <summary>
+        /// Helpmij Gebruiker
+        /// </summary>
+        private Gebruiker user = null;
+        /// <summary>
+        /// Helpmij GebruikerData
+        /// </summary>
+        private GebruikerData userData = null;
+
+        /// <summary>
+        /// Helpmij Login Gui Form
+        /// </summary>
+        public frmLogin(Boolean getUserData)
         {
             InitializeComponent();
+            this.getUserData = getUserData;
+            // Register events
+            hmLogin.onLoginSuccess += new LoginSuccessEventHandler(onLoginSuccess);
         }
 
+        /// <summary>
+        /// Verkrijg de gebruiker
+        /// </summary>
+        /// <returns>Gebruiker</returns>
+        public Gebruiker GetUser()
+        {
+            return user;
+        }
+
+        /// <summary>
+        /// Verkrijg gebruikers gegevens
+        /// </summary>
+        /// <returns>GebruikerData</returns>
+        public GebruikerData GetUserData()
+        {
+            return userData;
+        }
+
+        /// <summary>
+        /// Inloggen
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Event Arguments</param>
         private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // Log in op Helpmij.nl
+            btnLogin.Text = "Bezig...";
+            btnLogin.Enabled = false;
+            hmLogin.Enabled = false;
+            hmLogin.Inloggen(getUserData);
+        }
+
+
+        /// <summary>
+        /// Annuleren
+        /// </summary>
+        /// <param name="sender">Button</param>
+        /// <param name="e">Event Arguments</param>
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Cancel Login
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        /// <summary>
+        /// On Login Success Event
+        /// </summary>
+        /// <param name="e">Event Arguments</param>
+        /// <param name="sender">Sender</param>
+        private void onLoginSuccess(Object sender, LoginSuccessEventArgs e)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new LoginSuccessEventHandler(onLoginSuccess), new Object[] { sender, e });
+            }
+            else
+            {
+                // Login success
+                this.DialogResult = DialogResult.OK;
+                if (getUserData)
+                    userData = e.GetUserData();
+                user = e.GetUser();
+                this.Close();
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
         {
 
         }

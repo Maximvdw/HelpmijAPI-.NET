@@ -19,19 +19,6 @@ namespace mvdw.helpmijapi.chat
         void Connect(Gebruiker user);
 
         /// <summary>
-        /// Connecteer met chat.helpmij.nl
-        /// </summary>
-        /// <param name="user">Gebruiker - user</param>
-        /// <param name="listener">ChatListener - Listener</param>
-        void Connect(Gebruiker user, ChatListener listener);
-
-        /// <summary>
-        /// Registreer een chat listener
-        /// </summary>
-        /// <param name="listener">ChatListener</param>
-        void RegisterListener(ChatListener listener);
-
-        /// <summary>
         /// Zend een bericht in de chat
         /// </summary>
         /// <param name="message">String - Bericht</param>
