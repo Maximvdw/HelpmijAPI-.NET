@@ -161,42 +161,6 @@ namespace mvdw.helpmij
         /// </summary>
         public static String varidSuffix = " >";
         /// <summary>
-        /// De prefix van een nieuwe topic URL
-        /// </summary>
-        public static String newTopicUrlPrefix = @"<a href=""";
-        /// <summary>
-        /// De suffix van een nieuwe topic URL
-        /// </summary>
-        public static String newTopicUrlSuffix = @""" class=""last_title""";
-        /// <summary>
-        /// De prefix van een nieuwe topic TITEL
-        /// </summary>
-        public static String newTopicTitlePrefix = @"class=""last_title"" title=""";
-        /// <summary>
-        /// De suffix van een nieuwe topic TITEL
-        /// </summary>
-        public static String newTopicTitleSuffix = @"""><span>";
-        /// <summary>
-        /// De prefix van een nieuwe topic TIME
-        /// </summary>
-        public static String newTopicTimePrefix = @"""><span>";
-        /// <summary>
-        /// De suffix van een nieuwe topic TIME
-        /// </summary>
-        public static String newTopicTimeSuffix = @" &gt;";
-        /// <summary>
-        /// Tab pagina met laatste nieuwe topics
-        /// </summary>
-        public static String homepageTab1 = @"ui-tabs-panel"" id=""tab_latest_questions_1";
-        /// <summary>
-        /// Tab pagina met laatste onbeantwoorde topics
-        /// </summary>
-        public static String homepageTab2 = @"ui-tabs-panel"" id=""tab_latest_questions_2";
-        /// <summary>
-        /// Tab pagina met laatste topics van user
-        /// </summary>
-        public static String homepageTab3 = @"ui-tabs-panel"" id=""tab_latest_questions_3";
-        /// <summary>
         /// Prefix van een topic post
         /// </summary>
         public static String postPrefix = @"<blockquote class=""postcontent restore "">";

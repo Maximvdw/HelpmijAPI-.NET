@@ -25,7 +25,7 @@ using System.Drawing;
 /*
  * DO NOT INCLUDE IN LITE VERSION
  */
-namespace mvdw.helpmijapi.artwork
+namespace mvdw.helpmijapi.artwork.logo
 {
     /// <summary>
     /// Helpmij Logo type
@@ -65,13 +65,13 @@ namespace mvdw.helpmijapi.artwork
             switch (type)
             {
                 case LogoType.SMALL:
-                    return Properties.Resources.Logo_SMALL;
+                    return resLogos.Logo_SMALL;
                 case LogoType.LARGE:
-                    return Properties.Resources.Logo_LARGE;
+                    return resLogos.Logo_LARGE;
                 case LogoType.HM_SMALL:
-                    return Properties.Resources.Logo_HM_SMALL;
+                    return resLogos.Logo_HM_SMALL;
                 case LogoType.HM_LARGE:
-                    return Properties.Resources.Logo_HM_LARGE;
+                    return resLogos.Logo_HM_LARGE;
             }
             return null; // Geen logo
         }

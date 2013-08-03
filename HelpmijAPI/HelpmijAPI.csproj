@@ -36,6 +36,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>HMapi.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -44,7 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="helpmijapi\artwork\HelpmijLogo.cs" />
+    <Compile Include="helpmijapi\artwork\logo\HelpmijLogo.cs" />
+    <Compile Include="helpmijapi\artwork\logo\resLogos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resLogos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="helpmijapi\artwork\userbar\HelpmijUserbar.cs" />
+    <Compile Include="helpmijapi\artwork\userbar\resUserbars.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>resUserbars.resx</DependentUpon>
+    </Compile>
+    <Compile Include="helpmijapi\artwork\userbar\uiUserbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\artwork\userbar\uiUserbar.Designer.cs">
+      <DependentUpon>uiUserbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="helpmijapi\chat\Chat.cs" />
     <Compile Include="helpmijapi\chat\events\ChatReceivedEvent.cs" />
@@ -121,6 +147,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="helpmijapi\artwork\logo\resLogos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>resLogos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\artwork\userbar\resUserbars.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>resUserbars.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\artwork\userbar\uiUserbar.resx">
+      <DependentUpon>uiUserbar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\forum\gui\uiHompageTopics.resx">
       <DependentUpon>uiHompageTopics.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="helpmij\forum\HMForumData.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>HMForumData.Designer.cs</LastGenOutput>
@@ -145,11 +185,28 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>HMGebruikerData.Designer.cs</LastGenOutput>
     </None>
+    <None Include="HMapi.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\CALIBRI.TTF" />
+    <None Include="Resources\CAMBRIA.TTC" />
     <None Include="Resources\Logo_LARGE.png" />
+    <None Include="Resources\UB_Belg.ini" />
+    <None Include="Resources\UB_Classic.ini" />
+    <None Include="Resources\UB_ClassicDark.ini" />
+    <None Include="Resources\UB_Emboss.ini" />
+    <None Include="Resources\UB_GreenSpring.ini" />
+    <None Include="Resources\UB_Herfst.ini" />
+    <None Include="Resources\UB_Nederland.ini" />
+    <None Include="Resources\UB_Online.ini" />
+    <None Include="Resources\UB_RainbowBlue.ini" />
+    <None Include="Resources\UB_RainbowGreen.ini" />
+    <None Include="Resources\UB_RainbowRed.ini" />
+    <None Include="Resources\UB_RainbowYellow.ini" />
+    <None Include="Resources\UB_Weer.ini" />
+    <None Include="Resources\visitor.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_SMALL.png" />
@@ -159,6 +216,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo-HM_SMALL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Belg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Belg_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Classic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Classic_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_ClassicDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_ClassicDark_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Emboss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Emboss_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_GreenSpring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_GreenSpring_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Herfst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Herfst_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Nederland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_Nederland_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowBlue_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowGreen_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowRed_PREVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UB_RainbowYellow_PREVIEW.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

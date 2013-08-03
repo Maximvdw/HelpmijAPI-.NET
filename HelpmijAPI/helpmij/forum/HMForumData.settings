@@ -32,5 +32,35 @@
     <Setting Name="commentBodySuffix" Type="System.String" Scope="User">
       <Value Profile="(Default)">@"&lt;/blockquote&gt;"</Value>
     </Setting>
+    <Setting Name="siteURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"http://www.helpmij.nl"</Value>
+    </Setting>
+    <Setting Name="newTopicUrlPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"&lt;a href="""</Value>
+    </Setting>
+    <Setting Name="newTopicUrlSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@""" class=""last_title"""</Value>
+    </Setting>
+    <Setting Name="newTopicTitlePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"class=""last_title"" title="""</Value>
+    </Setting>
+    <Setting Name="newTopicTitleSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"""&gt;&lt;span&gt;"</Value>
+    </Setting>
+    <Setting Name="newTopicTimePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"""&gt;&lt;span&gt;"</Value>
+    </Setting>
+    <Setting Name="newTopicTimeSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@" &amp;gt;"</Value>
+    </Setting>
+    <Setting Name="homepageTab1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_1"</Value>
+    </Setting>
+    <Setting Name="homepageTab2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_2"</Value>
+    </Setting>
+    <Setting Name="homepageTab3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_3"</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -20,24 +20,19 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="P:mvdw.Properties.Resources.Logo_HM_LARGE">
+        <member name="P:mvdw.Properties.Resources.CALIBRI">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
-        <member name="P:mvdw.Properties.Resources.Logo_HM_SMALL">
+        <member name="P:mvdw.Properties.Resources.CAMBRIA">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
-        <member name="P:mvdw.Properties.Resources.Logo_LARGE">
+        <member name="P:mvdw.Properties.Resources.visitor">
             <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:mvdw.Properties.Resources.Logo_SMALL">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
+              Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerData">
@@ -213,51 +208,6 @@
         <member name="F:mvdw.helpmij.HelpmijData.varidSuffix">
             <summary>
             De suffix van de javascript var met de userid
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicUrlPrefix">
-            <summary>
-            De prefix van een nieuwe topic URL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicUrlSuffix">
-            <summary>
-            De suffix van een nieuwe topic URL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicTitlePrefix">
-            <summary>
-            De prefix van een nieuwe topic TITEL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicTitleSuffix">
-            <summary>
-            De suffix van een nieuwe topic TITEL
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicTimePrefix">
-            <summary>
-            De prefix van een nieuwe topic TIME
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.newTopicTimeSuffix">
-            <summary>
-            De suffix van een nieuwe topic TIME
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.homepageTab1">
-            <summary>
-            Tab pagina met laatste nieuwe topics
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.homepageTab2">
-            <summary>
-            Tab pagina met laatste onbeantwoorde topics
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.homepageTab3">
-            <summary>
-            Tab pagina met laatste topics van user
             </summary>
         </member>
         <member name="F:mvdw.helpmij.HelpmijData.postPrefix">
@@ -634,6 +584,75 @@
             </summary>
             <returns>String - Laatste update</returns>
         </member>
+        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics">
+            <summary>
+            Helpmij Hompage Topics User Interface
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.user">
+            <summary>
+            Helpmij Gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.#ctor">
+            <summary>
+            Initialzeer de gebruikerscontrol
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - user</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadTopics">
+            <summary>
+            Laad Helpmij Hompage Topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadNewTopics">
+            <summary>
+            Laad nieuwe topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUnansweredTopics">
+            <summary>
+            Laad onbeantwoorde topics
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUserTopics">
+            <summary>
+            Laad gebruikers topics
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics.InvokeTopicLoad">
+            <summary>
+            Topic Load Invoke
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.forum.TopicReader">
             <summary>
             Helpmij Topic Reader
@@ -732,9 +751,54 @@
             TOKEN Curly Close
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_SQUARED_OPEN">
+            <summary>
+            TOKEN Squared Open
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_SQUARED_CLOSE">
+            <summary>
+            TOKEN Squared Close
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_COLON">
+            <summary>
+            TOKEN Colon
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_COMMA">
+            <summary>
+            TOKEN Comma
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_STRING">
+            <summary>
+            TOKEN String
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NUMBER">
+            <summary>
+            TOKEN Number
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_TRUE">
+            <summary>
+            TOKEN True
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_FALSE">
+            <summary>
+            TOKEN False
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NULL">
             <summary>
             Token Null
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsJSON.BUILDER_CAPACITY">
+            <summary>
+            Builder Capacity
             </summary>
         </member>
         <member name="M:mvdw.helpmij.utils.UtilsJSON.JsonDecode(System.String)">
@@ -758,6 +822,15 @@
             </summary>
             <param name="json">A Hashtable / ArrayList</param>
             <returns>A JSON encoded string, or null if object 'json' is not serializable</returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)">
+            <summary>
+            Parse JSON Object
+            </summary>
+            <param name="json">Json</param>
+            <param name="index">Index output</param>
+            <param name="success">Succes output</param>
+            <returns>Hashtable</returns>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
@@ -2009,6 +2082,42 @@
             Chat Message Types
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.artwork.logo.resLogos">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.Logo_HM_LARGE">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.Logo_HM_SMALL">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.Logo_LARGE">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.logo.resLogos.Logo_SMALL">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijTopic">
             <summary>
             Helpmij Topic
@@ -2512,6 +2621,11 @@
             Gebruik een proxy server
             </summary>
         </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.ResetSettings">
+            <summary>
+            Reset API Settings
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijComment">
             <summary>
             Reacties op een Topic
@@ -2521,6 +2635,361 @@
             <summary>
             Reacties op een Topic
             </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.userbar.resUserbars">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Belg">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Belg Style
+            Version=1.2.0
+            Image=UB_Belg.png
+            Preview=UB_Belg_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=7
+            Color_OUTSIDE_Green=69
+            Color_OUTSIDE_Blue=136
+            Txt_Xpos=335
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Belg_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Belg_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Classic">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Classic Style
+            Version=1.2.0
+            Image=UB_Classic.png
+            Preview=UB_Classic_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=0
+            Color_OUTSIDE_Green=0
+            Color_OUTSIDE_Blue=0
+            Txt_Xpos=322
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Classic_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Classic_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_ClassicDark">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Classic Dark Style
+            Version=1.2.0
+            Image=UB_ClassicDark.png
+            Preview=UB_ClassicDark_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=5
+            Color_OUTSIDE_Green=46
+            Color_OUTSIDE_Blue=86
+            Txt_Xpos=334
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_ClassicDark_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_ClassicDark_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Emboss">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Emboss Style
+            Version=1.2.0
+            Image=UB_Emboss.png
+            Preview=UB_Emboss.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=0
+            Color_OUTSIDE_Green=0
+            Color_OUTSIDE_Blue=0
+            Txt_Xpos=322
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Emboss_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Emboss_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_GreenSpring">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Green Spring
+            Version=1.2.0
+            Image=UB_GreenSpring.png
+            Preview=UB_GreenSpring_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=53
+            Color_OUTSIDE_Green=85
+            Color_OUTSIDE_Blue=5
+            Txt_Xpos=332
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_GreenSpring_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_GreenSpring_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Herfst">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Herfst Style
+            Version=1.2.0
+            Image=UB_Herfst.png
+            Preview=UB_Herfst_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=217
+            Color_INSIDE_Blue=156
+            Color_OUTSIDE_Red=36
+            Color_OUTSIDE_Green=29
+            Color_OUTSIDE_Blue=13
+            Txt_Xpos=337
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Herfst_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Herfst_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Nederland">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Nederland Style
+            Version=1.2.0
+            Image=UB_Nederland.png
+            Preview=UB_Nederland_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=7
+            Color_OUTSIDE_Green=69
+            Color_OUTSIDE_Blue=136
+            Txt_Xpos=335
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Nederland_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Nederland_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Online">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Dynamic Online
+            Version=1.3.0
+            
+            Dynamic=true
+            AllowOveride=true
+            URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Online/UB_Online.php
+            
+            Argument_Version_Name=#HIDE#
+            Argument_Version_TXT=version
+            Argument_Version=1.0.0
+            Argument_Style_Name=Userbar Stijl
+            Argument_Style_TXT=style
+            Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
+            Argument_ID_Name=Gebruikers ID
+            Argument_ID_TXT=us [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowBlue">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Rainbow Blue Style
+            Version=1.2.0
+            Image=UB_RainbowBlue.png
+            Preview=UB_RainbowBlue_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=37
+            Color_OUTSIDE_Green=39
+            Color_OUTSIDE_Blue=125
+            Txt_Xpos=336
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowBlue_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowBlue_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowGreen">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Rainbow Green Style
+            Version=1.2.0
+            Image=UB_RainbowGreen.png
+            Preview=UB_RainbowGreen_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=62
+            Color_OUTSIDE_Green=136
+            Color_OUTSIDE_Blue=15
+            Txt_Xpos=336
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowGreen_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowGreen_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowRed">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Rainbow Red Style
+            Version=1.2.0
+            Image=UB_RainbowRed.png
+            Preview=UB_RainbowRed_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=172
+            Color_OUTSIDE_Green=25
+            Color_OUTSIDE_Blue=20
+            Txt_Xpos=336
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowRed_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowRed_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowYellow">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Rainbow Yellow Style
+            Version=1.2.0
+            Image=UB_RainbowYellow.png
+            Preview=UB_RainbowYellow_PREVIEW.png
+            Color_INSIDE_Red=255
+            Color_INSIDE_Green=255
+            Color_INSIDE_Blue=255
+            Color_OUTSIDE_Red=114
+            Color_OUTSIDE_Green=113
+            Color_OUTSIDE_Blue=28
+            Txt_Xpos=336
+            Txt_Ypos=5.
+             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowYellow_img">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowYellow_PREVIEW">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Weer">
+             <summary>
+               Looks up a localized string similar to [USERBAR]
+            Name=Helpmij Dynamic Weer
+            Version=1.3.0
+            
+            Dynamic=true
+            AllowOveride=true
+            URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Weer/UB_Weer.php
+            
+            Argument_Version_Name=#HIDE#
+            Argument_Version_TXT=version
+            Argument_Version=1.0.0
+            Argument_Style_Name=Userbar Stijl
+            Argument_Style_TXT=style
+            Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
+            Argument_ID_Name=/
+            Argument_ID_TXT=/
+            Argument_ID=/
+            Ar [rest of string was truncated]&quot;;.
+             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.frmLogin">
             <summary>
@@ -2647,6 +3116,38 @@
             Laat enkel vrienden toe te contacteren
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.artwork.userbar.uiUserbar">
+            <summary>
+            Helpmij.nl Userbars
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.uiUserbar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.#ctor">
+            <summary>
+            Helpmij.nl Userbars
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.DefaultUserbar">
+            <summary>
+            Basis Userbar
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.chat.HelpmijChatListener">
             <summary>
             Helpmij Chat Listener
@@ -2722,6 +3223,11 @@
             </summary>
             <param name="message">Error Message</param>
         </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArguments">
+            <summary>
+            Chat Received Event Arguments
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
             <summary>
             Helpmij.nl Login Interface
@@ -2772,28 +3278,20 @@
             Login Success Event Arguments
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.SetGetData(System.Boolean)">
-            <summary>
-            Set of data moet verkregen worden
-            </summary>
-            <param name="val">Value</param>
-        </member>
         <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.#ctor">
             <summary>
             Login User Interface
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Inloggen(System.Boolean)">
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Inloggen">
             <summary>
             Inloggen
             </summary>
-            <param name="GetInfo">Verkrijg Gebruikers informatie</param>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Login(System.Boolean,System.String,System.String)">
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Login(System.String,System.String)">
             <summary>
             Meld de HM gebruiker aan
             </summary>
-            <param name="GetInfo">Verkrijg gebruikers informatie</param>
             <param name="username">Helpmij Gebruikersnaam</param>
             <param name="password">Helpmij Wachtwoord</param>
         </member>
@@ -2947,6 +3445,57 @@
             Proxy server instellingen
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.artwork.logo.LogoType">
+            <summary>
+            Helpmij Logo type
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.logo.LogoType.SMALL">
+            <summary>
+            Helpmij logo small
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.logo.LogoType.LARGE">
+            <summary>
+            Helpmij logo large
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.logo.LogoType.HM_SMALL">
+            <summary>
+            Helpmij logo small enkel HM
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.logo.LogoType.HM_LARGE">
+            <summary>
+            Helpmij logo large enkel HM
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.logo.HelpmijLogo">
+            <summary>
+            Verkrijg artwork van het Helpmij Logo
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.logo.HelpmijLogo.GetLogo(mvdw.helpmijapi.artwork.logo.LogoType)">
+            <summary>
+            Verkrijg het normale Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.logo.HelpmijLogo.GetLogoXmas(mvdw.helpmijapi.artwork.logo.LogoType)">
+            <summary>
+            Verkrijg het kerst Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - kert Logo</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.logo.HelpmijLogo.GetCurrentLogo(mvdw.helpmijapi.artwork.logo.LogoType)">
+            <summary>
+            Verkrijg het beste Helpmij Logo
+            </summary>
+            <param name="type">Logo type</param>
+            <returns>Image - Current Logo</returns>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsEncryption">
             <summary>
             Encryptie Utilities
@@ -2959,60 +3508,19 @@
             <param name="str">De input</param>
             <returns>String - MD5 hash</returns>
         </member>
-        <member name="T:mvdw.helpmijapi.artwork.LogoType">
+        <member name="T:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar">
             <summary>
-            Helpmij Logo type
+            Helpmij Userbar
             </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.SMALL">
-            <summary>
-            Helpmij logo small
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.LARGE">
-            <summary>
-            Helpmij logo large
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_SMALL">
-            <summary>
-            Helpmij logo small enkel HM
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.artwork.LogoType.HM_LARGE">
-            <summary>
-            Helpmij logo large enkel HM
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.artwork.HelpmijLogo">
-            <summary>
-            Verkrijg artwork van het Helpmij Logo
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogo(mvdw.helpmijapi.artwork.LogoType)">
-            <summary>
-            Verkrijg het normale Helpmij Logo
-            </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - Logo</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetLogoXmas(mvdw.helpmijapi.artwork.LogoType)">
-            <summary>
-            Verkrijg het kerst Helpmij Logo
-            </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - kert Logo</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.artwork.HelpmijLogo.GetCurrentLogo(mvdw.helpmijapi.artwork.LogoType)">
-            <summary>
-            Verkrijg het beste Helpmij Logo
-            </summary>
-            <param name="type">Logo type</param>
-            <returns>Image - Current Logo</returns>
         </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
             Helpmij Homepage topics
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.homepage.HomepageTopics.s">
+            <summary>
+            HM Forum Data Settings
             </summary>
         </member>
         <member name="F:mvdw.helpmij.homepage.HomepageTopics.source">
@@ -3130,80 +3638,6 @@
             Reset je Helpmij Gebruiker wachtwoord
             </summary>
             <param name="email">String - Email</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArguments">
-            <summary>
-            Chat Received Event Arguments
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics">
-            <summary>
-            Helpmij Hompage Topics User Interface
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.user">
-            <summary>
-            Helpmij Gebruiker
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.#ctor">
-            <summary>
-            Initialzeer de gebruikerscontrol
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.GetUser">
-            <summary>
-            Verkrijg de gebruiker
-            </summary>
-            <returns>Gebruiker - user</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
-            <summary>
-            Set de gebruiker
-            </summary>
-            <param name="user">Gebruiker - User</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadTopics">
-            <summary>
-            Laad Helpmij Hompage Topics
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadNewTopics">
-            <summary>
-            Laad nieuwe topics
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUnansweredTopics">
-            <summary>
-            Laad onbeantwoorde topics
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.LoadUserTopics">
-            <summary>
-            Laad gebruikers topics
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics.InvokeTopicLoad">
-            <summary>
-            Topic Load Invoke
-            </summary>
         </member>
     </members>
 </doc>

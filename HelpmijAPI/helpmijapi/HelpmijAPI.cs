@@ -23,6 +23,7 @@ using System.Net;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmij.gebruiker;
 using mvdw.helpmij;
+using mvdw.helpmij.forum;
 
 namespace mvdw.helpmijapi
 {
@@ -88,6 +89,15 @@ namespace mvdw.helpmijapi
         public static void EnableProxy()
         {
             HelpmijConfig.proxy = true; // Zet proxy op aan
+        }
+
+        /// <summary>
+        /// Reset API Settings
+        /// </summary>
+        public static void ResetSettings()
+        {
+            HMGebruikerData.Default.Reset();
+            HMForumData.Default.Reset();
         }
     }
 }

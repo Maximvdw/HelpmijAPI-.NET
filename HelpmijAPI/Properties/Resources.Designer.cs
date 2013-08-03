@@ -61,42 +61,32 @@ namespace mvdw.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_HM_LARGE {
+        internal static byte[] CALIBRI {
             get {
-                object obj = ResourceManager.GetObject("Logo_HM_LARGE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("CALIBRI", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_HM_SMALL {
+        internal static byte[] CAMBRIA {
             get {
-                object obj = ResourceManager.GetObject("Logo_HM_SMALL", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("CAMBRIA", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_LARGE {
+        internal static byte[] visitor {
             get {
-                object obj = ResourceManager.GetObject("Logo_LARGE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo_SMALL {
-            get {
-                object obj = ResourceManager.GetObject("Logo_SMALL", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("visitor", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

@@ -142,5 +142,125 @@ namespace mvdw.helpmij.forum {
                 this["commentBodySuffix"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"http://www.helpmij.nl\"")]
+        public string siteURL {
+            get {
+                return ((string)(this["siteURL"]));
+            }
+            set {
+                this["siteURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"<a href=\"\"\"")]
+        public string newTopicUrlPrefix {
+            get {
+                return ((string)(this["newTopicUrlPrefix"]));
+            }
+            set {
+                this["newTopicUrlPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\" class=\"\"last_title\"\"\"")]
+        public string newTopicUrlSuffix {
+            get {
+                return ((string)(this["newTopicUrlSuffix"]));
+            }
+            set {
+                this["newTopicUrlSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"class=\"\"last_title\"\" title=\"\"\"")]
+        public string newTopicTitlePrefix {
+            get {
+                return ((string)(this["newTopicTitlePrefix"]));
+            }
+            set {
+                this["newTopicTitlePrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\"><span>\"")]
+        public string newTopicTitleSuffix {
+            get {
+                return ((string)(this["newTopicTitleSuffix"]));
+            }
+            set {
+                this["newTopicTitleSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\"><span>\"")]
+        public string newTopicTimePrefix {
+            get {
+                return ((string)(this["newTopicTimePrefix"]));
+            }
+            set {
+                this["newTopicTimePrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\" &gt;\"")]
+        public string newTopicTimeSuffix {
+            get {
+                return ((string)(this["newTopicTimeSuffix"]));
+            }
+            set {
+                this["newTopicTimeSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_1\"")]
+        public string homepageTab1 {
+            get {
+                return ((string)(this["homepageTab1"]));
+            }
+            set {
+                this["homepageTab1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_2\"")]
+        public string homepageTab2 {
+            get {
+                return ((string)(this["homepageTab2"]));
+            }
+            set {
+                this["homepageTab2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_3\"")]
+        public string homepageTab3 {
+            get {
+                return ((string)(this["homepageTab3"]));
+            }
+            set {
+                this["homepageTab3"] = value;
+            }
+        }
     }
 }

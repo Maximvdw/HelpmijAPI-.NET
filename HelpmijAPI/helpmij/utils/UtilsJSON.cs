@@ -44,19 +44,46 @@ namespace mvdw.helpmij.utils
         /// TOKEN Curly Close
         /// </summary>
         public const int TOKEN_CURLY_CLOSE = 2;
+        /// <summary>
+        /// TOKEN Squared Open
+        /// </summary>
         public const int TOKEN_SQUARED_OPEN = 3;
+        /// <summary>
+        /// TOKEN Squared Close
+        /// </summary>
         public const int TOKEN_SQUARED_CLOSE = 4;
+        /// <summary>
+        /// TOKEN Colon
+        /// </summary>
         public const int TOKEN_COLON = 5;
+        /// <summary>
+        /// TOKEN Comma
+        /// </summary>
         public const int TOKEN_COMMA = 6;
+        /// <summary>
+        /// TOKEN String
+        /// </summary>
         public const int TOKEN_STRING = 7;
+        /// <summary>
+        /// TOKEN Number
+        /// </summary>
         public const int TOKEN_NUMBER = 8;
+        /// <summary>
+        /// TOKEN True
+        /// </summary>
         public const int TOKEN_TRUE = 9;
+        /// <summary>
+        /// TOKEN False
+        /// </summary>
         public const int TOKEN_FALSE = 10;
         /// <summary>
         /// Token Null
         /// </summary>
         public const int TOKEN_NULL = 11;
 
+        /// <summary>
+        /// Builder Capacity
+        /// </summary>
         private const int BUILDER_CAPACITY = 2000;
 
         /// <summary>
@@ -105,6 +132,13 @@ namespace mvdw.helpmij.utils
             return (success ? builder.ToString() : null);
         }
 
+        /// <summary>
+        /// Parse JSON Object
+        /// </summary>
+        /// <param name="json">Json</param>
+        /// <param name="index">Index output</param>
+        /// <param name="success">Succes output</param>
+        /// <returns>Hashtable</returns>
         protected static Hashtable ParseObject(char[] json, ref int index, ref bool success)
         {
             Hashtable table = new Hashtable();

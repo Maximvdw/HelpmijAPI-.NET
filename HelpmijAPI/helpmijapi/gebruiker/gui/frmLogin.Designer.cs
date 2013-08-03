@@ -37,7 +37,7 @@
             // 
             // picLogo
             // 
-            this.picLogo.Image = global::mvdw.Properties.Resources.Logo_SMALL;
+            this.picLogo.Image = global::mvdw.helpmijapi.artwork.logo.resLogos.Logo_SMALL;
             this.picLogo.Location = new System.Drawing.Point(12, 12);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(243, 87);

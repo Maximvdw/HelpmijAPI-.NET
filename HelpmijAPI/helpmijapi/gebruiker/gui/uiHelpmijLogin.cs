@@ -83,14 +83,13 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// Login Success Event Arguments
         /// </summary>
         public static LoginSuccessEventArgs LoginSuccessEventArgs;
+        
 
-        /// <summary>
-        /// Set of data moet verkregen worden
-        /// </summary>
-        /// <param name="val">Value</param>
-        public void SetGetData(Boolean val)
+        [Description("Verkrijg gebruikers gegevens"), Category("Data")] 
+        public Boolean Data
         {
-            this.getData = val;
+            get { return getData; }
+            set { getData = value; }
         }
 
         /// <summary>
@@ -123,8 +122,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Inloggen
         /// </summary>
-        /// <param name="GetInfo">Verkrijg Gebruikers informatie</param>
-        public void Inloggen(Boolean GetInfo)
+        public void Inloggen()
         {
             // Controlleer of de velden ingevoerd zijn
             if (txtUsername.Text != "" && txtUsername.Text != "")
@@ -148,7 +146,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
                     // Reset settings
                     Properties.Settings.Default.Reset();
                 }
-                Thread thLogin = new Thread(() => Login(GetInfo, username, passwordMD5));
+                Thread thLogin = new Thread(() => Login(username, passwordMD5));
                 thLogin.Start();
             }
         }
@@ -156,10 +154,9 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Meld de HM gebruiker aan
         /// </summary>
-        /// <param name="GetInfo">Verkrijg gebruikers informatie</param>
         /// <param name="username">Helpmij Gebruikersnaam</param>
         /// <param name="password">Helpmij Wachtwoord</param>
-        private void Login(Boolean GetInfo, String username, String password)
+        private void Login(String username, String password)
         {
             // Verkrijg de gebruiker
             user = null;
@@ -168,7 +165,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
                 // Probeer in to loggen
                 user = Helpmij.LoginMD5(username, password);
                 // Controlleer of de informatie moet worden opgehaald
-                if (GetInfo == true)
+                if (Data == true)
                 {
                     // Haal de gegevens op
                     userData = user.GetUserData();
@@ -229,7 +226,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         {
             // Controlleer of het ENTER is
             if (e.KeyData == Keys.Enter){
-                Inloggen(getData);
+                Inloggen();
             }
         }
     }

@@ -87,7 +87,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
             btnLogin.Text = "Bezig...";
             btnLogin.Enabled = false;
             hmLogin.Enabled = false;
-            hmLogin.Inloggen(getUserData);
+            hmLogin.Inloggen();
         }
 
 

@@ -32,8 +32,13 @@ namespace mvdw.helpmij.homepage
     /// <summary>
     /// Helpmij Homepage topics
     /// </summary>
-    class HomepageTopics : HelpmijData
+    internal class HomepageTopics
     {
+        /// <summary>
+        /// HM Forum Data Settings
+        /// </summary>
+        private static HMForumData s = new HMForumData();
+
         /// <summary>
         /// Cache source code
         /// </summary>
@@ -51,7 +56,7 @@ namespace mvdw.helpmij.homepage
             if (UtilsHTTP.IsInternetAvailable())
             {
                 // Stel de URL samen
-                String url = siteURL;
+                String url = s.siteURL;
                 // Maak een nieuwe cookiecontainer
                 CookieContainer cookies = new CookieContainer();
                 HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
@@ -73,7 +78,7 @@ namespace mvdw.helpmij.homepage
             if (UtilsHTTP.IsInternetAvailable())
             {
                 // Stel de URL samen
-                String url = siteURL;
+                String url = s.siteURL;
                 // Maak een nieuwe cookiecontainer
                 CookieContainer cookies = user.GetCookies();
                 HomepageTopics.source = UtilsHTTP.GetSource(url, cookies);
@@ -102,18 +107,18 @@ namespace mvdw.helpmij.homepage
                 RefreshCache();
                 source = HomepageTopics.source;
             }
-            source = source.Split(new[] { homepageTab1, 
-                homepageTab2 }, StringSplitOptions.RemoveEmptyEntries)[1];
+            source = source.Split(new[] { s.homepageTab1, 
+                s.homepageTab2 }, StringSplitOptions.RemoveEmptyEntries)[1];
             // Start met het ophalen van de gegevens
             List<String> topicURLs = new List<String>();
             List<String> topicTitles = new List<String>();
             List<String> topicTimes = new List<String>();
             topicURLs = UtilsString.GetSubStrings(source,
-                newTopicUrlPrefix, newTopicUrlSuffix);
+                s.newTopicUrlPrefix, s.newTopicUrlSuffix);
             topicTitles = UtilsString.GetSubStrings(source,
-                newTopicTitlePrefix, newTopicTitleSuffix);
+                s.newTopicTitlePrefix, s.newTopicTitleSuffix);
             topicTimes = UtilsString.GetSubStrings(source,
-                newTopicTimePrefix, newTopicTimeSuffix);
+                s.newTopicTimePrefix, s.newTopicTimeSuffix);
             for (int i = 0; i < topicURLs.Count; i++)
             {
                 // Creer een nieuwe HomepageTopic
@@ -148,18 +153,18 @@ namespace mvdw.helpmij.homepage
                 RefreshCache();
                 source = HomepageTopics.source;
             }
-            source = source.Split(new[] { homepageTab2, 
-                homepageTab3 }, StringSplitOptions.RemoveEmptyEntries)[1];
+            source = source.Split(new[] { s.homepageTab2, 
+                s.homepageTab3 }, StringSplitOptions.RemoveEmptyEntries)[1];
             // Start met het ophalen van de gegevens
             List<String> topicURLs = new List<String>();
             List<String> topicTitles = new List<String>();
             List<String> topicTimes = new List<String>();
             topicURLs = UtilsString.GetSubStrings(source,
-                newTopicUrlPrefix, newTopicUrlSuffix);
+                s.newTopicUrlPrefix, s.newTopicUrlSuffix);
             topicTitles = UtilsString.GetSubStrings(source,
-                newTopicTitlePrefix, newTopicTitleSuffix);
+                s.newTopicTitlePrefix, s.newTopicTitleSuffix);
             topicTimes = UtilsString.GetSubStrings(source,
-                newTopicTimePrefix, newTopicTimeSuffix);
+                s.newTopicTimePrefix, s.newTopicTimeSuffix);
             for (int i = 0; i < topicURLs.Count; i++)
             {
                 // Creer een nieuwe HomepageTopic
@@ -195,18 +200,18 @@ namespace mvdw.helpmij.homepage
                 RefreshCache(user);
                 source = HomepageTopics.source;
             }
-            source = source.Split(new[] { homepageTab2, 
-                homepageTab3 }, StringSplitOptions.RemoveEmptyEntries)[1];
+            source = source.Split(new[] { s.homepageTab2, 
+                s.homepageTab3 }, StringSplitOptions.RemoveEmptyEntries)[1];
             // Start met het ophalen van de gegevens
             List<String> topicURLs = new List<String>();
             List<String> topicTitles = new List<String>();
             List<String> topicTimes = new List<String>();
             topicURLs = UtilsString.GetSubStrings(source,
-                newTopicUrlPrefix, newTopicUrlSuffix);
+                s.newTopicUrlPrefix, s.newTopicUrlSuffix);
             topicTitles = UtilsString.GetSubStrings(source,
-                newTopicTitlePrefix, newTopicTitleSuffix);
+                s.newTopicTitlePrefix, s.newTopicTitleSuffix);
             topicTimes = UtilsString.GetSubStrings(source,
-                newTopicTimePrefix, newTopicTimeSuffix);
+                s.newTopicTimePrefix, s.newTopicTimeSuffix);
             for (int i = 0; i < topicURLs.Count; i++)
             {
                 // Creer een nieuwe HomepageTopic
