@@ -616,6 +616,11 @@
             Helpmij Gebruiker
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.forum.gui.uiHompageTopics.preview">
+            <summary>
+            Toon een voorbeeld
+            </summary>
+        </member>
         <member name="M:mvdw.helpmijapi.forum.gui.uiHompageTopics.#ctor">
             <summary>
             Initialzeer de gebruikerscontrol
@@ -652,6 +657,12 @@
             <summary>
             Laad gebruikers topics
             </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.forum.gui.uiHompageTopics.ShowPreview">
+            <summary>
+            Toon een voorbeeld met nieuwe topics
+            </summary>
+            <returns>True / false</returns>
         </member>
         <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics.InvokeTopicLoad">
             <summary>
@@ -3143,9 +3154,34 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.uiUserbar.type">
+            <summary>
+            Default Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.uiUserbar.message">
+            <summary>
+            Userbar Message
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.uiUserbar.preview">
+            <summary>
+            Toon userbar voorbeeld
+            </summary>
+        </member>
         <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.#ctor">
             <summary>
             Helpmij.nl Userbars
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.WriteText">
+            <summary>
+            Schrijf de tekst op de userbar
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.ShowPreview">
+            <summary>
+            Toon Userbar voorbeeld
             </summary>
         </member>
         <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.DefaultUserbar">
@@ -3348,6 +3384,11 @@
             Event wanneer het inloggen gelukt is
             </summary>
         </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.chat.HelpmijChatMessage">
             <summary>
             Helpmij.nl Chat bericht
@@ -3518,6 +3559,75 @@
             Helpmij Userbar
             </summary>
         </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GetPreviewUserbar(mvdw.helpmijapi.artwork.userbar.UserbarType)">
+            <summary>
+            Verkrijg voorbeeld
+            </summary>
+            <param name="type">Userbar Type</param>
+            <returns>Userbar Image</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GetBlankUserbar(mvdw.helpmijapi.artwork.userbar.UserbarType)">
+            <summary>
+            Verkrijg Lege Userbar
+            </summary>
+            <param name="type">Userbar Type</param>
+            <returns>Userbar Image</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.userbar.UserbarType">
+            <summary>
+            Helpmij.nl Userbar Types
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.Classic">
+            <summary>
+            Classic Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.Emboss">
+            <summary>
+            Emboss Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.Belg">
+            <summary>
+            Belg Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.ClassicDark">
+            <summary>
+            Classic Dark Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.GreenSpring">
+            <summary>
+            Green Spring Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.Herfst">
+            <summary>
+            Herfst Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.Nederland">
+            <summary>
+            Nederland Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.RainbowBlue">
+            <summary>
+            Rainbow Blue Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.RainbowGreen">
+            <summary>
+            Rainbow Green Userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.RainbowRed">
+            <summary>
+            Rainbow Red Userbar
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
             Helpmij Homepage topics
@@ -3643,6 +3753,15 @@
             Reset je Helpmij Gebruiker wachtwoord
             </summary>
             <param name="email">String - Email</param>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsFont.GetEmbeddedFont(System.String,System.Drawing.FontStyle,System.Single)">
+            <summary>
+            Verkrijg een font van de resources
+            </summary>
+            <param name="font">Font naam (+ext)</param>
+            <param name="size">Font size</param>
+            <param name="style">Font Style</param>
+            <returns>System.Drawing.Font - Font</returns>
         </member>
     </members>
 </doc>

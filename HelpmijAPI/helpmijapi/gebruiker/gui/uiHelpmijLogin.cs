@@ -85,6 +85,9 @@ namespace mvdw.helpmijapi.gebruiker.gui
         public static LoginSuccessEventArgs LoginSuccessEventArgs;
         
 
+        /// <summary>
+        /// Data
+        /// </summary>
         [Description("Verkrijg gebruikers gegevens"), Category("Data")] 
         public Boolean Data
         {

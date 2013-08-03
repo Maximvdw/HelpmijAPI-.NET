@@ -40,6 +40,10 @@ namespace mvdw.helpmijapi.forum.gui
         /// Helpmij Gebruiker
         /// </summary>
         private Gebruiker user = null;
+        /// <summary>
+        /// Toon een voorbeeld
+        /// </summary>
+        private Boolean preview = false;
 
         /// <summary>
         /// Initialzeer de gebruikerscontrol
@@ -47,6 +51,33 @@ namespace mvdw.helpmijapi.forum.gui
         public uiHompageTopics()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Toon een voorbeeld met nieuwe topics
+        /// </summary>
+        /// <returns>True / false</returns>
+        [Description("Laad topics als voorbeeld"), Category("ShowPreview")]
+        public Boolean ShowPreview
+        {
+            get
+            {
+                return preview;
+            }
+            set
+            {
+                this.preview = value;
+                if (value == true)
+                {
+                    LoadTopics();
+                }
+                else
+                {
+                    lstTopicsNew.Items.Clear();
+                    lstTopicsUnanswered.Items.Clear();
+                    lstTopicsUser.Items.Clear();
+                }
+            }
         }
 
         /// <summary>

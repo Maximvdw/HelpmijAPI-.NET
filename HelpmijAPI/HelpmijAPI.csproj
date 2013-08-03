@@ -43,7 +43,8 @@
     <DelaySign>true</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>HMapi.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -117,6 +118,7 @@
       <DependentUpon>HMGebruikerData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
+    <Compile Include="helpmij\utils\UtilsFont.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />
     <Compile Include="helpmij\forum\HelpmijComment.cs" />
@@ -177,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="helpmij\forum\HMForumData.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>HMForumData.Designer.cs</LastGenOutput>
@@ -186,7 +187,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>HMGebruikerData.Designer.cs</LastGenOutput>
     </None>
-    <None Include="HMapi.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -16,6 +16,19 @@ namespace mvdw.helpmijapi.artwork.userbar
     public partial class uiUserbar : UserControl
     {
         /// <summary>
+        /// Default Userbar
+        /// </summary>
+        private UserbarType type = UserbarType.Classic;
+        /// <summary>
+        /// Userbar Message
+        /// </summary>
+        private String message = null;
+        /// <summary>
+        /// Toon userbar voorbeeld
+        /// </summary>
+        private Boolean preview = false;
+
+        /// <summary>
         /// Helpmij.nl Userbars
         /// </summary>
         public uiUserbar()
@@ -26,17 +39,61 @@ namespace mvdw.helpmijapi.artwork.userbar
         }
 
         /// <summary>
-        /// Basis Userbar
+        /// Toon Userbar voorbeeld
         /// </summary>
-        public List<String> DefaultUserbar
+        [Description("Toon Userbar voorbeeld"), Category("ShowPreview")]
+        public Boolean ShowPreview
         {
             get
             {
-                throw new System.NotImplementedException();
+                return preview;
             }
             set
             {
+                this.preview = value;
+                // Wijzig Image
+                if (preview == true)
+                {
+                    this.BackgroundImage = HelpmijUserbar.GetPreviewUserbar(type);
+                }
+                else
+                {
+                    this.BackgroundImage = HelpmijUserbar.GetBlankUserbar(type);
+                }
             }
+        }
+
+        /// <summary>
+        /// Basis Userbar
+        /// </summary>
+        [Description("Basis Userbar"), Category("DefaultUserbar")]
+        public UserbarType DefaultUserbar
+        {
+            get
+            {
+                return type;
+            }
+            set
+            {
+                this.type = value;
+                // Wijzig Image
+                if (preview == true)
+                {
+                    this.BackgroundImage = HelpmijUserbar.GetPreviewUserbar(type);
+                }
+                else
+                {
+                    this.BackgroundImage = HelpmijUserbar.GetBlankUserbar(type);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Schrijf de tekst op de userbar
+        /// </summary>
+        private void WriteText()
+        {
+
         }
 
         private void uiUserbar_Load(object sender, EventArgs e)
