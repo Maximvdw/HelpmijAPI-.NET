@@ -97,7 +97,9 @@ namespace mvdw.helpmijapi
         public static void ResetSettings()
         {
             HMGebruikerData.Default.Reset();
+            HMGebruikerData.Default.Reload();
             HMForumData.Default.Reset();
+            HMForumData.Default.Reload();
         }
     }
 }

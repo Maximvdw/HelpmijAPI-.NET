@@ -32,6 +32,11 @@ namespace mvdw.helpmij.gebruiker
     /// </summary>
     internal class HelpmijGebruikerData : HelpmijData
     {
+        /// <summary>
+        /// HM Gebruiker Data
+        /// </summary>
+        private static HMGebruikerData s = new HMGebruikerData();
+
         /* Prive Gegevens van de Gebruiker */
         #region Prive Gebruikers Data
         /// <summary>
@@ -243,7 +248,7 @@ namespace mvdw.helpmij.gebruiker
             if (UtilsHTTP.IsInternetAvailable())
             {
                 // Stel de URL samen
-                String url = siteURL + signaturePHP;
+                String url = siteURL + s.publicprofilePHP + userHelpmij.GetUserID();
                 // Verkrijg de gebruikers ID
                 int id = userHelpmij.GetUserID();
                 if (id != -1)
@@ -252,8 +257,30 @@ namespace mvdw.helpmij.gebruiker
                     String source = UtilsHTTP.GetSource(url, userHelpmij.GetCookies());
                     try
                     {
-                        userHelpmij.signatureHTML = UtilsString.GetSubStrings(source,
-                            signatureHTMLPrefix, signatureHTMLSuffix)[0]; // Signature HTML
+                        userHelpmij.userRank = UtilsString.GetSubStrings(source,
+                            s.userstatusPrefix, s.userstatusSuffix)[0]; // User Rank
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        userHelpmij.totalPosts = int.Parse(UtilsString.GetSubStrings(source,
+                            s.totalPostsPrefix, s.totalPostsSuffix)[0]); // Totaal aantal berichten
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        userHelpmij.postEaDay = Decimal.Parse(UtilsString.GetSubStrings(source,
+                            s.postdayPrefix, s.postdaySuffix)[0]); // Totaal aantal berichten
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        String registration = UtilsString.GetSubStrings(source,
+                            s.registeredPrefix, s.registeredSuffix)[0]; // Registratie
+                        userHelpmij.registrationDate = DateTime.Parse(registration);
+                        userHelpmij.registrationDay = userHelpmij.registrationDate.Day;
+                        userHelpmij.registrationMonth = userHelpmij.registrationDate.Month;
+                        userHelpmij.registrationYear = userHelpmij.registrationDate.Year;
                     }
                     catch (Exception) { }
                 }

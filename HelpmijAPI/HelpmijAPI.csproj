@@ -105,6 +105,7 @@
     <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="helpmij\forum\HMForumData.cs" />
     <Compile Include="helpmij\forum\HMForumData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

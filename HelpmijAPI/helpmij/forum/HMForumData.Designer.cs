@@ -25,7 +25,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"/page\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/page")]
         public string pagePrefix {
             get {
                 return ((string)(this["pagePrefix"]));
@@ -37,7 +37,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\" href=\"\"member.php/\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" href=\"member.php/")]
         public string memberPrefix {
             get {
                 return ((string)(this["memberPrefix"]));
@@ -49,7 +49,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\" title=\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\" title=")]
         public string memberSuffix {
             get {
                 return ((string)(this["memberSuffix"]));
@@ -61,7 +61,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"?s=\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("?s=")]
         public string authorSuffix {
             get {
                 return ((string)(this["authorSuffix"]));
@@ -73,7 +73,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"<title> \"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<title> ")]
         public string titlePrefix {
             get {
                 return ((string)(this["titlePrefix"]));
@@ -85,7 +85,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"</title>\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("</title>")]
         public string titleSuffix {
             get {
                 return ((string)(this["titleSuffix"]));
@@ -97,7 +97,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"<meta name=\"\"keywords\"\" content=\"\"\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<meta name=\"keywords\" content=\"")]
         public string metaKeywordPrefix {
             get {
                 return ((string)(this["metaKeywordPrefix"]));
@@ -109,7 +109,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" @\"\"\" />\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" \" />")]
         public string metaKeywordSuffix {
             get {
                 return ((string)(this["metaKeywordSuffix"]));
@@ -121,7 +121,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"<blockquote class=\"\"postcontent restore \"\">\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<blockquote class=\"postcontent restore \">")]
         public string commentBodyPrefix {
             get {
                 return ((string)(this["commentBodyPrefix"]));
@@ -133,7 +133,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"</blockquote>\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("</blockquote>")]
         public string commentBodySuffix {
             get {
                 return ((string)(this["commentBodySuffix"]));
@@ -145,7 +145,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"http://www.helpmij.nl\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.helpmij.nl")]
         public string siteURL {
             get {
                 return ((string)(this["siteURL"]));
@@ -157,7 +157,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"<a href=\"\"\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<a href=")]
         public string newTopicUrlPrefix {
             get {
                 return ((string)(this["newTopicUrlPrefix"]));
@@ -169,7 +169,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\" class=\"\"last_title\"\"\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" class=\"last_title")]
         public string newTopicUrlSuffix {
             get {
                 return ((string)(this["newTopicUrlSuffix"]));
@@ -181,7 +181,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"class=\"\"last_title\"\" title=\"\"\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("class=\"last_title\" title=\"")]
         public string newTopicTitlePrefix {
             get {
                 return ((string)(this["newTopicTitlePrefix"]));
@@ -193,7 +193,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\"><span>\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"><span>")]
         public string newTopicTitleSuffix {
             get {
                 return ((string)(this["newTopicTitleSuffix"]));
@@ -205,7 +205,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"\"\"><span>\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"><span>")]
         public string newTopicTimePrefix {
             get {
                 return ((string)(this["newTopicTimePrefix"]));
@@ -217,7 +217,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\" &gt;\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" &gt;")]
         public string newTopicTimeSuffix {
             get {
                 return ((string)(this["newTopicTimeSuffix"]));
@@ -229,7 +229,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_1\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ui-tabs-panel\" id=\"tab_latest_questions_1")]
         public string homepageTab1 {
             get {
                 return ((string)(this["homepageTab1"]));
@@ -241,7 +241,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_2\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ui-tabs-panel\" id=\"tab_latest_questions_2")]
         public string homepageTab2 {
             get {
                 return ((string)(this["homepageTab2"]));
@@ -253,13 +253,25 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("@\"ui-tabs-panel\"\" id=\"\"tab_latest_questions_3\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ui-tabs-panel\" id=\"tab_latest_questions_3")]
         public string homepageTab3 {
             get {
                 return ((string)(this["homepageTab3"]));
             }
             set {
                 this["homepageTab3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<!-- End tab containers -->")]
+        public string hompageTabEnd {
+            get {
+                return ((string)(this["hompageTabEnd"]));
+            }
+            set {
+                this["hompageTabEnd"] = value;
             }
         }
     }

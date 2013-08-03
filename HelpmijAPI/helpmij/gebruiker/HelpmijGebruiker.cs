@@ -181,7 +181,7 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Gemiddeld aantal posts per dag
         /// </summary>
-        public int postEaDay = -1;
+        public Decimal postEaDay = -1;
         /// <summary>
         /// Gebruikers Profiel
         /// </summary>
@@ -904,13 +904,14 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="posts">int - Posts</param>
         public void SetTotalPosts(int posts)
         {
+            this.totalPosts = posts;
         }
 
         /// <summary>
         /// Verkrijg het gemiddeld aantal berichten per dag
         /// </summary>
-        /// <returns>int - Berichten per dag</returns>
-        public int GetPostsEachDay()
+        /// <returns>Decimal - Berichten per dag</returns>
+        public Decimal GetPostsEachDay()
         {
             return postEaDay;
         }
@@ -918,9 +919,10 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Set het gemiddeld aantal berichten per dag
         /// </summary>
-        /// <param name="posts">int - Berichten per dag</param>
-        public void SetPostsEachDay(int posts)
+        /// <param name="posts">Decimal - Berichten per dag</param>
+        public void SetPostsEachDay(Decimal posts)
         {
+            this.postEaDay = posts;
         }
 
         /// <summary>

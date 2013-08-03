@@ -58,5 +58,113 @@ namespace mvdw.helpmij.gebruiker {
                 this["sendPassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<span class=\"usertitle\">")]
+        public string userstatusPrefix {
+            get {
+                return ((string)(this["userstatusPrefix"]));
+            }
+            set {
+                this["userstatusPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</span>\r")]
+        public string userstatusSuffix {
+            get {
+                return ((string)(this["userstatusSuffix"]));
+            }
+            set {
+                this["userstatusSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/forum/member.php/")]
+        public string publicprofilePHP {
+            get {
+                return ((string)(this["publicprofilePHP"]));
+            }
+            set {
+                this["publicprofilePHP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<dt>Totaal aantal berichten</dt>\r\n\t\t<dd> ")]
+        public string totalPostsPrefix {
+            get {
+                return ((string)(this["totalPostsPrefix"]));
+            }
+            set {
+                this["totalPostsPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
+        public string totalPostsSuffix {
+            get {
+                return ((string)(this["totalPostsSuffix"]));
+            }
+            set {
+                this["totalPostsSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Berichten per dag</dt>\r\n\t\t<dd> ")]
+        public string postdayPrefix {
+            get {
+                return ((string)(this["postdayPrefix"]));
+            }
+            set {
+                this["postdayPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
+        public string postdaySuffix {
+            get {
+                return ((string)(this["postdaySuffix"]));
+            }
+            set {
+                this["postdaySuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Geregistreerd</dt>\r\n\t\t<dd>  ")]
+        public string registeredPrefix {
+            get {
+                return ((string)(this["registeredPrefix"]));
+            }
+            set {
+                this["registeredPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
+        public string registeredSuffix {
+            get {
+                return ((string)(this["registeredSuffix"]));
+            }
+            set {
+                this["registeredSuffix"] = value;
+            }
+        }
     }
 }

@@ -50,7 +50,8 @@
   <Class Name="mvdw.helpmij.forum.HMForumData" Collapsed="true">
     <Position X="13.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAAACAAQAAAAAAAAIAAAAAABQAAAAAAEEYAUAAA=</HashCode>
+      <HashCode>gEAAAAAACAAQAAEEAAgAIAAgAAAjQAAAAAAEEYAUCBA=</HashCode>
+      <FileName>helpmij\forum\HMForumData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="mvdw.helpmij.forum.TopicReader" Collapsed="true">
@@ -63,7 +64,7 @@
   <Class Name="mvdw.helpmij.homepage.HomepageTopics" Collapsed="true">
     <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABIAAAAAAAAAIAAEAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABIAAAAAAAAAIAAEAAAAAIAAAAAAAQA=</HashCode>
       <FileName>helpmij\forum\HomepageTopics.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -78,7 +79,7 @@
   <Class Name="mvdw.helpmij.gebruiker.HelpmijGebruikerData" Collapsed="true">
     <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAIABAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAIABAAAAAAAAAAAAAAEAAAAIAAAAAAAAA=</HashCode>
       <FileName>helpmij\gebruiker\HelpmijGebruikerData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,7 +93,7 @@
   <Class Name="mvdw.helpmij.gebruiker.HMGebruikerData" Collapsed="true">
     <Position X="15.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAIAAAAAABAAAAABAAAAAAABA=</HashCode>
+      <HashCode>AEAQAAEAAAAAACEgCAAAIAAAAAAhAAAABBAAAAAACBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="mvdw.helpmij.HelpmijConfig" Collapsed="true">
@@ -105,7 +106,7 @@
   <Class Name="mvdw.helpmij.HelpmijData" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ofygoAABgAAiFFcwSBwMiTYgSoFugBlcLJNDFgQAABQ=</HashCode>
+      <HashCode>ofygoAABgAAiFFYwSBwMiTYASoFMgBlcLJNDFgQAABQ=</HashCode>
       <FileName>helpmij\HelpmijData.cs</FileName>
     </TypeIdentifier>
   </Class>

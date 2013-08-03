@@ -470,6 +470,11 @@
             Dropdown DATA - Suffix
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerData.s">
+            <summary>
+            HM Gebruiker Data
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerData.GetPrivateData(mvdw.helpmij.gebruiker.HelpmijGebruiker)">
             <summary>
             Verkrijg de gebruikers data, en save het
@@ -1306,13 +1311,13 @@
             <summary>
             Verkrijg het gemiddeld aantal berichten per dag
             </summary>
-            <returns>int - Berichten per dag</returns>
+            <returns>Decimal - Berichten per dag</returns>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetPostsEachDay(System.Int32)">
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.SetPostsEachDay(System.Decimal)">
             <summary>
             Set het gemiddeld aantal berichten per dag
             </summary>
-            <param name="posts">int - Berichten per dag</param>
+            <param name="posts">Decimal - Berichten per dag</param>
         </member>
         <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetPublicProfileURL">
             <summary>
@@ -1955,13 +1960,13 @@
             <summary>
             Verkrijg het gemiddeld aantal berichten per dag
             </summary>
-            <returns>int - Berichten per dag</returns>
+            <returns>Decimal - Berichten per dag</returns>
         </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetPostsEachDay(System.Int32)">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetPostsEachDay(System.Decimal)">
             <summary>
             Set het gemiddeld aantal berichten per dag
             </summary>
-            <param name="posts">int - Berichten per dag</param>
+            <param name="posts">Decimal - Berichten per dag</param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetPublicProfileURL">
             <summary>

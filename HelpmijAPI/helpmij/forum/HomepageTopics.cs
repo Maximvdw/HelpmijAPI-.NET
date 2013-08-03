@@ -195,13 +195,12 @@ namespace mvdw.helpmij.homepage
             // Verkrijg de broncode
             String source = HomepageTopics.source;
             Gebruiker cachedUser = HomepageTopics.user;
-            if (source == null && (cachedUser == user))
+            if (source == null || (cachedUser != user))
             {
                 RefreshCache(user);
                 source = HomepageTopics.source;
             }
-            source = source.Split(new[] { s.homepageTab2, 
-                s.homepageTab3 }, StringSplitOptions.RemoveEmptyEntries)[1];
+            source = source.Split(new[] { s.homepageTab3,s.hompageTabEnd }, StringSplitOptions.RemoveEmptyEntries)[1];
             // Start met het ophalen van de gegevens
             List<String> topicURLs = new List<String>();
             List<String> topicTitles = new List<String>();

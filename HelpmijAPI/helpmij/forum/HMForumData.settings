@@ -3,64 +3,67 @@
   <Profiles />
   <Settings>
     <Setting Name="pagePrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"/page"</Value>
+      <Value Profile="(Default)">/page</Value>
     </Setting>
     <Setting Name="memberPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@" href=""member.php/"</Value>
+      <Value Profile="(Default)"> href="member.php/</Value>
     </Setting>
     <Setting Name="memberSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@""" title="</Value>
+      <Value Profile="(Default)">" title=</Value>
     </Setting>
     <Setting Name="authorSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"?s="</Value>
+      <Value Profile="(Default)">?s=</Value>
     </Setting>
     <Setting Name="titlePrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"&lt;title&gt; "</Value>
+      <Value Profile="(Default)">&lt;title&gt; </Value>
     </Setting>
     <Setting Name="titleSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"&lt;/title&gt;"</Value>
+      <Value Profile="(Default)">&lt;/title&gt;</Value>
     </Setting>
     <Setting Name="metaKeywordPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"&lt;meta name=""keywords"" content="""</Value>
+      <Value Profile="(Default)">&lt;meta name="keywords" content="</Value>
     </Setting>
     <Setting Name="metaKeywordSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)"> @""" /&gt;"</Value>
+      <Value Profile="(Default)"> " /&gt;</Value>
     </Setting>
     <Setting Name="commentBodyPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"&lt;blockquote class=""postcontent restore ""&gt;"</Value>
+      <Value Profile="(Default)">&lt;blockquote class="postcontent restore "&gt;</Value>
     </Setting>
     <Setting Name="commentBodySuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"&lt;/blockquote&gt;"</Value>
+      <Value Profile="(Default)">&lt;/blockquote&gt;</Value>
     </Setting>
     <Setting Name="siteURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"http://www.helpmij.nl"</Value>
+      <Value Profile="(Default)">http://www.helpmij.nl</Value>
     </Setting>
     <Setting Name="newTopicUrlPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"&lt;a href="""</Value>
+      <Value Profile="(Default)">&lt;a href=</Value>
     </Setting>
     <Setting Name="newTopicUrlSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@""" class=""last_title"""</Value>
+      <Value Profile="(Default)"> class="last_title</Value>
     </Setting>
     <Setting Name="newTopicTitlePrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"class=""last_title"" title="""</Value>
+      <Value Profile="(Default)">class="last_title" title="</Value>
     </Setting>
     <Setting Name="newTopicTitleSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"""&gt;&lt;span&gt;"</Value>
+      <Value Profile="(Default)">"&gt;&lt;span&gt;</Value>
     </Setting>
     <Setting Name="newTopicTimePrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"""&gt;&lt;span&gt;"</Value>
+      <Value Profile="(Default)">"&gt;&lt;span&gt;</Value>
     </Setting>
     <Setting Name="newTopicTimeSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@" &amp;gt;"</Value>
+      <Value Profile="(Default)"> &amp;gt;</Value>
     </Setting>
     <Setting Name="homepageTab1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_1"</Value>
+      <Value Profile="(Default)">ui-tabs-panel" id="tab_latest_questions_1</Value>
     </Setting>
     <Setting Name="homepageTab2" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_2"</Value>
+      <Value Profile="(Default)">ui-tabs-panel" id="tab_latest_questions_2</Value>
     </Setting>
     <Setting Name="homepageTab3" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@"ui-tabs-panel"" id=""tab_latest_questions_3"</Value>
+      <Value Profile="(Default)">ui-tabs-panel" id="tab_latest_questions_3</Value>
+    </Setting>
+    <Setting Name="hompageTabEnd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!-- End tab containers --&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

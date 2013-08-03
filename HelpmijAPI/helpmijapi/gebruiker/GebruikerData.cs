@@ -379,14 +379,14 @@ namespace mvdw.helpmijapi.gebruiker
         /// <summary>
         /// Verkrijg het gemiddeld aantal berichten per dag
         /// </summary>
-        /// <returns>int - Berichten per dag</returns>
-        int GetPostsEachDay();
+        /// <returns>Decimal - Berichten per dag</returns>
+        Decimal GetPostsEachDay();
 
         /// <summary>
         /// Set het gemiddeld aantal berichten per dag
         /// </summary>
-        /// <param name="posts">int - Berichten per dag</param>
-        void SetPostsEachDay(int posts);
+        /// <param name="posts">Decimal - Berichten per dag</param>
+        void SetPostsEachDay(Decimal posts);
 
         /// <summary>
         /// Verkrijg de publieke profiel URL
