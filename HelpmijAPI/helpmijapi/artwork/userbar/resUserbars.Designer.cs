@@ -63,8 +63,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Belg Style
-        ///Version=1.2.0
-        ///Image=UB_Belg.png
+        ///Image=UB_Belg_img.png
         ///Preview=UB_Belg_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -104,8 +103,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Classic Style
-        ///Version=1.2.0
-        ///Image=UB_Classic.png
+        ///Image=UB_Classic_img.png
         ///Preview=UB_Classic_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -145,8 +143,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Classic Dark Style
-        ///Version=1.2.0
-        ///Image=UB_ClassicDark.png
+        ///Image=UB_ClassicDark_img.png
         ///Preview=UB_ClassicDark_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -186,8 +183,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Emboss Style
-        ///Version=1.2.0
-        ///Image=UB_Emboss.png
+        ///Image=UB_Emboss_img.png
         ///Preview=UB_Emboss.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -227,8 +223,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Green Spring
-        ///Version=1.2.0
-        ///Image=UB_GreenSpring.png
+        ///Image=UB_GreenSpring_img.png
         ///Preview=UB_GreenSpring_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -268,8 +263,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Herfst Style
-        ///Version=1.2.0
-        ///Image=UB_Herfst.png
+        ///Image=UB_Herfst_img.png
         ///Preview=UB_Herfst_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=217
@@ -309,8 +303,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Nederland Style
-        ///Version=1.2.0
-        ///Image=UB_Nederland.png
+        ///Image=UB_Nederland_img.png
         ///Preview=UB_Nederland_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -349,33 +342,8 @@ namespace mvdw.helpmijapi.artwork.userbar {
         
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
-        ///Name=Helpmij Dynamic Online
-        ///Version=1.3.0
-        ///
-        ///Dynamic=true
-        ///AllowOveride=true
-        ///URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Online/UB_Online.php
-        ///
-        ///Argument_Version_Name=#HIDE#
-        ///Argument_Version_TXT=version
-        ///Argument_Version=1.0.0
-        ///Argument_Style_Name=Userbar Stijl
-        ///Argument_Style_TXT=style
-        ///Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
-        ///Argument_ID_Name=Gebruikers ID
-        ///Argument_ID_TXT=us [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string UB_Online {
-            get {
-                return ResourceManager.GetString("UB_Online", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Rainbow Blue Style
-        ///Version=1.2.0
-        ///Image=UB_RainbowBlue.png
+        ///Image=UB_RainbowBlue_img.png
         ///Preview=UB_RainbowBlue_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -415,8 +383,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Rainbow Green Style
-        ///Version=1.2.0
-        ///Image=UB_RainbowGreen.png
+        ///Image=UB_RainbowGreen_img.png
         ///Preview=UB_RainbowGreen_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -456,8 +423,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Rainbow Red Style
-        ///Version=1.2.0
-        ///Image=UB_RainbowRed.png
+        ///Image=UB_RainbowRed_img.png
         ///Preview=UB_RainbowRed_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -497,8 +463,7 @@ namespace mvdw.helpmijapi.artwork.userbar {
         /// <summary>
         ///   Looks up a localized string similar to [USERBAR]
         ///Name=Helpmij Rainbow Yellow Style
-        ///Version=1.2.0
-        ///Image=UB_RainbowYellow.png
+        ///Image=UB_RainbowYellow_img.png
         ///Preview=UB_RainbowYellow_PREVIEW.png
         ///Color_INSIDE_Red=255
         ///Color_INSIDE_Green=255
@@ -532,32 +497,6 @@ namespace mvdw.helpmijapi.artwork.userbar {
             get {
                 object obj = ResourceManager.GetObject("UB_RainbowYellow_PREVIEW", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to [USERBAR]
-        ///Name=Helpmij Dynamic Weer
-        ///Version=1.3.0
-        ///
-        ///Dynamic=true
-        ///AllowOveride=true
-        ///URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Weer/UB_Weer.php
-        ///
-        ///Argument_Version_Name=#HIDE#
-        ///Argument_Version_TXT=version
-        ///Argument_Version=1.0.0
-        ///Argument_Style_Name=Userbar Stijl
-        ///Argument_Style_TXT=style
-        ///Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
-        ///Argument_ID_Name=/
-        ///Argument_ID_TXT=/
-        ///Argument_ID=/
-        ///Ar [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string UB_Weer {
-            get {
-                return ResourceManager.GetString("UB_Weer", resourceCulture);
             }
         }
     }

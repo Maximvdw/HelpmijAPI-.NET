@@ -30,6 +30,21 @@ namespace mvdw.helpmijapi.artwork.userbar
     public class HelpmijUserbar
     {
         /// <summary>
+        /// Userbar Type
+        /// </summary>
+        private UserbarType type = UserbarType.Classic;
+
+
+        /// <summary>
+        /// Creeer een nieuwe userbar
+        /// </summary>
+        /// <param name="type">UserbarType - Type</param>
+        public HelpmijUserbar(UserbarType type)
+        {
+            this.type = type;
+        }
+
+        /// <summary>
         /// Verkrijg voorbeeld
         /// </summary>
         /// <param name="type">Userbar Type</param>

@@ -91,6 +91,7 @@
     <Compile Include="helpmijapi\gebruiker\GebruikerPrivacy.cs" />
     <Compile Include="helpmijapi\Helpmij.cs" />
     <Compile Include="helpmijapi\HelpmijAPI.cs" />
+    <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
     <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
     <Compile Include="helpmijapi\gebruiker\events\LoginFailed.cs" />
@@ -118,6 +119,12 @@
       <DependentUpon>HMGebruikerData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
+    <Compile Include="helpmij\ui\TaskbarNotifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="helpmij\ui\TaskbarNotifier.Designer.cs">
+      <DependentUpon>TaskbarNotifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmij\utils\UtilsFont.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />
@@ -172,6 +179,9 @@
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="helpmij\ui\TaskbarNotifier.resx">
+      <DependentUpon>TaskbarNotifier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -194,6 +204,7 @@
     <None Include="Resources\CALIBRI.TTF" />
     <None Include="Resources\CAMBRIA.TTC" />
     <None Include="Resources\Logo_LARGE.png" />
+    <None Include="Resources\MyriadPro-Regular.otf" />
     <None Include="Resources\UB_Belg.ini" />
     <None Include="Resources\UB_Classic.ini" />
     <None Include="Resources\UB_ClassicDark.ini" />
@@ -201,12 +212,10 @@
     <None Include="Resources\UB_GreenSpring.ini" />
     <None Include="Resources\UB_Herfst.ini" />
     <None Include="Resources\UB_Nederland.ini" />
-    <None Include="Resources\UB_Online.ini" />
     <None Include="Resources\UB_RainbowBlue.ini" />
     <None Include="Resources\UB_RainbowGreen.ini" />
     <None Include="Resources\UB_RainbowRed.ini" />
     <None Include="Resources\UB_RainbowYellow.ini" />
-    <None Include="Resources\UB_Weer.ini" />
     <None Include="Resources\visitor.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -284,7 +293,9 @@
   <ItemGroup>
     <None Include="Resources\UB_RainbowYellow_PREVIEW.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\skin1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

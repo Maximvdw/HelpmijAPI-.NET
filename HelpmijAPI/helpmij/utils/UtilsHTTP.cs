@@ -36,15 +36,23 @@ namespace mvdw.helpmij.utils
         /// <returns>Boolean - True bij verbinding</returns>
         public static Boolean IsInternetAvailable()
         {
-            var ping = new Ping();
-            // Constrolleer met google, want ICMP bij helpmij staat af
-            var result = ping.Send("www.google.com");
-            if (result.Status == IPStatus.Success)
+            try
             {
-                return true;
+                var ping = new Ping();
+                // Constrolleer met google, want ICMP bij helpmij staat af
+                var result = ping.Send("www.google.com");
+                if (result.Status == IPStatus.Success)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception)
             {
+                // False
                 return false;
             }
         }

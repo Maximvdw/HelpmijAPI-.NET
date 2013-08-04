@@ -68,6 +68,12 @@ namespace mvdw.helpmijapi.forum
         /// <summary>
         /// Verkrijg alle comments
         /// </summary>
+        /// <returns>Topic</returns>
+        Topic GetTopic();
+
+        /// <summary>
+        /// Verkrijg alle comments
+        /// </summary>
         /// <returns>List met Comments</returns>
         List<Comment> GetComments();
 
@@ -76,5 +82,19 @@ namespace mvdw.helpmijapi.forum
         /// </summary>
         /// <param name="comments">List met Comments</param>
         void SetComments(List<Comment> comments);
+
+        /// <summary>
+        /// Controlleer of een topic aan jouw intressen voldoet
+        /// </summary>
+        /// <param name="intrests">List String - Intresses</param>
+        /// <returns>Boolean</returns>
+        Boolean MatchesIntrests(List<String> intrests);
+
+        /// <summary>
+        /// Controlleer of een topic aan jouw intressen voldoet
+        /// </summary>
+        /// <param name="intrests">List String - Intresses</param>
+        /// <returns>Boolean</returns>
+        Boolean MatchesIntrests(String[] intrests);
     }
 }

@@ -109,7 +109,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" \" />")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\" />")]
         public string metaKeywordSuffix {
             get {
                 return ((string)(this["metaKeywordSuffix"]));
@@ -157,7 +157,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<a href=")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<a href=\"")]
         public string newTopicUrlPrefix {
             get {
                 return ((string)(this["newTopicUrlPrefix"]));
@@ -169,7 +169,7 @@ namespace mvdw.helpmij.forum {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" class=\"last_title")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\" class=\"last_title")]
         public string newTopicUrlSuffix {
             get {
                 return ((string)(this["newTopicUrlSuffix"]));
@@ -272,6 +272,30 @@ namespace mvdw.helpmij.forum {
             }
             set {
                 this["hompageTabEnd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<!-- BEGIN TEMPLATE: footer -->")]
+        public string endTopic {
+            get {
+                return ((string)(this["endTopic"]));
+            }
+            set {
+                this["endTopic"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<!-- BEGIN TEMPLATE: header -->")]
+        public string beginTopic {
+            get {
+                return ((string)(this["beginTopic"]));
+            }
+            set {
+                this["beginTopic"] = value;
             }
         }
     }

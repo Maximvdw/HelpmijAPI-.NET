@@ -30,6 +30,16 @@
               Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
+        <member name="P:mvdw.Properties.Resources.MyriadPro_Regular">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:mvdw.Properties.Resources.skin1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:mvdw.Properties.Resources.visitor">
             <summary>
               Looks up a localized resource of type System.Byte[].
@@ -722,6 +732,22 @@
             <param name="topic">Helpmij Topic</param>
             <returns>Lijst met Comment</returns>
         </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.MatchesIntrests(System.Collections.Generic.List{System.String},mvdw.helpmijapi.forum.Topic)">
+            <summary>
+            Controlleer of een topic aan de keywords voldoet
+            </summary>
+            <param name="intrests">String list</param>
+            <param name="topic">Topic</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.TopicReader.MatchesIntrests(System.String[],mvdw.helpmijapi.forum.Topic)">
+            <summary>
+            Controlleer of een topic aan de keywords voldoet
+            </summary>
+            <param name="intrests">String list</param>
+            <param name="topic">Topic</param>
+            <returns>Boolean</returns>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs">
             <summary>
             Login Failed Event Arguments
@@ -847,6 +873,30 @@
             <param name="index">Index output</param>
             <param name="success">Succes output</param>
             <returns>Hashtable</returns>
+        </member>
+        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.lnkClose_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
+            <summary>
+            Sluit de TaskbarNotifier
+            </summary>
+            <param name="sender">Sender</param>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="F:mvdw.helpmij.ui.TaskbarNotifier.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
@@ -1342,6 +1392,11 @@
             </summary>
             <param name="url">String - URL</param>
         </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerData.IsVerenigingslid">
+            <summary>
+            Get/Set of de gebruiker verenigingslid is
+            </summary>
+        </member>
         <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.s">
             <summary>
             HM Gebruiker Data
@@ -1530,6 +1585,11 @@
         <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.profileURL">
             <summary>
             Gebruikers Profiel
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.vererningingslid">
+            <summary>
+            Verenigingslid
             </summary>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.ResetPassword(System.String)">
@@ -1996,6 +2056,11 @@
             Refresh de gegevens
             </summary>
         </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruiker.IsVerenigingslid">
+            <summary>
+            Get/Set of de gebruiker verenigingslid is
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs">
             <summary>
             Login Success Event Arguments
@@ -2251,6 +2316,12 @@
             </summary>
             <param name="keywords"></param>
         </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.GetTopic">
+            <summary>
+            Verkrijg alle comments
+            </summary>
+            <returns>Topic</returns>
+        </member>
         <member name="M:mvdw.helpmijapi.forum.Topic.GetComments">
             <summary>
             Verkrijg alle comments
@@ -2262,6 +2333,20 @@
             Set alle comments
             </summary>
             <param name="comments">List met Comments</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.MatchesIntrests(System.Collections.Generic.List{System.String})">
+            <summary>
+            Controlleer of een topic aan jouw intressen voldoet
+            </summary>
+            <param name="intrests">List String - Intresses</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Topic.MatchesIntrests(System.String[])">
+            <summary>
+            Controlleer of een topic aan jouw intressen voldoet
+            </summary>
+            <param name="intrests">List String - Intresses</param>
+            <returns>Boolean</returns>
         </member>
         <member name="F:mvdw.helpmij.forum.HelpmijTopic.title">
             <summary>
@@ -2421,6 +2506,20 @@
             Set alle comments
             </summary>
             <param name="comments">List met Comments</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.MatchesIntrests(System.Collections.Generic.List{System.String})">
+            <summary>
+            Controlleer of een topic aan jouw intressen voldoet
+            </summary>
+            <param name="intrests">List String - Intresses</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijTopic.MatchesIntrests(System.String[])">
+            <summary>
+            Controlleer of een topic aan jouw intressen voldoet
+            </summary>
+            <param name="intrests">List String - Intresses</param>
+            <returns>Boolean</returns>
         </member>
         <member name="T:mvdw.helpmij.forum.HelpmijForum">
             <summary>
@@ -2652,6 +2751,64 @@
             Reacties op een Topic
             </summary>
         </member>
+        <member name="M:mvdw.helpmijapi.forum.Comment.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - User</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Comment.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Comment.GetBodyHTML">
+            <summary>
+            Verkrijg de tekst in HTML
+            </summary>
+            <returns>String - HTML</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.Comment.SetBodyHTML(System.String)">
+            <summary>
+            Set de tekst in HTML
+            </summary>
+            <param name="html">String - HTML</param>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijComment.user">
+            <summary>
+            Autheur van de comment
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.forum.HelpmijComment.bodyHTML">
+            <summary>
+            HTML Body
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijComment.GetUser">
+            <summary>
+            Verkrijg de gebruiker
+            </summary>
+            <returns>Gebruiker - User</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijComment.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - User</param>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijComment.GetBodyHTML">
+            <summary>
+            Verkrijg de tekst in HTML
+            </summary>
+            <returns>String - HTML</returns>
+        </member>
+        <member name="M:mvdw.helpmij.forum.HelpmijComment.SetBodyHTML(System.String)">
+            <summary>
+            Set de tekst in HTML
+            </summary>
+            <param name="html">String - HTML</param>
+        </member>
         <member name="T:mvdw.helpmijapi.artwork.userbar.resUserbars">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -2672,8 +2829,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Belg Style
-            Version=1.2.0
-            Image=UB_Belg.png
+            Image=UB_Belg_img.png
             Preview=UB_Belg_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2699,8 +2855,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Classic Style
-            Version=1.2.0
-            Image=UB_Classic.png
+            Image=UB_Classic_img.png
             Preview=UB_Classic_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2726,8 +2881,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Classic Dark Style
-            Version=1.2.0
-            Image=UB_ClassicDark.png
+            Image=UB_ClassicDark_img.png
             Preview=UB_ClassicDark_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2753,8 +2907,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Emboss Style
-            Version=1.2.0
-            Image=UB_Emboss.png
+            Image=UB_Emboss_img.png
             Preview=UB_Emboss.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2780,8 +2933,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Green Spring
-            Version=1.2.0
-            Image=UB_GreenSpring.png
+            Image=UB_GreenSpring_img.png
             Preview=UB_GreenSpring_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2807,8 +2959,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Herfst Style
-            Version=1.2.0
-            Image=UB_Herfst.png
+            Image=UB_Herfst_img.png
             Preview=UB_Herfst_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=217
@@ -2834,8 +2985,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Nederland Style
-            Version=1.2.0
-            Image=UB_Nederland.png
+            Image=UB_Nederland_img.png
             Preview=UB_Nederland_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2857,32 +3007,11 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Online">
-             <summary>
-               Looks up a localized string similar to [USERBAR]
-            Name=Helpmij Dynamic Online
-            Version=1.3.0
-            
-            Dynamic=true
-            AllowOveride=true
-            URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Online/UB_Online.php
-            
-            Argument_Version_Name=#HIDE#
-            Argument_Version_TXT=version
-            Argument_Version=1.0.0
-            Argument_Style_Name=Userbar Stijl
-            Argument_Style_TXT=style
-            Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
-            Argument_ID_Name=Gebruikers ID
-            Argument_ID_TXT=us [rest of string was truncated]&quot;;.
-             </summary>
-        </member>
         <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_RainbowBlue">
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Rainbow Blue Style
-            Version=1.2.0
-            Image=UB_RainbowBlue.png
+            Image=UB_RainbowBlue_img.png
             Preview=UB_RainbowBlue_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2908,8 +3037,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Rainbow Green Style
-            Version=1.2.0
-            Image=UB_RainbowGreen.png
+            Image=UB_RainbowGreen_img.png
             Preview=UB_RainbowGreen_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2935,8 +3063,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Rainbow Red Style
-            Version=1.2.0
-            Image=UB_RainbowRed.png
+            Image=UB_RainbowRed_img.png
             Preview=UB_RainbowRed_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2962,8 +3089,7 @@
              <summary>
                Looks up a localized string similar to [USERBAR]
             Name=Helpmij Rainbow Yellow Style
-            Version=1.2.0
-            Image=UB_RainbowYellow.png
+            Image=UB_RainbowYellow_img.png
             Preview=UB_RainbowYellow_PREVIEW.png
             Color_INSIDE_Red=255
             Color_INSIDE_Green=255
@@ -2984,28 +3110,6 @@
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.artwork.userbar.resUserbars.UB_Weer">
-             <summary>
-               Looks up a localized string similar to [USERBAR]
-            Name=Helpmij Dynamic Weer
-            Version=1.3.0
-            
-            Dynamic=true
-            AllowOveride=true
-            URL=http://helpmij.6te.net/Userbar%20Creator/DYNAMIC/Userbar_Weer/UB_Weer.php
-            
-            Argument_Version_Name=#HIDE#
-            Argument_Version_TXT=version
-            Argument_Version=1.0.0
-            Argument_Style_Name=Userbar Stijl
-            Argument_Style_TXT=style
-            Argument_Style=#SELECTION#classic;classicdark;emboss;rainbow_blue;rainbow_red;rainbow_green;rainbow_yellow;greenspring;hersft;belg;nederland
-            Argument_ID_Name=/
-            Argument_ID_TXT=/
-            Argument_ID=/
-            Ar [rest of string was truncated]&quot;;.
-             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.frmLogin">
             <summary>
@@ -3462,6 +3566,11 @@
             </summary>
             <param name="type">ChatMessageType - Type</param>
         </member>
+        <member name="T:mvdw.helpmijapi.ui.HelpmijPopup">
+            <summary>
+            Helpmij Pop-up
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsString">
             <summary>
             String Utilities
@@ -3559,6 +3668,17 @@
             Helpmij Userbar
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.type">
+            <summary>
+            Userbar Type
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.#ctor(mvdw.helpmijapi.artwork.userbar.UserbarType)">
+            <summary>
+            Creeer een nieuwe userbar
+            </summary>
+            <param name="type">UserbarType - Type</param>
+        </member>
         <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GetPreviewUserbar(mvdw.helpmijapi.artwork.userbar.UserbarType)">
             <summary>
             Verkrijg voorbeeld
@@ -3627,6 +3747,20 @@
             <summary>
             Rainbow Red Userbar
             </summary>
+        </member>
+        <member name="T:mvdw.helpmij.utils.UtilsFont">
+            <summary>
+            Font utilities
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsFont.GetEmbeddedFont(System.String,System.Drawing.FontStyle,System.Single)">
+            <summary>
+            Verkrijg een font van de resources
+            </summary>
+            <param name="font">Font naam (+ext)</param>
+            <param name="size">Font size</param>
+            <param name="style">Font Style</param>
+            <returns>System.Drawing.Font - Font</returns>
         </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
@@ -3753,15 +3887,6 @@
             Reset je Helpmij Gebruiker wachtwoord
             </summary>
             <param name="email">String - Email</param>
-        </member>
-        <member name="M:mvdw.helpmij.utils.UtilsFont.GetEmbeddedFont(System.String,System.Drawing.FontStyle,System.Single)">
-            <summary>
-            Verkrijg een font van de resources
-            </summary>
-            <param name="font">Font naam (+ext)</param>
-            <param name="size">Font size</param>
-            <param name="style">Font Style</param>
-            <returns>System.Drawing.Font - Font</returns>
         </member>
     </members>
 </doc>

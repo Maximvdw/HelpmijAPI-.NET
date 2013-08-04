@@ -27,6 +27,7 @@ using mvdw.helpmij.utils;
 using mvdw.helpmij.gebruiker;
 using mvdw.helpmijapi.gebruiker.exceptions;
 using mvdw.helpmijapi.forum;
+using mvdw.helpmijapi;
 
 namespace mvdw.helpmij.forum
 {
@@ -54,7 +55,7 @@ namespace mvdw.helpmij.forum
                 topic.SetAuthor(GetAuthor(source)); // AUTHEUR
                 topic.SetTitle(GetTitle(source)); // TITEL
                 topic.SetKeywords(GetKeywords(source)); // KEYWORDS
-                topic.SetComments(GetComments(source,cookies,topic)); // COMMENTS
+                topic.SetComments(GetComments(source, cookies, topic)); // COMMENTS
             }
             else
             {
@@ -120,8 +121,9 @@ namespace mvdw.helpmij.forum
             // Split met ', '
             String[] data = keywords_str.Split(',');
             List<String> output = new List<String>();
-            foreach (String keyword in data){
-                output.Add(keyword.Replace(" ", ""));
+            foreach (String keyword in data)
+            {
+                output.Add(keyword.Replace(" ", "").ToLower());
             }
             // Return het resultaat
             return output;
@@ -145,21 +147,83 @@ namespace mvdw.helpmij.forum
             {
                 // Eerste keer
                 if (curPage == "")
-                    curPage = source;
+                    curPage = source.Split(new[] { s.beginTopic }, StringSplitOptions.RemoveEmptyEntries)[1].Replace("/page" + i + "#top","");
                 prevPage = curPage; // Vorige pagina
                 // Haal informatie uit pagina
                 List<String> authors = UtilsString.GetSubStrings(curPage,
                 s.memberPrefix, s.memberSuffix); // Autheurs
-                List<String> bodyHtml = UtilsString.GetSubStrings(curPage,
-                s.commentBodyPrefix, s.commentBodySuffix); // Berichten
+                String[] bodyHtml = curPage.Split(new[] { s.commentBodyPrefix, s.commentBodySuffix }, StringSplitOptions.RemoveEmptyEntries);
+
+                // Loop door alle comments
+                for (int j = 0; j < authors.Count-1; j++)
+                {
+                    Comment comment = new HelpmijComment();
+                    Gebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0,authors[j].IndexOf('-'))));
+                    comment.SetUser(user);
+                    comment.SetBodyHTML(bodyHtml[(j+1)+(j)]);
+                    comments.Add(comment);
+                }
 
                 // Verkrijg nieuwe pagina
-                curPage = UtilsHTTP.GetSource(topic.GetURL() + s.pagePrefix + i.ToString(),cookies);
+                curPage = UtilsHTTP.GetSource(topic.GetURL() + s.pagePrefix + i.ToString(), cookies);
+                curPage = curPage.Split(new[] { s.beginTopic }, StringSplitOptions.RemoveEmptyEntries)[1].Replace("/page" + i + "#top", "");
                 i += 1;
             }
 
             // Return het resultaat
             return comments;
+        }
+
+        /// <summary>
+        /// Controlleer of een topic aan de keywords voldoet
+        /// </summary>
+        /// <param name="intrests">String list</param>
+        /// <param name="topic">Topic</param>
+        /// <returns>Boolean</returns>
+        public static Boolean MatchesIntrests(List<String> intrests, Topic topic)
+        {
+            // Verkrijg informatie
+            String title = topic.GetTitle().ToLower();
+
+            List<String> keywords = topic.GetKeywords();
+            keywords.AddRange(title.Split(' '));
+
+            // Doorloop de intressen
+            foreach (String key in keywords)
+            {
+                if (intrests.Contains(key.ToLower()))
+                {
+                    return true;
+                }
+            }
+            // Geen return gebeurt
+            return false;
+        }
+
+        /// <summary>
+        /// Controlleer of een topic aan de keywords voldoet
+        /// </summary>
+        /// <param name="intrests">String list</param>
+        /// <param name="topic">Topic</param>
+        /// <returns>Boolean</returns>
+        public static Boolean MatchesIntrests(String[] intrests, Topic topic)
+        {
+            // Verkrijg informatie
+            String title = topic.GetTitle().ToLower();
+
+            List<String> keywords = topic.GetKeywords();
+            keywords.AddRange(title.Split(' '));
+
+            // Doorloop de intressen
+            foreach (String key in keywords)
+            {
+                if (intrests.Contains(key.ToLower()))
+                {
+                    return true;
+                }
+            }
+            // Geen return gebeurt
+            return false;
         }
     }
 }

@@ -399,5 +399,10 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <param name="url">String - URL</param>
         void SetPublicProfileURL(String url);
+
+        /// <summary>
+        /// Get/Set of de gebruiker verenigingslid is
+        /// </summary>
+        Boolean IsVerenigingslid {get; set;}
     }
 }

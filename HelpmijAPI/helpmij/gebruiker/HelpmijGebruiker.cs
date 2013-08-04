@@ -186,6 +186,10 @@ namespace mvdw.helpmij.gebruiker
         /// Gebruikers Profiel
         /// </summary>
         public String profileURL = null;
+        /// <summary>
+        /// Verenigingslid
+        /// </summary>
+        public Boolean vererningingslid = false;
 
 
         /// <summary>
@@ -202,6 +206,7 @@ namespace mvdw.helpmij.gebruiker
             }
             catch (Exception ex)
             {
+                // Error
             }
         }
 
@@ -940,6 +945,22 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="url">String - URL</param>
         public void SetPublicProfileURL(String url)
         {
+            this.profileURL = url;
+        }
+
+        /// <summary>
+        /// Get/Set of de gebruiker verenigingslid is
+        /// </summary>
+        public Boolean IsVerenigingslid
+        {
+            get
+            {
+                return vererningingslid;
+            }
+            set
+            {
+                this.vererningingslid = value;
+            }
         }
 
         /// <summary>

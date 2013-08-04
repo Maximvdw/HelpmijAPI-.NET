@@ -117,21 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="UB_Belg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Belg.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="UB_Belg_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Belg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UB_Belg_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Belg_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UB_Classic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Classic.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="UB_ClassicDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_ClassicDark.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UB_ClassicDark_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_ClassicDark.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,17 +136,11 @@
   <data name="UB_Classic_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Classic_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UB_Emboss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Emboss.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
   <data name="UB_Emboss_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Emboss.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UB_Emboss_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Emboss_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UB_GreenSpring" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_GreenSpring.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UB_GreenSpring_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_GreenSpring.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,17 +148,11 @@
   <data name="UB_GreenSpring_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_GreenSpring_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UB_Herfst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Herfst.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
   <data name="UB_Herfst_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Herfst.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UB_Herfst_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Herfst_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UB_Nederland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Nederland.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UB_Nederland_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Nederland.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,20 +160,11 @@
   <data name="UB_Nederland_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_Nederland_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UB_Online" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Online.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="UB_RainbowBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_RainbowBlue.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
   <data name="UB_RainbowBlue_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowBlue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UB_RainbowBlue_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowBlue_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UB_RainbowGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_RainbowGreen.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UB_RainbowGreen_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowGreen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,17 +172,11 @@
   <data name="UB_RainbowGreen_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowGreen_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UB_RainbowRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_RainbowRed.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
   <data name="UB_RainbowRed_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowRed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UB_RainbowRed_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowRed_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="UB_RainbowYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_RainbowYellow.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="UB_RainbowYellow_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowYellow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +184,38 @@
   <data name="UB_RainbowYellow_PREVIEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\Resources\UB_RainbowYellow_PREVIEW.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UB_Weer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Resources\UB_Weer.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UB_Belg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_Belg.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_Classic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_Classic.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_ClassicDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_ClassicDark.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_Emboss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_Emboss.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_GreenSpring" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_GreenSpring.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_Herfst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_Herfst.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_Nederland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_Nederland.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_RainbowBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_RainbowBlue.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_RainbowGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_RainbowGreen.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_RainbowRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_RainbowRed.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="UB_RainbowYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Resources\UB_RainbowYellow.ini;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

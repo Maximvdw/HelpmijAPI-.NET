@@ -239,5 +239,25 @@ namespace mvdw.helpmij.forum
         {
             this.comments = comments;
         }
+
+        /// <summary>
+        /// Controlleer of een topic aan jouw intressen voldoet
+        /// </summary>
+        /// <param name="intrests">List String - Intresses</param>
+        /// <returns>Boolean</returns>
+        public Boolean MatchesIntrests(List<String> intrests)
+        {
+            return TopicReader.MatchesIntrests(intrests, this);
+        }
+
+        /// <summary>
+        /// Controlleer of een topic aan jouw intressen voldoet
+        /// </summary>
+        /// <param name="intrests">List String - Intresses</param>
+        /// <returns>Boolean</returns>
+        public Boolean MatchesIntrests(String[] intrests)
+        {
+            return TopicReader.MatchesIntrests(intrests, this);
+        }
     }
 }

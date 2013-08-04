@@ -21,37 +21,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using mvdw.helpmijapi.gebruiker;
-
-namespace mvdw.helpmijapi.forum
+namespace mvdw.helpmijapi.ui
 {
     /// <summary>
-    /// Reacties op een Topic
+    /// Helpmij Pop-up
     /// </summary>
-    public interface Comment
+    public class HelpmijPopup
     {
-        /// <summary>
-        /// Verkrijg de gebruiker
-        /// </summary>
-        /// <returns>Gebruiker - User</returns>
-        Gebruiker GetUser();
-
-        /// <summary>
-        /// Set de gebruiker
-        /// </summary>
-        /// <param name="user">Gebruiker - User</param>
-        void SetUser(Gebruiker user);
-
-        /// <summary>
-        /// Verkrijg de tekst in HTML
-        /// </summary>
-        /// <returns>String - HTML</returns>
-        String GetBodyHTML();
-
-        /// <summary>
-        /// Set de tekst in HTML
-        /// </summary>
-        /// <param name="html">String - HTML</param>
-        void SetBodyHTML(String html);
     }
 }

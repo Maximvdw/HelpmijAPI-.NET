@@ -41,5 +41,18 @@
     <Setting Name="registeredSuffix" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;/dd&gt;</Value>
     </Setting>
+    <Setting Name="lastactivityPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Laatste activiteit&lt;/dt&gt;
+		&lt;dd&gt; </Value>
+    </Setting>
+    <Setting Name="lastactivitySuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/dd&gt;</Value>
+    </Setting>
+    <Setting Name="publicuserPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;title&gt;Bekijk Profiel: </Value>
+    </Setting>
+    <Setting Name="publicuserSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> - Helpmij.nl Forum&lt;/title&gt;</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

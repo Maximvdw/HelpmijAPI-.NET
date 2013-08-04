@@ -259,6 +259,12 @@ namespace mvdw.helpmij.gebruiker
                     {
                         userHelpmij.userRank = UtilsString.GetSubStrings(source,
                             s.userstatusPrefix, s.userstatusSuffix)[0]; // User Rank
+                        if (userHelpmij.userRank.Contains("<br />Verenigingslid"))
+                        {
+                            userHelpmij.userRank.Replace("<br />Verenigingslid", "");
+                            // Verenigingslid
+                            userHelpmij.IsVerenigingslid = true;
+                        }
                     }
                     catch (Exception) { }
                     try
@@ -281,6 +287,22 @@ namespace mvdw.helpmij.gebruiker
                         userHelpmij.registrationDay = userHelpmij.registrationDate.Day;
                         userHelpmij.registrationMonth = userHelpmij.registrationDate.Month;
                         userHelpmij.registrationYear = userHelpmij.registrationDate.Year;
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        String lastactivity = UtilsString.GetSubStrings(source,
+                            s.lastactivityPrefix, s.lastactivitySuffix)[0]; // Laatste Activiteit
+                        userHelpmij.lastactivityDate = DateTime.Parse(lastactivity);
+                        userHelpmij.lastactivityDay = userHelpmij.lastactivityDate.Day;
+                        userHelpmij.lastactivityMonth = userHelpmij.lastactivityDate.Month;
+                        userHelpmij.lastactivityYear = userHelpmij.lastactivityDate.Year;
+                    }
+                    catch (Exception) { }
+                    try
+                    {
+                        userHelpmij.nickname = UtilsString.GetSubStrings(source,
+                            s.publicuserPrefix, s.publicuserSuffix)[0]; // Gebruikersnaam
                     }
                     catch (Exception) { }
                 }

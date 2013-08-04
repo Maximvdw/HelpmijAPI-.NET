@@ -166,5 +166,53 @@ namespace mvdw.helpmij.gebruiker {
                 this["registeredSuffix"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Laatste activiteit</dt>\r\n\t\t<dd> ")]
+        public string lastactivityPrefix {
+            get {
+                return ((string)(this["lastactivityPrefix"]));
+            }
+            set {
+                this["lastactivityPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>")]
+        public string lastactivitySuffix {
+            get {
+                return ((string)(this["lastactivitySuffix"]));
+            }
+            set {
+                this["lastactivitySuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<title>Bekijk Profiel: ")]
+        public string publicuserPrefix {
+            get {
+                return ((string)(this["publicuserPrefix"]));
+            }
+            set {
+                this["publicuserPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" - Helpmij.nl Forum</title>\r")]
+        public string publicuserSuffix {
+            get {
+                return ((string)(this["publicuserSuffix"]));
+            }
+            set {
+                this["publicuserSuffix"] = value;
+            }
+        }
     }
 }

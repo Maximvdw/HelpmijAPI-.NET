@@ -31,5 +31,49 @@ namespace mvdw.helpmij.forum
     /// </summary>
     internal class HelpmijComment : Comment
     {
+        /// <summary>
+        /// Autheur van de comment
+        /// </summary>
+        private Gebruiker user = null;
+        /// <summary>
+        /// HTML Body
+        /// </summary>
+        private String bodyHTML = null;
+
+        /// <summary>
+        /// Verkrijg de gebruiker
+        /// </summary>
+        /// <returns>Gebruiker - User</returns>
+        public Gebruiker GetUser()
+        {
+            return user;
+        }
+
+        /// <summary>
+        /// Set de gebruiker
+        /// </summary>
+        /// <param name="user">Gebruiker - User</param>
+        public void SetUser(Gebruiker user)
+        {
+            this.user = user;
+        }
+
+        /// <summary>
+        /// Verkrijg de tekst in HTML
+        /// </summary>
+        /// <returns>String - HTML</returns>
+        public String GetBodyHTML()
+        {
+            return bodyHTML;
+        }
+
+        /// <summary>
+        /// Set de tekst in HTML
+        /// </summary>
+        /// <param name="html">String - HTML</param>
+        public void SetBodyHTML(String html)
+        {
+            this.bodyHTML = html;
+        }
     }
 }

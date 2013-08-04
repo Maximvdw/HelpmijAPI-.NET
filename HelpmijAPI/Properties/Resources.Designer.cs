@@ -83,6 +83,26 @@ namespace mvdw.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] MyriadPro_Regular {
+            get {
+                object obj = ResourceManager.GetObject("MyriadPro_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skin1 {
+            get {
+                object obj = ResourceManager.GetObject("skin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] visitor {
             get {
                 object obj = ResourceManager.GetObject("visitor", resourceCulture);

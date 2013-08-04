@@ -24,7 +24,7 @@
       <Value Profile="(Default)">&lt;meta name="keywords" content="</Value>
     </Setting>
     <Setting Name="metaKeywordSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)"> " /&gt;</Value>
+      <Value Profile="(Default)">" /&gt;</Value>
     </Setting>
     <Setting Name="commentBodyPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;blockquote class="postcontent restore "&gt;</Value>
@@ -36,10 +36,10 @@
       <Value Profile="(Default)">http://www.helpmij.nl</Value>
     </Setting>
     <Setting Name="newTopicUrlPrefix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;a href=</Value>
+      <Value Profile="(Default)">&lt;a href="</Value>
     </Setting>
     <Setting Name="newTopicUrlSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)"> class="last_title</Value>
+      <Value Profile="(Default)">" class="last_title</Value>
     </Setting>
     <Setting Name="newTopicTitlePrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">class="last_title" title="</Value>
@@ -64,6 +64,12 @@
     </Setting>
     <Setting Name="hompageTabEnd" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;!-- End tab containers --&gt;</Value>
+    </Setting>
+    <Setting Name="endTopic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!-- BEGIN TEMPLATE: footer --&gt;</Value>
+    </Setting>
+    <Setting Name="beginTopic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;!-- BEGIN TEMPLATE: header --&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>
