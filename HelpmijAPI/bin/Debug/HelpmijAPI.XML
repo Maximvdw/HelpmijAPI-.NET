@@ -874,30 +874,6 @@
             <param name="success">Succes output</param>
             <returns>Hashtable</returns>
         </member>
-        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.lnkClose_LinkClicked(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)">
-            <summary>
-            Sluit de TaskbarNotifier
-            </summary>
-            <param name="sender">Sender</param>
-            <param name="e">Event Arguments</param>
-        </member>
-        <member name="F:mvdw.helpmij.ui.TaskbarNotifier.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:mvdw.helpmij.ui.TaskbarNotifier.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
             HTTP Utilities

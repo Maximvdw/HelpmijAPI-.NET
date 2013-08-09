@@ -1,139 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="142171a6-a987-4d36-9857-b20985a81aaf" Title="mvdw.helpmij.utils Namespace" Url="html/8a472c03-4981-d728-fc7e-3ea2f1ec2c8d.htm">
-    <HelpTOCNode Id="16233672-1dc3-488b-b71a-3eff10bfdca1" Title="UtilsJSON Class" Url="html/ecdb4d9d-ee48-df29-7e63-5a054595cae7.htm">
-      <HelpTOCNode Title="UtilsJSON Members" Url="html/eaa69163-a61d-1e83-7eb2-2fc0e9e2c702.htm" />
-      <HelpTOCNode Title="UtilsJSON Constructor " Url="html/9f69fd70-ff5c-61db-cc18-6cf6d704adea.htm" />
-      <HelpTOCNode Id="94810908-9b68-4b5f-8719-5db0508b0693" Title="UtilsJSON Fields" Url="html/891bafbd-04fd-3354-8a4f-5c23cf588f53.htm">
-        <HelpTOCNode Title="TOKEN_COLON Field" Url="html/50a19230-badd-a876-d9ac-8300e45c1ec3.htm" />
-        <HelpTOCNode Title="TOKEN_COMMA Field" Url="html/ab31a87a-ca0b-8cbf-e6ad-95943cfe291f.htm" />
-        <HelpTOCNode Title="TOKEN_CURLY_CLOSE Field" Url="html/90c7b699-0176-d6c9-e0ae-19e6334aa5a3.htm" />
-        <HelpTOCNode Title="TOKEN_CURLY_OPEN Field" Url="html/a73b41a1-aa66-4c3c-0cf6-b3f9139d5ccb.htm" />
-        <HelpTOCNode Title="TOKEN_FALSE Field" Url="html/63ca2a8d-58ee-6e5f-067c-61f4d5db798c.htm" />
-        <HelpTOCNode Title="TOKEN_NONE Field" Url="html/9b0a2d7a-89cf-97aa-2c2f-8f9d5a0ac0f8.htm" />
-        <HelpTOCNode Title="TOKEN_NULL Field" Url="html/cfca4880-bb36-f9d5-9f0a-9713f10dd23a.htm" />
-        <HelpTOCNode Title="TOKEN_NUMBER Field" Url="html/5bc3e796-7953-82dc-fd75-8154fb2ebd4f.htm" />
-        <HelpTOCNode Title="TOKEN_SQUARED_CLOSE Field" Url="html/959a2b11-f434-334a-0b8d-6fa665ca842b.htm" />
-        <HelpTOCNode Title="TOKEN_SQUARED_OPEN Field" Url="html/9156c401-8630-4525-e72b-51510484ec59.htm" />
-        <HelpTOCNode Title="TOKEN_STRING Field" Url="html/ace5409a-134e-1eda-7549-12723c82bec6.htm" />
-        <HelpTOCNode Title="TOKEN_TRUE Field" Url="html/efd9a24a-d96a-2ae2-0e62-9017408526d4.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="5b12cb88-f4ee-44ec-bab6-46e752640d21" Title="UtilsJSON Methods" Url="html/8b98d200-a8ea-08f5-d2a7-8d8d4f16a516.htm">
-        <HelpTOCNode Title="EatWhitespace Method " Url="html/13947b18-3ee9-6664-aa6d-6957d4188d81.htm" />
-        <HelpTOCNode Title="GetLastIndexOfNumber Method " Url="html/f55a1ba0-7245-d221-0d5e-c8d763f87ae3.htm" />
-        <HelpTOCNode Id="08f722d7-d2f4-412b-9f4c-2739d4a0db0c" Title="JsonDecode Method " Url="html/c623bf1f-0672-38f7-f67a-8c632ecaeafd.htm">
-          <HelpTOCNode Title="JsonDecode Method (String)" Url="html/a554669e-5f33-24f1-070e-898e38e5e2d6.htm" />
-          <HelpTOCNode Title="JsonDecode Method (String, Boolean)" Url="html/92ccfb1f-6eac-98c9-201e-8f2b2bc3563a.htm" />
-        </HelpTOCNode>
-        <HelpTOCNode Title="JsonEncode Method " Url="html/ceef25f2-5f27-0ce9-2a2e-702f16d58bde.htm" />
-        <HelpTOCNode Title="LookAhead Method " Url="html/fbbb5bc3-1ac2-44f9-c00b-cb32a9ab903b.htm" />
-        <HelpTOCNode Title="NextToken Method " Url="html/357e648e-d203-de6e-e4f2-113825985d3d.htm" />
-        <HelpTOCNode Title="ParseArray Method " Url="html/4b6dd74e-d69b-8d83-e652-9e10e6e9902a.htm" />
-        <HelpTOCNode Title="ParseNumber Method " Url="html/10f01a72-103f-9d7c-f236-edd93e3d1114.htm" />
-        <HelpTOCNode Title="ParseObject Method " Url="html/7d0dba7d-9d8d-a065-758a-ccceaa99041e.htm" />
-        <HelpTOCNode Title="ParseString Method " Url="html/09ffcc7b-f034-7d93-d986-bd56e385d23a.htm" />
-        <HelpTOCNode Title="ParseValue Method " Url="html/a986cfc6-3983-6af8-5ba4-545e3dd630cd.htm" />
-        <HelpTOCNode Title="SerializeArray Method " Url="html/a4b9eba9-0894-6393-18a4-b5a1581a256c.htm" />
-        <HelpTOCNode Title="SerializeNumber Method " Url="html/3c11284c-c6b3-b9b3-2a7b-4509469c2859.htm" />
-        <HelpTOCNode Title="SerializeObject Method " Url="html/f6013a06-c3f4-3a72-4f29-9929899ac3bd.htm" />
-        <HelpTOCNode Title="SerializeString Method " Url="html/4ef9c668-55b5-a922-92d7-5dead4df668a.htm" />
-        <HelpTOCNode Title="SerializeValue Method " Url="html/c246a344-70ed-bf6f-7dca-955921eabc28.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-  </HelpTOCNode>
-  <HelpTOCNode Id="1e0ca872-3364-438a-b4ef-1b4eab2940dd" Title="mvdw.helpmijapi Namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm">
-    <HelpTOCNode Id="9c4d6f3e-6cc9-4f7c-9ca0-204de190c76d" Title="Helpmij Class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm">
+  <HelpTOCNode Id="6a8ef888-f410-46ff-9581-762fdd30d169" Title="mvdw.helpmijapi Namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm">
+    <HelpTOCNode Id="6e4fc42c-6134-4d56-bcc9-c8fc460723cf" Title="Helpmij Class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm">
       <HelpTOCNode Title="Helpmij Members" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
       <HelpTOCNode Title="Helpmij Constructor " Url="html/b9c5b112-2f2d-fcc3-2464-885aaf56ddf3.htm" />
-      <HelpTOCNode Id="d6c7cd63-4e83-40fe-9150-ae3f3cd58161" Title="Helpmij Methods" Url="html/2e91ce71-7f70-edab-b5ff-825457f560a8.htm">
+      <HelpTOCNode Id="25fe7661-64ec-4361-9abc-e9cc87311235" Title="Helpmij Methods" Url="html/2e91ce71-7f70-edab-b5ff-825457f560a8.htm">
         <HelpTOCNode Title="GetChat Method " Url="html/9471600a-580a-7dad-08f5-075b9fcddcab.htm" />
         <HelpTOCNode Title="GetNewTopics Method " Url="html/49d1e779-a178-87b2-a4ff-ed51f00b8236.htm" />
-        <HelpTOCNode Title="GetUnansweredTopics Method " Url="html/1b3cd944-d375-21d0-29fd-4dfc637af789.htm" />
+        <HelpTOCNode Id="4e6e67e3-7499-41c5-b236-6956fa7ba9a9" Title="GetUnansweredTopics Method " Url="html/65531a5f-01f9-f6f3-5dfe-c048fbfa4c1c.htm">
+          <HelpTOCNode Title="GetUnansweredTopics Method " Url="html/1b3cd944-d375-21d0-29fd-4dfc637af789.htm" />
+          <HelpTOCNode Title="GetUnansweredTopics Method (Gebruiker)" Url="html/c9a92a6a-5aaa-11ae-0830-7ce3dd12ebfb.htm" />
+        </HelpTOCNode>
         <HelpTOCNode Title="GetUser Method " Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
         <HelpTOCNode Title="Login Method " Url="html/1f5b1808-aa67-3072-4e04-a408cfbc4fb0.htm" />
         <HelpTOCNode Title="LoginMD5 Method " Url="html/dd420cc7-eec9-28e9-928e-4cd68fd0bd1f.htm" />
         <HelpTOCNode Title="RefreshCache Method " Url="html/c940a9be-184b-d668-cd15-a237861017b6.htm" />
+        <HelpTOCNode Title="ResetPassword Method " Url="html/4d5545fb-5035-441a-3c83-58d268a7029d.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="47b83a33-d43e-4539-a1bc-f26bc401f352" Title="HelpmijAPI Class" Url="html/7fc12436-3e43-56ef-df48-07d1f352cb17.htm">
+    <HelpTOCNode Id="bf9d55d2-9e4d-4da8-a691-b82f90b7c52d" Title="HelpmijAPI Class" Url="html/7fc12436-3e43-56ef-df48-07d1f352cb17.htm">
       <HelpTOCNode Title="HelpmijAPI Members" Url="html/b54f7df7-bb92-3666-d05a-368d356250b2.htm" />
       <HelpTOCNode Title="HelpmijAPI Constructor " Url="html/b9f9e81e-bbef-65c5-e29d-edce7f55134f.htm" />
-      <HelpTOCNode Id="130a731e-79ba-449d-8370-b2dd563f2ea4" Title="HelpmijAPI Methods" Url="html/3735eab4-db5d-c7fc-0dd6-241b6bf05cdc.htm">
+      <HelpTOCNode Id="59698583-69d4-452f-b07c-5d6e26537495" Title="HelpmijAPI Methods" Url="html/3735eab4-db5d-c7fc-0dd6-241b6bf05cdc.htm">
         <HelpTOCNode Title="DisableProxy Method " Url="html/8275ce25-a87c-d8a4-88be-a10609585ef4.htm" />
         <HelpTOCNode Title="EnableProxy Method " Url="html/2ae5b116-d5d3-d1ba-de92-bc4a12133d98.htm" />
         <HelpTOCNode Title="GetAuthor Method " Url="html/eace840d-c6aa-34cb-0e23-1ebe1e5b5a9b.htm" />
         <HelpTOCNode Title="GetVersion Method " Url="html/086c800e-e406-5957-87a6-6a8fc496e6b4.htm" />
-        <HelpTOCNode Id="0df06d60-9407-4741-84a0-4f2e63e4810c" Title="SetProxy Method " Url="html/86db9481-858b-1ff2-c629-77fc8f192c08.htm">
+        <HelpTOCNode Title="ResetSettings Method " Url="html/a3a63743-cf75-ca6a-c9d8-23391a52cb3e.htm" />
+        <HelpTOCNode Id="f45d6b12-d3a8-4551-9ecf-cb9383cb431b" Title="SetProxy Method " Url="html/86db9481-858b-1ff2-c629-77fc8f192c08.htm">
           <HelpTOCNode Title="SetProxy Method (String, Int32)" Url="html/9cd8f59f-9109-d07f-2bdb-7ecbf260bd78.htm" />
           <HelpTOCNode Title="SetProxy Method (String, Int32, String, String)" Url="html/b2ff8ce6-e27b-0ade-7004-4c05978f2e71.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="43c0a488-51d1-4933-8405-31719ce47bf2" Title="mvdw.helpmijapi.artwork Namespace" Url="html/37c851ca-ed0d-d73b-8d61-10f4c669f169.htm">
-    <HelpTOCNode Id="11fe5f77-5204-430d-a425-af8a2dbf66ba" Title="HelpmijLogo Class" Url="html/9a748da8-cd4e-ee19-88d5-80df1d656928.htm">
-      <HelpTOCNode Title="HelpmijLogo Members" Url="html/7ead9d3b-f4ee-cc29-2146-dcd256316c2c.htm" />
-      <HelpTOCNode Title="HelpmijLogo Constructor " Url="html/0135c93b-ee9e-c5e3-4514-e19123432063.htm" />
-      <HelpTOCNode Id="25b89a1e-ec29-4dde-b774-bd5e18c980b1" Title="HelpmijLogo Methods" Url="html/ffcbeb53-75ff-0fb1-71c7-f0a2c7c80634.htm">
-        <HelpTOCNode Title="GetCurrentLogo Method " Url="html/6f03222d-a4fd-366e-67d8-f9a2a02e54e9.htm" />
-        <HelpTOCNode Title="GetLogo Method " Url="html/1bfbf318-03d7-9a1b-d08d-004cbcf07955.htm" />
-        <HelpTOCNode Title="GetLogoXmas Method " Url="html/d8654c85-43e0-0bf4-7cae-d1c40a32ae3f.htm" />
+  <HelpTOCNode Id="71513e90-ab9d-464a-a879-482b21b568b0" Title="mvdw.helpmijapi.artwork.logo Namespace" Url="html/59c39f13-725b-77b2-45c8-8cb618248569.htm">
+    <HelpTOCNode Id="3b7e1e07-2fc1-47e1-983b-0c27ad3b87eb" Title="HelpmijLogo Class" Url="html/0a335ceb-064c-6ae3-c1f8-560f40b17d88.htm">
+      <HelpTOCNode Title="HelpmijLogo Members" Url="html/dda1db7b-9b8d-d166-4c21-e54119311eef.htm" />
+      <HelpTOCNode Title="HelpmijLogo Constructor " Url="html/0eff8147-acd4-9a7c-abdc-0c8395dbb173.htm" />
+      <HelpTOCNode Id="c3a14224-11bc-48d4-b317-b8825ed9e2c3" Title="HelpmijLogo Methods" Url="html/1faae1b1-a72b-19d4-5881-f01e0727928b.htm">
+        <HelpTOCNode Title="GetCurrentLogo Method " Url="html/9e625342-fa2c-1e80-87b6-c674f817831d.htm" />
+        <HelpTOCNode Title="GetLogo Method " Url="html/f9243cec-9ab1-7e37-34f7-e946aeb7d94e.htm" />
+        <HelpTOCNode Title="GetLogoXmas Method " Url="html/800b7683-0271-fd2b-2121-6b5513abc79c.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Title="LogoType Enumeration" Url="html/0c406a93-abe8-7e8c-4d79-ad9dac161cf4.htm" />
+    <HelpTOCNode Title="LogoType Enumeration" Url="html/4d336aa1-166d-5a6e-25d0-ac37d012ab6d.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="d8425d72-1da1-4ee7-82c9-ee4c4653018b" Title="mvdw.helpmijapi.chat Namespace" Url="html/c16273d1-86d3-edba-69fd-63227a743024.htm">
-    <HelpTOCNode Id="8fe8a252-d0e5-4933-9b1e-ef557314e584" Title="Chat Interface" Url="html/1c8c9af7-275a-eeb2-33d9-fe331a2d0e64.htm">
-      <HelpTOCNode Title="Chat Members" Url="html/fcc2c766-882a-8068-619e-482794cdc276.htm" />
-      <HelpTOCNode Id="7013cc6b-6838-4c42-ad14-bcb13793a361" Title="Chat Methods" Url="html/cb75c8ae-d1fe-d154-3959-57c0a040299b.htm">
-        <HelpTOCNode Id="a879f3f5-1fac-4154-af89-2413296f418f" Title="Connect Method " Url="html/a785d238-d48a-a270-8495-e3057f71653b.htm">
-          <HelpTOCNode Title="Connect Method (Gebruiker)" Url="html/5f80a4b0-cc4c-3c87-344b-def63d50de63.htm" />
-          <HelpTOCNode Title="Connect Method (Gebruiker, ChatListener)" Url="html/be406b2e-9f72-3554-f4f3-ae8fc3a8a4ee.htm" />
+  <HelpTOCNode Id="13e246f8-3ef1-4c59-bd7a-cfaa7ef540f1" Title="mvdw.helpmijapi.artwork.userbar Namespace" Url="html/2a63f5aa-c253-4f0d-bbb2-3101cad8ead2.htm">
+    <HelpTOCNode Id="adf2e988-2b6c-46fa-b8f2-d04f02dc772f" Title="HelpmijUserbar Class" Url="html/fea47570-e829-bc8b-0032-055b531d9140.htm">
+      <HelpTOCNode Title="HelpmijUserbar Members" Url="html/cafcf201-623e-f36e-2383-e84afa8db399.htm" />
+      <HelpTOCNode Title="HelpmijUserbar Constructor " Url="html/65befa66-5159-602d-cfbf-ffc082a3a9a9.htm" />
+      <HelpTOCNode Id="5b0e2f95-ccc1-401f-80f3-dfa61b1b4172" Title="HelpmijUserbar Methods" Url="html/fbdb4f3c-9290-d220-015d-60decee8fa25.htm">
+        <HelpTOCNode Title="GetBlankUserbar Method " Url="html/07cd3be7-1d0a-8f70-14b5-f1283307fb73.htm" />
+        <HelpTOCNode Title="GetPreviewUserbar Method " Url="html/4fd5a2b0-c9a3-58f2-5b8b-40fa61d2cb1d.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5f5f743d-8154-4921-8ad6-cdfeb138182d" Title="uiUserbar Class" Url="html/c844a1c7-1511-dd6a-04f4-de5848003ae6.htm">
+      <HelpTOCNode Title="uiUserbar Members" Url="html/2889747c-afb5-a5fd-4456-e7abc6ed9b4c.htm" />
+      <HelpTOCNode Title="uiUserbar Constructor " Url="html/647dda4e-8a04-3dad-b935-be02bab263c4.htm" />
+      <HelpTOCNode Id="827f3e44-36e8-4dfa-8b1e-d082aa6ceaf3" Title="uiUserbar Methods" Url="html/5f5a4873-a0af-3b8d-d1b4-d2ea90729df9.htm">
+        <HelpTOCNode Id="e6d6c8ed-739d-46f1-8af6-fdddc236aa33" Title="Dispose Method " Url="html/7b3e93ad-9b23-daf2-0c4f-57cd3fab6381.htm">
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/95c95592-4655-05b8-1411-d7d4ac4fc0d4.htm" />
         </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9dea9c54-92ee-48bf-bffc-ac5c0bf8f375" Title="uiUserbar Properties" Url="html/eddc37c7-f6dc-7a7e-9315-64f3b5c6b7f8.htm">
+        <HelpTOCNode Title="DefaultUserbar Property " Url="html/b0d384a6-2187-546b-bd93-2dabd7471843.htm" />
+        <HelpTOCNode Title="ShowPreview Property " Url="html/d4add0ab-6063-88a6-1613-c116b7b0d344.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="uiUserbar Events" Url="html/0bb03701-08aa-322f-8ae9-34f573e6287a.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="UserbarType Enumeration" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="f704d3dc-aa20-40bc-ba7a-a68bf7db502c" Title="mvdw.helpmijapi.chat Namespace" Url="html/c16273d1-86d3-edba-69fd-63227a743024.htm">
+    <HelpTOCNode Id="648d68fe-fc98-42a2-9fe3-aac799d5233f" Title="Chat Interface" Url="html/1c8c9af7-275a-eeb2-33d9-fe331a2d0e64.htm">
+      <HelpTOCNode Title="Chat Members" Url="html/fcc2c766-882a-8068-619e-482794cdc276.htm" />
+      <HelpTOCNode Id="0e6265c5-5e68-4290-a72f-1c4b75ea31b6" Title="Chat Methods" Url="html/cb75c8ae-d1fe-d154-3959-57c0a040299b.htm">
+        <HelpTOCNode Title="Connect Method " Url="html/5f80a4b0-cc4c-3c87-344b-def63d50de63.htm" />
         <HelpTOCNode Title="ForceUpdate Method " Url="html/8a314dd1-fc30-16ca-646c-381a538278b7.htm" />
         <HelpTOCNode Title="GetLastUpdate Method " Url="html/52f8fd0c-b74b-4a16-56a3-9d037f45bd66.htm" />
-        <HelpTOCNode Title="RegisterListener Method " Url="html/28108449-39e4-bc3a-098b-12c7aab90194.htm" />
         <HelpTOCNode Title="SendCommand Method " Url="html/aa6e399f-6511-a26a-1c25-91abd2d27380.htm" />
         <HelpTOCNode Title="SendMessage Method " Url="html/45f48dd9-d2a4-cd27-52af-856e2a9e1f6b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b9605756-71ca-4210-8a07-30dfebb7d0b9" Title="ChatMessage Interface" Url="html/ad0228ca-00e3-cbaa-a81f-620ba3b36abf.htm">
+    <HelpTOCNode Id="43a789e1-f175-420e-964e-028f62cedf79" Title="ChatMessage Interface" Url="html/ad0228ca-00e3-cbaa-a81f-620ba3b36abf.htm">
       <HelpTOCNode Title="ChatMessage Members" Url="html/8c08c564-0278-598f-4cd9-7089ad4bfba0.htm" />
-      <HelpTOCNode Id="05c06453-a0e0-4378-b713-d0aa661f98e0" Title="ChatMessage Methods" Url="html/a3b71a66-bc76-fd93-d2e0-8d9212a5e5e5.htm">
+      <HelpTOCNode Id="be3f1617-49f2-41d7-bafc-6f40eb3d49c4" Title="ChatMessage Methods" Url="html/a3b71a66-bc76-fd93-d2e0-8d9212a5e5e5.htm">
+        <HelpTOCNode Title="GetColor Method " Url="html/9f2df14b-59a5-96da-4c05-74a1dc5233e5.htm" />
         <HelpTOCNode Title="GetMessage Method " Url="html/f56f39f7-10d4-5bae-93c7-b9da1452b6d4.htm" />
+        <HelpTOCNode Title="GetMessageType Method " Url="html/f9d8fa1e-0700-ad83-86d3-101bdb0cf086.htm" />
         <HelpTOCNode Title="GetUser Method " Url="html/7a6cccd3-074c-534b-4dd3-54697397170f.htm" />
+        <HelpTOCNode Title="SetColor Method " Url="html/1ba6200c-0e6e-16f7-808f-e031d852bad7.htm" />
         <HelpTOCNode Title="SetMessage Method " Url="html/39a2fcd1-4d77-27f1-b496-a3dd2881cc40.htm" />
+        <HelpTOCNode Title="SetMessageType Method " Url="html/24edecd0-1ba1-1c86-a643-438c9ed65749.htm" />
         <HelpTOCNode Title="SetUser Method " Url="html/6e56b08c-8975-4fdc-840a-b747a79d240e.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
+    <HelpTOCNode Title="ChatMessageType Enumeration" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="e14c2dea-5fea-4ff3-8759-00dfcadbf2ee" Title="mvdw.helpmijapi.chat.events Namespace" Url="html/54b1b5a2-f85f-a2c9-c7aa-58631b34ae09.htm">
-    <HelpTOCNode Title="ChatJoinListener Interface" Url="html/04e89a13-51b4-5b1c-8b4f-329709337205.htm" />
-    <HelpTOCNode Id="8ba7868f-f576-4c79-85f8-464ed4b6128e" Title="ChatListener Interface" Url="html/7f7aff19-8e35-9216-85b7-4d2f5df08607.htm">
-      <HelpTOCNode Title="ChatListener Members" Url="html/2ae81962-eab2-eabc-2566-d5b97230f000.htm" />
-      <HelpTOCNode Title="ChatListener Methods" Url="html/bacd908f-d17f-366b-fdc3-cce0677f24c4.htm" />
-    </HelpTOCNode>
-    <HelpTOCNode Title="ChatQuitListener Interface" Url="html/b8d21a18-7e15-8ddb-5f67-0733c20e578c.htm" />
-    <HelpTOCNode Id="d550aa74-4bf1-4806-b8c3-a6f061540a23" Title="ChatReceivedArguments Class" Url="html/9ae87f98-2bb9-daf4-bb0e-cb80d25d156b.htm">
-      <HelpTOCNode Title="ChatReceivedArguments Members" Url="html/285fe80e-8438-20a7-f05a-23190a90a3ae.htm" />
-      <HelpTOCNode Title="ChatReceivedArguments Constructor " Url="html/a3d172f2-6252-8ebd-9671-27276e3fe196.htm" />
-      <HelpTOCNode Id="cd4f80fa-19f8-408a-9209-974867590e58" Title="ChatReceivedArguments Methods" Url="html/5cb8c5b2-b1c7-e9c9-7ba7-eb992adcac38.htm">
-        <HelpTOCNode Title="GetChatMessages Method " Url="html/07b493fa-6c91-c8cb-63d4-3cecd30faba6.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="74e6bf75-6d40-4aec-ac08-20b8e8ec4544" Title="ChatReceivedListener Interface" Url="html/8d60a2dd-4490-e35c-0ebb-9f7042a1eb24.htm">
-      <HelpTOCNode Title="ChatReceivedListener Members" Url="html/4db00320-ad2d-3cb1-c0ac-ef928aa6dcd3.htm" />
-      <HelpTOCNode Id="7481d8fa-4c97-400a-b03e-fce63d02b14b" Title="ChatReceivedListener Methods" Url="html/3d73e142-2871-bf73-035e-4a59cb57cfc8.htm">
-        <HelpTOCNode Title="onChatReceived Method " Url="html/6991dff5-d90a-f807-f8f3-69e54f99be2b.htm" />
-      </HelpTOCNode>
+  <HelpTOCNode Id="e1436453-79a2-47b4-af5c-67698280fb82" Title="mvdw.helpmijapi.chat.events Namespace" Url="html/54b1b5a2-f85f-a2c9-c7aa-58631b34ae09.htm">
+    <HelpTOCNode Id="dbbd0518-ab45-4384-8a90-a8812f69db7e" Title="ChatReceivedEventArguments Class" Url="html/d2be5872-083b-5ed0-39fd-79b0a0be1e38.htm">
+      <HelpTOCNode Title="ChatReceivedEventArguments Members" Url="html/20b33dbe-5c06-4861-6667-69fe05c492e5.htm" />
+      <HelpTOCNode Title="ChatReceivedEventArguments Constructor " Url="html/f33d8835-79f1-3171-cf6a-32ef855353f9.htm" />
+      <HelpTOCNode Title="ChatReceivedEventArguments Methods" Url="html/81ee8e2e-79d1-e918-4f41-7a79f0a7aae3.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="27be5ee3-c1a4-4d88-903e-f2ddb4b88dde" Title="mvdw.helpmijapi.forum Namespace" Url="html/132a562e-2f68-0f9d-f3a8-8db722543a1a.htm">
-    <HelpTOCNode Title="Comment Interface" Url="html/4fbf6936-08a1-f5d1-29f0-2de50967f32a.htm" />
-    <HelpTOCNode Id="da5d3ece-8d70-400c-ba09-398ffbd55c84" Title="Forum Interface" Url="html/cc171a98-9cf7-3671-1376-9b9bb6896a5b.htm">
+  <HelpTOCNode Id="90e45569-38db-4a6d-b109-eeec07225300" Title="mvdw.helpmijapi.forum Namespace" Url="html/132a562e-2f68-0f9d-f3a8-8db722543a1a.htm">
+    <HelpTOCNode Id="b4f2f7d8-db13-4acf-ba17-f8522f2cc138" Title="Comment Interface" Url="html/4fbf6936-08a1-f5d1-29f0-2de50967f32a.htm">
+      <HelpTOCNode Title="Comment Members" Url="html/a3a6278c-831f-92c2-dd99-17ed99048dbb.htm" />
+      <HelpTOCNode Id="e6dfc15f-8d39-44c5-9614-ee095875edbf" Title="Comment Methods" Url="html/34f7e7d5-ddfe-ff30-655c-6946ae06ef38.htm">
+        <HelpTOCNode Title="GetBodyHTML Method " Url="html/b5e6d9d9-7b6c-349b-ce69-d577047486ac.htm" />
+        <HelpTOCNode Title="GetUser Method " Url="html/f0954fd0-18de-994d-cad1-4a8258adf3b7.htm" />
+        <HelpTOCNode Title="SetBodyHTML Method " Url="html/01a9c2a6-4055-35d1-4044-ebb7a38086ce.htm" />
+        <HelpTOCNode Title="SetUser Method " Url="html/d829c115-1595-b24d-2a30-f7f48914808c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="79cb12b6-98a1-4236-ae60-d4f7aee202a6" Title="Forum Interface" Url="html/cc171a98-9cf7-3671-1376-9b9bb6896a5b.htm">
       <HelpTOCNode Title="Forum Members" Url="html/23410e81-0e18-52a2-f2c9-e78a9c408503.htm" />
-      <HelpTOCNode Id="83262d38-84a3-49b8-981f-bb19dbdd4b19" Title="Forum Methods" Url="html/eba332a9-8525-372a-5d64-3d99f4cd6c06.htm">
+      <HelpTOCNode Id="54fc302d-5b1b-456b-9318-4136678631ec" Title="Forum Methods" Url="html/eba332a9-8525-372a-5d64-3d99f4cd6c06.htm">
         <HelpTOCNode Title="GetID Method " Url="html/1d21fc15-5c59-7708-d39e-e7eb3ecd9ea1.htm" />
         <HelpTOCNode Title="GetSubForums Method " Url="html/176f49e4-30f4-5113-f6a6-33eb7ac33761.htm" />
         <HelpTOCNode Title="GetTitle Method " Url="html/a42834b2-4be2-0040-6bdf-0352c3e46768.htm" />
@@ -147,9 +131,9 @@
         <HelpTOCNode Title="SetURL Method " Url="html/3cbe1852-d0e9-eaf8-6941-2a4d26d8cfa3.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5cdac435-6326-4e5d-813d-da2716b155b8" Title="HomepageTopic Interface" Url="html/c2e949cf-5c77-c84c-3524-f229c58b127e.htm">
+    <HelpTOCNode Id="71604661-3f16-4f4b-bd9d-e31ef8b39791" Title="HomepageTopic Interface" Url="html/c2e949cf-5c77-c84c-3524-f229c58b127e.htm">
       <HelpTOCNode Title="HomepageTopic Members" Url="html/de6ca2a0-52e2-ad77-9021-bfec746334d7.htm" />
-      <HelpTOCNode Id="b40bfba1-feb4-47dc-ac4b-8bbe1da6043e" Title="HomepageTopic Methods" Url="html/e5564b4e-d99b-366b-8de8-64a245a58e28.htm">
+      <HelpTOCNode Id="fbcdb80b-76e4-4209-a5d3-da0b545a756a" Title="HomepageTopic Methods" Url="html/e5564b4e-d99b-366b-8de8-64a245a58e28.htm">
         <HelpTOCNode Title="GetHour Method " Url="html/ab33f608-b2ae-a356-de60-cea09bb38ee9.htm" />
         <HelpTOCNode Title="GetID Method " Url="html/3a076400-e51b-d84d-d7e8-6bbd3093fd5f.htm" />
         <HelpTOCNode Title="GetMinute Method " Url="html/d4b3e109-a37c-cadf-c1c9-33731edb6a36.htm" />
@@ -163,13 +147,20 @@
         <HelpTOCNode Title="SetURL Method " Url="html/a971b1b5-c2d5-99da-95b5-0d1ad3c849d9.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5ca6312b-ff5a-4755-8ec1-1dbc6c8e9cf9" Title="Topic Interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm">
+    <HelpTOCNode Id="74bbf419-13e8-424e-9dc3-43b8988ec722" Title="Topic Interface" Url="html/492344f9-d3fe-2ab1-d151-c92a11d0f71f.htm">
       <HelpTOCNode Title="Topic Members" Url="html/cedc37a2-23d2-243a-bcb0-bf73d1233b68.htm" />
-      <HelpTOCNode Id="4f4cebf3-4563-4d16-ba1a-0f86721c3cb6" Title="Topic Methods" Url="html/d175daa5-a934-9c9e-4bfb-9e1a6baf0052.htm">
+      <HelpTOCNode Id="ac63590d-7489-413a-b523-4d7cce066c4b" Title="Topic Methods" Url="html/d175daa5-a934-9c9e-4bfb-9e1a6baf0052.htm">
         <HelpTOCNode Title="GetAuthor Method " Url="html/000e450f-72e3-8607-2bfa-46ec6d7e50df.htm" />
         <HelpTOCNode Title="GetComments Method " Url="html/2e44c596-8072-b515-e1bb-170ccd0cd1d1.htm" />
         <HelpTOCNode Title="GetHTMLSource Method " Url="html/58ebf515-4925-cab3-9f32-d8197bdd8d4a.htm" />
         <HelpTOCNode Title="GetKeywords Method " Url="html/8f94c389-7bcc-69da-fbb4-d111b2598457.htm" />
+        <HelpTOCNode Id="3fe9d834-7f2f-44cb-9733-68046d4cfe58" Title="GetTopic Method " Url="html/70cf8699-b959-a815-6e34-5008eeb80418.htm">
+          <HelpTOCNode Title="GetTopic Method " Url="html/db11aa6a-87aa-3f66-c323-fc10e60c11b1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="191def06-4c5d-4ffc-ba40-2631ec89e618" Title="MatchesIntrests Method " Url="html/11f11104-8576-4b26-2b9d-15f309ce74e7.htm">
+          <HelpTOCNode Title="MatchesIntrests Method (List(String))" Url="html/0252a33c-2455-f49a-fdeb-96e152ea3ab4.htm" />
+          <HelpTOCNode Title="MatchesIntrests Method (String[])" Url="html/c22a5673-f027-f816-7b42-fef2440341b9.htm" />
+        </HelpTOCNode>
         <HelpTOCNode Title="SetAuthor Method " Url="html/78cfa425-50d7-fbdc-9b11-3d273a1d006c.htm" />
         <HelpTOCNode Title="SetComments Method " Url="html/1b6689e6-17cd-6aca-d264-0c2573f2fac3.htm" />
         <HelpTOCNode Title="SetHTMLSource Method " Url="html/3cfe3043-7390-4763-62de-cc1e94577d1d.htm" />
@@ -177,11 +168,29 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="239d56a4-2d55-4b32-b5b5-b8071ca2124d" Title="mvdw.helpmijapi.gebruiker Namespace" Url="html/4b163277-fa5c-c97f-bae1-1cc445fc0045.htm">
+  <HelpTOCNode Id="3b0581b0-a7e5-4447-ad8c-9123a61168e0" Title="mvdw.helpmijapi.forum.gui Namespace" Url="html/39b560d6-951d-6bd6-c962-6864a6eb9167.htm">
+    <HelpTOCNode Id="38880a63-3fbf-4a40-993e-dc74933b4449" Title="uiHompageTopics Class" Url="html/b811b9a3-95fa-101b-f009-38b45a2001ff.htm">
+      <HelpTOCNode Title="uiHompageTopics Members" Url="html/0bb7ed9b-8637-8c85-80da-cfe76cb5fe45.htm" />
+      <HelpTOCNode Title="uiHompageTopics Constructor " Url="html/5f885781-aeb5-7895-72a5-c25029a8f511.htm" />
+      <HelpTOCNode Id="aeae3114-dc90-4cf2-8571-f3a6e56c7e0b" Title="uiHompageTopics Methods" Url="html/14bed3fa-0df2-d25a-0b0e-66ed92f069ba.htm">
+        <HelpTOCNode Id="78b97532-04a5-4b77-ab9b-6cf204fe9b63" Title="Dispose Method " Url="html/da84bb99-d52b-b1de-f99c-482aa3a7e827.htm">
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/1f3f1b4d-14b6-214e-bcdf-8f71c25b7eb9.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetUser Method " Url="html/2fca2026-d4ca-3d49-c02b-4af73bbc96ef.htm" />
+        <HelpTOCNode Title="LoadTopics Method " Url="html/7c0b1796-62f2-01ba-1990-6f3f3b3e1c94.htm" />
+        <HelpTOCNode Title="SetUser Method " Url="html/4c6169ee-2fba-f127-3a19-a8cf028408f0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c98913a2-7a14-47ee-8806-f803ecb14fdb" Title="uiHompageTopics Properties" Url="html/8bc5d66c-1eba-0c69-ddf0-181306119b5d.htm">
+        <HelpTOCNode Title="ShowPreview Property " Url="html/402569dd-d8ca-2f7d-68c3-244b704f6408.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="uiHompageTopics Events" Url="html/0a2e14af-7359-7df4-51e1-1146462a62e0.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="e7874753-9a83-4555-aa22-456922f06753" Title="mvdw.helpmijapi.gebruiker Namespace" Url="html/4b163277-fa5c-c97f-bae1-1cc445fc0045.htm">
     <HelpTOCNode Title="ContactPrivacy Enumeration" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
-    <HelpTOCNode Id="e70bc922-3b80-463f-82c6-047f762c88ca" Title="Gebruiker Interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm">
+    <HelpTOCNode Id="715783bf-3117-470e-9da2-40c95f9032d3" Title="Gebruiker Interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm">
       <HelpTOCNode Title="Gebruiker Members" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
-      <HelpTOCNode Id="55db6938-d461-40be-9c6e-4f1a0a9f5e71" Title="Gebruiker Methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm">
+      <HelpTOCNode Id="0dc8305b-74f3-49e0-beb2-8a373ad4dca6" Title="Gebruiker Methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm">
         <HelpTOCNode Title="GetCookies Method " Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
         <HelpTOCNode Title="GetNickname Method " Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
         <HelpTOCNode Title="GetSecurityToken Method " Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
@@ -198,9 +207,9 @@
         <HelpTOCNode Title="SetUserID Method " Url="html/c9e509f0-e529-8c6d-0aa9-72b7abb2f3ed.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="82431785-c42b-4d98-abfd-a4d40ca3bb0f" Title="GebruikerData Interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm">
+    <HelpTOCNode Id="8a774492-4f19-49f5-a8a6-64bad9844277" Title="GebruikerData Interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm">
       <HelpTOCNode Title="GebruikerData Members" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
-      <HelpTOCNode Id="3444a4aa-9a36-45e7-afea-6a54219d4a90" Title="GebruikerData Methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm">
+      <HelpTOCNode Id="6a070fba-b9bd-4a16-9287-8bad34162aeb" Title="GebruikerData Methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm">
         <HelpTOCNode Title="GetAgePrivacy Method " Url="html/c7ee23ac-1028-b3d3-4e3a-3a13f89034ae.htm" />
         <HelpTOCNode Title="GetAIM Method " Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
         <HelpTOCNode Title="GetAvatar Method " Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
@@ -248,7 +257,7 @@
         <HelpTOCNode Title="SetLastactivityMonth Method " Url="html/0a3793e0-dfb4-f6c4-845e-9ed4aa80485b.htm" />
         <HelpTOCNode Title="SetLastactivityYear Method " Url="html/073981f2-636a-bb47-0f09-1b9178223a19.htm" />
         <HelpTOCNode Title="SetMSN Method " Url="html/e5056b74-3b46-b100-a521-946ff8215e2a.htm" />
-        <HelpTOCNode Title="SetPostsEachDay Method " Url="html/d8b6a23d-cc51-ab5c-b350-51763a833139.htm" />
+        <HelpTOCNode Title="SetPostsEachDay Method " Url="html/d8b49632-1916-82bc-a3b6-837705ca994b.htm" />
         <HelpTOCNode Title="SetPrivacy Method " Url="html/fe701c33-154e-09f5-5d2f-331f28acf570.htm" />
         <HelpTOCNode Title="SetPublicProfileURL Method " Url="html/e303f491-4d80-167b-f715-b963f278cb9c.htm" />
         <HelpTOCNode Title="SetRegistrationDate Method " Url="html/2ab39f1b-5b21-ca0d-3217-cc3d3d2352a8.htm" />
@@ -264,44 +273,118 @@
         <HelpTOCNode Title="SetWoonplaats Method " Url="html/5ca07ff9-5c8d-842b-9ff8-4d2032df722a.htm" />
         <HelpTOCNode Title="SetYahoo Method " Url="html/0c7d4a82-1757-c159-16d9-2796b2ef2eb5.htm" />
       </HelpTOCNode>
+      <HelpTOCNode Id="4ca887e8-0106-4dea-aee3-831c426e919c" Title="GebruikerData Properties" Url="html/5ea00bec-7475-ec8a-8657-9117df69823e.htm">
+        <HelpTOCNode Title="IsVerenigingslid Property " Url="html/9a523e4f-9c7e-ea0a-ba2a-d52df05173f1.htm" />
+      </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="LeeftijdPrivacy Enumeration" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="5772629c-1bef-468f-acf1-aacd2c1080ed" Title="mvdw.helpmijapi.gebruiker.exceptions Namespace" Url="html/7d692306-f550-ee12-2a52-91e3b2f9546c.htm">
-    <HelpTOCNode Id="ba1a1635-b77a-42cf-96c1-722b02a9b153" Title="CredentialsWrongException Class" Url="html/ec2e1e42-adc8-1fea-16fb-161e98e45c00.htm">
+  <HelpTOCNode Id="7900916d-b0d2-42a9-bc35-48bf012e8d0b" Title="mvdw.helpmijapi.gebruiker.events Namespace" Url="html/fb39e3a2-a3ac-63be-d727-5644e1624991.htm">
+    <HelpTOCNode Id="1939ed45-e8dd-42d4-a46e-07b9c416bd09" Title="LoginFailedEventArgs Class" Url="html/9e9276ac-8760-f326-6d17-7da5818336b9.htm">
+      <HelpTOCNode Title="LoginFailedEventArgs Members" Url="html/b535d75c-7d47-282c-66f7-e477fd23b9d8.htm" />
+      <HelpTOCNode Title="LoginFailedEventArgs Constructor " Url="html/2309715a-ce76-d6bc-0cbd-12e833e7abf6.htm" />
+      <HelpTOCNode Id="270154f4-396c-4c59-94ff-fd6d00b8255b" Title="LoginFailedEventArgs Fields" Url="html/02338c17-908b-5722-bb0c-6afbdd173734.htm">
+        <HelpTOCNode Title="error Field" Url="html/fbb24fd6-7a49-0ba8-92da-0301496cb585.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="LoginFailedEventArgs Methods" Url="html/711b1f1b-c402-df9d-d739-fcdd717cda12.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="LoginFailedEventHandler Delegate" Url="html/bcc113f8-6b69-0d06-0ab2-95b864ecc3c6.htm" />
+    <HelpTOCNode Id="994ee6c4-ea9a-4ecb-84bd-ad9ca8002a98" Title="LoginSuccessEventArgs Class" Url="html/be4e3188-6ad4-7838-2bb5-ae9e084032f2.htm">
+      <HelpTOCNode Title="LoginSuccessEventArgs Members" Url="html/513191fc-8a75-151f-712b-6aa6aff10ff6.htm" />
+      <HelpTOCNode Id="0e200dd3-d571-4485-8668-7594aa8f598d" Title="LoginSuccessEventArgs Constructor " Url="html/a2c3be06-6fca-c16d-0b09-3b2b6bc32b21.htm">
+        <HelpTOCNode Title="LoginSuccessEventArgs Constructor (Gebruiker)" Url="html/60716b4d-9b1e-98b0-a113-5ce733502fff.htm" />
+        <HelpTOCNode Title="LoginSuccessEventArgs Constructor (GebruikerData)" Url="html/4acaa72f-bf24-cd9e-51b5-7ff49a910b66.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4ba1b844-cb2b-4d2e-b71d-882c6a44c5d4" Title="LoginSuccessEventArgs Methods" Url="html/1a53c706-9c4f-5fca-7a9b-779f8063a2bf.htm">
+        <HelpTOCNode Title="GetUser Method " Url="html/4deb0379-36a0-8e56-c193-11afe33fabcf.htm" />
+        <HelpTOCNode Title="GetUserData Method " Url="html/e6817fd9-a5f4-feda-d0db-4baf8e68c25a.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="LoginSuccessEventHandler Delegate" Url="html/d70333b2-57f1-10c7-62f1-aa50896dbcde.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="00542dab-35be-4600-96a7-8665091580e2" Title="mvdw.helpmijapi.gebruiker.exceptions Namespace" Url="html/7d692306-f550-ee12-2a52-91e3b2f9546c.htm">
+    <HelpTOCNode Id="6cfbe383-6d6e-411c-8aa2-4e1d1849a91a" Title="CredentialsWrongException Class" Url="html/ec2e1e42-adc8-1fea-16fb-161e98e45c00.htm">
       <HelpTOCNode Title="CredentialsWrongException Members" Url="html/c04e96a2-9770-312a-0de0-06702a220933.htm" />
       <HelpTOCNode Title="CredentialsWrongException Constructor " Url="html/143d7933-55bd-3430-15ab-28303d9cbd8b.htm" />
       <HelpTOCNode Title="CredentialsWrongException Methods" Url="html/3acb795a-65a0-bbbf-1eed-2e0796af340f.htm" />
       <HelpTOCNode Title="CredentialsWrongException Properties" Url="html/2e69871a-ea7e-e40e-6990-ee6e32405873.htm" />
       <HelpTOCNode Title="CredentialsWrongException Events" Url="html/1b8aced2-07a9-618d-0acb-4870970c3184.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="a6d7215a-e25d-4ceb-804e-50036a61e8c3" Title="UnableToConnectException Class" Url="html/9726627a-19d8-145b-cc5f-3b527984b970.htm">
+    <HelpTOCNode Id="e463b9ba-8d0a-4957-a9f6-ed717ce0de32" Title="UnableToConnectException Class" Url="html/9726627a-19d8-145b-cc5f-3b527984b970.htm">
       <HelpTOCNode Title="UnableToConnectException Members" Url="html/9e4c9b56-667d-8136-93e3-d6fd6169cda4.htm" />
       <HelpTOCNode Title="UnableToConnectException Constructor " Url="html/85e2aaa4-eb81-4dd1-8f4a-36add4361764.htm" />
       <HelpTOCNode Title="UnableToConnectException Methods" Url="html/ba8f55d6-2334-6057-dcb6-e73b78817a6a.htm" />
       <HelpTOCNode Title="UnableToConnectException Properties" Url="html/e5176b6a-4e10-34c5-f2c3-0b49da7e217f.htm" />
       <HelpTOCNode Title="UnableToConnectException Events" Url="html/0f4d03e9-4789-efbd-5483-8764277d64a1.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c65fcfb4-2bf7-441d-92c0-a829f4157315" Title="UnableToSaveUserException Class" Url="html/2e34698e-d40f-0efb-5df3-565f8597b208.htm">
+    <HelpTOCNode Id="c88e1b52-ac25-4db3-9fa9-f0a12d2065df" Title="UnableToSaveUserException Class" Url="html/2e34698e-d40f-0efb-5df3-565f8597b208.htm">
       <HelpTOCNode Title="UnableToSaveUserException Members" Url="html/e4a01d09-e74e-64cb-fc83-90bc0fbaeee7.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Constructor " Url="html/a580d044-53df-a80f-c889-2711fd7f273e.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Methods" Url="html/48d66531-39a1-566f-efeb-33e774013428.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Properties" Url="html/62660267-f157-2aba-7a1f-25480d06a6a3.htm" />
       <HelpTOCNode Title="UnableToSaveUserException Events" Url="html/4725993c-f7f5-d8f4-32af-78ad01dd3e03.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="bd30e59c-0f09-4a66-9648-900f82272dbb" Title="UserDataNotFound Class" Url="html/f8c10dfd-253e-62c3-5715-a23d4012a3f8.htm">
+    <HelpTOCNode Id="ddd05a08-8eb1-47db-b69d-cc025cd4ac08" Title="UserDataNotFound Class" Url="html/f8c10dfd-253e-62c3-5715-a23d4012a3f8.htm">
       <HelpTOCNode Title="UserDataNotFound Members" Url="html/9912e778-aad4-43b0-891c-35dca20f1c7a.htm" />
       <HelpTOCNode Title="UserDataNotFound Constructor " Url="html/a8c09ca9-6199-f786-17e4-cec3972fb815.htm" />
       <HelpTOCNode Title="UserDataNotFound Methods" Url="html/cf7b8aab-e626-c164-3e1b-cfc2f135f190.htm" />
       <HelpTOCNode Title="UserDataNotFound Properties" Url="html/bb68fc53-9aa0-0d43-f336-2f937c56b064.htm" />
       <HelpTOCNode Title="UserDataNotFound Events" Url="html/3a69605c-49c7-b7c8-807f-332af1eb43d6.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="93c36b20-64ba-4f4d-bbe4-f06fb4fd9dc7" Title="UserNotLoggedInException Class" Url="html/fd518b4c-b4db-4cbe-e3d2-aa64282e313b.htm">
+    <HelpTOCNode Id="b4612b4c-35e3-41ad-b474-3787dee6018e" Title="UserNotLoggedInException Class" Url="html/fd518b4c-b4db-4cbe-e3d2-aa64282e313b.htm">
       <HelpTOCNode Title="UserNotLoggedInException Members" Url="html/aa41f5ca-8c3f-bcd1-06bd-0a4f09c4b145.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Constructor " Url="html/ada4ec2f-3b69-2a0e-ca8b-d6af8bbcff70.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Methods" Url="html/9691ec6e-1f8e-3e09-85f7-c4340824822c.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Properties" Url="html/e055e0ca-3499-c984-34be-d8a2d8d8290d.htm" />
       <HelpTOCNode Title="UserNotLoggedInException Events" Url="html/674542d3-b7bc-335a-5ac8-a71079cbbec3.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="b499f2d4-c935-48ed-9772-e39954b040c9" Title="mvdw.helpmijapi.gebruiker.gui Namespace" Url="html/6e8980c6-034f-4c80-80f4-7426f967b716.htm">
+    <HelpTOCNode Id="cb8ec05f-399b-4589-bc69-a45f9bb809c4" Title="frmLogin Class" Url="html/eae56258-3a9e-c197-1749-f43ce2d07629.htm">
+      <HelpTOCNode Title="frmLogin Members" Url="html/0a7b5043-00c2-5d42-85fe-b3f725cd2f6c.htm" />
+      <HelpTOCNode Title="frmLogin Constructor " Url="html/3419f349-494d-2b85-0fd5-e267e69d2a97.htm" />
+      <HelpTOCNode Id="f5f6f14f-6142-4864-ac3f-e59cb5888810" Title="frmLogin Methods" Url="html/e6281712-0774-455b-1cdd-a41b0289fd5b.htm">
+        <HelpTOCNode Id="4f2bba97-c8bc-4111-a000-b9d5836fd6dc" Title="Dispose Method " Url="html/87dced22-1743-9c75-b35d-cb89543d0605.htm">
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/04c48e9c-42f7-2418-8476-6a7c68147fcf.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetUser Method " Url="html/cae7bdc2-5344-24e6-3d9b-ee54f7312ee4.htm" />
+        <HelpTOCNode Title="GetUserData Method " Url="html/351cb1b3-140e-d427-baa8-36378a4dab4c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="frmLogin Properties" Url="html/2898dcef-dac2-14e6-0d63-088e1871ae63.htm" />
+      <HelpTOCNode Title="frmLogin Events" Url="html/abb69ddc-c708-2069-c708-c4c4f03c9aa4.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="fa1f9619-e4b9-4631-b272-300324b8c07e" Title="uiHelpmijLogin Class" Url="html/e26c00cd-418f-3bc0-215a-d2b9f1f38c97.htm">
+      <HelpTOCNode Title="uiHelpmijLogin Members" Url="html/6c37857e-ea8c-881f-fba3-737f507c622d.htm" />
+      <HelpTOCNode Title="uiHelpmijLogin Constructor " Url="html/9c9a9240-9458-fd9d-f173-7ef650c79cb9.htm" />
+      <HelpTOCNode Id="95ca6578-6414-42c4-abaa-e8414696d4c6" Title="uiHelpmijLogin Fields" Url="html/59b8d623-6d5c-97a2-70a3-55ff3e3e6235.htm">
+        <HelpTOCNode Title="chkRemember Field" Url="html/24c59068-729a-354d-f60a-896c933a589f.htm" />
+        <HelpTOCNode Title="LoginFailedEventArgs Field" Url="html/cb07277d-710b-45ae-2915-892b9773f534.htm" />
+        <HelpTOCNode Title="LoginFailedEventHandler Field" Url="html/2db31c23-57a7-d200-7a03-467bcbb4d01f.htm" />
+        <HelpTOCNode Title="LoginSuccessEventArgs Field" Url="html/7d7f542b-1114-ebf6-a6c5-4332758ebdac.htm" />
+        <HelpTOCNode Title="LoginSuccessEventHandler Field" Url="html/1e2ce210-ff8f-63ab-f521-b7a70ea38544.htm" />
+        <HelpTOCNode Title="txtPassword Field" Url="html/e930dbe1-1efc-d530-e8d2-984db5f14931.htm" />
+        <HelpTOCNode Title="txtUsername Field" Url="html/29d08c46-2877-2bfb-1c15-7a8c2c438f54.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1817aede-4609-4121-aa27-a7f2bcbecb23" Title="uiHelpmijLogin Methods" Url="html/a0fb5a68-d3fb-87cc-2778-da7dbea6f1be.htm">
+        <HelpTOCNode Id="8498bc2d-6cf5-4358-87e7-79c5b368e8d5" Title="Dispose Method " Url="html/fea3252d-0378-f75c-7f82-4d9c9171a77a.htm">
+          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/b418c3d8-8ab2-518d-df3c-6f45062c8020.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Inloggen Method " Url="html/7bb2631b-17ba-09b2-9747-f6171132f8f0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="602f0827-7aa0-436c-865f-5feef35d317f" Title="uiHelpmijLogin Properties" Url="html/efb53d42-40ba-5fe4-e7d9-ae103d595acf.htm">
+        <HelpTOCNode Title="Data Property " Url="html/64899ffb-9b68-909c-d550-5b0eb8d33ba9.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7c4d86b7-1924-4034-8c2a-54c73d8855af" Title="uiHelpmijLogin Events" Url="html/12dd7a8f-148e-77b2-4348-37d2d1488351.htm">
+        <HelpTOCNode Title="onLoginFailed Event" Url="html/9969ea78-abb1-ebc1-9c04-105732eae220.htm" />
+        <HelpTOCNode Title="onLoginSuccess Event" Url="html/2021449b-78eb-f461-5740-1d6734e2d67c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="da352bf3-0ab4-49ab-a00a-385944be603d" Title="mvdw.helpmijapi.ui Namespace" Url="html/44da7ff3-8747-3b17-4f39-7ce9aecdcbc4.htm">
+    <HelpTOCNode Id="d5f82d06-6734-41a4-8867-c3f04a895187" Title="HelpmijPopup Class" Url="html/d15737e5-6c19-184f-9e96-c3b3dab59f60.htm">
+      <HelpTOCNode Title="HelpmijPopup Members" Url="html/70a023b2-66e9-5c97-0eb7-0ed1b25f6076.htm" />
+      <HelpTOCNode Title="HelpmijPopup Constructor " Url="html/b90dfd8a-d93e-d234-98f1-6414760d5d93.htm" />
+      <HelpTOCNode Title="HelpmijPopup Methods" Url="html/801117ef-9e54-d9c9-0e63-6496d2bdf55b.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
 </HelpTOC>

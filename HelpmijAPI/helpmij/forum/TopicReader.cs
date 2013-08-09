@@ -142,9 +142,15 @@ namespace mvdw.helpmij.forum
             String prevPage = source;
             String curPage = "";
             List<Comment> comments = new List<Comment>(); // Nieuwe lijst
-            int i = 2;
-            while (prevPage != curPage)
+            // Read pages
+            int pages = 1;
+            try
             {
+                pages = int.Parse(UtilsString.GetSubStrings(source, s.topicPagesPrefix, s.topicPagesSuffix)[0]);
+            }
+            catch (Exception) { }
+
+            for (int i = 1;i<=pages;i++){
                 // Eerste keer
                 if (curPage == "")
                     curPage = source.Split(new[] { s.beginTopic }, StringSplitOptions.RemoveEmptyEntries)[1].Replace("/page" + i + "#top","");
@@ -155,19 +161,26 @@ namespace mvdw.helpmij.forum
                 String[] bodyHtml = curPage.Split(new[] { s.commentBodyPrefix, s.commentBodySuffix }, StringSplitOptions.RemoveEmptyEntries);
 
                 // Loop door alle comments
-                for (int j = 0; j < authors.Count-1; j++)
+                for (int j = 0; j < authors.Count; j++)
                 {
-                    Comment comment = new HelpmijComment();
-                    Gebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0,authors[j].IndexOf('-'))));
-                    comment.SetUser(user);
-                    comment.SetBodyHTML(bodyHtml[(j+1)+(j)]);
-                    comments.Add(comment);
+                    try
+                    {
+                        Comment comment = new HelpmijComment();
+                        Gebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0, authors[j].IndexOf('-'))));
+                        comment.SetUser(user);
+                        comment.SetBodyHTML(bodyHtml[(j + 1) + (j)]);
+                        comments.Add(comment);
+                    }
+                    catch (Exception)
+                    {
+                        // Comment kon niet gelezen wordne
+                        // Reclame?
+                    }
                 }
 
                 // Verkrijg nieuwe pagina
                 curPage = UtilsHTTP.GetSource(topic.GetURL() + s.pagePrefix + i.ToString(), cookies);
                 curPage = curPage.Split(new[] { s.beginTopic }, StringSplitOptions.RemoveEmptyEntries)[1].Replace("/page" + i + "#top", "");
-                i += 1;
             }
 
             // Return het resultaat
@@ -185,8 +198,11 @@ namespace mvdw.helpmij.forum
             // Verkrijg informatie
             String title = topic.GetTitle().ToLower();
 
+            String bodyHtml = topic.GetComments()[0].GetBodyHTML();
+            String[] bodyKeywords = bodyHtml.Split(' ');
             List<String> keywords = topic.GetKeywords();
             keywords.AddRange(title.Split(' '));
+            keywords.AddRange(bodyKeywords);
 
             // Doorloop de intressen
             foreach (String key in keywords)
@@ -208,22 +224,7 @@ namespace mvdw.helpmij.forum
         /// <returns>Boolean</returns>
         public static Boolean MatchesIntrests(String[] intrests, Topic topic)
         {
-            // Verkrijg informatie
-            String title = topic.GetTitle().ToLower();
-
-            List<String> keywords = topic.GetKeywords();
-            keywords.AddRange(title.Split(' '));
-
-            // Doorloop de intressen
-            foreach (String key in keywords)
-            {
-                if (intrests.Contains(key.ToLower()))
-                {
-                    return true;
-                }
-            }
-            // Geen return gebeurt
-            return false;
+            return MatchesIntrests(intrests.ToList<String>(), topic);
         }
     }
 }

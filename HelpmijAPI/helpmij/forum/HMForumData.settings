@@ -71,5 +71,11 @@
     <Setting Name="beginTopic" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;!-- BEGIN TEMPLATE: header --&gt;</Value>
     </Setting>
+    <Setting Name="topicPagesPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">id="yui-gen82"&gt;Pagina 1 van </Value>
+    </Setting>
+    <Setting Name="topicPagesSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/a&gt;</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

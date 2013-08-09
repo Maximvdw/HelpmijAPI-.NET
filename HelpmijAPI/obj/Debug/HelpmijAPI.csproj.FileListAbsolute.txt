@@ -14,4 +14,4 @@ C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.forum.g
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.logo.resLogos.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.resUserbars.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.uiUserbar.resources
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmij.ui.TaskbarNotifier.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML

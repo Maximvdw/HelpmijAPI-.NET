@@ -298,5 +298,29 @@ namespace mvdw.helpmij.forum {
                 this["beginTopic"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("id=\"yui-gen82\">Pagina 1 van ")]
+        public string topicPagesPrefix {
+            get {
+                return ((string)(this["topicPagesPrefix"]));
+            }
+            set {
+                this["topicPagesPrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</a>")]
+        public string topicPagesSuffix {
+            get {
+                return ((string)(this["topicPagesSuffix"]));
+            }
+            set {
+                this["topicPagesSuffix"] = value;
+            }
+        }
     }
 }

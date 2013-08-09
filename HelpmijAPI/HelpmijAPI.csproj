@@ -119,12 +119,6 @@
       <DependentUpon>HMGebruikerData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
-    <Compile Include="helpmij\ui\TaskbarNotifier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="helpmij\ui\TaskbarNotifier.Designer.cs">
-      <DependentUpon>TaskbarNotifier.cs</DependentUpon>
-    </Compile>
     <Compile Include="helpmij\utils\UtilsFont.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />
@@ -178,9 +172,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="helpmij\ui\TaskbarNotifier.resx">
-      <DependentUpon>TaskbarNotifier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -295,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\skin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="helpmij\ui\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="1.9.6.0" projectFile="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\DocumentationHelpmijAPI.shfbproj" started="16-7-2013 21:33:05">
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.6.0" projectFile="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\DocumentationHelpmijAPI.shfbproj" started="5-8-2013 14:33:56">
 <buildStep step="Initializing">
 Finding tools...
 Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
@@ -19,11 +19,11 @@ Copying XML comments files
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Engels (Verenigde Staten))...
-    Last step completed in 00:00:00.2639
+    Last step completed in 00:00:00.3612
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0390
+    Last step completed in 00:00:00.0420
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -31,22 +31,22 @@ Generating reflection information...
   MRefBuilder (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Loaded 1 assemblies for reflection and 1 dependency assemblies.
-  Info: Wrote information on 8 namespaces, 25 types, and 186 members
+  Info: Wrote information on 12 namespaces, 32 types, and 221 members
   XslTransform (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
-    Last step completed in 00:00:10.4299
+    Last step completed in 00:00:08.4563
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0468
+    Last step completed in 00:00:00.0380
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     0 attribute nodes removed
     0 explicit interface implementations removed
-    0 local and base class EII elements removed
-    Last step completed in 00:00:00.0740
+    20 local and base class EII elements removed
+    Last step completed in 00:00:00.2882
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -58,12 +58,12 @@ Transforming reflection output...
   XslTransform (v2.7.2.0)
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-    Last step completed in 00:00:06.6812
+    Last step completed in 00:00:07.3698
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0400
+    Last step completed in 00:00:00.4813
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -455,12 +455,12 @@ C:\Program Files (x86)\Sandcastle\\Presentation\VS2010\branding -&gt; C:\Users\M
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-instrumentedLink.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-instrumentedLink.xslt
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-languageSpecificText.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-languageSpecificText.xslt
     C:\Program Files (x86)\Sandcastle\Presentation\VS2010\branding\ps-codesnippet.xslt -> C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\branding\ps-codesnippet.xslt
-    Last step completed in 00:00:03.1195
+    Last step completed in 00:00:04.1806
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0340
+    Last step completed in 00:00:00.0580
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -473,17 +473,17 @@ Generating intermediate table of contents file...
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:04.0027
+    Last step completed in 00:00:01.2855
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.1300
+    Last step completed in 00:00:00.2266
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\sandcastle.config
-    Last step completed in 00:00:00.1511
+    Last step completed in 00:00:00.1471
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -492,87 +492,16 @@ Building reference help topics...
   Copyright &#184; 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Loading configuration...
   Info: Processing topics...
-  Warn: ShowMissingComponent: [N:mvdw.helpmij.utils] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.EatWhitespace(System.Char[],System.Int32@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.EatWhitespace(System.Char[],System.Int32@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.EatWhitespace(System.Char[],System.Int32@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.GetLastIndexOfNumber(System.Char[],System.Int32)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.GetLastIndexOfNumber(System.Char[],System.Int32)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.GetLastIndexOfNumber(System.Char[],System.Int32)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.GetLastIndexOfNumber(System.Char[],System.Int32)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.LookAhead(System.Char[],System.Int32)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.LookAhead(System.Char[],System.Int32)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.LookAhead(System.Char[],System.Int32)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.LookAhead(System.Char[],System.Int32)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.NextToken(System.Char[],System.Int32@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.NextToken(System.Char[],System.Int32@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.NextToken(System.Char[],System.Int32@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.NextToken(System.Char[],System.Int32@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseArray(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseArray(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseArray(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseArray(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseArray(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;success&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseNumber(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseNumber(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseNumber(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseNumber(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseNumber(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;success&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseObject(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;success&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseString(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseString(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseString(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseString(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseString(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;success&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseValue(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseValue(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseValue(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;json&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseValue(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;index&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.ParseValue(System.Char[],System.Int32@,System.Boolean@)] Missing &lt;param name=&quot;success&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeArray(System.Collections.ArrayList,System.Text.StringBuilder)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeArray(System.Collections.ArrayList,System.Text.StringBuilder)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeArray(System.Collections.ArrayList,System.Text.StringBuilder)] Missing &lt;param name=&quot;anArray&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeArray(System.Collections.ArrayList,System.Text.StringBuilder)] Missing &lt;param name=&quot;builder&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeNumber(System.Double,System.Text.StringBuilder)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeNumber(System.Double,System.Text.StringBuilder)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeNumber(System.Double,System.Text.StringBuilder)] Missing &lt;param name=&quot;number&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeNumber(System.Double,System.Text.StringBuilder)] Missing &lt;param name=&quot;builder&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeObject(System.Collections.Hashtable,System.Text.StringBuilder)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeObject(System.Collections.Hashtable,System.Text.StringBuilder)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeObject(System.Collections.Hashtable,System.Text.StringBuilder)] Missing &lt;param name=&quot;anObject&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeObject(System.Collections.Hashtable,System.Text.StringBuilder)] Missing &lt;param name=&quot;builder&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeString(System.String,System.Text.StringBuilder)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeString(System.String,System.Text.StringBuilder)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeString(System.String,System.Text.StringBuilder)] Missing &lt;param name=&quot;aString&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeString(System.String,System.Text.StringBuilder)] Missing &lt;param name=&quot;builder&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeValue(System.Object,System.Text.StringBuilder)] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeValue(System.Object,System.Text.StringBuilder)] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeValue(System.Object,System.Text.StringBuilder)] Missing &lt;param name=&quot;value&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmij.utils.UtilsJSON.SerializeValue(System.Object,System.Text.StringBuilder)] Missing &lt;param name=&quot;builder&quot;/&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_COLON] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_COMMA] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_CURLY_CLOSE] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_CURLY_OPEN] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_FALSE] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NONE] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NULL] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_NUMBER] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_SQUARED_CLOSE] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_SQUARED_OPEN] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_STRING] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [F:mvdw.helpmij.utils.UtilsJSON.TOKEN_TRUE] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.Helpmij.GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)] Missing &lt;param name=&quot;user&quot;/&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.HelpmijAPI.GetVersion] Missing &lt;returns&gt; documentation
-  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.artwork] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.artwork.logo] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.artwork.userbar] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.chat] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.chat.events] Missing &lt;summary&gt; documentation
-  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.chat.events.ChatReceivedArguments.GetChatMessages] Missing &lt;returns&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.forum] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.forum.Topic.SetKeywords(System.Collections.Generic.List{{System.String}})] Missing &lt;param name=&quot;keywords&quot;/&gt; documentation
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.forum.gui] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.gebruiker] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData] Missing &lt;returns&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.Gebruiker.SetCookies(System.Net.CookieContainer)] Missing &lt;param name=&quot;container&quot;/&gt; documentation
@@ -580,9 +509,16 @@ Building reference help topics...
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivity(System.DateTime)] Missing &lt;param name=&quot;date&quot;/&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.GebruikerData.SetLastactivityDay(System.Int32)] Missing &lt;param name=&quot;dag&quot;/&gt; documentation
   Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.GebruikerData.SetRegistrationDay(System.Int32)] Missing &lt;param name=&quot;dag&quot;/&gt; documentation
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.gebruiker.events] Missing &lt;summary&gt; documentation
   Warn: ShowMissingComponent: [N:mvdw.helpmijapi.gebruiker.exceptions] Missing &lt;summary&gt; documentation
-  Info: Processed 259 topics
-    Last step completed in 00:02:48.8189
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.gebruiker.gui] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [M:mvdw.helpmijapi.gebruiker.gui.frmLogin.#ctor(System.Boolean)] Missing &lt;param name=&quot;getUserData&quot;/&gt; documentation
+  Warn: ShowMissingComponent: [F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.chkRemember] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtPassword] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [F:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.txtUsername] Missing &lt;summary&gt; documentation
+  Warn: ShowMissingComponent: [N:mvdw.helpmijapi.ui] Missing &lt;summary&gt; documentation
+  Info: Processed 316 topics
+    Last step completed in 00:14:23.9393
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -590,7 +526,7 @@ Combining conceptual and API intermediate TOC files...
 Clearing any prior web output
     Ignoring read-only/hidden file C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Thumbs.db
     Did not delete folder &#39;C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\icons&#39; as it contains read-only or hidden folders/files
-    Last step completed in 00:00:00.2181
+    Last step completed in 00:00:00.5974
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -602,29 +538,29 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1
-Processed 259 HTML files
+Processed 316 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\HelpmijAPI-Docs.hhk
 Saving HTML Help 1 table of contents to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\HelpmijAPI-Docs.hhc
 
 Processing website files in C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\Website
-Processed 259 HTML files
+Processed 316 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\WebKI.xml
 Saving website table of contents to C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\WebTOC.xml
-    Last step completed in 00:00:05.0671
+    Last step completed in 00:00:13.0317
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
-    Last step completed in 00:00:00.0070
+    Last step completed in 00:00:00.0040
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1 index file...
-    Last step completed in 00:00:00.0030
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0220
+    Last step completed in 00:00:00.0280
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -639,13 +575,13 @@ Compiling HTML Help 1 file...
   
   
   
-  Compile time: 0 minutes, 6 seconds
+  Compile time: 0 minutes, 9 seconds
   
-  261	Topics
+  318	Topics
   
-  3,088	Local links
+  3,706	Local links
   
-  1,337	Internet links
+  9,662	Internet links
   
   0	Graphics
   
@@ -653,20 +589,20 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1\HelpmijAPI-Docs.chm, 667,015 bytes
+  Created c:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\doc\Help\Working\Output\HtmlHelp1\HelpmijAPI-Docs.chm, 662,573 bytes
   
-  Compression decreased file by 1,972,998 bytes.
+  Compression decreased file by 4,809,541 bytes.
   
-    Last step completed in 00:00:11.0344
+    Last step completed in 00:00:10.9614
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0100
+    Last step completed in 00:00:00.0120
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
-    Last step completed in 00:00:01.9360
+    Last step completed in 00:00:04.3360
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -674,16 +610,17 @@ Copying website files to output folder...
 Copied 100 files
 Copied 200 files
 Copied 300 files
-Copied 357 files for the website content
-    Last step completed in 00:00:00.8313
+Copied 400 files
+Copied 414 files for the website content
+    Last step completed in 00:00:01.4647
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:01.2018
+    Last step completed in 00:00:01.0690
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 07-16-2013 09:36 .  Total time: 00:03:34,6188
+Build completed successfully at 08-05-2013 02:49 .  Total time: 00:15:19,5931
 
 </buildStep>
 </shfbBuild>
