@@ -113,10 +113,6 @@ namespace mvdw.helpmij
         /// </summary>
         public static String tokenArg = "securitytoken";
         /// <summary>
-        /// Avatar URL Prefix
-        /// </summary>
-        public static String avatarUrlPrefix = siteURL + @"/forum/image.php?u=";
-        /// <summary>
         /// Error message prefix
         /// </summary>
         public static String errorPrefix = @"<div class=""blockrow restore"">";

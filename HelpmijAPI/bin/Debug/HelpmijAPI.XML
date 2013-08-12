@@ -20,6 +20,11 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="P:mvdw.Properties.Resources.Avatar">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:mvdw.Properties.Resources.CALIBRI">
             <summary>
               Looks up a localized resource of type System.Byte[].
@@ -158,11 +163,6 @@
         <member name="F:mvdw.helpmij.HelpmijData.tokenArg">
             <summary>
             Security Token argument
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.HelpmijData.avatarUrlPrefix">
-            <summary>
-            Avatar URL Prefix
             </summary>
         </member>
         <member name="F:mvdw.helpmij.HelpmijData.errorPrefix">
@@ -929,6 +929,12 @@
             </summary>
             <param name="nickname">String - Nickname</param>
         </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetAvatarUrl(System.String)">
+            <summary>
+            Set de avatar URL
+            </summary>
+            <param name="url"></param>
+        </member>
         <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserID">
             <summary>
             Verkrijg de Gebruikers ID
@@ -996,13 +1002,13 @@
             Refresh de gegevens
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetAvatarUrl">
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetAvatarUrl">
             <summary>
             Verkrijg de avatar url
             </summary>
             <returns>String - URL naar avatar</returns>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetAvatar">
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetAvatar">
             <summary>
             Verkrijg de avatar Image
             </summary>
@@ -1584,6 +1590,12 @@
             <summary>
             Verkrijg GebruikersData
             </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetAvatarUrl(System.String)">
+            <summary>
+            Set de avatar URL
+            </summary>
+            <param name="url"></param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetUserData">
             <summary>
@@ -2674,6 +2686,16 @@
             Helpmij Aplication Interface
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.HelpmijAPI.downloadSize">
+            <summary>
+            Total Downloaded
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.HelpmijAPI.uploadSize">
+            <summary>
+            Total Uploaded
+            </summary>
+        </member>
         <member name="M:mvdw.helpmijapi.HelpmijAPI.GetVersion">
             <summary>
             Verkrijg de API versie
@@ -2716,6 +2738,18 @@
             <summary>
             Reset API Settings
             </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetDownloadSize">
+            <summary>
+            Verkrijg het aantal byte dat gedownload is
+            </summary>
+            <returns>Size in byte</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.GetUploadSize">
+            <summary>
+            Verkrijg het aantal byte dat geupload is
+            </summary>
+            <returns>Size in byte</returns>
         </member>
         <member name="T:mvdw.helpmij.forum.HelpmijComment">
             <summary>
@@ -3087,6 +3121,46 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="T:mvdw.helpmij.utils.UtilsINI">
+            <summary>
+            INI-File Utilities
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsINI.#ctor(System.String)">
+            <summary>
+            Get filename and open file
+            </summary>
+            <param name="file">INI file location</param>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsINI.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            Write data to the ini file
+            </summary>
+            <param name="Section">Section in ini file: [SECTION]</param>
+            <param name="Key">Key in Section: key=...</param>
+            <param name="Value">Value to put in the key: key=value</param>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsINI.ReadValue(System.String,System.String)">
+            <summary>
+            Read data from the ini file
+            </summary>
+            <param name="Section">Section in ini file: [SECTION]</param>
+            <param name="Key">Key in Section: key=...</param>
+            <returns></returns>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsINI.DeleteSection(System.String)">
+            <summary>
+            Delete the section from the ini file
+            </summary>
+            <param name="Section">Section in ini file: [SECTION]</param>
+        </member>
+        <member name="M:mvdw.helpmij.utils.UtilsINI.DeleteKey(System.String,System.String)">
+            <summary>
+            Delete the key from the ini file
+            </summary>
+            <param name="Section">Section in ini file: [SECTION]</param>
+            <param name="key">Key in section: key=....</param>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.frmLogin">
             <summary>
             Helpmij Login GUI Form
@@ -3249,19 +3323,30 @@
             Toon userbar voorbeeld
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.uiUserbar.args">
+            <summary>
+            Userbar arguments
+            </summary>
+        </member>
         <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.#ctor">
             <summary>
             Helpmij.nl Userbars
             </summary>
         </member>
-        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.WriteText">
+        <member name="M:mvdw.helpmijapi.artwork.userbar.uiUserbar.GetUserbar">
             <summary>
-            Schrijf de tekst op de userbar
+            Verkrijg de Userbar
             </summary>
+            <returns>UserbarArguments</returns>
         </member>
         <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.ShowPreview">
             <summary>
             Toon Userbar voorbeeld
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.UBText">
+            <summary>
+            Userbar Text
             </summary>
         </member>
         <member name="P:mvdw.helpmijapi.artwork.userbar.uiUserbar.DefaultUserbar">
@@ -3655,6 +3740,20 @@
             </summary>
             <param name="type">UserbarType - Type</param>
         </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GetUserbar(mvdw.helpmijapi.artwork.userbar.UserbarType,System.String)">
+            <summary>
+            Verkrijg Userbar volgens settings
+            </summary>
+            <param name="type">Userbar type</param>
+            <param name="text">Userbar text</param>
+            <returns>UserbarArguments</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GenerateUserbar(mvdw.helpmijapi.artwork.userbar.UserbarArguments)">
+            <summary>
+            Generate the userbar
+            </summary>
+            <param name="userbar">UserbarArguments</param>
+        </member>
         <member name="M:mvdw.helpmijapi.artwork.userbar.HelpmijUserbar.GetPreviewUserbar(mvdw.helpmijapi.artwork.userbar.UserbarType)">
             <summary>
             Verkrijg voorbeeld
@@ -3668,6 +3767,46 @@
             </summary>
             <param name="type">Userbar Type</param>
             <returns>Userbar Image</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.artwork.userbar.UserbarArguments">
+            <summary>
+            Helpmij Userbar Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.Text">
+            <summary>
+            Userbar Text
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.ForeColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.BorderColor">
+            <summary>
+            Text border color
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.Background">
+            <summary>
+            Blank userbar
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.Xpos">
+            <summary>
+            Text X-Pos
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.Ypos">
+            <summary>
+            Text Y-Pos
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarArguments.Userbar">
+            <summary>
+            Completed Userbar
+            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.artwork.userbar.UserbarType">
             <summary>
@@ -3724,12 +3863,17 @@
             Rainbow Red Userbar
             </summary>
         </member>
+        <member name="F:mvdw.helpmijapi.artwork.userbar.UserbarType.RainbowYellow">
+            <summary>
+            Rainbow Yellow Userbar
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsFont">
             <summary>
             Font utilities
             </summary>
         </member>
-        <member name="M:mvdw.helpmij.utils.UtilsFont.GetEmbeddedFont(System.String,System.Drawing.FontStyle,System.Single)">
+        <member name="M:mvdw.helpmij.utils.UtilsFont.GetEmbeddedFont(mvdw.helpmij.utils.UtilsFont.HMFont,System.Drawing.FontStyle,System.Single)">
             <summary>
             Verkrijg een font van de resources
             </summary>
@@ -3737,6 +3881,21 @@
             <param name="size">Font size</param>
             <param name="style">Font Style</param>
             <returns>System.Drawing.Font - Font</returns>
+        </member>
+        <member name="T:mvdw.helpmij.utils.UtilsFont.HMFont">
+            <summary>
+            Helpmij Font
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsFont.HMFont.Calibri">
+            <summary>
+            Calibri Font
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsFont.HMFont.Visitor">
+            <summary>
+            Visitor Font
+            </summary>
         </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
@@ -3791,6 +3950,11 @@
             Aanmelden op Helpmij.nl
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijLogin.s">
+            <summary>
+            HM Gebruiker Data
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijLogin.Login(System.String,System.String)">
             <summary>
             Aanmelden op Helpmij.nl
@@ -3800,9 +3964,149 @@
             <returns>int - ID</returns>
             <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">Foutieve inlog gegevens</exception>
         </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerSysteem">
+            <summary>
+            Helpmij.nl Gebruiker Systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Nickname">
+            <summary>
+            Get/Set de Nickname van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Functie">
+            <summary>
+            Get/Set de functie van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Systeemkast">
+            <summary>
+            Get/Set de systeemkast van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Moederbord">
+            <summary>
+            Get/Set het moederbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Processor">
+            <summary>
+            Get/Set de processor van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geheugen">
+            <summary>
+            Get/Set het geheugen van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Koeler">
+            <summary>
+            Get/Set de koeler van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Casefan">
+            <summary>
+            Get/Set de case fan van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Harddisk">
+            <summary>
+            Get/Set de harddisks van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Videokaart">
+            <summary>
+            Get/Set de videokaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Monitor">
+            <summary>
+            Get/Set de monitor(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Brander">
+            <summary>
+            Get/Set de brander van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.CdDvdDrives">
+            <summary>
+            Get/Set de cd/dvd drives van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Speakers">
+            <summary>
+            Get/Set de speakers van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geluidskaart">
+            <summary>
+            Get/Set de geluidskaart van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Netwerkkaart">
+            <summary>
+            Get/Set de netwerkkaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Muis">
+            <summary>
+            Get/Set de muis van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Toetsenbord">
+            <summary>
+            Get/Set het toetsenbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Scanner">
+            <summary>
+            Get/Set de scanner van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Printer">
+            <summary>
+            Get/Set de printer van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Internetverbinding">
+            <summary>
+            Get/Set de internetverbinding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Besturingsssysteem">
+            <summary>
+            Get/Set het bestuuringssysteem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Voeding">
+            <summary>
+            Get/Set de voeding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Extra">
+            <summary>
+            Get/Set extra informatie over het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Temperatuur">
+            <summary>
+            Get/Set de temperatuur van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Foto">
+            <summary>
+            Get/Set een foto van het systeem
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.Helpmij">
             <summary>
             Helpmij Aplication Interface
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.Helpmij.sUser">
+            <summary>
+            HM Gebruiker Data
             </summary>
         </member>
         <member name="M:mvdw.helpmijapi.Helpmij.LoginMD5(System.String,System.String)">
@@ -3863,6 +4167,38 @@
             Reset je Helpmij Gebruiker wachtwoord
             </summary>
             <param name="email">String - Email</param>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.user">
+            <summary>
+            Gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.RefreshImage">
+            <summary>
+            Refresh Image
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.UserID">
+            <summary>
+            Get/Set de gebruikers ID
+            </summary>
         </member>
     </members>
 </doc>

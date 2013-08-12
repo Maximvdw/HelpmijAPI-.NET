@@ -60,10 +60,6 @@ namespace mvdw.helpmij.gebruiker
                     userHelpmij.sectoken =
                         UtilsString.GetSubStrings(source, vartokenPrefix, vartokenSuffix)[0];
 
-                    // AVATAR
-                    userHelpmij.avatarUrl =
-                        avatarUrlPrefix + id;
-
                     // Start met het ophalen van de gegevens...
                     try
                     {

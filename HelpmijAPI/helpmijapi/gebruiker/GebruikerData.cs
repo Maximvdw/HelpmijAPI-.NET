@@ -29,18 +29,6 @@ namespace mvdw.helpmijapi.gebruiker
     public interface GebruikerData : Gebruiker
     {
         /// <summary>
-        /// Verkrijg de avatar url
-        /// </summary>
-        /// <returns>String - URL naar avatar</returns>
-        String GetAvatarUrl();
-
-        /// <summary>
-        /// Verkrijg de avatar Image
-        /// </summary>
-        /// <returns>Image - Avatar</returns>
-        Image GetAvatar();
-
-        /// <summary>
         /// Verkrijg de geboortedatum
         /// </summary>
         /// <returns>DateTime - Geboortedatum</returns>

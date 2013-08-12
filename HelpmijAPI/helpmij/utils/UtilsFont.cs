@@ -34,16 +34,41 @@ namespace mvdw.helpmij.utils
     internal class UtilsFont
     {
         /// <summary>
+        /// Helpmij Font
+        /// </summary>
+        public enum HMFont
+        {
+            /// <summary>
+            /// Calibri Font
+            /// </summary>
+            Calibri,
+            /// <summary>
+            /// Visitor Font
+            /// </summary>
+            Visitor
+        }
+
+        /// <summary>
         /// Verkrijg een font van de resources
         /// </summary>
         /// <param name="font">Font naam (+ext)</param>
         /// <param name="size">Font size</param>
         /// <param name="style">Font Style</param>
         /// <returns>System.Drawing.Font - Font</returns>
-        public Font GetEmbeddedFont(String font, FontStyle style, float size)
+        public static Font GetEmbeddedFont(HMFont hmfont, FontStyle style, float size)
         {
+            String font = ""; // Font resource
+            switch (hmfont) // Verkrijg de geselecteerde font
+            {
+                case HMFont.Calibri:
+                    font = "CALIBRI.TTF";
+                    break;
+                case HMFont.Visitor:
+                    font = "visitor.ttf";
+                    break;
+            }
             // specify embedded resource name
-            string resource = "mvdw." + font;
+            string resource = "mvdw.Properties.Resources." + font;
 
             // receive resource stream
             Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource);

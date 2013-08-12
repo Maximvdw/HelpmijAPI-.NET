@@ -22,6 +22,7 @@ using System.Text;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
+using mvdw.helpmijapi;
 
 namespace mvdw.helpmij.utils
 {
@@ -100,6 +101,9 @@ namespace mvdw.helpmij.utils
             {
                 source = reader.ReadToEnd();
             }
+            // Get Download size [RAW}
+            HelpmijAPI.downloadSize += source.Length;
+
             response.Close();
 
             // Return de source code
@@ -142,6 +146,9 @@ namespace mvdw.helpmij.utils
             {
                 source = reader.ReadToEnd();
             }
+            // Get Download size [RAW}
+            HelpmijAPI.downloadSize += source.Length;
+
             response.Close();
 
             // Return de source code

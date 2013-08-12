@@ -73,18 +73,6 @@ namespace mvdw.helpmij.gebruiker {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("</span>\r")]
-        public string userstatusSuffix {
-            get {
-                return ((string)(this["userstatusSuffix"]));
-            }
-            set {
-                this["userstatusSuffix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("/forum/member.php/")]
         public string publicprofilePHP {
             get {
@@ -109,18 +97,6 @@ namespace mvdw.helpmij.gebruiker {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
-        public string totalPostsSuffix {
-            get {
-                return ((string)(this["totalPostsSuffix"]));
-            }
-            set {
-                this["totalPostsSuffix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Berichten per dag</dt>\r\n\t\t<dd> ")]
         public string postdayPrefix {
             get {
@@ -133,18 +109,6 @@ namespace mvdw.helpmij.gebruiker {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
-        public string postdaySuffix {
-            get {
-                return ((string)(this["postdaySuffix"]));
-            }
-            set {
-                this["postdaySuffix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Geregistreerd</dt>\r\n\t\t<dd>  ")]
         public string registeredPrefix {
             get {
@@ -152,18 +116,6 @@ namespace mvdw.helpmij.gebruiker {
             }
             set {
                 this["registeredPrefix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r")]
-        public string registeredSuffix {
-            get {
-                return ((string)(this["registeredSuffix"]));
-            }
-            set {
-                this["registeredSuffix"] = value;
             }
         }
         
@@ -205,13 +157,85 @@ namespace mvdw.helpmij.gebruiker {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" - Helpmij.nl Forum</title>\r")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/forum/systemspecs.php?actie=add")]
+        public string privateSystemAddPHP {
+            get {
+                return ((string)(this["privateSystemAddPHP"]));
+            }
+            set {
+                this["privateSystemAddPHP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</span>\r\n")]
+        public string userstatusSuffix {
+            get {
+                return ((string)(this["userstatusSuffix"]));
+            }
+            set {
+                this["userstatusSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r\n")]
+        public string totalPostsSuffix {
+            get {
+                return ((string)(this["totalPostsSuffix"]));
+            }
+            set {
+                this["totalPostsSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r\n")]
+        public string postdaySuffix {
+            get {
+                return ((string)(this["postdaySuffix"]));
+            }
+            set {
+                this["postdaySuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("</dd>\r\n")]
+        public string registeredSuffix {
+            get {
+                return ((string)(this["registeredSuffix"]));
+            }
+            set {
+                this["registeredSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(" - Helpmij.nl Forum</title>\r\n")]
         public string publicuserSuffix {
             get {
                 return ((string)(this["publicuserSuffix"]));
             }
             set {
                 this["publicuserSuffix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/forum/image.php?u=")]
+        public string avatarUrlPrefix {
+            get {
+                return ((string)(this["avatarUrlPrefix"]));
+            }
+            set {
+                this["avatarUrlPrefix"] = value;
             }
         }
     }

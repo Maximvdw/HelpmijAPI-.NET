@@ -89,6 +89,13 @@
     <Compile Include="helpmijapi\gebruiker\GebruikerData.cs" />
     <Compile Include="helpmijapi\gebruiker\exceptions\GebruikerExceptions.cs" />
     <Compile Include="helpmijapi\gebruiker\GebruikerPrivacy.cs" />
+    <Compile Include="helpmijapi\gebruiker\GebruikerSysteem.cs" />
+    <Compile Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.Designer.cs">
+      <DependentUpon>uiGebruikerAvatar.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\Helpmij.cs" />
     <Compile Include="helpmijapi\HelpmijAPI.cs" />
     <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
@@ -120,6 +127,7 @@
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
     <Compile Include="helpmij\utils\UtilsFont.cs" />
+    <Compile Include="helpmij\utils\UtilsINI.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
     <Compile Include="helpmij\chat\HelpmijChat.cs" />
     <Compile Include="helpmij\forum\HelpmijComment.cs" />
@@ -169,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.resx">
+      <DependentUpon>uiGebruikerAvatar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
@@ -289,6 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="helpmij\ui\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avatar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

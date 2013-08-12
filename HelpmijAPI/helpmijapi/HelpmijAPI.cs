@@ -33,6 +33,16 @@ namespace mvdw.helpmijapi
     public class HelpmijAPI
     {
         /// <summary>
+        /// Total Downloaded
+        /// </summary>
+        internal static Decimal downloadSize = 0;
+        /// <summary>
+        /// Total Uploaded
+        /// </summary>
+        internal static Decimal uploadSize = 0;
+
+
+        /// <summary>
         /// Verkrijg de API versie
         /// </summary>
         /// <returns></returns>
@@ -100,6 +110,24 @@ namespace mvdw.helpmijapi
             HMGebruikerData.Default.Reload();
             HMForumData.Default.Reset();
             HMForumData.Default.Reload();
+        }
+
+        /// <summary>
+        /// Verkrijg het aantal byte dat gedownload is
+        /// </summary>
+        /// <returns>Size in byte</returns>
+        public static Decimal GetDownloadSize()
+        {
+            return downloadSize;
+        }
+
+        /// <summary>
+        /// Verkrijg het aantal byte dat geupload is
+        /// </summary>
+        /// <returns>Size in byte</returns>
+        public static Decimal GetUploadSize()
+        {
+            return uploadSize;
         }
     }
 }

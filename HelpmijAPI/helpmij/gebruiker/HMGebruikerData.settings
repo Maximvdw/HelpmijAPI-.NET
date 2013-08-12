@@ -14,9 +14,6 @@
     <Setting Name="userstatusPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;span class="usertitle"&gt;</Value>
     </Setting>
-    <Setting Name="userstatusSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;/span&gt;</Value>
-    </Setting>
     <Setting Name="publicprofilePHP" Type="System.String" Scope="User">
       <Value Profile="(Default)">/forum/member.php/</Value>
     </Setting>
@@ -24,22 +21,13 @@
       <Value Profile="(Default)">&lt;dt&gt;Totaal aantal berichten&lt;/dt&gt;
 		&lt;dd&gt; </Value>
     </Setting>
-    <Setting Name="totalPostsSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;/dd&gt;</Value>
-    </Setting>
     <Setting Name="postdayPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Berichten per dag&lt;/dt&gt;
 		&lt;dd&gt; </Value>
     </Setting>
-    <Setting Name="postdaySuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;/dd&gt;</Value>
-    </Setting>
     <Setting Name="registeredPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Geregistreerd&lt;/dt&gt;
 		&lt;dd&gt;  </Value>
-    </Setting>
-    <Setting Name="registeredSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)">&lt;/dd&gt;</Value>
     </Setting>
     <Setting Name="lastactivityPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Laatste activiteit&lt;/dt&gt;
@@ -51,8 +39,31 @@
     <Setting Name="publicuserPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;title&gt;Bekijk Profiel: </Value>
     </Setting>
+    <Setting Name="privateSystemAddPHP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/forum/systemspecs.php?actie=add</Value>
+    </Setting>
+    <Setting Name="userstatusSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/span&gt;
+</Value>
+    </Setting>
+    <Setting Name="totalPostsSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/dd&gt;
+</Value>
+    </Setting>
+    <Setting Name="postdaySuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/dd&gt;
+</Value>
+    </Setting>
+    <Setting Name="registeredSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;/dd&gt;
+</Value>
+    </Setting>
     <Setting Name="publicuserSuffix" Type="System.String" Scope="User">
-      <Value Profile="(Default)"> - Helpmij.nl Forum&lt;/title&gt;</Value>
+      <Value Profile="(Default)"> - Helpmij.nl Forum&lt;/title&gt;
+</Value>
+    </Setting>
+    <Setting Name="avatarUrlPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/forum/image.php?u=</Value>
     </Setting>
   </Settings>
 </SettingsFile>

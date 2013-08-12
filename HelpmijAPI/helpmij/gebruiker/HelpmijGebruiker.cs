@@ -267,6 +267,15 @@ namespace mvdw.helpmij.gebruiker
         }
 
         /// <summary>
+        /// Set de avatar URL
+        /// </summary>
+        /// <param name="url"></param>
+        public void SetAvatarUrl(String url)
+        {
+            this.avatarUrl = url;
+        }
+
+        /// <summary>
         /// Sla de wijzigingen op
         /// </summary>
         /// <exception cref="UserNotLoggedInException">Wanneer cookies null zijn</exception>
@@ -365,12 +374,15 @@ namespace mvdw.helpmij.gebruiker
         public Image GetAvatar()
         {
             CheckVariable(avatarUrl);
+            if (avatar != null)
+                return avatar;
             // Stream the image from the url
             var request = WebRequest.Create(avatarUrl);
             using (var response = request.GetResponse())
             using (var stream = response.GetResponseStream())
             {
-                return Image.FromStream(stream);
+                avatar = Image.FromStream(stream);
+                return avatar;
             }
         }
 

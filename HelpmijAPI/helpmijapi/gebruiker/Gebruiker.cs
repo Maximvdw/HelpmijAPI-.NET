@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
+using System.Drawing;
 
 namespace mvdw.helpmijapi.gebruiker
 {
@@ -39,6 +40,12 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <param name="nickname">String - Nickname</param>
         void SetNickname(String nickname);
+
+        /// <summary>
+        /// Set de avatar URL
+        /// </summary>
+        /// <param name="url"></param>
+        void SetAvatarUrl(String url);
 
         /// <summary>
         /// Verkrijg de Gebruikers ID
@@ -106,5 +113,17 @@ namespace mvdw.helpmijapi.gebruiker
         /// Refresh de gegevens
         /// </summary>
         void refreshData();
+
+        /// <summary>
+        /// Verkrijg de avatar url
+        /// </summary>
+        /// <returns>String - URL naar avatar</returns>
+        String GetAvatarUrl();
+
+        /// <summary>
+        /// Verkrijg de avatar Image
+        /// </summary>
+        /// <returns>Image - Avatar</returns>
+        Image GetAvatar();
     }
 }

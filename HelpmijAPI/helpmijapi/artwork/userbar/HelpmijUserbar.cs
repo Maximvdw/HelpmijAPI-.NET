@@ -21,6 +21,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Reflection;
+using mvdw.helpmij.utils;
 
 namespace mvdw.helpmijapi.artwork.userbar
 {
@@ -42,6 +44,52 @@ namespace mvdw.helpmijapi.artwork.userbar
         public HelpmijUserbar(UserbarType type)
         {
             this.type = type;
+        }
+
+        /// <summary>
+        /// Verkrijg Userbar volgens settings
+        /// </summary>
+        /// <param name="type">Userbar type</param>
+        /// <param name="text">Userbar text</param>
+        /// <returns>UserbarArguments</returns>
+        public static UserbarArguments GetUserbar(UserbarType type, String text)
+        {
+            UserbarArguments userbar = new UserbarArguments();
+            userbar.Background = GetBlankUserbar(type);
+            userbar.Text = text;
+            userbar = GenerateUserbar(userbar);
+            return userbar; // Return the userbar
+        }
+
+ 
+
+        /// <summary>
+        /// Generate the userbar
+        /// </summary>
+        /// <param name="userbar">UserbarArguments</param>
+        public static UserbarArguments GenerateUserbar(UserbarArguments userbar)
+        {
+            try
+            {
+                // Get the userbar font
+                userbar.Userbar = userbar.Background; // Failsafe
+                Font font = UtilsFont.GetEmbeddedFont(UtilsFont.HMFont.Visitor, FontStyle.Regular, 9);
+                Image background = userbar.Background; // Get background
+                // Start met tekenen
+                using (Graphics g = Graphics.FromImage(background))
+                {
+                    Point p = new Point(335 - (int)g.MeasureString(userbar.Text, font).Width, 5);
+                    g.DrawString(userbar.Text, font, Brushes.White, p);
+                    // Save userbar
+                    g.Save();
+                    userbar.Userbar = background;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            // Return result
+            return userbar;
         }
 
         /// <summary>
@@ -117,6 +165,40 @@ namespace mvdw.helpmijapi.artwork.userbar
         }
     }
 
+    /// <summary>
+    /// Helpmij Userbar Arguments
+    /// </summary>
+    public class UserbarArguments
+    {
+        /// <summary>
+        /// Userbar Text
+        /// </summary>
+        public String Text;
+        /// <summary>
+        /// Text color
+        /// </summary>
+        public Color ForeColor;
+        /// <summary>
+        /// Text border color
+        /// </summary>
+        public Color BorderColor;
+        /// <summary>
+        /// Blank userbar
+        /// </summary>
+        public Image Background;
+        /// <summary>
+        /// Text X-Pos
+        /// </summary>
+        public int Xpos;
+        /// <summary>
+        /// Text Y-Pos
+        /// </summary>
+        public int Ypos;
+        /// <summary>
+        /// Completed Userbar
+        /// </summary>
+        public Image Userbar;
+    }
 
     /// <summary>
     /// Helpmij.nl Userbar Types
@@ -163,6 +245,9 @@ namespace mvdw.helpmijapi.artwork.userbar
         /// Rainbow Red Userbar
         /// </summary>
         RainbowRed,
+        /// <summary>
+        /// Rainbow Yellow Userbar
+        /// </summary>
         RainbowYellow
     }
 }

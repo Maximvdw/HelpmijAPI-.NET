@@ -27,6 +27,10 @@ namespace mvdw.helpmijapi.artwork.userbar
         /// Toon userbar voorbeeld
         /// </summary>
         private Boolean preview = false;
+        /// <summary>
+        /// Userbar arguments
+        /// </summary>
+        private UserbarArguments args = null;
 
         /// <summary>
         /// Helpmij.nl Userbars
@@ -58,9 +62,38 @@ namespace mvdw.helpmijapi.artwork.userbar
                 }
                 else
                 {
-                    this.BackgroundImage = HelpmijUserbar.GetBlankUserbar(type);
+                    this.args = HelpmijUserbar.GetUserbar(type, message);
+                    this.BackgroundImage = args.Userbar;
                 }
             }
+        }
+
+        /// <summary>
+        /// Userbar Text
+        /// </summary>
+        [Description("Userbar Text"), Category("UBText")]
+        public String UBText
+        {
+            get
+            {
+                return message;
+            }
+            set
+            {
+                // Save val
+                this.message = value;
+                args = HelpmijUserbar.GenerateUserbar(args);
+                this.BackgroundImage = args.Userbar;
+            }
+        }
+
+        /// <summary>
+        /// Verkrijg de Userbar
+        /// </summary>
+        /// <returns>UserbarArguments</returns>
+        public UserbarArguments GetUserbar()
+        {
+            return args;
         }
 
         /// <summary>
@@ -83,17 +116,10 @@ namespace mvdw.helpmijapi.artwork.userbar
                 }
                 else
                 {
-                    this.BackgroundImage = HelpmijUserbar.GetBlankUserbar(type);
+                    this.args = HelpmijUserbar.GetUserbar(type, message);
+                    this.BackgroundImage = args.Userbar;
                 }
             }
-        }
-
-        /// <summary>
-        /// Schrijf de tekst op de userbar
-        /// </summary>
-        private void WriteText()
-        {
-
         }
 
         private void uiUserbar_Load(object sender, EventArgs e)

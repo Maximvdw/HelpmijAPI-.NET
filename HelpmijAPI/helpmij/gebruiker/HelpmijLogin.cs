@@ -33,6 +33,11 @@ namespace mvdw.helpmij.gebruiker
     internal class HelpmijLogin : HelpmijData
     {
         /// <summary>
+        /// HM Gebruiker Data
+        /// </summary>
+        private static HMGebruikerData s = new HMGebruikerData();
+
+        /// <summary>
         /// Aanmelden op Helpmij.nl
         /// </summary>
         /// <param name="username">Helpmij Gebruikersnaam</param>
@@ -69,6 +74,7 @@ namespace mvdw.helpmij.gebruiker
                     user.SetUserID(id);
                     user.SetNickname(username);
                     user.SetOnline();
+                    user.SetAvatarUrl(s.siteURL + s.avatarUrlPrefix + id);
                     return user; // Enkel cookies , id , nick en sectoken
                 }
             }

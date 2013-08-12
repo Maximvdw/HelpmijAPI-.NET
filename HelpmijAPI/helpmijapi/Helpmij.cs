@@ -35,6 +35,11 @@ namespace mvdw.helpmijapi
     public class Helpmij
     {
         /// <summary>
+        /// HM Gebruiker Data
+        /// </summary>
+        private static HMGebruikerData sUser = new HMGebruikerData();
+
+        /// <summary>
         /// Aanmelden op Helpmij.nl
         /// </summary>
         /// <param name="username">Helpmij gebruikersnaam</param>
@@ -68,6 +73,7 @@ namespace mvdw.helpmijapi
             // Creeer een nieuwe gebruikers instantie
             Gebruiker user = new HelpmijGebruiker();
             user.SetUserID(ID);
+            user.SetAvatarUrl(sUser.siteURL + sUser.avatarUrlPrefix + ID);
             return user; // Return de gebruiker
         }
 
