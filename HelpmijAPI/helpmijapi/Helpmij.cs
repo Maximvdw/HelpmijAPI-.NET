@@ -132,5 +132,14 @@ namespace mvdw.helpmijapi
         {
             HelpmijGebruiker.ResetPassword(email);
         }
+
+        /// <summary>
+        /// Verkrijg een Gebruikers Systeem
+        /// </summary>
+        /// <returns>GebruikerSysteem - system</returns>
+        public static GebruikerSysteem GetSystem()
+        {
+            return new HelpmijGebruikerSysteem();
+        }
     }
 }

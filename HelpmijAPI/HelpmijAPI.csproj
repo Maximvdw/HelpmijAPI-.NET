@@ -23,7 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\HelpmijAPI.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
     <LangVersion>3</LangVersion>
     <RunCodeAnalysis>true</RunCodeAnalysis>
@@ -50,6 +50,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -78,6 +79,12 @@
     <Compile Include="helpmijapi\forum\Comment.cs" />
     <Compile Include="helpmijapi\forum\Forum.cs" />
     <Compile Include="helpmijapi\forum\exceptions\ForumExceptions.cs" />
+    <Compile Include="helpmijapi\forum\gui\uiComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\forum\gui\uiComment.Designer.cs">
+      <DependentUpon>uiComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\forum\gui\uiHompageTopics.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +105,15 @@
     </Compile>
     <Compile Include="helpmijapi\Helpmij.cs" />
     <Compile Include="helpmijapi\HelpmijAPI.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Chassis.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Memory.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Monitor.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Motherboard.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Processor.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Storage.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\Videocard.cs" />
+    <Compile Include="helpmijapi\sysinfo\software\Operatingsystem.cs" />
+    <Compile Include="helpmijapi\sysinfo\utils\Converter.cs" />
     <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
     <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
@@ -120,6 +136,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>HMForumData.settings</DependentUpon>
     </Compile>
+    <Compile Include="helpmij\gebruiker\HelpmijGebruikerSysteem.cs" />
     <Compile Include="helpmij\gebruiker\HMGebruikerData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -171,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\artwork\userbar\uiUserbar.resx">
       <DependentUpon>uiUserbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\forum\gui\uiComment.resx">
+      <DependentUpon>uiComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\forum\gui\uiHompageTopics.resx">
       <DependentUpon>uiHompageTopics.cs</DependentUpon>
@@ -303,6 +323,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commentbackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -171,7 +171,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
                 if (Data == true)
                 {
                     // Haal de gegevens op
-                    userData = user.GetUserData();
+                    userData = user.GetUserData(true);
                     // Login gelukt
                     if (this.onLoginSuccess != null)
                         this.onLoginSuccess(this, new LoginSuccessEventArgs(userData));

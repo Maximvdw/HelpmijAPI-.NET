@@ -190,6 +190,10 @@ namespace mvdw.helpmij.gebruiker
         /// Verenigingslid
         /// </summary>
         public Boolean vererningingslid = false;
+        /// <summary>
+        /// Gebruiker systeem
+        /// </summary>
+        public List<GebruikerSysteem> systems = new List<GebruikerSysteem>();
 
 
         /// <summary>
@@ -249,19 +253,23 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Verkrijg GebruikersData
         /// </summary>
-        public GebruikerData GetUserData()
+        /// <param name="fetch">Also fetch data?</param>
+        public GebruikerData GetUserData(Boolean fetch)
         {
-            if (GetCookies() != null)
+            if (fetch)
             {
-                // Laad de instellingen van het online profiel
-                HelpmijGebruikerData.GetPublicData(this); // Bevat apparte gegevens
-                HelpmijGebruikerData.GetPrivateData(this);
-                HelpmijGebruikerData.GetSignature(this);
-            }
-            else
-            {
-                // Laad publieke instellingen
-                HelpmijGebruikerData.GetPublicData(this);
+                if (GetCookies() != null)
+                {
+                    // Laad de instellingen van het online profiel
+                    HelpmijGebruikerData.GetPublicData(this); // Bevat apparte gegevens
+                    HelpmijGebruikerData.GetPrivateData(this);
+                    HelpmijGebruikerData.GetSignature(this);
+                }
+                else
+                {
+                    // Laad publieke instellingen
+                    HelpmijGebruikerData.GetPublicData(this);
+                }
             }
             return this;
         }
@@ -973,6 +981,26 @@ namespace mvdw.helpmij.gebruiker
             {
                 this.vererningingslid = value;
             }
+        }
+
+        /// <summary>
+        /// Voeg een gebruikersysteem toe
+        /// </summary>
+        /// <param name="system">GebruikerSysteem - System</param>
+        public void AddSystem(GebruikerSysteem system)
+        {
+            // Save system to site
+            if (HelpmijGebruikerSysteem.SaveSystem(system,this))
+                systems.Add(system); // Add to list
+        }
+
+        /// <summary>
+        /// Verkrijg een Gebruiker systeem
+        /// </summary>
+        /// <returns>GebruikerSysteem - System</returns>
+        public List<GebruikerSysteem> GetSystems()
+        {
+            return systems;
         }
 
         /// <summary>

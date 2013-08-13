@@ -45,7 +45,7 @@ namespace mvdw.helpmijapi.gebruiker.events
         {
             if (userData == null)
             {
-                return user.GetUserData();
+                return user.GetUserData(false);
             }
             else
             {

@@ -77,5 +77,8 @@
     <Setting Name="topicPagesSuffix" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;/a&gt;</Value>
     </Setting>
+    <Setting Name="mobileStyle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">?styleid=20</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

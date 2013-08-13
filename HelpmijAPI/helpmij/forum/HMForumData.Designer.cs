@@ -322,5 +322,17 @@ namespace mvdw.helpmij.forum {
                 this["topicPagesSuffix"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("?styleid=20")]
+        public string mobileStyle {
+            get {
+                return ((string)(this["mobileStyle"]));
+            }
+            set {
+                this["mobileStyle"] = value;
+            }
+        }
     }
 }

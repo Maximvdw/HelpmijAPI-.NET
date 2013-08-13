@@ -56,6 +56,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
             this.getUserData = getUserData;
             // Register events
             hmLogin.onLoginSuccess += new LoginSuccessEventHandler(onLoginSuccess);
+            hmLogin.onLoginFailed += new LoginFailedEventHandler(onLoginFailed);
         }
 
         /// <summary>
@@ -103,24 +104,70 @@ namespace mvdw.helpmijapi.gebruiker.gui
         }
 
         /// <summary>
+        /// On Login Failed Event
+        /// </summary>
+        /// <param name="e">Event Arguments</param>
+        /// <param name="sender">Sender</param>
+        private void onLoginFailed(Object sender, LoginFailedEventArgs e)
+        {
+            try
+            {
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new LoginFailedEventHandler(onLoginFailed), new Object[] { sender, e });
+                }
+                else
+                {
+                    // Login Failed
+                    MessageBox.Show("Je hebt een ongeldige gebruikersnaam of een ongeldig wachtwoord ingevoerd.\nDenk eraan dat het wachtwoord hoofdlettergevoelig is.",
+                        "Helpmij.nl Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    btnLogin.Text = "&Inloggen";
+                    btnLogin.Enabled = true;
+                    hmLogin.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                // Login Failed
+                MessageBox.Show("Je hebt een ongeldige gebruikersnaam of een ongeldig wachtwoord ingevoerd.\nDenk eraan dat het wachtwoord hoofdlettergevoelig is.",
+                    "Helpmij.nl Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnLogin.Text = "&Inloggen";
+                btnLogin.Enabled = true;
+                hmLogin.Enabled = true;
+            }
+        }
+
+        /// <summary>
         /// On Login Success Event
         /// </summary>
         /// <param name="e">Event Arguments</param>
         /// <param name="sender">Sender</param>
         private void onLoginSuccess(Object sender, LoginSuccessEventArgs e)
         {
-            if (this.InvokeRequired)
+            try
             {
-                this.Invoke(new LoginSuccessEventHandler(onLoginSuccess), new Object[] { sender, e });
+                if (this.InvokeRequired)
+                {
+                    this.Invoke(new LoginSuccessEventHandler(onLoginSuccess), new Object[] { sender, e });
+                }
+                else
+                {
+                    // Login success
+                    this.DialogResult = DialogResult.OK;
+                    if (getUserData)
+                        userData = e.GetUserData();
+                    user = e.GetUser();
+                    this.Close();
+                }
             }
-            else
+            catch (Exception)
             {
-                // Login success
-                this.DialogResult = DialogResult.OK;
-                if (getUserData)
-                    userData = e.GetUserData();
-                user = e.GetUser();
-                this.Close();
+                // Login Failed
+                MessageBox.Show("Je hebt een ongeldige gebruikersnaam of een ongeldig wachtwoord ingevoerd.\nDenk eraan dat het wachtwoord hoofdlettergevoelig is.",
+                    "Helpmij.nl Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnLogin.Text = "&Inloggen";
+                btnLogin.Enabled = true;
+                hmLogin.Enabled = true;
             }
         }
 

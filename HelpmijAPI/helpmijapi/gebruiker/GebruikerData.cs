@@ -392,5 +392,17 @@ namespace mvdw.helpmijapi.gebruiker
         /// Get/Set of de gebruiker verenigingslid is
         /// </summary>
         Boolean IsVerenigingslid {get; set;}
+
+        /// <summary>
+        /// Voeg een gebruikersysteem toe
+        /// </summary>
+        /// <param name="system">GebruikerSysteem - System</param>
+        void AddSystem(GebruikerSysteem system);
+
+        /// <summary>
+        /// Verkrijg een Gebruiker systeem
+        /// </summary>
+        /// <returns>GebruikerSysteem - System</returns>
+        List<GebruikerSysteem> GetSystems();
     }
 }

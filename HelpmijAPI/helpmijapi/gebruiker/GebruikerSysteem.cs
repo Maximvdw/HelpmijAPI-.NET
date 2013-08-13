@@ -137,7 +137,7 @@ namespace mvdw.helpmijapi.gebruiker
         /// <summary>
         /// Get/Set het bestuuringssysteem
         /// </summary>
-        String Besturingsssysteem { get; set; }
+        String Besturingssysteem { get; set; }
 
         /// <summary>
         /// Get/Set de voeding van het systeem

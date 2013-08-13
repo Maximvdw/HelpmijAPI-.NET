@@ -35,6 +35,11 @@
               Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
+        <member name="P:mvdw.Properties.Resources.commentbackground">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:mvdw.Properties.Resources.MyriadPro_Regular">
             <summary>
               Looks up a localized resource of type System.Byte[].
@@ -599,6 +604,22 @@
             </summary>
             <returns>String - Laatste update</returns>
         </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Videocard">
+            <summary>
+            Video Card Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Videocard.gpuName">
+            <summary>
+            Vidoe Processor name
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Videocard.GetVideocardNames">
+            <summary>
+            Get the Video processor name
+            </summary>
+            <remarks>String - Video Processor Names</remarks>
+        </member>
         <member name="T:mvdw.helpmijapi.forum.gui.uiHompageTopics">
             <summary>
             Helpmij Hompage Topics User Interface
@@ -769,6 +790,22 @@
             Login Failed Event Handler
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Processor">
+            <summary>
+            Processor Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Processor.cpuName">
+            <summary>
+            Processor name
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Processor.GetProcessorNames">
+            <summary>
+            Get the processor name
+            </summary>
+            <remarks>String - Processor Names</remarks>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsJSON">
              <summary>
              This class encodes and decodes JSON strings.
@@ -874,9 +911,611 @@
             <param name="success">Succes output</param>
             <returns>Hashtable</returns>
         </member>
+        <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem">
+            <summary>
+            Helpmij Gebruiker Systeem
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerSysteem">
+            <summary>
+            Helpmij.nl Gebruiker Systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Nickname">
+            <summary>
+            Get/Set de Nickname van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Functie">
+            <summary>
+            Get/Set de functie van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Systeemkast">
+            <summary>
+            Get/Set de systeemkast van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Moederbord">
+            <summary>
+            Get/Set het moederbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Processor">
+            <summary>
+            Get/Set de processor van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geheugen">
+            <summary>
+            Get/Set het geheugen van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Koeler">
+            <summary>
+            Get/Set de koeler van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Casefan">
+            <summary>
+            Get/Set de case fan van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Harddisk">
+            <summary>
+            Get/Set de harddisks van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Videokaart">
+            <summary>
+            Get/Set de videokaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Monitor">
+            <summary>
+            Get/Set de monitor(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Brander">
+            <summary>
+            Get/Set de brander van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.CdDvdDrives">
+            <summary>
+            Get/Set de cd/dvd drives van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Speakers">
+            <summary>
+            Get/Set de speakers van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geluidskaart">
+            <summary>
+            Get/Set de geluidskaart van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Netwerkkaart">
+            <summary>
+            Get/Set de netwerkkaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Muis">
+            <summary>
+            Get/Set de muis van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Toetsenbord">
+            <summary>
+            Get/Set het toetsenbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Scanner">
+            <summary>
+            Get/Set de scanner van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Printer">
+            <summary>
+            Get/Set de printer van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Internetverbinding">
+            <summary>
+            Get/Set de internetverbinding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Besturingssysteem">
+            <summary>
+            Get/Set het bestuuringssysteem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Voeding">
+            <summary>
+            Get/Set de voeding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Extra">
+            <summary>
+            Get/Set extra informatie over het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Temperatuur">
+            <summary>
+            Get/Set de temperatuur van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Foto">
+            <summary>
+            Get/Set een foto van het systeem
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.s">
+            <summary>
+            HM Gebruiker Data
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.nickname">
+            <summary>
+            Nickname
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.functie">
+            <summary>
+            Functie
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.systeemkast">
+            <summary>
+            Systeemkast
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.moederbord">
+            <summary>
+            Moederbord
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.processor">
+            <summary>
+            Processor
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.geheugen">
+            <summary>
+            Geheugen
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.koeler">
+            <summary>
+            CPU koeler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.casefan">
+            <summary>
+            Case Fan
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.harddisk">
+            <summary>
+            Hard disk
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.videokaart">
+            <summary>
+            Video kaart
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.monitor">
+            <summary>
+            Monitor
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.brander">
+            <summary>
+            Brander
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.cddvddrives">
+            <summary>
+            CD/DVD Drives
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.speakers">
+            <summary>
+            Speakers
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.geluidskaart">
+            <summary>
+            Geluidskaart
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.netwerkkaart">
+            <summary>
+            Netwerkkaart
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.muis">
+            <summary>
+            Muis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.toetsenbord">
+            <summary>
+            Toetsenbord
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.scanner">
+            <summary>
+            Scanner
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.printer">
+            <summary>
+            Printer
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.internetverbinding">
+            <summary>
+            Internet Verbinding
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.besturingssysteem">
+            <summary>
+            Bestuuringssysteem
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.voeding">
+            <summary>
+            Voeding
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.extra">
+            <summary>
+            Extra
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.temperatuur">
+            <summary>
+            Temperatuur
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.foto">
+            <summary>
+            Systeem Foto
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.SaveSystem(mvdw.helpmijapi.gebruiker.GebruikerSysteem,mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Save een gebruikers systeem
+            </summary>
+            <param name="system">System</param>
+            <returns>Boolean - Result</returns>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Nickname">
+            <summary>
+            Get/Set de Nickname van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Functie">
+            <summary>
+            Get/Set de functie van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Systeemkast">
+            <summary>
+            Get/Set de systeemkast van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Moederbord">
+            <summary>
+            Get/Set het moederbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Processor">
+            <summary>
+            Get/Set de processor van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Geheugen">
+            <summary>
+            Get/Set het geheugen van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Koeler">
+            <summary>
+            Get/Set de koeler van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Casefan">
+            <summary>
+            Get/Set de case fan van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Harddisk">
+            <summary>
+            Get/Set de harddisks van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Videokaart">
+            <summary>
+            Get/Set de videokaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Monitor">
+            <summary>
+            Get/Set de monitor(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Brander">
+            <summary>
+            Get/Set de brander van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.CdDvdDrives">
+            <summary>
+            Get/Set de cd/dvd drives van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Speakers">
+            <summary>
+            Get/Set de speakers van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Geluidskaart">
+            <summary>
+            Get/Set de geluidskaart van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Netwerkkaart">
+            <summary>
+            Get/Set de netwerkkaart(en) van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Muis">
+            <summary>
+            Get/Set de muis van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Toetsenbord">
+            <summary>
+            Get/Set het toetsenbord van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Scanner">
+            <summary>
+            Get/Set de scanner van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Printer">
+            <summary>
+            Get/Set de printer van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Internetverbinding">
+            <summary>
+            Get/Set de internetverbinding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Besturingssysteem">
+            <summary>
+            Get/Set het bestuuringssysteem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Voeding">
+            <summary>
+            Get/Set de voeding van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Extra">
+            <summary>
+            Get/Set extra informatie over het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Temperatuur">
+            <summary>
+            Get/Set de temperatuur van het systeem
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmij.gebruiker.HelpmijGebruikerSysteem.Foto">
+            <summary>
+            Get/Set een foto van het systeem
+            </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Storage">
+            <summary>
+            Storage Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Storage.logicalDrivesSize">
+            <summary>
+            Logical Drives - Size
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Storage.GetLogicalDrivesSize">
+            <summary>
+            Get logical drive capacities
+            </summary>
+            <remarks>String - Capacity</remarks>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Chassis">
+            <summary>
+            Get system chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Chassis.type">
+            <summary>
+            Chassis Type
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Chassis.osManufacturer">
+            <summary>
+            Manufacturer that installed the OS
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Chassis.GetChassisType">
+            <summary>
+            Get Chassis Type
+            </summary>
+            <returns>Chassis Type</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Chassis.GetManufacturerName">
+            <summary>
+            Get Manufacturer
+            </summary>
+            <returns>String - Name</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes">
+            <summary>
+            Chassis Types
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Other">
+            <summary>
+            Other (Unknown)
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Desktop">
+            <summary>
+            Desktop
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.LowProfileDesktop">
+            <summary>
+            Low Profile Desktop
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.PizzaBox">
+            <summary>
+            Pizza Box PC
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.MiniTower">
+            <summary>
+            Mini Tower PC
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Tower">
+            <summary>
+            Tower PC
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Portable">
+            <summary>
+            Portable
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Laptop">
+            <summary>
+            Laptop
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Notebook">
+            <summary>
+            Notebook
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.Handheld">
+            <summary>
+            Handheld device
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.DockingStation">
+            <summary>
+            Docking Station
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.AllInOne">
+            <summary>
+            All in One
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.SubNotebook">
+            <summary>
+            Sub Netbook
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.SpaceSaving">
+            <summary>
+            Space Saving desktop
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.LunchBox">
+            <summary>
+            Lunchbox
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.MainSystemChassis">
+            <summary>
+            Main System Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.ExpansionChassis">
+            <summary>
+            Expansion Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.SubChassis">
+            <summary>
+            Sub Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.BusExpansionChassis">
+            <summary>
+            Bus Expansion Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.PeripheralChassis">
+            <summary>
+            Peripheral Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.StorageChassis">
+            <summary>
+            Storage Chassis
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.RackMountChassis">
+            <summary>
+            Rack Mounted Chassis (server)
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.ChassisTypes.SealedCasePC">
+            <summary>
+            Sealed PC
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.forum.gui.uiComment.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiComment.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.forum.gui.uiComment.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:mvdw.helpmij.utils.UtilsHTTP">
             <summary>
             HTTP Utilities
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.utils.UtilsHTTP.userAgent">
+            <summary>
+            User Agent
             </summary>
         </member>
         <member name="M:mvdw.helpmij.utils.UtilsHTTP.IsInternetAvailable">
@@ -987,10 +1626,11 @@
             </summary>
             <param name="container"></param>
         </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData">
+        <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.GetUserData(System.Boolean)">
             <summary>
             Verkrijg GebruikersData
             </summary>
+            <param name="fetch">Fetch User data</param>
         </member>
         <member name="M:mvdw.helpmijapi.gebruiker.Gebruiker.SetUserData">
             <summary>
@@ -1374,6 +2014,18 @@
             </summary>
             <param name="url">String - URL</param>
         </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.AddSystem(mvdw.helpmijapi.gebruiker.GebruikerSysteem)">
+            <summary>
+            Voeg een gebruikersysteem toe
+            </summary>
+            <param name="system">GebruikerSysteem - System</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.GebruikerData.GetSystems">
+            <summary>
+            Verkrijg een Gebruiker systeem
+            </summary>
+            <returns>GebruikerSysteem - System</returns>
+        </member>
         <member name="P:mvdw.helpmijapi.gebruiker.GebruikerData.IsVerenigingslid">
             <summary>
             Get/Set of de gebruiker verenigingslid is
@@ -1574,6 +2226,11 @@
             Verenigingslid
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.gebruiker.HelpmijGebruiker.systems">
+            <summary>
+            Gebruiker systeem
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.ResetPassword(System.String)">
             <summary>
             Reset gebruiekrs wachtwoord
@@ -1586,10 +2243,11 @@
             </summary>
             <param name="var">Variabele</param>
         </member>
-        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserData">
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetUserData(System.Boolean)">
             <summary>
             Verkrijg GebruikersData
             </summary>
+            <param name="fetch">Also fetch data?</param>
         </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.SetAvatarUrl(System.String)">
             <summary>
@@ -2039,6 +2697,18 @@
             </summary>
             <param name="url">String - URL</param>
         </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.AddSystem(mvdw.helpmijapi.gebruiker.GebruikerSysteem)">
+            <summary>
+            Voeg een gebruikersysteem toe
+            </summary>
+            <param name="system">GebruikerSysteem - System</param>
+        </member>
+        <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.GetSystems">
+            <summary>
+            Verkrijg een Gebruiker systeem
+            </summary>
+            <returns>GebruikerSysteem - System</returns>
+        </member>
         <member name="M:mvdw.helpmij.gebruiker.HelpmijGebruiker.refreshData">
             <summary>
             Refresh de gegevens
@@ -2048,6 +2718,60 @@
             <summary>
             Get/Set of de gebruiker verenigingslid is
             </summary>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Motherboard">
+            <summary>
+            Mother Board information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Motherboard.modoProduct">
+            <summary>
+            Motherboard Product
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Motherboard.modoSerial">
+            <summary>
+            Motherboard Serial number
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Motherboard.GetSerial">
+            <summary>
+            Get Motherboard Serial
+            </summary>
+            <returns>String - Name</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Motherboard.GetProduct">
+            <summary>
+            Get Motherboard product
+            </summary>
+            <returns>String - Name</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Memory">
+            <summary>
+            Memory Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Memory.memoryCapacity">
+            <summary>
+            Memory information - Capacity
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Memory.memoryType">
+            <summary>
+            Memory information - Type
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Memory.GetMemoryCapacities">
+            <summary>
+            Get the memory capacties of each slot
+            </summary>
+            <remarks>Double - Memory capactities</remarks>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Memory.GetMemoryTypes">
+            <summary>
+            Get the memory types of each slot
+            </summary>
+            <remarks>String - Memory types</remarks>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs">
             <summary>
@@ -2681,6 +3405,22 @@
             </summary>
             <param name="topics">Lijst met topics</param>
         </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.Monitor">
+            <summary>
+            Display Monitor Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.Monitor.monitors">
+            <summary>
+            Monitor descriptions
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.hardware.Monitor.GetMonitors">
+            <summary>
+            Get the Monitor names
+            </summary>
+            <remarks>String - Monitor names</remarks>
+        </member>
         <member name="T:mvdw.helpmijapi.HelpmijAPI">
             <summary>
             Helpmij Aplication Interface
@@ -3212,6 +3952,13 @@
             <param name="sender">Button</param>
             <param name="e">Event Arguments</param>
         </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.onLoginFailed(System.Object,mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs)">
+            <summary>
+            On Login Failed Event
+            </summary>
+            <param name="e">Event Arguments</param>
+            <param name="sender">Sender</param>
+        </member>
         <member name="M:mvdw.helpmijapi.gebruiker.gui.frmLogin.onLoginSuccess(System.Object,mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs)">
             <summary>
             On Login Success Event
@@ -3552,6 +4299,38 @@
         <member name="P:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.Data">
             <summary>
             Data
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.user">
+            <summary>
+            Gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.RefreshImage">
+            <summary>
+            Refresh Image
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.UserID">
+            <summary>
+            Get/Set de gebruikers ID
             </summary>
         </member>
         <member name="T:mvdw.helpmij.chat.HelpmijChatMessage">
@@ -3897,6 +4676,18 @@
             Visitor Font
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.utils.Converter">
+            <summary>
+            Converters
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.utils.Converter.ByteConvert(System.Double)">
+            <summary>
+            Convert bytes to a readable string
+            </summary>
+            <param name="bytes">int - bytes</param>
+            <returns>String - [xx] MB/GB/KB ,..</returns>
+        </member>
         <member name="T:mvdw.helpmij.homepage.HomepageTopics">
             <summary>
             Helpmij Homepage topics
@@ -3964,140 +4755,32 @@
             <returns>int - ID</returns>
             <exception cref="T:mvdw.helpmijapi.gebruiker.exceptions.CredentialsWrongException">Foutieve inlog gegevens</exception>
         </member>
-        <member name="T:mvdw.helpmijapi.gebruiker.GebruikerSysteem">
+        <member name="T:mvdw.helpmijapi.sysinfo.software.Operatingsystem">
             <summary>
-            Helpmij.nl Gebruiker Systeem
+            Operating System Information
             </summary>
         </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Nickname">
+        <member name="F:mvdw.helpmijapi.sysinfo.software.Operatingsystem.osName">
             <summary>
-            Get/Set de Nickname van het systeem
+            OS Friendly name
             </summary>
         </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Functie">
+        <member name="F:mvdw.helpmijapi.sysinfo.software.Operatingsystem.osManufacturer">
             <summary>
-            Get/Set de functie van het systeem
+            Manufacturer that created the OS
             </summary>
         </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Systeemkast">
+        <member name="M:mvdw.helpmijapi.sysinfo.software.Operatingsystem.GetOSName">
             <summary>
-            Get/Set de systeemkast van het systeem
+            Get OS Friendly name
             </summary>
+            <returns>String - Name</returns>
         </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Moederbord">
+        <member name="M:mvdw.helpmijapi.sysinfo.software.Operatingsystem.GetManufacturerName">
             <summary>
-            Get/Set het moederbord van het systeem
+            Get Manufacturer
             </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Processor">
-            <summary>
-            Get/Set de processor van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geheugen">
-            <summary>
-            Get/Set het geheugen van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Koeler">
-            <summary>
-            Get/Set de koeler van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Casefan">
-            <summary>
-            Get/Set de case fan van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Harddisk">
-            <summary>
-            Get/Set de harddisks van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Videokaart">
-            <summary>
-            Get/Set de videokaart(en) van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Monitor">
-            <summary>
-            Get/Set de monitor(en) van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Brander">
-            <summary>
-            Get/Set de brander van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.CdDvdDrives">
-            <summary>
-            Get/Set de cd/dvd drives van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Speakers">
-            <summary>
-            Get/Set de speakers van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Geluidskaart">
-            <summary>
-            Get/Set de geluidskaart van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Netwerkkaart">
-            <summary>
-            Get/Set de netwerkkaart(en) van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Muis">
-            <summary>
-            Get/Set de muis van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Toetsenbord">
-            <summary>
-            Get/Set het toetsenbord van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Scanner">
-            <summary>
-            Get/Set de scanner van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Printer">
-            <summary>
-            Get/Set de printer van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Internetverbinding">
-            <summary>
-            Get/Set de internetverbinding van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Besturingsssysteem">
-            <summary>
-            Get/Set het bestuuringssysteem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Voeding">
-            <summary>
-            Get/Set de voeding van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Extra">
-            <summary>
-            Get/Set extra informatie over het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Temperatuur">
-            <summary>
-            Get/Set de temperatuur van het systeem
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.GebruikerSysteem.Foto">
-            <summary>
-            Get/Set een foto van het systeem
-            </summary>
+            <returns>String - Name</returns>
         </member>
         <member name="T:mvdw.helpmijapi.Helpmij">
             <summary>
@@ -4168,37 +4851,11 @@
             </summary>
             <param name="email">String - Email</param>
         </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.user">
+        <member name="M:mvdw.helpmijapi.Helpmij.GetSystem">
             <summary>
-            Gebruiker
+            Verkrijg een Gebruikers Systeem
             </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.RefreshImage">
-            <summary>
-            Refresh Image
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="P:mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.UserID">
-            <summary>
-            Get/Set de gebruikers ID
-            </summary>
+            <returns>GebruikerSysteem - system</returns>
         </member>
     </members>
 </doc>

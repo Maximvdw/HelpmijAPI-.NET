@@ -82,17 +82,24 @@ namespace mvdw.helpmij.forum
         /// <returns>Gebruiker - Auteur</returns>
         private static Gebruiker GetAuthor(String source)
         {
-            String usernameAndID = UtilsString.GetSubStrings(source,
-                s.memberPrefix, s.authorSuffix)[0];
-            String[] data = usernameAndID.Split('-');
-            String username = data[1];
-            int id = int.Parse(data[0]);
-            // Maak een nieuwe gebruiker met deze gegevens
-            Gebruiker user = new HelpmijGebruiker();
-            user.SetNickname(username);
-            user.SetUserID(id);
-            // Return the result
-            return user;
+            try
+            {
+                String usernameAndID = UtilsString.GetSubStrings(source,
+                    s.memberPrefix, s.authorSuffix)[0];
+                String[] data = usernameAndID.Split('-');
+                String username = data[1];
+                int id = int.Parse(data[0]);
+                // Maak een nieuwe gebruiker met deze gegevens
+                Gebruiker user = new HelpmijGebruiker();
+                user.SetNickname(username);
+                user.SetUserID(id);
+                // Return the result
+                return user;
+            }
+            catch (Exception)
+            {
+                return null; // Error
+            }
         }
 
         /// <summary>
@@ -102,10 +109,17 @@ namespace mvdw.helpmij.forum
         /// <returns>String - Titel</returns>
         private static String GetTitle(String source)
         {
-            // Verkrijg de titel
-            String title = UtilsString.GetSubStrings(source,
-                s.titlePrefix, s.titleSuffix)[0];
-            return title;
+            try
+            {
+                // Verkrijg de titel
+                String title = UtilsString.GetSubStrings(source,
+                    s.titlePrefix, s.titleSuffix)[0];
+                return title;
+            }
+            catch (Exception)
+            {
+                return null; // Error
+            }
         }
 
         /// <summary>
@@ -115,18 +129,25 @@ namespace mvdw.helpmij.forum
         /// <returns>String - Titel</returns>
         private static List<String> GetKeywords(String source)
         {
-            // Verkrijg de titel
-            String keywords_str = UtilsString.GetSubStrings(source,
-                s.metaKeywordPrefix, s.metaKeywordSuffix)[0];
-            // Split met ', '
-            String[] data = keywords_str.Split(',');
-            List<String> output = new List<String>();
-            foreach (String keyword in data)
+            try
             {
-                output.Add(keyword.Replace(" ", "").ToLower());
+                // Verkrijg de titel
+                String keywords_str = UtilsString.GetSubStrings(source,
+                    s.metaKeywordPrefix, s.metaKeywordSuffix)[0];
+                // Split met ', '
+                String[] data = keywords_str.Split(',');
+                List<String> output = new List<String>();
+                foreach (String keyword in data)
+                {
+                    output.Add(keyword.Replace(" ", "").ToLower());
+                }
+                // Return het resultaat
+                return output;
             }
-            // Return het resultaat
-            return output;
+            catch (Exception)
+            {
+                return null; // Error
+            }
         }
 
         /// <summary>

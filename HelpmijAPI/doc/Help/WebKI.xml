@@ -1,7 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
 
+  <HelpKINode Title="AddSystem method" Url="html/9dad6409-8a94-bfbd-3ab9-89ab3d4b587b.htm" />
+  <HelpKINode Title="AllInOne enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Background field" Url="html/6e5cb188-bbde-2c56-345e-0474c4819920.htm" />
   <HelpKINode Title="Belg enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
+  <HelpKINode Title="Besturingssysteem property" Url="html/032746ec-2968-e9a8-68d3-cadfa06a0444.htm" />
+  <HelpKINode Title="BorderColor field" Url="html/30555dd1-bb54-5d0b-d158-49e9b9ced703.htm" />
+  <HelpKINode Title="Brander property" Url="html/f2e5327f-06f4-63c7-32b2-01c0042873ac.htm" />
+  <HelpKINode Title="BusExpansionChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="ByteConvert method" Url="html/2a47c9bd-0ff2-afbd-5527-1cc055dd267e.htm" />
+  <HelpKINode Title="Casefan property" Url="html/9973aa77-ffde-2a6b-d804-275bd6490395.htm" />
+  <HelpKINode Title="CdDvdDrives property" Url="html/f45a701d-768e-f2e3-6b9d-4d792da1dd90.htm" />
+  <HelpKINode Title="Chassis class" Url="html/9f42fac2-774a-ad20-d507-179b3bd43033.htm" />
+  <HelpKINode Title="Chassis class" Url="html/f1d9ee36-ccf2-de60-1076-ad009d4b1dd1.htm" />
+  <HelpKINode Title="Chassis class">
+    <HelpKINode Title="about Chassis class" Url="html/9f42fac2-774a-ad20-d507-179b3bd43033.htm" />
+    <HelpKINode Title="all members" Url="html/f1d9ee36-ccf2-de60-1076-ad009d4b1dd1.htm" />
+    <HelpKINode Title="constructor" Url="html/b98bef5b-b8a6-069b-76a3-bb12362675e5.htm" />
+    <HelpKINode Title="methods" Url="html/26ec6c03-741b-17de-2690-a965650f7988.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Chassis.Chassis constructor" Url="html/b98bef5b-b8a6-069b-76a3-bb12362675e5.htm" />
+  <HelpKINode Title="Chassis.GetChassisType method" Url="html/f9292ce7-cc41-3ff2-3670-f98a4ae1dede.htm" />
+  <HelpKINode Title="Chassis.GetManufacturerName method" Url="html/73bf0f50-9768-ce0c-7dd5-42beea76df4e.htm" />
+  <HelpKINode Title="ChassisTypes enumeration" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="Chat interface" Url="html/1c8c9af7-275a-eeb2-33d9-fe331a2d0e64.htm" />
   <HelpKINode Title="Chat interface" Url="html/fcc2c766-882a-8068-619e-482794cdc276.htm" />
   <HelpKINode Title="Chat interface">
@@ -56,6 +78,16 @@
   <HelpKINode Title="Connect method" Url="html/5f80a4b0-cc4c-3c87-344b-def63d50de63.htm" />
   <HelpKINode Title="CONTACTEN enumeration member" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
   <HelpKINode Title="ContactPrivacy enumeration" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
+  <HelpKINode Title="Converter class" Url="html/40b5abd6-fd70-ca0a-ce11-7051ca4de760.htm" />
+  <HelpKINode Title="Converter class" Url="html/c6f91255-6e18-2f3c-54c8-011017a13778.htm" />
+  <HelpKINode Title="Converter class">
+    <HelpKINode Title="about Converter class" Url="html/40b5abd6-fd70-ca0a-ce11-7051ca4de760.htm" />
+    <HelpKINode Title="all members" Url="html/c6f91255-6e18-2f3c-54c8-011017a13778.htm" />
+    <HelpKINode Title="constructor" Url="html/482c54f5-3b02-6bcc-ea04-560d459a1ab2.htm" />
+    <HelpKINode Title="methods" Url="html/61bf65d4-7b0d-d6f7-208c-b44c1154b278.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Converter.ByteConvert method" Url="html/2a47c9bd-0ff2-afbd-5527-1cc055dd267e.htm" />
+  <HelpKINode Title="Converter.Converter constructor" Url="html/482c54f5-3b02-6bcc-ea04-560d459a1ab2.htm" />
   <HelpKINode Title="CredentialsWrongException class" Url="html/c04e96a2-9770-312a-0de0-06702a220933.htm" />
   <HelpKINode Title="CredentialsWrongException class" Url="html/ec2e1e42-adc8-1fea-16fb-161e98e45c00.htm" />
   <HelpKINode Title="CredentialsWrongException class">
@@ -69,15 +101,22 @@
   <HelpKINode Title="CredentialsWrongException.CredentialsWrongException constructor" Url="html/143d7933-55bd-3430-15ab-28303d9cbd8b.htm" />
   <HelpKINode Title="Data property" Url="html/64899ffb-9b68-909c-d550-5b0eb8d33ba9.htm" />
   <HelpKINode Title="DefaultUserbar property" Url="html/b0d384a6-2187-546b-bd93-2dabd7471843.htm" />
+  <HelpKINode Title="Desktop enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="DisableProxy method" Url="html/8275ce25-a87c-d8a4-88be-a10609585ef4.htm" />
+  <HelpKINode Title="Dispose method" Url="html/314fa5e6-ec71-b859-5d40-7067ec2e5b4e.htm" />
+  <HelpKINode Title="Dispose method" Url="html/3ce4e910-780a-1588-e77c-c78e08d6e601.htm" />
   <HelpKINode Title="Dispose method" Url="html/7b3e93ad-9b23-daf2-0c4f-57cd3fab6381.htm" />
   <HelpKINode Title="Dispose method" Url="html/87dced22-1743-9c75-b35d-cb89543d0605.htm" />
   <HelpKINode Title="Dispose method" Url="html/da84bb99-d52b-b1de-f99c-482aa3a7e827.htm" />
   <HelpKINode Title="Dispose method" Url="html/fea3252d-0378-f75c-7f82-4d9c9171a77a.htm" />
+  <HelpKINode Title="DockingStation enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="Emboss enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="EnableProxy method" Url="html/2ae5b116-d5d3-d1ba-de92-bc4a12133d98.htm" />
   <HelpKINode Title="error field" Url="html/fbb24fd6-7a49-0ba8-92da-0301496cb585.htm" />
+  <HelpKINode Title="ExpansionChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Extra property" Url="html/5144e0e3-9450-5b3c-8dfa-06eef3dd8bdf.htm" />
   <HelpKINode Title="ForceUpdate method" Url="html/8a314dd1-fc30-16ca-646c-381a538278b7.htm" />
+  <HelpKINode Title="ForeColor field" Url="html/53f4e359-6a0f-e2f2-5060-fb41b1f281db.htm" />
   <HelpKINode Title="Forum interface" Url="html/23410e81-0e18-52a2-f2c9-e78a9c408503.htm" />
   <HelpKINode Title="Forum interface" Url="html/cc171a98-9cf7-3671-1376-9b9bb6896a5b.htm" />
   <HelpKINode Title="Forum interface">
@@ -96,6 +135,7 @@
   <HelpKINode Title="Forum.SetTitle method" Url="html/b0d86001-8c33-63b8-e1ad-e59148ac3125.htm" />
   <HelpKINode Title="Forum.SetTopics method" Url="html/04a8df74-8c29-f4b8-28a2-3e7c0c27f826.htm" />
   <HelpKINode Title="Forum.SetURL method" Url="html/3cbe1852-d0e9-eaf8-6941-2a4d26d8cfa3.htm" />
+  <HelpKINode Title="Foto property" Url="html/b2f7d79a-5101-de82-dbdd-2742527a93c1.htm" />
   <HelpKINode Title="frmLogin class" Url="html/0a7b5043-00c2-5d42-85fe-b3f725cd2f6c.htm" />
   <HelpKINode Title="frmLogin class" Url="html/eae56258-3a9e-c197-1749-f43ce2d07629.htm" />
   <HelpKINode Title="frmLogin class">
@@ -110,6 +150,7 @@
   <HelpKINode Title="frmLogin.frmLogin constructor" Url="html/3419f349-494d-2b85-0fd5-e267e69d2a97.htm" />
   <HelpKINode Title="frmLogin.GetUser method" Url="html/cae7bdc2-5344-24e6-3d9b-ee54f7312ee4.htm" />
   <HelpKINode Title="frmLogin.GetUserData method" Url="html/351cb1b3-140e-d427-baa8-36378a4dab4c.htm" />
+  <HelpKINode Title="Functie property" Url="html/daaef96e-cd17-da23-7324-110101853f97.htm" />
   <HelpKINode Title="Gebruiker interface" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
   <HelpKINode Title="Gebruiker interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm" />
   <HelpKINode Title="Gebruiker interface">
@@ -117,13 +158,16 @@
     <HelpKINode Title="all members" Url="html/9c1f9f2f-9b81-a179-d77c-6538498bc657.htm" />
     <HelpKINode Title="methods" Url="html/ea5000da-1028-ef41-a451-f7a8b53bf4e1.htm" />
   </HelpKINode>
+  <HelpKINode Title="Gebruiker.GetAvatar method" Url="html/366c9edb-9210-b182-3775-6547f1e55cd8.htm" />
+  <HelpKINode Title="Gebruiker.GetAvatarUrl method" Url="html/e22e89a7-2f54-abe8-4858-6ba7ca6a7afc.htm" />
   <HelpKINode Title="Gebruiker.GetCookies method" Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
   <HelpKINode Title="Gebruiker.GetNickname method" Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
   <HelpKINode Title="Gebruiker.GetSecurityToken method" Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
-  <HelpKINode Title="Gebruiker.GetUserData method" Url="html/66dcb0be-63b6-759e-3f67-d2c760be4303.htm" />
+  <HelpKINode Title="Gebruiker.GetUserData method" Url="html/b0b1141b-e2c4-c2f8-3ac2-2f6cf082d8fb.htm" />
   <HelpKINode Title="Gebruiker.GetUserID method" Url="html/73560986-5418-5fe4-9345-30804c429632.htm" />
   <HelpKINode Title="Gebruiker.IsOnline method" Url="html/b96dda7d-d43b-f340-5a5e-4c67d9a2cde0.htm" />
   <HelpKINode Title="Gebruiker.refreshData method" Url="html/7e516c46-c871-b9e4-7a53-1e3005d56ab3.htm" />
+  <HelpKINode Title="Gebruiker.SetAvatarUrl method" Url="html/c51d43ae-9fb4-8f44-ed2e-5db55f1f8a35.htm" />
   <HelpKINode Title="Gebruiker.SetCookies method" Url="html/7f07555c-51a3-8ef5-8ff5-4962be8e6a7f.htm" />
   <HelpKINode Title="Gebruiker.SetNickname method" Url="html/0bcb2e16-906a-e7d7-68d7-88ca10479a43.htm" />
   <HelpKINode Title="Gebruiker.SetOffline method" Url="html/31217e7d-0de7-f823-2614-de6fef2e9a44.htm" />
@@ -139,10 +183,9 @@
     <HelpKINode Title="methods" Url="html/ae3bd203-bdf0-4373-17f1-454c67c34666.htm" />
     <HelpKINode Title="properties" Url="html/5ea00bec-7475-ec8a-8657-9117df69823e.htm" />
   </HelpKINode>
+  <HelpKINode Title="GebruikerData.AddSystem method" Url="html/9dad6409-8a94-bfbd-3ab9-89ab3d4b587b.htm" />
   <HelpKINode Title="GebruikerData.GetAgePrivacy method" Url="html/c7ee23ac-1028-b3d3-4e3a-3a13f89034ae.htm" />
   <HelpKINode Title="GebruikerData.GetAIM method" Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
-  <HelpKINode Title="GebruikerData.GetAvatar method" Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
-  <HelpKINode Title="GebruikerData.GetAvatarUrl method" Url="html/6a6e39ec-e287-61ee-f570-32885afefe7c.htm" />
   <HelpKINode Title="GebruikerData.GetBeroep method" Url="html/72d1518c-d92e-0856-7f41-113546b6a31e.htm" />
   <HelpKINode Title="GebruikerData.GetBiografie method" Url="html/6966208c-9990-6c1d-3899-0b773b64590c.htm" />
   <HelpKINode Title="GebruikerData.GetBirthday method" Url="html/e2535b7b-26e8-43bd-548d-02fb72dc4491.htm" />
@@ -166,6 +209,7 @@
   <HelpKINode Title="GebruikerData.GetSignatureBB method" Url="html/430a421a-4d00-c748-7d43-08b2aea45d19.htm" />
   <HelpKINode Title="GebruikerData.GetSignatureHTML method" Url="html/0c1aa2d6-6100-9cfc-d043-88be415d97dd.htm" />
   <HelpKINode Title="GebruikerData.GetSkype method" Url="html/b7ecd30f-4e0b-04a9-b4b0-2212245c85b9.htm" />
+  <HelpKINode Title="GebruikerData.GetSystems method" Url="html/bc79117f-5af0-f637-7bb9-9d52d4316b70.htm" />
   <HelpKINode Title="GebruikerData.GetTotalPosts method" Url="html/5f894318-b09d-c3a6-620b-fe4c82b7827e.htm" />
   <HelpKINode Title="GebruikerData.GetUserRank method" Url="html/e928ae5a-4c04-e6d9-12b9-4da3e388f9e1.htm" />
   <HelpKINode Title="GebruikerData.GetWebsite method" Url="html/0ccacc37-04a7-fbb6-f848-3b22c86d5808.htm" />
@@ -202,13 +246,49 @@
   <HelpKINode Title="GebruikerData.SetWebsite method" Url="html/053f69d2-df92-b085-df89-994fc966aa8c.htm" />
   <HelpKINode Title="GebruikerData.SetWoonplaats method" Url="html/5ca07ff9-5c8d-842b-9ff8-4d2032df722a.htm" />
   <HelpKINode Title="GebruikerData.SetYahoo method" Url="html/0c7d4a82-1757-c159-16d9-2796b2ef2eb5.htm" />
+  <HelpKINode Title="GebruikerSysteem interface" Url="html/3923d42c-da6d-d103-4215-8bb515b32beb.htm" />
+  <HelpKINode Title="GebruikerSysteem interface" Url="html/91ffd0ad-be75-8920-1e54-d655ee16de5f.htm" />
+  <HelpKINode Title="GebruikerSysteem interface">
+    <HelpKINode Title="about GebruikerSysteem interface" Url="html/3923d42c-da6d-d103-4215-8bb515b32beb.htm" />
+    <HelpKINode Title="all members" Url="html/91ffd0ad-be75-8920-1e54-d655ee16de5f.htm" />
+    <HelpKINode Title="properties" Url="html/025a79ff-3109-e46f-83a7-e4eb373c9502.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GebruikerSysteem.Besturingssysteem property" Url="html/032746ec-2968-e9a8-68d3-cadfa06a0444.htm" />
+  <HelpKINode Title="GebruikerSysteem.Brander property" Url="html/f2e5327f-06f4-63c7-32b2-01c0042873ac.htm" />
+  <HelpKINode Title="GebruikerSysteem.Casefan property" Url="html/9973aa77-ffde-2a6b-d804-275bd6490395.htm" />
+  <HelpKINode Title="GebruikerSysteem.CdDvdDrives property" Url="html/f45a701d-768e-f2e3-6b9d-4d792da1dd90.htm" />
+  <HelpKINode Title="GebruikerSysteem.Extra property" Url="html/5144e0e3-9450-5b3c-8dfa-06eef3dd8bdf.htm" />
+  <HelpKINode Title="GebruikerSysteem.Foto property" Url="html/b2f7d79a-5101-de82-dbdd-2742527a93c1.htm" />
+  <HelpKINode Title="GebruikerSysteem.Functie property" Url="html/daaef96e-cd17-da23-7324-110101853f97.htm" />
+  <HelpKINode Title="GebruikerSysteem.Geheugen property" Url="html/24f378fd-e363-7683-96b3-017646603103.htm" />
+  <HelpKINode Title="GebruikerSysteem.Geluidskaart property" Url="html/09305850-eb71-3c12-a0df-065da427a88c.htm" />
+  <HelpKINode Title="GebruikerSysteem.Harddisk property" Url="html/9abbff04-0600-e87a-ada2-920224af7d4c.htm" />
+  <HelpKINode Title="GebruikerSysteem.Internetverbinding property" Url="html/7ddc624e-3e85-55a2-2d62-34587fbb62bb.htm" />
+  <HelpKINode Title="GebruikerSysteem.Koeler property" Url="html/b7d8284b-8339-4233-c99d-74774552b3b3.htm" />
+  <HelpKINode Title="GebruikerSysteem.Moederbord property" Url="html/16257283-51c5-7557-793e-293a46b9d873.htm" />
+  <HelpKINode Title="GebruikerSysteem.Monitor property" Url="html/6ae418bf-6412-aacb-fc75-298f04062de9.htm" />
+  <HelpKINode Title="GebruikerSysteem.Muis property" Url="html/cdf97a2c-8695-0095-643f-703a63b2a624.htm" />
+  <HelpKINode Title="GebruikerSysteem.Netwerkkaart property" Url="html/86a84c3c-897e-5dab-0332-c93d249a99b3.htm" />
+  <HelpKINode Title="GebruikerSysteem.Nickname property" Url="html/45dbd18c-cc10-edc9-cb4d-0d99ac7a97c3.htm" />
+  <HelpKINode Title="GebruikerSysteem.Printer property" Url="html/5942e1f0-2b73-4cc5-bbe1-233dda7b1d89.htm" />
+  <HelpKINode Title="GebruikerSysteem.Processor property" Url="html/64d1b2ba-4e1b-7e5e-8617-fe5a13101e01.htm" />
+  <HelpKINode Title="GebruikerSysteem.Scanner property" Url="html/9874732b-a617-435c-f531-d28bbf2c7f84.htm" />
+  <HelpKINode Title="GebruikerSysteem.Speakers property" Url="html/c0ea28c7-1208-f229-ecea-949338ae0a03.htm" />
+  <HelpKINode Title="GebruikerSysteem.Systeemkast property" Url="html/0772eee2-118d-ecf3-68b0-b27481160fb1.htm" />
+  <HelpKINode Title="GebruikerSysteem.Temperatuur property" Url="html/594a4390-aef2-03df-4378-f1958aa87670.htm" />
+  <HelpKINode Title="GebruikerSysteem.Toetsenbord property" Url="html/627cbf24-34b0-eee3-8612-28571a1c5ba3.htm" />
+  <HelpKINode Title="GebruikerSysteem.Videokaart property" Url="html/718f3901-dc1f-d340-f4e0-e856cde64c27.htm" />
+  <HelpKINode Title="GebruikerSysteem.Voeding property" Url="html/1d5c7fe6-6aaf-92d7-1e09-bcc17e497353.htm" />
+  <HelpKINode Title="Geheugen property" Url="html/24f378fd-e363-7683-96b3-017646603103.htm" />
+  <HelpKINode Title="Geluidskaart property" Url="html/09305850-eb71-3c12-a0df-065da427a88c.htm" />
+  <HelpKINode Title="GenerateUserbar method" Url="html/9ad55416-eeea-8bb2-0a16-3292b0fbae75.htm" />
   <HelpKINode Title="GEREGISTREERDE_GEBRUIKERS enumeration member" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
   <HelpKINode Title="GetAgePrivacy method" Url="html/c7ee23ac-1028-b3d3-4e3a-3a13f89034ae.htm" />
   <HelpKINode Title="GetAIM method" Url="html/eb27dbf2-704e-d5b4-81f4-1f2ed725e9b2.htm" />
   <HelpKINode Title="GetAuthor method" Url="html/000e450f-72e3-8607-2bfa-46ec6d7e50df.htm" />
   <HelpKINode Title="GetAuthor method" Url="html/eace840d-c6aa-34cb-0e23-1ebe1e5b5a9b.htm" />
-  <HelpKINode Title="GetAvatar method" Url="html/a0e7e1c0-2949-ead3-9b88-47292343b6b3.htm" />
-  <HelpKINode Title="GetAvatarUrl method" Url="html/6a6e39ec-e287-61ee-f570-32885afefe7c.htm" />
+  <HelpKINode Title="GetAvatar method" Url="html/366c9edb-9210-b182-3775-6547f1e55cd8.htm" />
+  <HelpKINode Title="GetAvatarUrl method" Url="html/e22e89a7-2f54-abe8-4858-6ba7ca6a7afc.htm" />
   <HelpKINode Title="GetBeroep method" Url="html/72d1518c-d92e-0856-7f41-113546b6a31e.htm" />
   <HelpKINode Title="GetBiografie method" Url="html/6966208c-9990-6c1d-3899-0b773b64590c.htm" />
   <HelpKINode Title="GetBirthday method" Url="html/e2535b7b-26e8-43bd-548d-02fb72dc4491.htm" />
@@ -217,11 +297,13 @@
   <HelpKINode Title="GetBirthdayYear method" Url="html/066bbc46-f998-9564-dfae-126ced566031.htm" />
   <HelpKINode Title="GetBlankUserbar method" Url="html/07cd3be7-1d0a-8f70-14b5-f1283307fb73.htm" />
   <HelpKINode Title="GetBodyHTML method" Url="html/b5e6d9d9-7b6c-349b-ce69-d577047486ac.htm" />
+  <HelpKINode Title="GetChassisType method" Url="html/f9292ce7-cc41-3ff2-3670-f98a4ae1dede.htm" />
   <HelpKINode Title="GetChat method" Url="html/9471600a-580a-7dad-08f5-075b9fcddcab.htm" />
   <HelpKINode Title="GetColor method" Url="html/9f2df14b-59a5-96da-4c05-74a1dc5233e5.htm" />
   <HelpKINode Title="GetComments method" Url="html/2e44c596-8072-b515-e1bb-170ccd0cd1d1.htm" />
   <HelpKINode Title="GetCookies method" Url="html/30b789ae-584b-b45e-1a12-ac5750355692.htm" />
   <HelpKINode Title="GetCurrentLogo method" Url="html/9e625342-fa2c-1e80-87b6-c674f817831d.htm" />
+  <HelpKINode Title="GetDownloadSize method" Url="html/b3e7a064-e63d-48c1-4119-b7d1113e0fc7.htm" />
   <HelpKINode Title="GetHobbys method" Url="html/aca0b7c1-4a0d-6a04-37cd-1d4c7729e452.htm" />
   <HelpKINode Title="GetHour method" Url="html/ab33f608-b2ae-a356-de60-cea09bb38ee9.htm" />
   <HelpKINode Title="GetHTMLSource method" Url="html/58ebf515-4925-cab3-9f32-d8197bdd8d4a.htm" />
@@ -235,26 +317,38 @@
   <HelpKINode Title="GetLastactivityMonth method" Url="html/f627b24f-a933-895e-05a0-eb339ba605c6.htm" />
   <HelpKINode Title="GetLastactivityYear method" Url="html/c1bb4ee4-e4fd-f783-741b-afad631515e7.htm" />
   <HelpKINode Title="GetLastUpdate method" Url="html/52f8fd0c-b74b-4a16-56a3-9d037f45bd66.htm" />
+  <HelpKINode Title="GetLogicalDrivesSize method" Url="html/caf7a460-7cab-5f37-7066-e6e780122bd7.htm" />
   <HelpKINode Title="GetLogo method" Url="html/f9243cec-9ab1-7e37-34f7-e946aeb7d94e.htm" />
   <HelpKINode Title="GetLogoXmas method" Url="html/800b7683-0271-fd2b-2121-6b5513abc79c.htm" />
+  <HelpKINode Title="GetManufacturerName method" Url="html/2ac4fa41-21ef-0a61-919d-94a2bc467e2b.htm" />
+  <HelpKINode Title="GetManufacturerName method" Url="html/73bf0f50-9768-ce0c-7dd5-42beea76df4e.htm" />
+  <HelpKINode Title="GetMemoryCapacities method" Url="html/586ed6c8-51c9-50b1-9514-2463a5b74036.htm" />
+  <HelpKINode Title="GetMemoryTypes method" Url="html/e3c0eaab-fd3b-6185-c149-a9fa491b41b9.htm" />
   <HelpKINode Title="GetMessage method" Url="html/f56f39f7-10d4-5bae-93c7-b9da1452b6d4.htm" />
   <HelpKINode Title="GetMessageType method" Url="html/f9d8fa1e-0700-ad83-86d3-101bdb0cf086.htm" />
   <HelpKINode Title="GetMinute method" Url="html/d4b3e109-a37c-cadf-c1c9-33731edb6a36.htm" />
+  <HelpKINode Title="GetMonitors method" Url="html/85692731-ad8f-ccc0-fc14-a83918eb34d0.htm" />
   <HelpKINode Title="GetMSN method" Url="html/3f545ac6-e663-de8f-de1b-feb79e1e7c05.htm" />
   <HelpKINode Title="GetNewTopics method" Url="html/49d1e779-a178-87b2-a4ff-ed51f00b8236.htm" />
   <HelpKINode Title="GetNickname method" Url="html/471e6ce8-5bd8-6c04-be52-db22d256b54f.htm" />
+  <HelpKINode Title="GetOSName method" Url="html/41e2f08f-cd3c-e8a5-8789-6599bc59d024.htm" />
   <HelpKINode Title="GetPostsEachDay method" Url="html/ac47cf99-9e27-1595-1699-19e206b0e192.htm" />
   <HelpKINode Title="GetPreviewUserbar method" Url="html/4fd5a2b0-c9a3-58f2-5b8b-40fa61d2cb1d.htm" />
+  <HelpKINode Title="GetProcessorNames method" Url="html/42cee5e0-ce7b-b46a-e977-d4a7c7c52c30.htm" />
+  <HelpKINode Title="GetProduct method" Url="html/16db1c1a-e0c3-ac72-8537-98728e5e97b7.htm" />
   <HelpKINode Title="GetPublicProfileURL method" Url="html/dd07bde9-4c2b-ab94-4780-fc9836a57f5a.htm" />
   <HelpKINode Title="GetRegistrationDate method" Url="html/36c5650d-b17d-2a38-2fd3-b18b6c6e00d8.htm" />
   <HelpKINode Title="GetRegistrationDay method" Url="html/3d1eff3b-dbe4-7d42-6aa1-b7e39f61610f.htm" />
   <HelpKINode Title="GetRegistrationMonth method" Url="html/effbd65a-1c85-266a-a8e1-b0e57c834950.htm" />
   <HelpKINode Title="GetRegistrationYear method" Url="html/e42f9559-6deb-55be-27e1-319b407d2249.htm" />
   <HelpKINode Title="GetSecurityToken method" Url="html/efeaf1b7-b1b5-4957-24d9-854d70b1b59f.htm" />
+  <HelpKINode Title="GetSerial method" Url="html/463c99d5-b8fe-3fe8-3dba-1dc2565d144b.htm" />
   <HelpKINode Title="GetSignatureBB method" Url="html/430a421a-4d00-c748-7d43-08b2aea45d19.htm" />
   <HelpKINode Title="GetSignatureHTML method" Url="html/0c1aa2d6-6100-9cfc-d043-88be415d97dd.htm" />
   <HelpKINode Title="GetSkype method" Url="html/b7ecd30f-4e0b-04a9-b4b0-2212245c85b9.htm" />
   <HelpKINode Title="GetSubForums method" Url="html/176f49e4-30f4-5113-f6a6-33eb7ac33761.htm" />
+  <HelpKINode Title="GetSystem method" Url="html/c73c6a33-6c72-249b-6431-0e27ac1bdc5b.htm" />
+  <HelpKINode Title="GetSystems method" Url="html/bc79117f-5af0-f637-7bb9-9d52d4316b70.htm" />
   <HelpKINode Title="GetTitle method" Url="html/187d9978-5106-9a08-fa90-cf0b556fdcda.htm" />
   <HelpKINode Title="GetTitle method" Url="html/a42834b2-4be2-0040-6bdf-0352c3e46768.htm" />
   <HelpKINode Title="GetTopic method" Url="html/70cf8699-b959-a815-6e34-5008eeb80418.htm" />
@@ -262,6 +356,7 @@
   <HelpKINode Title="GetTopics method" Url="html/e4b60743-c8d5-aa4c-7aae-dad4f1d26872.htm" />
   <HelpKINode Title="GetTotalPosts method" Url="html/5f894318-b09d-c3a6-620b-fe4c82b7827e.htm" />
   <HelpKINode Title="GetUnansweredTopics method" Url="html/65531a5f-01f9-f6f3-5dfe-c048fbfa4c1c.htm" />
+  <HelpKINode Title="GetUploadSize method" Url="html/82a56c3e-be72-c2d8-9486-0fcd3a3463db.htm" />
   <HelpKINode Title="GetURL method" Url="html/0e0132f2-2cf4-ae78-b011-75b101b9b228.htm" />
   <HelpKINode Title="GetURL method" Url="html/45f24f0a-db6f-0b4e-78ab-357d24cf9777.htm" />
   <HelpKINode Title="GetUser method" Url="html/2fca2026-d4ca-3d49-c02b-4af73bbc96ef.htm" />
@@ -270,16 +365,21 @@
   <HelpKINode Title="GetUser method" Url="html/cae7bdc2-5344-24e6-3d9b-ee54f7312ee4.htm" />
   <HelpKINode Title="GetUser method" Url="html/f0954fd0-18de-994d-cad1-4a8258adf3b7.htm" />
   <HelpKINode Title="GetUser method" Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
+  <HelpKINode Title="GetUserbar method" Url="html/38fcfba3-c61d-2489-069c-43906a0a4169.htm" />
+  <HelpKINode Title="GetUserbar method" Url="html/ee952078-cdb7-0087-cb3c-a519fdf00897.htm" />
   <HelpKINode Title="GetUserData method" Url="html/351cb1b3-140e-d427-baa8-36378a4dab4c.htm" />
-  <HelpKINode Title="GetUserData method" Url="html/66dcb0be-63b6-759e-3f67-d2c760be4303.htm" />
+  <HelpKINode Title="GetUserData method" Url="html/b0b1141b-e2c4-c2f8-3ac2-2f6cf082d8fb.htm" />
   <HelpKINode Title="GetUserData method" Url="html/e6817fd9-a5f4-feda-d0db-4baf8e68c25a.htm" />
   <HelpKINode Title="GetUserID method" Url="html/73560986-5418-5fe4-9345-30804c429632.htm" />
   <HelpKINode Title="GetUserRank method" Url="html/e928ae5a-4c04-e6d9-12b9-4da3e388f9e1.htm" />
   <HelpKINode Title="GetVersion method" Url="html/086c800e-e406-5957-87a6-6a8fc496e6b4.htm" />
+  <HelpKINode Title="GetVideocardNames method" Url="html/e3192561-3249-42ed-a4ce-e562767d91ff.htm" />
   <HelpKINode Title="GetWebsite method" Url="html/0ccacc37-04a7-fbb6-f848-3b22c86d5808.htm" />
   <HelpKINode Title="GetWoonplaats method" Url="html/9fd3bbc9-65f3-8f21-9079-4688a9109425.htm" />
   <HelpKINode Title="GetYahoo method" Url="html/388ff61a-e076-ad31-3671-931c62a5e1cd.htm" />
   <HelpKINode Title="GreenSpring enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
+  <HelpKINode Title="Handheld enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Harddisk property" Url="html/9abbff04-0600-e87a-ada2-920224af7d4c.htm" />
   <HelpKINode Title="HasSubForums method" Url="html/5ed867af-2276-50f3-fa65-403293f88f21.htm" />
   <HelpKINode Title="Helpmij class" Url="html/1b4e0c45-2baa-3af7-b32a-ca6c9032b135.htm" />
   <HelpKINode Title="Helpmij class" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
@@ -291,6 +391,7 @@
   </HelpKINode>
   <HelpKINode Title="Helpmij.GetChat method" Url="html/9471600a-580a-7dad-08f5-075b9fcddcab.htm" />
   <HelpKINode Title="Helpmij.GetNewTopics method" Url="html/49d1e779-a178-87b2-a4ff-ed51f00b8236.htm" />
+  <HelpKINode Title="Helpmij.GetSystem method" Url="html/c73c6a33-6c72-249b-6431-0e27ac1bdc5b.htm" />
   <HelpKINode Title="Helpmij.GetUnansweredTopics method" Url="html/65531a5f-01f9-f6f3-5dfe-c048fbfa4c1c.htm" />
   <HelpKINode Title="Helpmij.GetUser method" Url="html/fc5c6eca-fde2-8512-bec5-057013651bf5.htm" />
   <HelpKINode Title="Helpmij.Helpmij constructor" Url="html/b9c5b112-2f2d-fcc3-2464-885aaf56ddf3.htm" />
@@ -309,6 +410,8 @@
   <HelpKINode Title="HelpmijAPI.DisableProxy method" Url="html/8275ce25-a87c-d8a4-88be-a10609585ef4.htm" />
   <HelpKINode Title="HelpmijAPI.EnableProxy method" Url="html/2ae5b116-d5d3-d1ba-de92-bc4a12133d98.htm" />
   <HelpKINode Title="HelpmijAPI.GetAuthor method" Url="html/eace840d-c6aa-34cb-0e23-1ebe1e5b5a9b.htm" />
+  <HelpKINode Title="HelpmijAPI.GetDownloadSize method" Url="html/b3e7a064-e63d-48c1-4119-b7d1113e0fc7.htm" />
+  <HelpKINode Title="HelpmijAPI.GetUploadSize method" Url="html/82a56c3e-be72-c2d8-9486-0fcd3a3463db.htm" />
   <HelpKINode Title="HelpmijAPI.GetVersion method" Url="html/086c800e-e406-5957-87a6-6a8fc496e6b4.htm" />
   <HelpKINode Title="HelpmijAPI.HelpmijAPI constructor" Url="html/b9f9e81e-bbef-65c5-e29d-edce7f55134f.htm" />
   <HelpKINode Title="HelpmijAPI.ResetSettings method" Url="html/a3a63743-cf75-ca6a-c9d8-23391a52cb3e.htm" />
@@ -342,8 +445,10 @@
     <HelpKINode Title="constructor" Url="html/65befa66-5159-602d-cfbf-ffc082a3a9a9.htm" />
     <HelpKINode Title="methods" Url="html/fbdb4f3c-9290-d220-015d-60decee8fa25.htm" />
   </HelpKINode>
+  <HelpKINode Title="HelpmijUserbar.GenerateUserbar method" Url="html/9ad55416-eeea-8bb2-0a16-3292b0fbae75.htm" />
   <HelpKINode Title="HelpmijUserbar.GetBlankUserbar method" Url="html/07cd3be7-1d0a-8f70-14b5-f1283307fb73.htm" />
   <HelpKINode Title="HelpmijUserbar.GetPreviewUserbar method" Url="html/4fd5a2b0-c9a3-58f2-5b8b-40fa61d2cb1d.htm" />
+  <HelpKINode Title="HelpmijUserbar.GetUserbar method" Url="html/ee952078-cdb7-0087-cb3c-a519fdf00897.htm" />
   <HelpKINode Title="HelpmijUserbar.HelpmijUserbar constructor" Url="html/65befa66-5159-602d-cfbf-ffc082a3a9a9.htm" />
   <HelpKINode Title="Herfst enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="HM_LARGE enumeration member" Url="html/4d336aa1-166d-5a6e-25d0-ac37d012ab6d.htm" />
@@ -368,8 +473,11 @@
   <HelpKINode Title="HomepageTopic.SetURL method" Url="html/a971b1b5-c2d5-99da-95b5-0d1ad3c849d9.htm" />
   <HelpKINode Title="IEDEREEN enumeration member" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
   <HelpKINode Title="Inloggen method" Url="html/7bb2631b-17ba-09b2-9747-f6171132f8f0.htm" />
+  <HelpKINode Title="Internetverbinding property" Url="html/7ddc624e-3e85-55a2-2d62-34587fbb62bb.htm" />
   <HelpKINode Title="IsOnline method" Url="html/b96dda7d-d43b-f340-5a5e-4c67d9a2cde0.htm" />
   <HelpKINode Title="IsVerenigingslid property" Url="html/9a523e4f-9c7e-ea0a-ba2a-d52df05173f1.htm" />
+  <HelpKINode Title="Koeler property" Url="html/b7d8284b-8339-4233-c99d-74774552b3b3.htm" />
+  <HelpKINode Title="Laptop enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="LARGE enumeration member" Url="html/4d336aa1-166d-5a6e-25d0-ac37d012ab6d.htm" />
   <HelpKINode Title="LeeftijdPrivacy enumeration" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
   <HelpKINode Title="LoadTopics method" Url="html/7c0b1796-62f2-01ba-1990-6f3f3b3e1c94.htm" />
@@ -406,7 +514,46 @@
   <HelpKINode Title="LoginSuccessEventHandler field" Url="html/1e2ce210-ff8f-63ab-f521-b7a70ea38544.htm" />
   <HelpKINode Title="LogoType enumeration" Url="html/4d336aa1-166d-5a6e-25d0-ac37d012ab6d.htm" />
   <HelpKINode Title="Logout enumeration member" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
+  <HelpKINode Title="LowProfileDesktop enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="LunchBox enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="MainSystemChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="MatchesIntrests method" Url="html/11f11104-8576-4b26-2b9d-15f309ce74e7.htm" />
+  <HelpKINode Title="Memory class" Url="html/7402dd69-87dd-3881-50a5-7761271aca92.htm" />
+  <HelpKINode Title="Memory class" Url="html/fcb672a6-c4a1-75be-aab4-2ee8d0f533f8.htm" />
+  <HelpKINode Title="Memory class">
+    <HelpKINode Title="about Memory class" Url="html/7402dd69-87dd-3881-50a5-7761271aca92.htm" />
+    <HelpKINode Title="all members" Url="html/fcb672a6-c4a1-75be-aab4-2ee8d0f533f8.htm" />
+    <HelpKINode Title="constructor" Url="html/a8175fb2-fceb-f4af-b65a-4bdbaadc8b53.htm" />
+    <HelpKINode Title="methods" Url="html/891557d7-26d9-78b7-a486-bd5008fab026.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Memory.GetMemoryCapacities method" Url="html/586ed6c8-51c9-50b1-9514-2463a5b74036.htm" />
+  <HelpKINode Title="Memory.GetMemoryTypes method" Url="html/e3c0eaab-fd3b-6185-c149-a9fa491b41b9.htm" />
+  <HelpKINode Title="Memory.Memory constructor" Url="html/a8175fb2-fceb-f4af-b65a-4bdbaadc8b53.htm" />
+  <HelpKINode Title="MiniTower enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Moederbord property" Url="html/16257283-51c5-7557-793e-293a46b9d873.htm" />
+  <HelpKINode Title="Monitor class" Url="html/91ce59cb-9450-0314-1218-61344c45e8eb.htm" />
+  <HelpKINode Title="Monitor class" Url="html/9dd40d71-9735-fecd-c148-11d4017b713e.htm" />
+  <HelpKINode Title="Monitor class">
+    <HelpKINode Title="about Monitor class" Url="html/91ce59cb-9450-0314-1218-61344c45e8eb.htm" />
+    <HelpKINode Title="all members" Url="html/9dd40d71-9735-fecd-c148-11d4017b713e.htm" />
+    <HelpKINode Title="constructor" Url="html/767a6d42-910d-f80b-903d-d9c32e294f22.htm" />
+    <HelpKINode Title="methods" Url="html/34507720-f55c-fdc6-143e-af72a03200ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Monitor property" Url="html/6ae418bf-6412-aacb-fc75-298f04062de9.htm" />
+  <HelpKINode Title="Monitor.GetMonitors method" Url="html/85692731-ad8f-ccc0-fc14-a83918eb34d0.htm" />
+  <HelpKINode Title="Monitor.Monitor constructor" Url="html/767a6d42-910d-f80b-903d-d9c32e294f22.htm" />
+  <HelpKINode Title="Motherboard class" Url="html/85f72712-d57a-5d59-ef90-f10aec1e6f7b.htm" />
+  <HelpKINode Title="Motherboard class" Url="html/b0b63f95-0e62-eeb6-ffe5-ddae0f9415ce.htm" />
+  <HelpKINode Title="Motherboard class">
+    <HelpKINode Title="about Motherboard class" Url="html/b0b63f95-0e62-eeb6-ffe5-ddae0f9415ce.htm" />
+    <HelpKINode Title="all members" Url="html/85f72712-d57a-5d59-ef90-f10aec1e6f7b.htm" />
+    <HelpKINode Title="constructor" Url="html/9a5b87ce-ce7a-56ec-769c-c2b1fc6c0fc0.htm" />
+    <HelpKINode Title="methods" Url="html/522bb2a3-42fa-7dbd-2576-b967bfd5c02d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Motherboard.GetProduct method" Url="html/16db1c1a-e0c3-ac72-8537-98728e5e97b7.htm" />
+  <HelpKINode Title="Motherboard.GetSerial method" Url="html/463c99d5-b8fe-3fe8-3dba-1dc2565d144b.htm" />
+  <HelpKINode Title="Motherboard.Motherboard constructor" Url="html/9a5b87ce-ce7a-56ec-769c-c2b1fc6c0fc0.htm" />
+  <HelpKINode Title="Muis property" Url="html/cdf97a2c-8695-0095-643f-703a63b2a624.htm" />
   <HelpKINode Title="mvdw.helpmijapi namespace" Url="html/8206be0d-48fe-8b43-e558-0f6f634211f2.htm" />
   <HelpKINode Title="mvdw.helpmijapi.artwork.logo namespace" Url="html/59c39f13-725b-77b2-45c8-8cb618248569.htm" />
   <HelpKINode Title="mvdw.helpmijapi.artwork.logo.HelpmijLogo class" Url="html/0a335ceb-064c-6ae3-c1f8-560f40b17d88.htm" />
@@ -417,6 +564,8 @@
   <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.HelpmijUserbar class" Url="html/fea47570-e829-bc8b-0032-055b531d9140.htm" />
   <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.uiUserbar class" Url="html/2889747c-afb5-a5fd-4456-e7abc6ed9b4c.htm" />
   <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.uiUserbar class" Url="html/c844a1c7-1511-dd6a-04f4-de5848003ae6.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.UserbarArguments class" Url="html/11c6afe6-4f31-16dd-621c-046f1abbf617.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.UserbarArguments class" Url="html/d69505b5-1fcc-6d88-ab74-ea5c9a8fc603.htm" />
   <HelpKINode Title="mvdw.helpmijapi.artwork.userbar.UserbarType enumeration" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="mvdw.helpmijapi.chat namespace" Url="html/c16273d1-86d3-edba-69fd-63227a743024.htm" />
   <HelpKINode Title="mvdw.helpmijapi.chat.Chat interface" Url="html/1c8c9af7-275a-eeb2-33d9-fe331a2d0e64.htm" />
@@ -433,6 +582,8 @@
   <HelpKINode Title="mvdw.helpmijapi.forum.Forum interface" Url="html/23410e81-0e18-52a2-f2c9-e78a9c408503.htm" />
   <HelpKINode Title="mvdw.helpmijapi.forum.Forum interface" Url="html/cc171a98-9cf7-3671-1376-9b9bb6896a5b.htm" />
   <HelpKINode Title="mvdw.helpmijapi.forum.gui namespace" Url="html/39b560d6-951d-6bd6-c962-6864a6eb9167.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.forum.gui.uiComment class" Url="html/6a82ae40-801f-ff7a-b305-3d193eef08f5.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.forum.gui.uiComment class" Url="html/712e93ac-8c83-a8ae-7b56-624a8a63284a.htm" />
   <HelpKINode Title="mvdw.helpmijapi.forum.gui.uiHompageTopics class" Url="html/0bb7ed9b-8637-8c85-80da-cfe76cb5fe45.htm" />
   <HelpKINode Title="mvdw.helpmijapi.forum.gui.uiHompageTopics class" Url="html/b811b9a3-95fa-101b-f009-38b45a2001ff.htm" />
   <HelpKINode Title="mvdw.helpmijapi.forum.HomepageTopic interface" Url="html/c2e949cf-5c77-c84c-3524-f229c58b127e.htm" />
@@ -463,9 +614,13 @@
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.Gebruiker interface" Url="html/e1ccd776-50c8-dd00-edbc-d06cbba609b8.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerData interface" Url="html/29060f53-96ec-7035-dd1f-b8502314a22d.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerData interface" Url="html/cedc4534-a2f0-66e5-d87b-9fe3072cc396.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerSysteem interface" Url="html/3923d42c-da6d-d103-4215-8bb515b32beb.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.GebruikerSysteem interface" Url="html/91ffd0ad-be75-8920-1e54-d655ee16de5f.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui namespace" Url="html/6e8980c6-034f-4c80-80f4-7426f967b716.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.frmLogin class" Url="html/0a7b5043-00c2-5d42-85fe-b3f725cd2f6c.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.frmLogin class" Url="html/eae56258-3a9e-c197-1749-f43ce2d07629.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar class" Url="html/4882fc5c-536f-9825-cf07-6328d762e96a.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar class" Url="html/aa6910ec-8fc8-b486-04a8-99c4e34a2b72.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin class" Url="html/6c37857e-ea8c-881f-fba3-737f507c622d.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin class" Url="html/e26c00cd-418f-3bc0-215a-d2b9f1f38c97.htm" />
   <HelpKINode Title="mvdw.helpmijapi.gebruiker.LeeftijdPrivacy enumeration" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
@@ -473,27 +628,84 @@
   <HelpKINode Title="mvdw.helpmijapi.Helpmij class" Url="html/a332597f-6c2d-5e61-e076-2a159ab7e7bd.htm" />
   <HelpKINode Title="mvdw.helpmijapi.HelpmijAPI class" Url="html/7fc12436-3e43-56ef-df48-07d1f352cb17.htm" />
   <HelpKINode Title="mvdw.helpmijapi.HelpmijAPI class" Url="html/b54f7df7-bb92-3666-d05a-368d356250b2.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware namespace" Url="html/00e5b256-1684-443d-6c62-948c913952bc.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Chassis class" Url="html/9f42fac2-774a-ad20-d507-179b3bd43033.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Chassis class" Url="html/f1d9ee36-ccf2-de60-1076-ad009d4b1dd1.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.ChassisTypes enumeration" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Memory class" Url="html/7402dd69-87dd-3881-50a5-7761271aca92.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Memory class" Url="html/fcb672a6-c4a1-75be-aab4-2ee8d0f533f8.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Monitor class" Url="html/91ce59cb-9450-0314-1218-61344c45e8eb.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Monitor class" Url="html/9dd40d71-9735-fecd-c148-11d4017b713e.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Motherboard class" Url="html/85f72712-d57a-5d59-ef90-f10aec1e6f7b.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Motherboard class" Url="html/b0b63f95-0e62-eeb6-ffe5-ddae0f9415ce.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Processor class" Url="html/54c9df38-701b-4b15-084d-3c5203f382ab.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Processor class" Url="html/c1239020-2815-9c81-6769-23ee0584fd8e.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Storage class" Url="html/6ca8b6be-beb4-b475-53d8-b17ede1fdb39.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Storage class" Url="html/e0aecaa9-b52b-8205-7e30-f8836b4a7bff.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Videocard class" Url="html/891241df-786a-2a28-9429-419a4ac38ac6.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.hardware.Videocard class" Url="html/e874bed9-d335-8496-0803-67587a637297.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.software namespace" Url="html/85918e48-5a01-aaee-c7dc-5ea30b4cb88f.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.software.Operatingsystem class" Url="html/55c6311b-a1e5-726f-dd7c-a7fa531640e1.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.software.Operatingsystem class" Url="html/84975fc2-6cb9-2400-9bc9-2f479422e9f8.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.utils namespace" Url="html/6a96e031-4ae1-14f4-fbf4-89fdb03a6f8d.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.utils.Converter class" Url="html/40b5abd6-fd70-ca0a-ce11-7051ca4de760.htm" />
+  <HelpKINode Title="mvdw.helpmijapi.sysinfo.utils.Converter class" Url="html/c6f91255-6e18-2f3c-54c8-011017a13778.htm" />
   <HelpKINode Title="mvdw.helpmijapi.ui namespace" Url="html/44da7ff3-8747-3b17-4f39-7ce9aecdcbc4.htm" />
   <HelpKINode Title="mvdw.helpmijapi.ui.HelpmijPopup class" Url="html/70a023b2-66e9-5c97-0eb7-0ed1b25f6076.htm" />
   <HelpKINode Title="mvdw.helpmijapi.ui.HelpmijPopup class" Url="html/d15737e5-6c19-184f-9e96-c3b3dab59f60.htm" />
   <HelpKINode Title="Nederland enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
+  <HelpKINode Title="Netwerkkaart property" Url="html/86a84c3c-897e-5dab-0332-c93d249a99b3.htm" />
+  <HelpKINode Title="Nickname property" Url="html/45dbd18c-cc10-edc9-cb4d-0d99ac7a97c3.htm" />
   <HelpKINode Title="Normal enumeration member" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
+  <HelpKINode Title="Notebook enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="onLoginFailed event" Url="html/9969ea78-abb1-ebc1-9c04-105732eae220.htm" />
   <HelpKINode Title="onLoginSuccess event" Url="html/2021449b-78eb-f461-5740-1d6734e2d67c.htm" />
+  <HelpKINode Title="Operatingsystem class" Url="html/55c6311b-a1e5-726f-dd7c-a7fa531640e1.htm" />
+  <HelpKINode Title="Operatingsystem class" Url="html/84975fc2-6cb9-2400-9bc9-2f479422e9f8.htm" />
+  <HelpKINode Title="Operatingsystem class">
+    <HelpKINode Title="about Operatingsystem class" Url="html/55c6311b-a1e5-726f-dd7c-a7fa531640e1.htm" />
+    <HelpKINode Title="all members" Url="html/84975fc2-6cb9-2400-9bc9-2f479422e9f8.htm" />
+    <HelpKINode Title="constructor" Url="html/f504e885-490b-08f3-df85-74201cbaffe3.htm" />
+    <HelpKINode Title="methods" Url="html/92fa9afc-4133-88da-4174-08893d170b25.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Operatingsystem.GetManufacturerName method" Url="html/2ac4fa41-21ef-0a61-919d-94a2bc467e2b.htm" />
+  <HelpKINode Title="Operatingsystem.GetOSName method" Url="html/41e2f08f-cd3c-e8a5-8789-6599bc59d024.htm" />
+  <HelpKINode Title="Operatingsystem.Operatingsystem constructor" Url="html/f504e885-490b-08f3-df85-74201cbaffe3.htm" />
+  <HelpKINode Title="Other enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="PeripheralChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="PizzaBox enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Portable enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Printer property" Url="html/5942e1f0-2b73-4cc5-bbe1-233dda7b1d89.htm" />
   <HelpKINode Title="Private enumeration member" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
+  <HelpKINode Title="Processor class" Url="html/54c9df38-701b-4b15-084d-3c5203f382ab.htm" />
+  <HelpKINode Title="Processor class" Url="html/c1239020-2815-9c81-6769-23ee0584fd8e.htm" />
+  <HelpKINode Title="Processor class">
+    <HelpKINode Title="about Processor class" Url="html/54c9df38-701b-4b15-084d-3c5203f382ab.htm" />
+    <HelpKINode Title="all members" Url="html/c1239020-2815-9c81-6769-23ee0584fd8e.htm" />
+    <HelpKINode Title="constructor" Url="html/73d4b282-5943-78cf-fceb-583bab117204.htm" />
+    <HelpKINode Title="methods" Url="html/d3546602-4ac5-ccef-3161-6301358fb320.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Processor property" Url="html/64d1b2ba-4e1b-7e5e-8617-fe5a13101e01.htm" />
+  <HelpKINode Title="Processor.GetProcessorNames method" Url="html/42cee5e0-ce7b-b46a-e977-d4a7c7c52c30.htm" />
+  <HelpKINode Title="Processor.Processor constructor" Url="html/73d4b282-5943-78cf-fceb-583bab117204.htm" />
   <HelpKINode Title="PublicAt enumeration member" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
+  <HelpKINode Title="RackMountChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="RainbowBlue enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="RainbowGreen enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="RainbowRed enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="RainbowYellow enumeration member" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="RefreshCache method" Url="html/c940a9be-184b-d668-cd15-a237861017b6.htm" />
   <HelpKINode Title="refreshData method" Url="html/7e516c46-c871-b9e4-7a53-1e3005d56ab3.htm" />
+  <HelpKINode Title="RefreshImage method" Url="html/2624e68b-c11d-31c3-01b4-1bf81dff177a.htm" />
   <HelpKINode Title="ResetPassword method" Url="html/4d5545fb-5035-441a-3c83-58d268a7029d.htm" />
   <HelpKINode Title="ResetSettings method" Url="html/a3a63743-cf75-ca6a-c9d8-23391a52cb3e.htm" />
+  <HelpKINode Title="Scanner property" Url="html/9874732b-a617-435c-f531-d28bbf2c7f84.htm" />
+  <HelpKINode Title="SealedCasePC enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="SendCommand method" Url="html/aa6e399f-6511-a26a-1c25-91abd2d27380.htm" />
   <HelpKINode Title="SendMessage method" Url="html/45f48dd9-d2a4-cd27-52af-856e2a9e1f6b.htm" />
   <HelpKINode Title="SetAIM method" Url="html/22f1cc52-3f5e-bab2-204a-84f4d39d1f2b.htm" />
   <HelpKINode Title="SetAuthor method" Url="html/78cfa425-50d7-fbdc-9b11-3d273a1d006c.htm" />
+  <HelpKINode Title="SetAvatarUrl method" Url="html/c51d43ae-9fb4-8f44-ed2e-5db55f1f8a35.htm" />
   <HelpKINode Title="SetBeroep method" Url="html/9badec02-254b-3d66-09b7-a1b2e801cb63.htm" />
   <HelpKINode Title="SetBiografie method" Url="html/6aa9c672-08ac-6ff6-fbfd-c4f28f716886.htm" />
   <HelpKINode Title="SetBirthday method" Url="html/f9638a54-90cc-acd4-91f6-d6bded328a83.htm" />
@@ -554,7 +766,26 @@
   <HelpKINode Title="ShowPreview property" Url="html/402569dd-d8ca-2f7d-68c3-244b704f6408.htm" />
   <HelpKINode Title="ShowPreview property" Url="html/d4add0ab-6063-88a6-1613-c116b7b0d344.htm" />
   <HelpKINode Title="SMALL enumeration member" Url="html/4d336aa1-166d-5a6e-25d0-ac37d012ab6d.htm" />
+  <HelpKINode Title="SpaceSaving enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Speakers property" Url="html/c0ea28c7-1208-f229-ecea-949338ae0a03.htm" />
   <HelpKINode Title="Status enumeration member" Url="html/005dd66a-65d0-f913-001f-125fe479984d.htm" />
+  <HelpKINode Title="Storage class" Url="html/6ca8b6be-beb4-b475-53d8-b17ede1fdb39.htm" />
+  <HelpKINode Title="Storage class" Url="html/e0aecaa9-b52b-8205-7e30-f8836b4a7bff.htm" />
+  <HelpKINode Title="Storage class">
+    <HelpKINode Title="about Storage class" Url="html/6ca8b6be-beb4-b475-53d8-b17ede1fdb39.htm" />
+    <HelpKINode Title="all members" Url="html/e0aecaa9-b52b-8205-7e30-f8836b4a7bff.htm" />
+    <HelpKINode Title="constructor" Url="html/b322bf0c-37f9-e37f-ba2c-2ef9be1cacc0.htm" />
+    <HelpKINode Title="methods" Url="html/f19a067c-7061-a606-8af2-0af5069c112a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Storage.GetLogicalDrivesSize method" Url="html/caf7a460-7cab-5f37-7066-e6e780122bd7.htm" />
+  <HelpKINode Title="Storage.Storage constructor" Url="html/b322bf0c-37f9-e37f-ba2c-2ef9be1cacc0.htm" />
+  <HelpKINode Title="StorageChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="SubChassis enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="SubNotebook enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Systeemkast property" Url="html/0772eee2-118d-ecf3-68b0-b27481160fb1.htm" />
+  <HelpKINode Title="Temperatuur property" Url="html/594a4390-aef2-03df-4378-f1958aa87670.htm" />
+  <HelpKINode Title="Text field" Url="html/2a5939c1-cbbd-8deb-d3b1-d5cd770ba9bc.htm" />
+  <HelpKINode Title="Toetsenbord property" Url="html/627cbf24-34b0-eee3-8612-28571a1c5ba3.htm" />
   <HelpKINode Title="TOON_GEBOORTEDAG_EN_MAAND enumeration member" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
   <HelpKINode Title="TOON_LEEFTIJD enumeration member" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
   <HelpKINode Title="TOON_LEEFTIJD_EN_GEBOORTEDATUM enumeration member" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
@@ -575,8 +806,36 @@
   <HelpKINode Title="Topic.SetComments method" Url="html/1b6689e6-17cd-6aca-d264-0c2573f2fac3.htm" />
   <HelpKINode Title="Topic.SetHTMLSource method" Url="html/3cfe3043-7390-4763-62de-cc1e94577d1d.htm" />
   <HelpKINode Title="Topic.SetKeywords method" Url="html/55b414cb-1346-3892-ab76-03f4813936e5.htm" />
+  <HelpKINode Title="Tower enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
   <HelpKINode Title="txtPassword field" Url="html/e930dbe1-1efc-d530-e8d2-984db5f14931.htm" />
   <HelpKINode Title="txtUsername field" Url="html/29d08c46-2877-2bfb-1c15-7a8c2c438f54.htm" />
+  <HelpKINode Title="UBText property" Url="html/53008cda-9fb3-d740-01d2-c31ee5598203.htm" />
+  <HelpKINode Title="uiComment class" Url="html/6a82ae40-801f-ff7a-b305-3d193eef08f5.htm" />
+  <HelpKINode Title="uiComment class" Url="html/712e93ac-8c83-a8ae-7b56-624a8a63284a.htm" />
+  <HelpKINode Title="uiComment class">
+    <HelpKINode Title="about uiComment class" Url="html/712e93ac-8c83-a8ae-7b56-624a8a63284a.htm" />
+    <HelpKINode Title="all members" Url="html/6a82ae40-801f-ff7a-b305-3d193eef08f5.htm" />
+    <HelpKINode Title="constructor" Url="html/91b64f1e-e0c3-28be-7bf7-e9a1e6dc466d.htm" />
+    <HelpKINode Title="events" Url="html/744bc3ae-5ccd-8129-d4f8-be184f676312.htm" />
+    <HelpKINode Title="methods" Url="html/59ace962-fbf2-ed8e-cd61-f065169987b7.htm" />
+    <HelpKINode Title="properties" Url="html/15a2f78e-7366-c3e8-e905-6e558832a070.htm" />
+  </HelpKINode>
+  <HelpKINode Title="uiComment.Dispose method" Url="html/3ce4e910-780a-1588-e77c-c78e08d6e601.htm" />
+  <HelpKINode Title="uiComment.uiComment constructor" Url="html/91b64f1e-e0c3-28be-7bf7-e9a1e6dc466d.htm" />
+  <HelpKINode Title="uiGebruikerAvatar class" Url="html/4882fc5c-536f-9825-cf07-6328d762e96a.htm" />
+  <HelpKINode Title="uiGebruikerAvatar class" Url="html/aa6910ec-8fc8-b486-04a8-99c4e34a2b72.htm" />
+  <HelpKINode Title="uiGebruikerAvatar class">
+    <HelpKINode Title="about uiGebruikerAvatar class" Url="html/4882fc5c-536f-9825-cf07-6328d762e96a.htm" />
+    <HelpKINode Title="all members" Url="html/aa6910ec-8fc8-b486-04a8-99c4e34a2b72.htm" />
+    <HelpKINode Title="constructor" Url="html/819b2d54-2f7f-1bc9-7493-93f4044780c0.htm" />
+    <HelpKINode Title="events" Url="html/8725cb4f-359a-cbe5-04b7-53ad551f0aaf.htm" />
+    <HelpKINode Title="methods" Url="html/b0cabdfc-c94b-f309-f609-c3792d84dae1.htm" />
+    <HelpKINode Title="properties" Url="html/b158fc60-5b90-f4d9-7b00-07f1ff603c97.htm" />
+  </HelpKINode>
+  <HelpKINode Title="uiGebruikerAvatar.Dispose method" Url="html/314fa5e6-ec71-b859-5d40-7067ec2e5b4e.htm" />
+  <HelpKINode Title="uiGebruikerAvatar.RefreshImage method" Url="html/2624e68b-c11d-31c3-01b4-1bf81dff177a.htm" />
+  <HelpKINode Title="uiGebruikerAvatar.uiGebruikerAvatar constructor" Url="html/819b2d54-2f7f-1bc9-7493-93f4044780c0.htm" />
+  <HelpKINode Title="uiGebruikerAvatar.UserID property" Url="html/f3570fb0-9ff9-74a7-b99d-b7224714a617.htm" />
   <HelpKINode Title="uiHelpmijLogin class" Url="html/6c37857e-ea8c-881f-fba3-737f507c622d.htm" />
   <HelpKINode Title="uiHelpmijLogin class" Url="html/e26c00cd-418f-3bc0-215a-d2b9f1f38c97.htm" />
   <HelpKINode Title="uiHelpmijLogin class">
@@ -629,7 +888,9 @@
   </HelpKINode>
   <HelpKINode Title="uiUserbar.DefaultUserbar property" Url="html/b0d384a6-2187-546b-bd93-2dabd7471843.htm" />
   <HelpKINode Title="uiUserbar.Dispose method" Url="html/7b3e93ad-9b23-daf2-0c4f-57cd3fab6381.htm" />
+  <HelpKINode Title="uiUserbar.GetUserbar method" Url="html/38fcfba3-c61d-2489-069c-43906a0a4169.htm" />
   <HelpKINode Title="uiUserbar.ShowPreview property" Url="html/d4add0ab-6063-88a6-1613-c116b7b0d344.htm" />
+  <HelpKINode Title="uiUserbar.UBText property" Url="html/53008cda-9fb3-d740-01d2-c31ee5598203.htm" />
   <HelpKINode Title="uiUserbar.uiUserbar constructor" Url="html/647dda4e-8a04-3dad-b935-be02bab263c4.htm" />
   <HelpKINode Title="UnableToConnectException class" Url="html/9726627a-19d8-145b-cc5f-3b527984b970.htm" />
   <HelpKINode Title="UnableToConnectException class" Url="html/9e4c9b56-667d-8136-93e3-d6fd6169cda4.htm" />
@@ -653,6 +914,25 @@
     <HelpKINode Title="properties" Url="html/62660267-f157-2aba-7a1f-25480d06a6a3.htm" />
   </HelpKINode>
   <HelpKINode Title="UnableToSaveUserException.UnableToSaveUserException constructor" Url="html/a580d044-53df-a80f-c889-2711fd7f273e.htm" />
+  <HelpKINode Title="Unknown enumeration member" Url="html/14be1618-9cc8-b285-4cd8-07e351172f48.htm" />
+  <HelpKINode Title="Userbar field" Url="html/bb080c01-92cc-7a78-37ab-fdeaf2ca5fd7.htm" />
+  <HelpKINode Title="UserbarArguments class" Url="html/11c6afe6-4f31-16dd-621c-046f1abbf617.htm" />
+  <HelpKINode Title="UserbarArguments class" Url="html/d69505b5-1fcc-6d88-ab74-ea5c9a8fc603.htm" />
+  <HelpKINode Title="UserbarArguments class">
+    <HelpKINode Title="about UserbarArguments class" Url="html/11c6afe6-4f31-16dd-621c-046f1abbf617.htm" />
+    <HelpKINode Title="all members" Url="html/d69505b5-1fcc-6d88-ab74-ea5c9a8fc603.htm" />
+    <HelpKINode Title="constructor" Url="html/d12c83f4-f83d-beb6-6c26-faca870f8709.htm" />
+    <HelpKINode Title="fields" Url="html/b4c8d26c-011f-c288-3c8d-008a51d6b7fb.htm" />
+    <HelpKINode Title="methods" Url="html/0c0e2df2-bca1-0079-a45c-f920e78585b2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserbarArguments.Background field" Url="html/6e5cb188-bbde-2c56-345e-0474c4819920.htm" />
+  <HelpKINode Title="UserbarArguments.BorderColor field" Url="html/30555dd1-bb54-5d0b-d158-49e9b9ced703.htm" />
+  <HelpKINode Title="UserbarArguments.ForeColor field" Url="html/53f4e359-6a0f-e2f2-5060-fb41b1f281db.htm" />
+  <HelpKINode Title="UserbarArguments.Text field" Url="html/2a5939c1-cbbd-8deb-d3b1-d5cd770ba9bc.htm" />
+  <HelpKINode Title="UserbarArguments.Userbar field" Url="html/bb080c01-92cc-7a78-37ab-fdeaf2ca5fd7.htm" />
+  <HelpKINode Title="UserbarArguments.UserbarArguments constructor" Url="html/d12c83f4-f83d-beb6-6c26-faca870f8709.htm" />
+  <HelpKINode Title="UserbarArguments.Xpos field" Url="html/87236dd2-70e3-387f-ddcb-deb58093d7f9.htm" />
+  <HelpKINode Title="UserbarArguments.Ypos field" Url="html/277578cc-f5c6-e422-89c8-56aa54fb1545.htm" />
   <HelpKINode Title="UserbarType enumeration" Url="html/1ebc89a2-60d7-821e-962a-9eea8a8231e9.htm" />
   <HelpKINode Title="UserDataNotFound class" Url="html/9912e778-aad4-43b0-891c-35dca20f1c7a.htm" />
   <HelpKINode Title="UserDataNotFound class" Url="html/f8c10dfd-253e-62c3-5715-a23d4012a3f8.htm" />
@@ -665,6 +945,7 @@
     <HelpKINode Title="properties" Url="html/bb68fc53-9aa0-0d43-f336-2f937c56b064.htm" />
   </HelpKINode>
   <HelpKINode Title="UserDataNotFound.UserDataNotFound constructor" Url="html/a8c09ca9-6199-f786-17e4-cec3972fb815.htm" />
+  <HelpKINode Title="UserID property" Url="html/f3570fb0-9ff9-74a7-b99d-b7224714a617.htm" />
   <HelpKINode Title="UserNotLoggedInException class" Url="html/aa41f5ca-8c3f-bcd1-06bd-0a4f09c4b145.htm" />
   <HelpKINode Title="UserNotLoggedInException class" Url="html/fd518b4c-b4db-4cbe-e3d2-aa64282e313b.htm" />
   <HelpKINode Title="UserNotLoggedInException class">
@@ -677,5 +958,19 @@
   </HelpKINode>
   <HelpKINode Title="UserNotLoggedInException.UserNotLoggedInException constructor" Url="html/ada4ec2f-3b69-2a0e-ca8b-d6af8bbcff70.htm" />
   <HelpKINode Title="VERBERG_LEEFTIJD_EN_GEBOORTEDATUM enumeration member" Url="html/05bcda7f-27be-c8e2-8459-e02f40131bd9.htm" />
+  <HelpKINode Title="Videocard class" Url="html/891241df-786a-2a28-9429-419a4ac38ac6.htm" />
+  <HelpKINode Title="Videocard class" Url="html/e874bed9-d335-8496-0803-67587a637297.htm" />
+  <HelpKINode Title="Videocard class">
+    <HelpKINode Title="about Videocard class" Url="html/e874bed9-d335-8496-0803-67587a637297.htm" />
+    <HelpKINode Title="all members" Url="html/891241df-786a-2a28-9429-419a4ac38ac6.htm" />
+    <HelpKINode Title="constructor" Url="html/293a67e0-6625-8600-b738-ab8213cff2c0.htm" />
+    <HelpKINode Title="methods" Url="html/d6ab9547-779d-3f45-745b-a4fa79e94dbc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Videocard.GetVideocardNames method" Url="html/e3192561-3249-42ed-a4ce-e562767d91ff.htm" />
+  <HelpKINode Title="Videocard.Videocard constructor" Url="html/293a67e0-6625-8600-b738-ab8213cff2c0.htm" />
+  <HelpKINode Title="Videokaart property" Url="html/718f3901-dc1f-d340-f4e0-e856cde64c27.htm" />
+  <HelpKINode Title="Voeding property" Url="html/1d5c7fe6-6aaf-92d7-1e09-bcc17e497353.htm" />
   <HelpKINode Title="VRIEDNEN enumeration member" Url="html/7c87669a-8a61-2253-dd0e-bef9122363de.htm" />
+  <HelpKINode Title="Xpos field" Url="html/87236dd2-70e3-387f-ddcb-deb58093d7f9.htm" />
+  <HelpKINode Title="Ypos field" Url="html/277578cc-f5c6-e422-89c8-56aa54fb1545.htm" />
 </HelpKI>

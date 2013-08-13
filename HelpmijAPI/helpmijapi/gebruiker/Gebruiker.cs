@@ -102,7 +102,8 @@ namespace mvdw.helpmijapi.gebruiker
         /// <summary>
         /// Verkrijg GebruikersData
         /// </summary>
-        GebruikerData GetUserData();
+        /// <param name="fetch">Fetch User data</param>
+        GebruikerData GetUserData(Boolean fetch);
 
         /// <summary>
         /// Sla de wijzigingen op
