@@ -29,7 +29,7 @@ namespace mvdw.helpmij.utils
     /// </summary>
     internal class UtilsINI
     {
-                /* -----------------------------
+        /* -----------------------------
          * Name: iniConfig
          * Author: Maxim Van de Wynckel
          * ----------------------------- */

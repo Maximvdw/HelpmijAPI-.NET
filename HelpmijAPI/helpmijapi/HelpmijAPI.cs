@@ -129,5 +129,14 @@ namespace mvdw.helpmijapi
         {
             return uploadSize;
         }
+
+        /// <summary>
+        /// Controlleer op updates voor de API
+        /// </summary>
+        /// <returns>Boolean - If update found</returns>
+        public static Boolean CheckForUpdates()
+        {
+            return false; // Under Construction
+        }
     }
 }

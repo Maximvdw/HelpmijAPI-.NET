@@ -25,6 +25,23 @@ namespace mvdw.helpmijapi.sysinfo.software
         /// </summary>
         private String osManufacturer = null;
 
+        /// <summary>
+        /// Get Machine name
+        /// </summary>
+        /// <returns>String - Name</returns>
+        public String GetMachineName()
+        {
+            return Environment.MachineName;
+        }
+
+        /// <summary>
+        /// Get the current User name
+        /// </summary>
+        /// <returns>String - Name</returns>
+        public String GetUserName()
+        {
+            return Environment.UserName;
+        }
 
         /// <summary>
         /// Get OS Friendly name

@@ -45,6 +45,11 @@
               Looks up a localized resource of type System.Byte[].
             </summary>
         </member>
+        <member name="P:mvdw.Properties.Resources.poweredby">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:mvdw.Properties.Resources.skin1">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -542,16 +547,23 @@
             </summary>
             <param name="command">String - Commando</param>
         </member>
-        <member name="M:mvdw.helpmijapi.chat.Chat.ForceUpdate">
+        <member name="M:mvdw.helpmijapi.chat.Chat.Update">
             <summary>
-            Forceer een update van de chat
+            Doe een update van de chat
             </summary>
+            <returns>List ChatMessage</returns>
         </member>
         <member name="M:mvdw.helpmijapi.chat.Chat.GetLastUpdate">
             <summary>
             Verkrijg de laatste update
             </summary>
             <returns>String - Laatste update</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.GetLastQuoteUpdate">
+            <summary>
+            Verkrijg de laatste quote update
+            </summary>
+            <returns>int - Laatste update</returns>
         </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.user">
             <summary>
@@ -563,9 +575,29 @@
             Laatste update
             </summary>
         </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChat.lastMessage">
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.lastQuoteUpdate">
             <summary>
             Laatste update
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.state">
+            <summary>
+            Chat state
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.users">
+            <summary>
+            Chat gebruikers
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.smilyCodes">
+            <summary>
+            All smily codes
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.smilyFiles">
+            <summary>
+            All smily urls
             </summary>
         </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.Connect(mvdw.helpmijapi.gebruiker.Gebruiker)">
@@ -574,12 +606,31 @@
             </summary>
             <param name="user">Ingelogde gebruiker</param>
         </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChat.FilterHTML(System.String)">
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.FilterMessage(System.String)">
             <summary>
-            Filter HTML output
+            Filter a message
             </summary>
-            <param name="input">String - Input</param>
-            <returns>String - Output</returns>
+            <param name="msg">String - Message</param>
+            <returns>String - Filtered Message</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.DecodeUpdateData(System.String)">
+            <summary>
+            Verkrijg update data
+            </summary>
+            <param name="jsonData">JSON String</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.DecodeOnlineUsers(System.String)">
+            <summary>
+            Verkrijg online gebruikers
+            </summary>
+            <param name="jsonData">Json Data</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.DecodeChatMessages(System.String)">
+            <summary>
+            Verkrijg alle chat berichten in de json data
+            </summary>
+            <param name="jsonData">JSON data</param>
+            <returns>List Chatmessages</returns>
         </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.SendMessage(System.String)">
             <summary>
@@ -593,16 +644,18 @@
             </summary>
             <param name="command">String - Commando</param>
         </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChat.ForceUpdate">
-            <summary>
-            Forceer een update van de chat
-            </summary>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:mvdw.helpmij.chat.HelpmijChat.Update" -->
         <member name="M:mvdw.helpmij.chat.HelpmijChat.GetLastUpdate">
             <summary>
             Verkrijg de laatste update
             </summary>
             <returns>String - Laatste update</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.GetLastQuoteUpdate">
+            <summary>
+            Verkrijg de laatste quote update
+            </summary>
+            <returns>int - Laatste update</returns>
         </member>
         <member name="T:mvdw.helpmijapi.sysinfo.hardware.Videocard">
             <summary>
@@ -769,6 +822,17 @@
             <param name="topic">Topic</param>
             <returns>Boolean</returns>
         </member>
+        <member name="T:mvdw.helpmij.forum.ForumReader">
+            <summary>
+            Read a forum
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.forum.ForumReader.GetBerichtgevingen">
+            <summary>
+            Verkrijg Berichtgevingen Forums
+            </summary>
+            <returns>List - Forum</returns>
+        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs">
             <summary>
             Login Failed Event Arguments
@@ -788,6 +852,22 @@
         <member name="T:mvdw.helpmijapi.gebruiker.events.LoginFailedEventHandler">
             <summary>
             Login Failed Event Handler
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.ui.frmAbout.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.ui.frmAbout.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.ui.frmAbout.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.sysinfo.hardware.Processor">
@@ -1540,6 +1620,11 @@
             <param name="url">De url</param>
             <param name="cookies">De cookies</param>
             <returns>String - Broncode</returns>
+        </member>
+        <member name="T:mvdw.helpmij.utils.UtilsHTTP.FileParameter">
+            <summary>
+            File Parameters
+            </summary>
         </member>
         <member name="T:mvdw.helpmij.gebruiker.HelpmijGebruiker">
             <summary>
@@ -3491,6 +3576,12 @@
             </summary>
             <returns>Size in byte</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.HelpmijAPI.CheckForUpdates">
+            <summary>
+            Controlleer op updates voor de API
+            </summary>
+            <returns>Boolean - If update found</returns>
+        </member>
         <member name="T:mvdw.helpmij.forum.HelpmijComment">
             <summary>
             Reacties op een Topic
@@ -3558,6 +3649,16 @@
             Set de tekst in HTML
             </summary>
             <param name="html">String - HTML</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.sysinfo.hardware.NetworkAdapter">
+            <summary>
+            Network Adapter Information
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.sysinfo.hardware.NetworkAdapter.phisicaladapterNames">
+            <summary>
+            Physical Adapters List
+            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.artwork.userbar.resUserbars">
             <summary>
@@ -4176,9 +4277,31 @@
             </summary>
             <param name="message">Error Message</param>
         </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArguments">
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs">
             <summary>
             Chat Received Event Arguments
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.message">
+            <summary>
+            Chat Message
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.#ctor(mvdw.helpmijapi.chat.ChatMessage)">
+            <summary>
+            Chat Received Event Arguments
+            </summary>
+            <param name="message">ChatMessage - Message</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.GetMessage">
+            <summary>
+            Get Chat Message
+            </summary>
+            <returns>ChatMessage - Message</returns>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventHandler">
+            <summary>
+            Chat Received Event Handler
             </summary>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
@@ -4440,6 +4563,28 @@
             Proxy server instellingen
             </summary>
         </member>
+        <member name="T:mvdw.helpmijapi.ui.API_Banner">
+            <summary>
+            Helpmij.nl API Banner
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.ui.API_Banner.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.ui.API_Banner.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.ui.API_Banner.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:mvdw.helpmijapi.artwork.logo.LogoType">
             <summary>
             Helpmij Logo type
@@ -4656,9 +4801,9 @@
             <summary>
             Verkrijg een font van de resources
             </summary>
-            <param name="font">Font naam (+ext)</param>
             <param name="size">Font size</param>
             <param name="style">Font Style</param>
+            <param name="hmfont">Helpmij Font</param>
             <returns>System.Drawing.Font - Font</returns>
         </member>
         <member name="T:mvdw.helpmij.utils.UtilsFont.HMFont">
@@ -4706,6 +4851,11 @@
         <member name="F:mvdw.helpmij.homepage.HomepageTopics.user">
             <summary>
             Cache gebruiker
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmij.homepage.HomepageTopics.ClearCache">
+            <summary>
+            Clear Cache
             </summary>
         </member>
         <member name="M:mvdw.helpmij.homepage.HomepageTopics.RefreshCache">
@@ -4769,6 +4919,18 @@
             <summary>
             Manufacturer that created the OS
             </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.software.Operatingsystem.GetMachineName">
+            <summary>
+            Get Machine name
+            </summary>
+            <returns>String - Name</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.sysinfo.software.Operatingsystem.GetUserName">
+            <summary>
+            Get the current User name
+            </summary>
+            <returns>String - Name</returns>
         </member>
         <member name="M:mvdw.helpmijapi.sysinfo.software.Operatingsystem.GetOSName">
             <summary>
@@ -4856,6 +5018,12 @@
             Verkrijg een Gebruikers Systeem
             </summary>
             <returns>GebruikerSysteem - system</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.CreateUser(mvdw.helpmijapi.gebruiker.GebruikerData)">
+            <summary>
+            Creer een nieuwe gebruiker
+            </summary>
+            <param name="userDat">Gebruikers Gegevens</param>
         </member>
     </members>
 </doc>

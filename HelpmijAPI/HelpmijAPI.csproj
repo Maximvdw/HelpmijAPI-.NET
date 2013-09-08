@@ -10,9 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>mvdw</RootNamespace>
     <AssemblyName>HelpmijAPI</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +52,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -109,11 +111,24 @@
     <Compile Include="helpmijapi\sysinfo\hardware\Memory.cs" />
     <Compile Include="helpmijapi\sysinfo\hardware\Monitor.cs" />
     <Compile Include="helpmijapi\sysinfo\hardware\Motherboard.cs" />
+    <Compile Include="helpmijapi\sysinfo\hardware\NetworkAdapter.cs" />
     <Compile Include="helpmijapi\sysinfo\hardware\Processor.cs" />
     <Compile Include="helpmijapi\sysinfo\hardware\Storage.cs" />
     <Compile Include="helpmijapi\sysinfo\hardware\Videocard.cs" />
     <Compile Include="helpmijapi\sysinfo\software\Operatingsystem.cs" />
     <Compile Include="helpmijapi\sysinfo\utils\Converter.cs" />
+    <Compile Include="helpmijapi\ui\API-Banner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\ui\API-Banner.Designer.cs">
+      <DependentUpon>API-Banner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpmijapi\ui\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\ui\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
     <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
@@ -130,6 +145,7 @@
     <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="helpmij\forum\ForumReader.cs" />
     <Compile Include="helpmij\forum\HMForumData.cs" />
     <Compile Include="helpmij\forum\HMForumData.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\ui\API-Banner.resx">
+      <DependentUpon>API-Banner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\ui\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -320,12 +342,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="helpmij\ui\" />
+    <Folder Include="helpmij\updater\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\commentbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweredby.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

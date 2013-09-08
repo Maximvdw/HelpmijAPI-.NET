@@ -82,6 +82,7 @@ namespace mvdw.helpmijapi.artwork.userbar
             {
                 // Save val
                 this.message = value;
+                args.Text = message;
                 args = HelpmijUserbar.GenerateUserbar(args);
                 this.BackgroundImage = args.Userbar;
             }

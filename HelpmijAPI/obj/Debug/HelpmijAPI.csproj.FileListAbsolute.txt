@@ -16,4 +16,6 @@ C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.uiUserbar.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.forum.gui.uiComment.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.API_Banner.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.frmAbout.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML

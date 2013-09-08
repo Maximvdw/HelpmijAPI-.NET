@@ -34,19 +34,23 @@ namespace mvdw.helpmij.chat
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        public Gebruiker user = null;
+        Gebruiker user = null;
         /// <summary>
         /// Het verzonden bericht
         /// </summary>
-        public String message = null;
+        String message = null;
         /// <summary>
         /// Bericht kleur
         /// </summary>
-        public Color color = Color.Black;
+        Color color = Color.Black;
         /// <summary>
         /// Chat bericht type
         /// </summary>
-        public ChatMessageType type = ChatMessageType.Normal;
+        ChatMessageType type = ChatMessageType.Normal;
+        /// <summary>
+        /// Timestamp
+        /// </summary>
+        DateTime timestamp = DateTime.Now;
 
         /// <summary>
         /// Verkrijg de gebruiker die het bericht schreef
@@ -118,6 +122,24 @@ namespace mvdw.helpmij.chat
         public void SetMessageType(ChatMessageType type)
         {
             this.type = type;
+        }
+
+        /// <summary>
+        /// Verkrijg timestamp van het bericht
+        /// </summary>
+        /// <returns>DateTime - Timestamp</returns>
+        public DateTime GetTimeStamp()
+        {
+            return timestamp;
+        }
+
+        /// <summary>
+        /// Set de timestamp van het bericht
+        /// </summary>
+        /// <param name="timestamp">DateTime - Timestamp</param>
+        public void SetTimeStamp(DateTime timestamp)
+        {
+            this.timestamp = timestamp;
         }
     }
 }

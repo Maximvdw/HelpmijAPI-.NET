@@ -255,6 +255,9 @@ namespace mvdw.helpmij.utils
             return formData;
         }
 
+        /// <summary>
+        /// File Parameters
+        /// </summary>
         public class FileParameter
         {
             public byte[] File { get; set; }

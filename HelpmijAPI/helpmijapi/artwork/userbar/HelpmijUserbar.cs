@@ -73,13 +73,33 @@ namespace mvdw.helpmijapi.artwork.userbar
             {
                 // Get the userbar font
                 userbar.Userbar = userbar.Background; // Failsafe
-                Font font = UtilsFont.GetEmbeddedFont(UtilsFont.HMFont.Visitor, FontStyle.Regular, 9);
+                Font font = UtilsFont.GetEmbeddedFont(UtilsFont.HMFont.Visitor, FontStyle.Regular, 10);
                 Image background = userbar.Background; // Get background
                 // Start met tekenen
                 using (Graphics g = Graphics.FromImage(background))
                 {
-                    Point p = new Point(335 - (int)g.MeasureString(userbar.Text, font).Width, 5);
+                    // Draw outlines
+                    int XAS = 335 - (int)g.MeasureString(userbar.Text, font).Width;
+                    int YAS = 5;
+                    Point p = new Point(XAS,YAS);
+                    for (int i = -1; i <= 1; i+= 2)
+                    {
+                        p = new Point(XAS + i, YAS);
+                        g.DrawString(userbar.Text, font, Brushes.Black, p);
+                        p = new Point(XAS, YAS + i);
+                        g.DrawString(userbar.Text, font, Brushes.Black, p);
+                        p = new Point(XAS + i, YAS+ i);
+                        g.DrawString(userbar.Text, font, Brushes.Black, p);
+                        p = new Point(XAS + i, YAS - i);
+                        g.DrawString(userbar.Text, font, Brushes.Black, p);
+                        p = new Point(XAS - i, YAS + i);
+                        g.DrawString(userbar.Text, font, Brushes.Black, p);
+                    }
+
+                    //Draw Actual text
+                    p = new Point(XAS,YAS);
                     g.DrawString(userbar.Text, font, Brushes.White, p);
+
                     // Save userbar
                     g.Save();
                     userbar.Userbar = background;

@@ -35,20 +35,36 @@ namespace mvdw.helpmij.chat
     /// <summary>
     /// Helpmij.nl Chat integratie
     /// </summary>
-    internal class HelpmijChat : HelpmijData, Chat
+    internal class HelpmijChat : Chat
     {
         /// <summary>
         /// Chat gebruiker
         /// </summary>
-        public Gebruiker user = null;
+        Gebruiker user = null;
         /// <summary>
         /// Laatste update
         /// </summary>
-        public String lastUpdate = "0";
+        String lastUpdate = "";
         /// <summary>
         /// Laatste update
         /// </summary>
-        public String lastMessage = "0"; 
+        int lastQuoteUpdate = 0;
+        /// <summary>
+        /// Chat state
+        /// </summary>
+        int state = 0;
+        /// <summary>
+        /// Chat gebruikers
+        /// </summary>
+        List<Gebruiker> users = null;
+        /// <summary>
+        /// All smily codes
+        /// </summary>
+        List<String> smilyCodes = new List<String>();
+        /// <summary>
+        /// All smily urls
+        /// </summary>
+        List<String> smilyFiles = new List<String>();
 
 
         /// <summary>
@@ -59,27 +75,284 @@ namespace mvdw.helpmij.chat
         {
             this.user = user;
             CookieContainer cookies = user.GetCookies();
+            // Laad de chat pagina om in te loggen
+            UtilsHTTP.GetSource("http://chat.helpmij.nl/",cookies);
             // Verkrijg de JSON data
-            String jsonData = UtilsHTTP.GetPOSTSource(chatGetState
-                , chatURL + chatPHP, ref cookies);
+            String jsonData = UtilsHTTP.GetPOSTSource("function=getState"
+                , "http://chat.helpmij.nl/process.php", ref cookies);
+            // Decodeer de JSON data
+            DecodeUpdateData(jsonData);
             Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
-            Object smilies = data["smilies"];
-            lastUpdate = (String)data["lastupdate"];
+            ArrayList jarray = (ArrayList)data["smilies"];
+            for (int i = 0; i < jarray.Count; i++)
+            {
+                try
+                {
+                    // Get all the smilies
+                    Hashtable jobject = (Hashtable)jarray[i];
+                    String code = (String)jobject["code"];
+                    String file = (String)jobject["file"];
+                    smilyCodes.Add(code);
+                    smilyFiles.Add(file);// Add smily
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
         }
 
         /// <summary>
-        /// Filter HTML output
+        /// Filter a message
         /// </summary>
-        /// <param name="input">String - Input</param>
-        /// <returns>String - Output</returns>
-        public String FilterHTML(String input)
+        /// <param name="msg">String - Message</param>
+        /// <returns>String - Filtered Message</returns>
+        private String FilterMessage(String msg)
         {
-            String output = input;
-            output = Regex.Replace(output, @"<[^>]*>", String.Empty);
-            output = output.Replace("&gt;", ">");
-            return output;
+            // Filter smilys
+            if (msg.Contains("alt=\"smiley\""))
+            {
+                for (int j = 0; j < smilyCodes.Count; j++)
+                {
+                    msg = msg.Replace("<img src=\"http://chat.helpmij.nl/images/smilies/" +
+                                smilyFiles[j] + "\" alt=\"smiley\" />", smilyCodes[j]);
+                }
+            }
+            // Filter HTML
+            msg = WebUtility.HtmlDecode(msg);
+
+            return msg; // Return filtered message
         }
 
+        /// <summary>
+        /// Verkrijg update data
+        /// </summary>
+        /// <param name="jsonData">JSON String</param>
+        private void DecodeUpdateData(String jsonData)
+        {
+            try
+            {
+                Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+                String newLastUpdate = (String)data["lastupdate"];
+                // lastupdate
+                if (newLastUpdate != null)
+                    lastUpdate = newLastUpdate;
+                String newState = (String)data["state"];
+
+                // state
+                if (newState != null)
+                    state = (int)data["state"];
+
+                // lastquoteupdate
+                data = (Hashtable)data["quote"];
+                if (data != null)
+                {
+                    int newLastQuoteUpdate = (int)data["lastupdate"];
+                    if (newLastQuoteUpdate != 0)
+                        lastQuoteUpdate = newLastQuoteUpdate;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// Verkrijg online gebruikers
+        /// </summary>
+        /// <param name="jsonData">Json Data</param>
+        private void DecodeOnlineUsers(String jsonData)
+        {
+            try
+            {
+                // Wis de lijst
+                users = new List<Gebruiker>();
+                Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+                ArrayList jarray = (ArrayList)data["users"];
+                // Loop all users
+                for (int i = 0; i < jarray.Count; i++)
+                {
+                    Hashtable userJson = (Hashtable)jarray[i];
+                    String username = (String)userJson["username"];
+                    int userid = (int)userJson["userid"];
+                    // Maak een gebruiker met deze gegevens
+                    Gebruiker user = new HelpmijGebruiker();
+                    user.SetNickname(username);
+                    user.SetUserID(userid);
+                    users.Add(user);
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Verkrijg alle chat berichten in de json data
+        /// </summary>
+        /// <param name="jsonData">JSON data</param>
+        /// <returns>List Chatmessages</returns>
+        private List<ChatMessage> DecodeChatMessages(String jsonData)
+        {
+            List<ChatMessage> msgs = new List<ChatMessage>();
+            try
+            {
+                // Decode json
+                Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
+                DecodeUpdateData(jsonData);
+                DecodeOnlineUsers(jsonData);
+                ArrayList jarray = (ArrayList)data["text"];
+                for (int i = 0; i < jarray.Count; i++)
+                {
+                    try
+                    {
+                        String msgHTML = (String)jarray[i];
+                        // Get timestamp
+                        String timeStr = UtilsString.GetSubStrings(msgHTML, "<span class=\"time\">[", "]</span>")[0];
+                        DateTime time = DateTime.Parse(timeStr);
+
+                        if (msgHTML.Contains("</span> komt binnen"))
+                        {
+                            // Login
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "<span class=\"user\">", "</span>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Login);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("logt uit</b></li>"))
+                        {
+                            // Logoff
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "</span> <b>", " logt uit</b></li>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Logout);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("is uit de chat verwijderd</b></li>"))
+                        {
+                            // Kicked
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "</span> <b>", " is uit de chat verwijderd</b></li>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Kicked);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("is terug</b></li>"))
+                        {
+                            // Back
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "</span> <b>", " is terug</b></li>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Back);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("is bezet</b></li>"))
+                        {
+                            // Busy
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "</span> <b>", " is bezet</b></li>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Busy);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("is afwezig</b></li>"))
+                        {
+                            // Kicked
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "</span> <b>", " is afwezig</b></li>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Away);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else if (msgHTML.Contains("<span class=\"userprivate\">"))
+                        {
+                            // Private message
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "<span class=\"userprivate\">", "</span>")[0];
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            String msg = UtilsString.GetSubStrings(msgHTML, username
+                                    + "</span>", "</li>")[0];
+                            // Filter message
+                            msg = FilterMessage(msg);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetMessage(msg);
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Private);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                        else
+                        {
+                            // Normal message
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    "<span class=\"user\">", "</span>")[0];
+                            String msg = UtilsString.GetSubStrings(msgHTML, username
+                                    + "</span>: ", "</li>")[0];
+                            // Filter message
+                            msg = FilterMessage(msg);
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetMessage(msg);
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Normal);
+                            chatMessage.SetTimeStamp(time);
+                            msgs.Add(chatMessage);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+            }
+            return msgs;
+        }
 
         /// <summary>
         /// Zend een bericht in de chat
@@ -87,8 +360,10 @@ namespace mvdw.helpmij.chat
         /// <param name="message">String - Bericht</param>
         public void SendMessage(String message)
         {
+            // Zend een bericht
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource(chatSendMessage + message + "&color=006666", chatURL + chatPHP, ref cookies);
+            UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=006666", 
+                "http://chat.helpmij.nl/process.php", ref cookies);
         }
 
         /// <summary>
@@ -97,75 +372,36 @@ namespace mvdw.helpmij.chat
         /// <param name="command">String - Commando</param>
         public void SendCommand(String command)
         {
+            // Zend een command
             CookieContainer cookies = user.GetCookies();
-            String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", "http://chat.helpmij.nl/process.php", ref cookies);
-            Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
-            lastUpdate = (String)data["lastupdate"];
-            ArrayList msgtext = (ArrayList)data["text"];
-            List<ChatMessage> messages = new List<ChatMessage>();
-            if (msgtext != null)
-            {
-                foreach (String msgdat in msgtext)
-                {
-                    try
-                    {
-                        String username = UtilsString.GetSubStrings(msgdat,
-                            messageUsernamePrefix, messageUsernameSuffix)[0];
-                        String message = UtilsString.GetSubStrings(msgdat,
-                            username + messagePrefix, messageSuffix)[0];
-                        String colorStr = UtilsString.GetSubStrings(msgdat,
-                            messageColorPrefix, messageColorSuffix)[0];
-                        Color color = ColorTranslator.FromHtml(colorStr);
-                        ChatMessageType type = ChatMessageType.Normal;
-
-                        if (message.StartsWith(":"))
-                        {
-                            // Normal message
-                            message = message.Substring(2);
-                            type = ChatMessageType.Normal;
-                        }
-                        else
-                        {
-                            // Login message
-                            type = ChatMessageType.Login;
-                        }
-
-                        // Filter HTML
-                        message = FilterHTML(message);
-                        ChatMessage cm = new HelpmijChatMessage();
-                        Gebruiker chatUser = new HelpmijGebruiker();
-                        chatUser.SetNickname(username);
-                        cm.SetMessage(message);
-                        cm.SetUser(chatUser);
-                        cm.SetColor(color);
-                        messages.Add(cm);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
-            }
+            // Haal response op
+            String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", 
+                "http://chat.helpmij.nl/process.php", ref cookies);
+            DecodeUpdateData(jsonData);
         }
 
         /// <summary>
-        /// Forceer een update van de chat
-        /// </summary>
-        public void ForceUpdate()
+        /// Doe update van de chat
+        /// </summary
+        /// <returns>Chatmessages</returns>
+        public List<ChatMessage> Update()
         {
-            CookieContainer cookies = user.GetCookies();
-            String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=1&lastupdate=" +
-                lastUpdate + "&lastquoteupdate=" + lastMessage, chatURL + chatPHP, ref cookies);
-            Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
-            ArrayList msgtext = (ArrayList)data["text"];
-            List<ChatMessage> messages = new List<ChatMessage>();
-            if (msgtext != null)
+            try
             {
-                foreach (String msg in msgtext)
-                {
-                    ChatMessage cm = new HelpmijChatMessage();
-                    cm.SetMessage(msg);
-                    messages.Add(cm);
-                }
+                // Chat messages
+                List<ChatMessage> msgs = new List<ChatMessage>();
+                CookieContainer cookies = user.GetCookies();
+                // Verkrijg Json Data
+                String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=" + state +
+                    "&lastupdate=" + lastUpdate +
+                    "&lastquoteupdate=" + lastQuoteUpdate, "http://chat.helpmij.nl/process.php", ref cookies);
+                DecodeUpdateData(jsonData);
+                msgs = DecodeChatMessages(jsonData);
+                return msgs; // Messages
+            }
+            catch (Exception)
+            {
+                return null; // Error
             }
         }
 
@@ -176,6 +412,15 @@ namespace mvdw.helpmij.chat
         public String GetLastUpdate()
         {
             return lastUpdate;
+        }
+
+        /// <summary>
+        /// Verkrijg de laatste quote update
+        /// </summary>
+        /// <returns>int - Laatste update</returns>
+        public int GetLastQuoteUpdate()
+        {
+            return lastQuoteUpdate;
         }
     }
 }

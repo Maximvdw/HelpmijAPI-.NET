@@ -31,14 +31,21 @@ namespace mvdw.helpmijapi.chat
         void SendCommand(String command);
 
         /// <summary>
-        /// Forceer een update van de chat
+        /// Doe een update van de chat
         /// </summary>
-        void ForceUpdate();
+        /// <returns>List ChatMessage</returns>
+        List<ChatMessage> Update();
 
         /// <summary>
         /// Verkrijg de laatste update
         /// </summary>
         /// <returns>String - Laatste update</returns>
         String GetLastUpdate();
+
+        /// <summary>
+        /// Verkrijg de laatste quote update
+        /// </summary>
+        /// <returns>int - Laatste update</returns>
+        int GetLastQuoteUpdate();
     }
 }

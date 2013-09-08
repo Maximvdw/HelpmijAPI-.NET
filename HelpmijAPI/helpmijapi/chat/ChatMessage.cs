@@ -77,6 +77,18 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="type">ChatMessageType - Type</param>
         void SetMessageType(ChatMessageType type);
+
+        /// <summary>
+        /// Verkrijg timestamp van het bericht
+        /// </summary>
+        /// <returns>DateTime - Timestamp</returns>
+        DateTime GetTimeStamp();
+
+        /// <summary>
+        /// Set de timestamp van het bericht
+        /// </summary>
+        /// <param name="timestamp">DateTime - Timestamp</param>
+        void SetTimeStamp(DateTime timestamp);
     }
 
     /// <summary>
@@ -85,10 +97,12 @@ namespace mvdw.helpmijapi.chat
     public enum ChatMessageType
     {
         Normal = 0,
-        PublicAt = 1,
         Private = 2,
         Login = 3,
         Logout = 4,
-        Status = 5
+        Back = 5,
+        Away = 6,
+        Busy = 7,
+        Kicked = 8
     }
 }

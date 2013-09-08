@@ -141,5 +141,13 @@ namespace mvdw.helpmijapi
         {
             return new HelpmijGebruikerSysteem();
         }
+
+        /// <summary>
+        /// Creer een nieuwe gebruiker
+        /// </summary>
+        /// <param name="userDat">Gebruikers Gegevens</param>
+        public static void CreateUser(GebruikerData userDat)
+        {
+        }
     }
 }

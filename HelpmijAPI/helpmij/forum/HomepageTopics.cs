@@ -49,6 +49,15 @@ namespace mvdw.helpmij.homepage
         public static Gebruiker user = null;
 
         /// <summary>
+        /// Clear Cache
+        /// </summary>
+        public static void ClearCache()
+        {
+            source = null;
+            user = null;
+        }
+
+        /// <summary>
         /// Refresh the source cache
         /// </summary>
         public static void RefreshCache()
