@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmijapi.chat.events;
 
@@ -83,5 +84,17 @@ namespace mvdw.helpmijapi.chat
         /// Load Progress Event
         /// </summary>
         event LoadProgressHandler onProgressEvent;
+
+        /// <summary>
+        /// Set chat kleur
+        /// </summary>
+        /// <param name="color">Color color</param>
+        void SetChatColor(Color color);
+
+        /// <summary>
+        /// Verkrijg chat kleur
+        /// </summary>
+        /// <returns>Color color</returns>
+        Color GetChatColor();
     }
 }

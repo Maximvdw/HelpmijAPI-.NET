@@ -578,6 +578,18 @@
             </summary>
             <param name="user">Gebruiker - user</param>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SetChatColor(System.Drawing.Color)">
+            <summary>
+            Set chat kleur
+            </summary>
+            <param name="color">Color color</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.GetChatColor">
+            <summary>
+            Verkrijg chat kleur
+            </summary>
+            <returns>Color color</returns>
+        </member>
         <member name="E:mvdw.helpmijapi.chat.Chat.onProgressEvent">
             <summary>
             Load Progress Event
@@ -601,6 +613,11 @@
         <member name="F:mvdw.helpmij.chat.HelpmijChat.state">
             <summary>
             Chat state
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChat.colorMsg">
+            <summary>
+            Chat color
             </summary>
         </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.users">
@@ -687,6 +704,18 @@
             Set de gebruiker
             </summary>
             <param name="user">Gebruiker - user</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.SetChatColor(System.Drawing.Color)">
+            <summary>
+            Set chat kleur
+            </summary>
+            <param name="color">Color color</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.GetChatColor">
+            <summary>
+            Verkrijg chat kleur
+            </summary>
+            <returns>Color color</returns>
         </member>
         <member name="E:mvdw.helpmij.chat.HelpmijChat.onProgressEvent">
             <summary>
@@ -4547,6 +4576,47 @@
             </summary>
             <param name="timestamp">DateTime - Timestamp</param>
         </member>
+        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressHandler">
+            <summary>
+            Load Progress Handler
+            </summary>
+            <param name="o">Sender</param>
+            <param name="e">Event Args</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressArgs">
+            <summary>
+            Chat Load Progress Event args
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.total">
+            <summary>
+            Total progress
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.current">
+            <summary>
+            Current progress
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            EventArgs Load Progress
+            </summary>
+            <param name="total">int - Total progress</param>
+            <param name="current">int - Current progress</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetTotalProgress">
+            <summary>
+            Verkrijg de totale stand
+            </summary>
+            <returns>int - Total</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetCurrentProgress">
+            <summary>
+            Verkrijg de huidige stand
+            </summary>
+            <returns>int - Progress</returns>
+        </member>
         <member name="T:mvdw.helpmijapi.ui.HelpmijPopup">
             <summary>
             Helpmij Pop-up
@@ -5048,47 +5118,6 @@
             Creer een nieuwe gebruiker
             </summary>
             <param name="userDat">Gebruikers Gegevens</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressHandler">
-            <summary>
-            Load Progress Handler
-            </summary>
-            <param name="o">Sender</param>
-            <param name="e">Event Args</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressArgs">
-            <summary>
-            Chat Load Progress Event args
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.total">
-            <summary>
-            Total progress
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.current">
-            <summary>
-            Current progress
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.#ctor(System.Int32,System.Int32)">
-            <summary>
-            EventArgs Load Progress
-            </summary>
-            <param name="total">int - Total progress</param>
-            <param name="current">int - Current progress</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetTotalProgress">
-            <summary>
-            Verkrijg de totale stand
-            </summary>
-            <returns>int - Total</returns>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetCurrentProgress">
-            <summary>
-            Verkrijg de huidige stand
-            </summary>
-            <returns>int - Progress</returns>
         </member>
     </members>
 </doc>

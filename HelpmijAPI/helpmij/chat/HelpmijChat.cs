@@ -54,6 +54,10 @@ namespace mvdw.helpmij.chat
         /// </summary>
         double state = 0;
         /// <summary>
+        /// Chat color
+        /// </summary>
+        Color colorMsg = Color.Black;
+        /// <summary>
         /// Chat gebruikers
         /// </summary>
         List<Gebruiker> users = null;
@@ -188,7 +192,7 @@ namespace mvdw.helpmij.chat
                     users.Add(user);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Error
             }
@@ -383,7 +387,9 @@ namespace mvdw.helpmij.chat
         {
             // Zend een bericht
             CookieContainer cookies = user.GetCookies();
-            UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=006666", 
+            // Verkrijg de kleur
+            String colorStr = ColorTranslator.ToHtml(Color.FromArgb(colorMsg.ToArgb())).Substring(1);
+            UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=" + colorStr, 
                 "http://chat.helpmij.nl/process.php", ref cookies);
         }
 
@@ -396,8 +402,10 @@ namespace mvdw.helpmij.chat
         {
             // Zend een command
             CookieContainer cookies = user.GetCookies();
+            // Verkrijg de kleur
+            String colorStr = ColorTranslator.ToHtml(Color.FromArgb(colorMsg.ToArgb())).Substring(1);
             // Haal response op
-            String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", 
+            String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=" + colorStr, 
                 "http://chat.helpmij.nl/process.php", ref cookies);
             DecodeUpdateData(jsonData);
             return DecodeChatMessages(jsonData);
@@ -462,6 +470,24 @@ namespace mvdw.helpmij.chat
         public void SetUser(Gebruiker user)
         {
             this.user = user;
+        }
+
+        /// <summary>
+        /// Set chat kleur
+        /// </summary>
+        /// <param name="color">Color color</param>
+        public void SetChatColor(Color color)
+        {
+            this.colorMsg = color;
+        }
+
+        /// <summary>
+        /// Verkrijg chat kleur
+        /// </summary>
+        /// <returns>Color color</returns>
+        public Color GetChatColor()
+        {
+            return colorMsg;
         }
     }
 }
