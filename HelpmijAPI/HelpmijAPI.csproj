@@ -77,7 +77,7 @@
     </Compile>
     <Compile Include="helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="helpmijapi\chat\Chat.cs" />
-    <Compile Include="helpmijapi\chat\events\ChatReceivedEvent.cs" />
+    <Compile Include="helpmijapi\chat\events\LoadProgressEvent.cs" />
     <Compile Include="helpmijapi\forum\Comment.cs" />
     <Compile Include="helpmijapi\forum\Forum.cs" />
     <Compile Include="helpmijapi\forum\exceptions\ForumExceptions.cs" />
@@ -130,7 +130,6 @@
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
-    <Compile Include="helpmij\chat\HelpmijChatListener.cs" />
     <Compile Include="helpmij\chat\HelpmijChatMessage.cs" />
     <Compile Include="helpmijapi\gebruiker\events\LoginFailed.cs" />
     <Compile Include="helpmijapi\gebruiker\gui\frmLogin.cs">
@@ -341,6 +340,7 @@
     <None Include="Resources\skin1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="helpmijapi\chat\gui\" />
     <Folder Include="helpmij\ui\" />
     <Folder Include="helpmij\updater\" />
   </ItemGroup>

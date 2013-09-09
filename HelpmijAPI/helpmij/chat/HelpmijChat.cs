@@ -27,8 +27,8 @@ using System.Drawing;
 using mvdw.helpmij.utils;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.chat.events;
 using mvdw.helpmij.gebruiker;
+using mvdw.helpmijapi.chat.events;
 
 namespace mvdw.helpmij.chat
 {
@@ -48,11 +48,11 @@ namespace mvdw.helpmij.chat
         /// <summary>
         /// Laatste update
         /// </summary>
-        int lastQuoteUpdate = 0;
+        double lastQuoteUpdate = 0;
         /// <summary>
         /// Chat state
         /// </summary>
-        int state = 0;
+        double state = 0;
         /// <summary>
         /// Chat gebruikers
         /// </summary>
@@ -66,6 +66,10 @@ namespace mvdw.helpmij.chat
         /// </summary>
         List<String> smilyFiles = new List<String>();
 
+        /// <summary>
+        /// Load Progress Event
+        /// </summary>
+        public event LoadProgressHandler onProgressEvent;
 
         /// <summary>
         /// Connecteer met Helpmij.nl Chat
@@ -137,24 +141,25 @@ namespace mvdw.helpmij.chat
                 // lastupdate
                 if (newLastUpdate != null)
                     lastUpdate = newLastUpdate;
-                String newState = (String)data["state"];
+                String newState = data["state"].ToString();
 
                 // state
                 if (newState != null)
-                    state = (int)data["state"];
+                    state = (Double)data["state"];
 
                 // lastquoteupdate
                 data = (Hashtable)data["quote"];
                 if (data != null)
                 {
-                    int newLastQuoteUpdate = (int)data["lastupdate"];
+                    Double newLastQuoteUpdate = (Double)data["lastupdate"];
                     if (newLastQuoteUpdate != 0)
                         lastQuoteUpdate = newLastQuoteUpdate;
                 }
             }
             catch (Exception ex)
             {
-
+                // Error
+                String errorMsg = ex.Message;
             }
         }
 
@@ -175,7 +180,7 @@ namespace mvdw.helpmij.chat
                 {
                     Hashtable userJson = (Hashtable)jarray[i];
                     String username = (String)userJson["username"];
-                    int userid = (int)userJson["userid"];
+                    int userid = int.Parse(userJson["userid"].ToString());
                     // Maak een gebruiker met deze gegevens
                     Gebruiker user = new HelpmijGebruiker();
                     user.SetNickname(username);
@@ -185,6 +190,7 @@ namespace mvdw.helpmij.chat
             }
             catch (Exception ex)
             {
+                // Error
             }
         }
 
@@ -205,9 +211,10 @@ namespace mvdw.helpmij.chat
                 ArrayList jarray = (ArrayList)data["text"];
                 for (int i = 0; i < jarray.Count; i++)
                 {
+                    String msgHTML = ""; // HTML Message
                     try
                     {
-                        String msgHTML = (String)jarray[i];
+                        msgHTML = (String)jarray[i];
                         // Get timestamp
                         String timeStr = UtilsString.GetSubStrings(msgHTML, "<span class=\"time\">[", "]</span>")[0];
                         DateTime time = DateTime.Parse(timeStr);
@@ -307,6 +314,10 @@ namespace mvdw.helpmij.chat
                             // Private message
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "<span class=\"userprivate\">", "</span>")[0];
+                            String colorStr = UtilsString.GetSubStrings(msgHTML, "style=\"color: ", "\">")[0];
+                            Color color = Color.Black;
+                            try { color = ColorTranslator.FromHtml(colorStr); }
+                            catch (Exception) { }
                             // Maak een gebruiker
                             Gebruiker user = new HelpmijGebruiker();
                             user.SetNickname(username);
@@ -320,6 +331,7 @@ namespace mvdw.helpmij.chat
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Private);
                             chatMessage.SetTimeStamp(time);
+                            chatMessage.SetColor(color);
                             msgs.Add(chatMessage);
                         }
                         else
@@ -329,6 +341,10 @@ namespace mvdw.helpmij.chat
                                     "<span class=\"user\">", "</span>")[0];
                             String msg = UtilsString.GetSubStrings(msgHTML, username
                                     + "</span>: ", "</li>")[0];
+                            String colorStr = UtilsString.GetSubStrings(msgHTML,"style=\"color: ", "\">")[0];
+                            Color color = Color.Black;
+                            try { color = ColorTranslator.FromHtml(colorStr); }
+                            catch (Exception) { }
                             // Filter message
                             msg = FilterMessage(msg);
                             // Maak een gebruiker
@@ -340,15 +356,20 @@ namespace mvdw.helpmij.chat
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Normal);
                             chatMessage.SetTimeStamp(time);
+                            chatMessage.SetColor(color);
                             msgs.Add(chatMessage);
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
+                        // Error while decoding messages
                     }
+                    // Event Progress
+                    if (onProgressEvent != null)
+                        onProgressEvent(this, new LoadProgressArgs(jarray.Count, i));
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
             return msgs;
@@ -370,7 +391,8 @@ namespace mvdw.helpmij.chat
         /// Zend een commando naar de chat
         /// </summary>
         /// <param name="command">String - Commando</param>
-        public void SendCommand(String command)
+        /// <returns>Chat messages</returns>
+        public List<ChatMessage> SendCommand(String command)
         {
             // Zend een command
             CookieContainer cookies = user.GetCookies();
@@ -378,6 +400,7 @@ namespace mvdw.helpmij.chat
             String jsonData = UtilsHTTP.GetPOSTSource("function=command&message=" + command + "&color=006666", 
                 "http://chat.helpmij.nl/process.php", ref cookies);
             DecodeUpdateData(jsonData);
+            return DecodeChatMessages(jsonData);
         }
 
         /// <summary>
@@ -415,12 +438,30 @@ namespace mvdw.helpmij.chat
         }
 
         /// <summary>
+        /// Set de laatste update
+        /// </summary>
+        /// <param name="newUpdate">DateTime - Lastupdate</param>
+        public void SetLastUpdate(DateTime newUpdate)
+        {
+            this.lastUpdate = newUpdate.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+
+        /// <summary>
         /// Verkrijg de laatste quote update
         /// </summary>
-        /// <returns>int - Laatste update</returns>
-        public int GetLastQuoteUpdate()
+        /// <returns>Double - Laatste update</returns>
+        public Double GetLastQuoteUpdate()
         {
             return lastQuoteUpdate;
+        }
+
+        /// <summary>
+        /// Set de gebruiker
+        /// </summary>
+        /// <param name="user">Gebruiker - user</param>
+        public void SetUser(Gebruiker user)
+        {
+            this.user = user;
         }
     }
 }

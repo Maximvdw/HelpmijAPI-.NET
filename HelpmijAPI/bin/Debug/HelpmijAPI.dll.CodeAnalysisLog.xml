@@ -12,7 +12,7 @@
          <Members>
           <Member Name="#GetComments(System.String,System.Net.CookieContainer,mvdw.helpmijapi.forum.Topic)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\forum" File="TopicReader.cs" Line="176">Replace the call to 'string.operator ==(string, string)' in 'TopicReader.GetComments(string, CookieContainer, Topic)' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
            </Messages>
@@ -27,7 +27,7 @@
          <Members>
           <Member Name="#GetPublicData(mvdw.helpmij.gebruiker.HelpmijGebruiker)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.String.Replace(System.String,System.String)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="System.String.Replace(System.String,System.String)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="StringCreation" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\gebruiker" File="HelpmijGebruikerData.cs" Line="260">'HelpmijGebruikerData.GetPublicData(HelpmijGebruiker)' calls 'string.Replace(string, string)' but does not use the new string instance that the method returns. Pass the instance as an argument to another method, assign the instance to a variable, or remove the call if it is unnecessary.</Issue>
             </Message>
            </Messages>
@@ -38,7 +38,7 @@
          <Members>
           <Member Name="#SaveSystem(mvdw.helpmijapi.gebruiker.GebruikerSysteem,mvdw.helpmijapi.gebruiker.Gebruiker)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\gebruiker" File="HelpmijGebruikerSysteem.cs" Line="169">Replace the call to 'string.operator ==(string, string)' in 'HelpmijGebruikerSysteem.SaveSystem(GebruikerSysteem, Gebruiker)' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
            </Messages>
@@ -53,21 +53,21 @@
          <Members>
           <Member Name="#GetNewTopics()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="TryParse" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\forum" File="HomepageTopics.cs" Line="141">'HomepageTopics.GetNewTopics()' calls 'DateTime.TryParse(string, out DateTime)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetUnansweredTopics()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="TryParse" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\forum" File="HomepageTopics.cs" Line="187">'HomepageTopics.GetUnansweredTopics()' calls 'DateTime.TryParse(string, out DateTime)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetUnansweredTopics(mvdw.helpmijapi.gebruiker.Gebruiker)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="System.DateTime.TryParse(System.String,System.DateTime@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="TryParse" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\forum" File="HomepageTopics.cs" Line="233">'HomepageTopics.GetUnansweredTopics(Gebruiker)' calls 'DateTime.TryParse(string, out DateTime)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
             </Message>
            </Messages>
@@ -82,7 +82,7 @@
          <Members>
           <Member Name="#GetMD5Hash(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsEncryption.cs" Line="39">In method 'UtilsEncryption.GetMD5Hash(string)', call System.IDisposable.Dispose on object 'md5Hash' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -93,7 +93,7 @@
          <Members>
           <Member Name="#GetEmbeddedFont(mvdw.helpmij.utils.UtilsFont+HMFont,System.Drawing.FontStyle,System.Single)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsFont.cs" Line="71">In method 'UtilsFont.GetEmbeddedFont(UtilsFont.HMFont, FontStyle, float)', call System.IDisposable.Dispose on object 'pfc' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -104,21 +104,21 @@
          <Members>
           <Member Name="#GetMultipartFormData(System.Collections.Generic.Dictionary`2&lt;System.String,System.Object&gt;,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsHTTP.cs" Line="207">In method 'UtilsHTTP.GetMultipartFormData(Dictionary&lt;string, object&gt;, string)', object 'formDataStream' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'formDataStream' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IsInternetAvailable()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsHTTP.cs" Line="47">In method 'UtilsHTTP.IsInternetAvailable()', call System.IDisposable.Dispose on object 'ping' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PostForm(System.String,System.String,System.Byte[],System.Net.CookieContainer)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsHTTP.cs" Line="199">Object 'requestStream' can be disposed more than once in method 'UtilsHTTP.PostForm(string, string, byte[], CookieContainer)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 199</Issue>
             </Message>
            </Messages>
@@ -129,53 +129,68 @@
          <Members>
           <Member Name="#GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'UtilsINI.GetPrivateProfileString(string, string, string, StringBuilder, int, string)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
-            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'section' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'key' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'def' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'retVal' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="5" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="5" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'filePath' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ReadValue(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="mvdw.helpmij.utils.UtilsINI.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="mvdw.helpmij.utils.UtilsINI.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmij\utils" File="UtilsINI.cs" Line="88">'UtilsINI.ReadValue(string, string)' calls 'UtilsINI.GetPrivateProfileString(string, string, string, StringBuilder, int, string)' but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#WritePrivateProfileString(System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'UtilsINI.WritePrivateProfileString(string, string, string, string)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
-            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'UtilsINI.WritePrivateProfileString(string, string, string, string)' will be 8 bytes wide on 32-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 32-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'long'.</Issue>
              <Issue Name="Return" Certainty="95" Level="Error">As it is declared in your code, the return type of P/Invoke 'UtilsINI.WritePrivateProfileString(string, string, string, string)' will be 8 bytes wide on 64-bit platforms. This is not correct, as the actual native declaration of this API indicates it should be 4 bytes wide on 64-bit platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of 'long'.</Issue>
             </Message>
-            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'section' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'key' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'val' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
             </Message>
-            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">To reduce security risk, marshal parameter 'filePath' as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="mvdw.helpmijapi.chat">
+       <Types>
+        <Type Name="Chat" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#onProgressEvent" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'LoadProgressHandler' as an object named 'sender'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -189,7 +204,7 @@
          <Members>
           <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\forum\gui" File="uiHompageTopics.Designer.cs" Line="73">Method 'uiHompageTopics.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Nieuw".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\forum\gui" File="uiHompageTopics.Designer.cs" Line="84">Method 'uiHompageTopics.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Onbeantwoord".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\forum\gui" File="uiHompageTopics.Designer.cs" Line="94">Method 'uiHompageTopics.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Uw vragen".</Issue>
@@ -204,35 +219,35 @@
        <Types>
         <Type Name="CredentialsWrongException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'CredentialsWrongException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="UnableToConnectException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'UnableToConnectException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="UnableToSaveUserException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'UnableToSaveUserException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="UserDataNotFound" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'UserDataNotFound' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="UserNotLoggedInException" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Certainty="95" Level="Error">Add [Serializable] to 'UserNotLoggedInException' as this type implements ISerializable.</Issue>
           </Message>
          </Messages>
@@ -245,14 +260,14 @@
          <Members>
           <Member Name="#btnLogin_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="88">Method 'frmLogin.btnLogin_Click(object, EventArgs)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Bezig...".</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.Designer.cs" Line="64">Method 'frmLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;Annuleren".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.Designer.cs" Line="54">Method 'frmLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;Inloggen".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.Designer.cs" Line="92">Method 'frmLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Helpmij.nl Login".</Issue>
@@ -261,11 +276,11 @@
           </Member>
           <Member Name="#onLoginFailed(System.Object,mvdw.helpmijapi.gebruiker.events.LoginFailedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="124">Method 'frmLogin.onLoginFailed(object, LoginFailedEventArgs)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;Inloggen".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="134">Method 'frmLogin.onLoginFailed(object, LoginFailedEventArgs)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;Inloggen".</Issue>
             </Message>
-            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="122">Method 'frmLogin.onLoginFailed(object, LoginFailedEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Helpmij.nl Login".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="132">Method 'frmLogin.onLoginFailed(object, LoginFailedEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Helpmij.nl Login".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="122">Method 'frmLogin.onLoginFailed(object, LoginFailedEventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Je hebt een ongeldige gebruikersnaam of een ongeldig wachtwoord ingevoerd.\nDenk...".</Issue>
@@ -275,10 +290,10 @@
           </Member>
           <Member Name="#onLoginSuccess(System.Object,mvdw.helpmijapi.gebruiker.events.LoginSuccessEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="168">Method 'frmLogin.onLoginSuccess(object, LoginSuccessEventArgs)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;Inloggen".</Issue>
             </Message>
-            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="166">Method 'frmLogin.onLoginSuccess(object, LoginSuccessEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Helpmij.nl Login".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="frmLogin.cs" Line="166">Method 'frmLogin.onLoginSuccess(object, LoginSuccessEventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Je hebt een ongeldige gebruikersnaam of een ongeldig wachtwoord ingevoerd.\nDenk...".</Issue>
             </Message>
@@ -290,7 +305,7 @@
          <Members>
           <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.Designer.cs" Line="68">Method 'uiHelpmijLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Gebruikersnaam:".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.Designer.cs" Line="98">Method 'uiHelpmijLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Herriner mij?".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.Designer.cs" Line="89">Method 'uiHelpmijLogin.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Wachtwoord vergeten?".</Issue>
@@ -300,7 +315,7 @@
           </Member>
           <Member Name="#Inloggen()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.cs" Line="131">Replace the call to 'string.operator !=(string, string)' in 'uiHelpmijLogin.Inloggen()' with a call to 'String.IsNullOrEmpty'.</Issue>
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.cs" Line="131">Replace the call to 'string.operator !=(string, string)' in 'uiHelpmijLogin.Inloggen()' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
@@ -308,7 +323,7 @@
           </Member>
           <Member Name="#uiLogin_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.cs" Line="111">Replace the call to 'string.operator !=(string, string)' in 'uiHelpmijLogin.uiLogin_Load(object, EventArgs)' with a call to 'String.IsNullOrEmpty'.</Issue>
              <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\gebruiker\gui" File="uiHelpmijLogin.cs" Line="111">Replace the call to 'string.operator !=(string, string)' in 'uiHelpmijLogin.uiLogin_Load(object, EventArgs)' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
@@ -324,14 +339,14 @@
          <Members>
           <Member Name="#GetChassisType()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Chassis.cs" Line="38">In method 'Chassis.GetChassisType()', call System.IDisposable.Dispose on object 'systemEnclosures' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetManufacturerName()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Chassis.cs" Line="66">In method 'Chassis.GetManufacturerName()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -340,7 +355,7 @@
         </Type>
         <Type Name="ChassisTypes" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
            <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'ChassisTypes' that has a value of zero with a suggested name of 'None'.</Issue>
           </Message>
          </Messages>
@@ -349,14 +364,14 @@
          <Members>
           <Member Name="#GetMemoryCapacities()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Memory.cs" Line="41">In method 'Memory.GetMemoryCapacities()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMemoryTypes()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Memory.cs" Line="70">In method 'Memory.GetMemoryTypes()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -367,7 +382,7 @@
          <Members>
           <Member Name="#GetMonitors()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Monitor.cs" Line="37">In method 'Monitor.GetMonitors()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -378,14 +393,14 @@
          <Members>
           <Member Name="#GetProduct()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Motherboard.cs" Line="70">In method 'Motherboard.GetProduct()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetSerial()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Motherboard.cs" Line="40">In method 'Motherboard.GetSerial()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -396,7 +411,7 @@
          <Members>
           <Member Name="#GetProcessorNames()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Processor.cs" Line="37">In method 'Processor.GetProcessorNames()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -407,7 +422,7 @@
          <Members>
           <Member Name="#GetLogicalDrivesSize()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Storage.cs" Line="37">In method 'Storage.GetLogicalDrivesSize()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -418,7 +433,7 @@
          <Members>
           <Member Name="#GetVideocardNames()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\hardware" File="Videocard.cs" Line="37">In method 'Videocard.GetVideocardNames()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -433,14 +448,14 @@
          <Members>
           <Member Name="#GetManufacturerName()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\software" File="Operatingsystem.cs" Line="88">In method 'Operatingsystem.GetManufacturerName()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetOSName()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\sysinfo\software" File="Operatingsystem.cs" Line="58">In method 'Operatingsystem.GetOSName()', call System.IDisposable.Dispose on object 'mos' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
@@ -455,7 +470,7 @@
          <Members>
           <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="API-Banner.Designer.cs" Line="58">Method 'API_Banner.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "v0.1.0".</Issue>
             </Message>
            </Messages>
@@ -466,7 +481,7 @@
          <Members>
           <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.cs" Line="16">Method 'frmAbout.frmAbout()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "About ".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.cs" Line="18">Method 'frmAbout.frmAbout()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Version ".</Issue>
             </Message>
@@ -476,7 +491,7 @@
            <Accessors>
             <Accessor Name="#get_AssemblyTitle()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
              <Messages>
-              <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="NonBreaking">
+              <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="NonBreaking">
                <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.cs" Line="34">Replace the call to 'string.operator !=(string, string)' in 'frmAbout.AssemblyTitle.get()' with a call to 'String.IsNullOrEmpty'.</Issue>
               </Message>
              </Messages>
@@ -485,7 +500,7 @@
           </Member>
           <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-08 17:26:09Z" FixCategory="DependsOnFix">
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2013-09-09 12:24:08Z" FixCategory="DependsOnFix">
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.Designer.cs" Line="150">Method 'frmAbout.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "&amp;OK".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.Designer.cs" Line="125">Method 'frmAbout.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Company Name".</Issue>
              <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\helpmijapi\ui" File="frmAbout.Designer.cs" Line="113">Method 'frmAbout.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Copyright".</Issue>
@@ -506,6 +521,16 @@
   </Target>
  </Targets>
  <Rules>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Declare event handlers correctly</Name>
+   <Description>By convention, .NET events have two parameters that specify the event sender and event data. Event handler signatures should follow this form: void MyEventHandler(object sender, EventArgs e). The 'sender' parameter is always of type System.Object, even if it is possible to employ a more specific type. The 'e' parameter is always of type System.EventArgs. Events that do not provide event data should use the System.EventHandler delegate type. Event handlers return void so that they can send each event to multiple target methods. Any value returned by a target would be lost after the first call.</Description>
+   <Resolution Name="First">Declare the first parameter of {0} as an object named 'sender'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
   <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
    <Name>Dispose objects before losing scope</Name>
    <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>

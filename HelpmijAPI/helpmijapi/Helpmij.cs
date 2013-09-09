@@ -117,6 +117,17 @@ namespace mvdw.helpmijapi
         }
 
         /// <summary>
+        /// Verkrijg een niet geconnecteerde helpmij chat
+        /// </summary>
+        /// <returns>Chat instantie</returns>
+        public static Chat GetChat()
+        {
+            Chat chat = new HelpmijChat();
+            return chat;
+        }
+
+
+        /// <summary>
         /// Refresh Homepage cache
         /// </summary>
         public static void RefreshCache()

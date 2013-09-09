@@ -546,6 +546,7 @@
             Zend een commando naar de chat
             </summary>
             <param name="command">String - Commando</param>
+            <returns>Chat messages</returns>
         </member>
         <member name="M:mvdw.helpmijapi.chat.Chat.Update">
             <summary>
@@ -559,11 +560,28 @@
             </summary>
             <returns>String - Laatste update</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SetLastUpdate(System.DateTime)">
+            <summary>
+            Set de laatste update
+            </summary>
+            <param name="lastUpdate">DateTime - Lastupdate</param>
+        </member>
         <member name="M:mvdw.helpmijapi.chat.Chat.GetLastQuoteUpdate">
             <summary>
             Verkrijg de laatste quote update
             </summary>
-            <returns>int - Laatste update</returns>
+            <returns>Double - Laatste update</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.Chat.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - user</param>
+        </member>
+        <member name="E:mvdw.helpmijapi.chat.Chat.onProgressEvent">
+            <summary>
+            Load Progress Event
+            </summary>
         </member>
         <member name="F:mvdw.helpmij.chat.HelpmijChat.user">
             <summary>
@@ -643,6 +661,7 @@
             Zend een commando naar de chat
             </summary>
             <param name="command">String - Commando</param>
+            <returns>Chat messages</returns>
         </member>
         <!-- Badly formed XML comment ignored for member "M:mvdw.helpmij.chat.HelpmijChat.Update" -->
         <member name="M:mvdw.helpmij.chat.HelpmijChat.GetLastUpdate">
@@ -651,11 +670,28 @@
             </summary>
             <returns>String - Laatste update</returns>
         </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.SetLastUpdate(System.DateTime)">
+            <summary>
+            Set de laatste update
+            </summary>
+            <param name="newUpdate">DateTime - Lastupdate</param>
+        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChat.GetLastQuoteUpdate">
             <summary>
             Verkrijg de laatste quote update
             </summary>
-            <returns>int - Laatste update</returns>
+            <returns>Double - Laatste update</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChat.SetUser(mvdw.helpmijapi.gebruiker.Gebruiker)">
+            <summary>
+            Set de gebruiker
+            </summary>
+            <param name="user">Gebruiker - user</param>
+        </member>
+        <member name="E:mvdw.helpmij.chat.HelpmijChat.onProgressEvent">
+            <summary>
+            Load Progress Event
+            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.sysinfo.hardware.Videocard">
             <summary>
@@ -2955,6 +2991,18 @@
             </summary>
             <param name="type">ChatMessageType - Type</param>
         </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.GetTimeStamp">
+            <summary>
+            Verkrijg timestamp van het bericht
+            </summary>
+            <returns>DateTime - Timestamp</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.ChatMessage.SetTimeStamp(System.DateTime)">
+            <summary>
+            Set de timestamp van het bericht
+            </summary>
+            <param name="timestamp">DateTime - Timestamp</param>
+        </member>
         <member name="T:mvdw.helpmijapi.chat.ChatMessageType">
             <summary>
             Chat Message Types
@@ -4202,26 +4250,6 @@
             Basis Userbar
             </summary>
         </member>
-        <member name="T:mvdw.helpmij.chat.HelpmijChatListener">
-            <summary>
-            Helpmij Chat Listener
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateInterval">
-            <summary>
-            Update Interval
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmij.chat.HelpmijChatListener.updateFlag">
-            <summary>
-            Set to true to stop updating
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmij.chat.HelpmijChatListener.StopListener">
-            <summary>
-            Stop de chat listener
-            </summary>
-        </member>
         <member name="T:mvdw.helpmijapi.gebruiker.exceptions.UnableToConnectException">
             <summary>
             Unable to connect to helpmij
@@ -4276,33 +4304,6 @@
             User Data is not found
             </summary>
             <param name="message">Error Message</param>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs">
-            <summary>
-            Chat Received Event Arguments
-            </summary>
-        </member>
-        <member name="F:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.message">
-            <summary>
-            Chat Message
-            </summary>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.#ctor(mvdw.helpmijapi.chat.ChatMessage)">
-            <summary>
-            Chat Received Event Arguments
-            </summary>
-            <param name="message">ChatMessage - Message</param>
-        </member>
-        <member name="M:mvdw.helpmijapi.chat.events.ChatReceivedEventArgs.GetMessage">
-            <summary>
-            Get Chat Message
-            </summary>
-            <returns>ChatMessage - Message</returns>
-        </member>
-        <member name="T:mvdw.helpmijapi.chat.events.ChatReceivedEventHandler">
-            <summary>
-            Chat Received Event Handler
-            </summary>
         </member>
         <member name="T:mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin">
             <summary>
@@ -4481,6 +4482,11 @@
             Chat bericht type
             </summary>
         </member>
+        <member name="F:mvdw.helpmij.chat.HelpmijChatMessage.timestamp">
+            <summary>
+            Timestamp
+            </summary>
+        </member>
         <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetUser">
             <summary>
             Verkrijg de gebruiker die het bericht schreef
@@ -4528,6 +4534,18 @@
             Set het type bericht
             </summary>
             <param name="type">ChatMessageType - Type</param>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.GetTimeStamp">
+            <summary>
+            Verkrijg timestamp van het bericht
+            </summary>
+            <returns>DateTime - Timestamp</returns>
+        </member>
+        <member name="M:mvdw.helpmij.chat.HelpmijChatMessage.SetTimeStamp(System.DateTime)">
+            <summary>
+            Set de timestamp van het bericht
+            </summary>
+            <param name="timestamp">DateTime - Timestamp</param>
         </member>
         <member name="T:mvdw.helpmijapi.ui.HelpmijPopup">
             <summary>
@@ -5002,6 +5020,12 @@
             <param name="user">Gebruiker</param>
             <returns>Chat instantie</returns>
         </member>
+        <member name="M:mvdw.helpmijapi.Helpmij.GetChat">
+            <summary>
+            Verkrijg een niet geconnecteerde helpmij chat
+            </summary>
+            <returns>Chat instantie</returns>
+        </member>
         <member name="M:mvdw.helpmijapi.Helpmij.RefreshCache">
             <summary>
             Refresh Homepage cache
@@ -5024,6 +5048,47 @@
             Creer een nieuwe gebruiker
             </summary>
             <param name="userDat">Gebruikers Gegevens</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressHandler">
+            <summary>
+            Load Progress Handler
+            </summary>
+            <param name="o">Sender</param>
+            <param name="e">Event Args</param>
+        </member>
+        <member name="T:mvdw.helpmijapi.chat.events.LoadProgressArgs">
+            <summary>
+            Chat Load Progress Event args
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.total">
+            <summary>
+            Total progress
+            </summary>
+        </member>
+        <member name="F:mvdw.helpmijapi.chat.events.LoadProgressArgs.current">
+            <summary>
+            Current progress
+            </summary>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            EventArgs Load Progress
+            </summary>
+            <param name="total">int - Total progress</param>
+            <param name="current">int - Current progress</param>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetTotalProgress">
+            <summary>
+            Verkrijg de totale stand
+            </summary>
+            <returns>int - Total</returns>
+        </member>
+        <member name="M:mvdw.helpmijapi.chat.events.LoadProgressArgs.GetCurrentProgress">
+            <summary>
+            Verkrijg de huidige stand
+            </summary>
+            <returns>int - Progress</returns>
         </member>
     </members>
 </doc>
