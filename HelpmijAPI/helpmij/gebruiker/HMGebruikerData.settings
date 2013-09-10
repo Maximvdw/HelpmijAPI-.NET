@@ -65,5 +65,20 @@
     <Setting Name="avatarUrlPrefix" Type="System.String" Scope="User">
       <Value Profile="(Default)">/forum/image.php?u=</Value>
     </Setting>
+    <Setting Name="searchPostsArgs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">do=finduser&amp;contenttype=vBForum_Post&amp;showposts=1&amp;userid=</Value>
+    </Setting>
+    <Setting Name="searchPHP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/forum/search.php</Value>
+    </Setting>
+    <Setting Name="searchPostsStartArgs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">do=finduser&amp;starteronly=1&amp;contenttype=vBForum_Thread&amp;userid=</Value>
+    </Setting>
+    <Setting Name="searchTopicUrlPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;a class="title" href="</Value>
+    </Setting>
+    <Setting Name="searchTopicUrlSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">" id="thread_title_</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

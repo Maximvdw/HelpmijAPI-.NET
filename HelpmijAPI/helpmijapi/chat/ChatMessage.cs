@@ -89,6 +89,18 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="timestamp">DateTime - Timestamp</param>
         void SetTimeStamp(DateTime timestamp);
+
+        /// <summary>
+        /// Verkrijg message ID
+        /// </summary>
+        /// <returns>int - ID</returns>
+        int GetMessageID();
+
+        /// <summary>
+        /// Set message ID
+        /// </summary>
+        /// <param name="id">int - ID</param>
+        void SetMessageID(int id);
     }
 
     /// <summary>
@@ -96,13 +108,37 @@ namespace mvdw.helpmijapi.chat
     /// </summary>
     public enum ChatMessageType
     {
+        /// <summary>
+        /// Normal Message
+        /// </summary>
         Normal = 0,
+        /// <summary>
+        /// Private Message
+        /// </summary>
         Private = 2,
+        /// <summary>
+        /// Login Action
+        /// </summary>
         Login = 3,
+        /// <summary>
+        /// Logout Action
+        /// </summary>
         Logout = 4,
+        /// <summary>
+        /// Back Action
+        /// </summary>
         Back = 5,
+        /// <summary>
+        /// Away Action
+        /// </summary>
         Away = 6,
+        /// <summary>
+        /// Busy Action
+        /// </summary>
         Busy = 7,
+        /// <summary>
+        /// Kicked Action
+        /// </summary>
         Kicked = 8
     }
 }

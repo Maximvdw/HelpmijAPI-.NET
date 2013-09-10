@@ -62,6 +62,10 @@ namespace mvdw.helpmij.chat
         /// </summary>
         List<Gebruiker> users = null;
         /// <summary>
+        /// Chat kleur van gebruikers
+        /// </summary>
+        List<Color> userColors = null;
+        /// <summary>
         /// All smily codes
         /// </summary>
         List<String> smilyCodes = new List<String>();
@@ -175,8 +179,10 @@ namespace mvdw.helpmij.chat
         {
             try
             {
-                // Wis de lijst
+                // Wis de lijsten
                 users = new List<Gebruiker>();
+                userColors = new List<Color>();
+                // Haal de gegevens op
                 Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
                 ArrayList jarray = (ArrayList)data["users"];
                 // Loop all users
@@ -185,6 +191,10 @@ namespace mvdw.helpmij.chat
                     Hashtable userJson = (Hashtable)jarray[i];
                     String username = (String)userJson["username"];
                     int userid = int.Parse(userJson["userid"].ToString());
+                    String colorStr = userJson["color"].ToString();
+                    Color color = Color.Black; // Default color
+                    if (colorStr != null)
+                        color = ColorTranslator.FromHtml("#" + colorStr);
                     // Maak een gebruiker met deze gegevens
                     Gebruiker user = new HelpmijGebruiker();
                     user.SetNickname(username);
@@ -338,6 +348,31 @@ namespace mvdw.helpmij.chat
                             chatMessage.SetColor(color);
                             msgs.Add(chatMessage);
                         }
+                        else if (msgHTML.Contains(timeStr + "]</span>\" "))
+                        {
+                            // 3de persoon
+                            String username = UtilsString.GetSubStrings(msgHTML,
+                                    timeStr + "]</span>\" ", "</span>")[0];
+                            String colorStr = UtilsString.GetSubStrings(msgHTML, "style=\"color: ", "\">")[0];
+                            Color color = Color.Black;
+                            try { color = ColorTranslator.FromHtml(colorStr); }
+                            catch (Exception) { }
+                            // Maak een gebruiker
+                            Gebruiker user = new HelpmijGebruiker();
+                            user.SetNickname(username);
+                            String msg = UtilsString.GetSubStrings(msgHTML, username
+                                    + "</span>", "</li>")[0];
+                            // Filter message
+                            msg = FilterMessage(msg);
+                            // Maak een nieuw ChatMessage aan met de gegevens
+                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            chatMessage.SetMessage(msg);
+                            chatMessage.SetUser(user);
+                            chatMessage.SetMessageType(ChatMessageType.Private);
+                            chatMessage.SetTimeStamp(time);
+                            chatMessage.SetColor(color);
+                            msgs.Add(chatMessage);
+                        }
                         else
                         {
                             // Normal message
@@ -388,9 +423,16 @@ namespace mvdw.helpmij.chat
             // Zend een bericht
             CookieContainer cookies = user.GetCookies();
             // Verkrijg de kleur
-            String colorStr = ColorTranslator.ToHtml(Color.FromArgb(colorMsg.ToArgb())).Substring(1);
-            UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=" + colorStr, 
-                "http://chat.helpmij.nl/process.php", ref cookies);
+            if (cookies != null)
+            {
+                String colorStr = ColorTranslator.ToHtml(Color.FromArgb(colorMsg.ToArgb())).Substring(1);
+                UtilsHTTP.GetPOSTSource("function=send&message=" + message + "&color=" + colorStr,
+                    "http://chat.helpmij.nl/process.php", ref cookies);
+            }
+            else
+            {
+                throw new Exception("De gebruiker is nog niet ingelogd");
+            }
         }
 
         /// <summary>
@@ -413,7 +455,7 @@ namespace mvdw.helpmij.chat
 
         /// <summary>
         /// Doe update van de chat
-        /// </summary
+        /// </summary>
         /// <returns>Chatmessages</returns>
         public List<ChatMessage> Update()
         {
@@ -488,6 +530,34 @@ namespace mvdw.helpmij.chat
         public Color GetChatColor()
         {
             return colorMsg;
+        }
+
+        /// <summary>
+        /// Verkrijg online gebruikers
+        /// </summary>
+        /// <returns>List users</returns>
+        public List<Gebruiker> GetOnlineUsers()
+        {
+            return users;
+        }
+
+        /// <summary>
+        /// Verkrijg de chat kleur van een specifieke gebruiker
+        /// </summary>
+        /// <param name="user">Gebruiker - User</param>
+        /// <returns>Color color</returns>
+        public Color GetChatColor(Gebruiker user)
+        {
+            if (users != null)
+            {
+                int idx = users.IndexOf(user);
+                return userColors[idx];
+            }
+            else
+            {
+                // Default kleur
+                return Color.Black;
+            }
         }
     }
 }

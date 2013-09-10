@@ -51,6 +51,11 @@ namespace mvdw.helpmij.chat
         /// Timestamp
         /// </summary>
         DateTime timestamp = DateTime.Now;
+        /// <summary>
+        /// Message ID
+        /// </summary>
+        int id = 0;
+
 
         /// <summary>
         /// Verkrijg de gebruiker die het bericht schreef
@@ -140,6 +145,24 @@ namespace mvdw.helpmij.chat
         public void SetTimeStamp(DateTime timestamp)
         {
             this.timestamp = timestamp;
+        }
+
+        /// <summary>
+        /// Verkrijg message ID
+        /// </summary>
+        /// <returns>int - ID</returns>
+        public int GetMessageID()
+        {
+            return id;
+        }
+
+        /// <summary>
+        /// Set message ID
+        /// </summary>
+        /// <param name="id">int - ID</param>
+        public void SetMessageID(int id)
+        {
+            this.id = id;
         }
     }
 }

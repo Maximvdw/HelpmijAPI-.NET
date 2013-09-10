@@ -96,5 +96,18 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <returns>Color color</returns>
         Color GetChatColor();
+
+        /// <summary>
+        /// Verkrijg de chat kleur van een specifieke gebruiker
+        /// </summary>
+        /// <param name="user">Gebruiker - User</param>
+        /// <returns>Color color</returns>
+        Color GetChatColor(Gebruiker user);
+
+        /// <summary>
+        /// Verkrijg online gebruikers
+        /// </summary>
+        /// <returns>List users</returns>
+        List<Gebruiker> GetOnlineUsers();
     }
 }

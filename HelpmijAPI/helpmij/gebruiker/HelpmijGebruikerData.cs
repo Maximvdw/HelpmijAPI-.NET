@@ -24,6 +24,7 @@ using System.Net;
 using mvdw.helpmij.utils;
 using mvdw.helpmijapi.gebruiker;
 using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.forum;
 
 namespace mvdw.helpmij.gebruiker
 {
@@ -234,6 +235,38 @@ namespace mvdw.helpmij.gebruiker
             }
         }
         #endregion
+
+        /// <summary>
+        /// Verkrijg posts die door de gebruiker gestart zijn
+        /// </summary>
+        /// <param name="userHelpmij">HelpmijGebruiker - userHelpmij</param>
+        public static void GetPostsStarted(HelpmijGebruiker userHelpmij)
+        {
+            if (UtilsHTTP.IsInternetAvailable())
+            {
+                // Stel de URL samen
+                String url = siteURL + s.searchPHP + s.searchPostsArgs + userHelpmij.GetUserID();
+                // Verkrijg de gebruikers ID
+                int id = userHelpmij.GetUserID();
+                if (id != -1)
+                {
+                    // Verkrijg de source code
+                    String source = UtilsHTTP.GetSource(url, userHelpmij.GetCookies());
+                    try
+                    {
+                        List<String> topicUrls = (List<String>)UtilsString.GetSubStrings(source,
+                            "<a class=\"title\" href=\"", "\" id=\"thread_title_"); // Topic Urls
+
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                // Error geen internet
+                throw new UnableToConnectException("Kan geen verbinding met Helpmij.nl maken!");
+            }
+        }
 
         /// <summary>
         /// Verkrijg de publieke data van de gebruiker
