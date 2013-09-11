@@ -78,6 +78,18 @@
     <Compile Include="helpmijapi\chat\ChatMessage.cs" />
     <Compile Include="helpmijapi\chat\Chat.cs" />
     <Compile Include="helpmijapi\chat\events\LoadProgressEvent.cs" />
+    <Compile Include="helpmijapi\chat\gui\uiChatMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\chat\gui\uiChatMessage.Designer.cs">
+      <DependentUpon>uiChatMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpmijapi\chat\gui\uiHelpmijChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="helpmijapi\chat\gui\uiHelpmijChat.Designer.cs">
+      <DependentUpon>uiHelpmijChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="helpmijapi\forum\Comment.cs" />
     <Compile Include="helpmijapi\forum\Forum.cs" />
     <Compile Include="helpmijapi\forum\exceptions\ForumExceptions.cs" />
@@ -144,6 +156,7 @@
     <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="helpmij\debug\DebugChat.cs" />
     <Compile Include="helpmij\forum\ForumReader.cs" />
     <Compile Include="helpmij\forum\HMForumData.cs" />
     <Compile Include="helpmij\forum\HMForumData.Designer.cs">
@@ -158,6 +171,7 @@
       <DependentUpon>HMGebruikerData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
+    <Compile Include="helpmij\ui\TaskbarPopup.cs" />
     <Compile Include="helpmij\utils\UtilsFont.cs" />
     <Compile Include="helpmij\utils\UtilsINI.cs" />
     <Compile Include="helpmij\utils\UtilsJSON.cs" />
@@ -203,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\artwork\userbar\uiUserbar.resx">
       <DependentUpon>uiUserbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\chat\gui\uiChatMessage.resx">
+      <DependentUpon>uiChatMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpmijapi\chat\gui\uiHelpmijChat.resx">
+      <DependentUpon>uiHelpmijChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\forum\gui\uiComment.resx">
       <DependentUpon>uiComment.cs</DependentUpon>
@@ -340,8 +360,6 @@
     <None Include="Resources\skin1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="helpmijapi\chat\gui\" />
-    <Folder Include="helpmij\ui\" />
     <Folder Include="helpmij\updater\" />
   </ItemGroup>
   <ItemGroup>

@@ -24,6 +24,7 @@ using System.Net;
 using System.Collections;
 using System.Text.RegularExpressions;
 using System.Drawing;
+using System.Threading;
 using mvdw.helpmij.utils;
 using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
@@ -73,6 +74,7 @@ namespace mvdw.helpmij.chat
         /// All smily urls
         /// </summary>
         List<String> smilyFiles = new List<String>();
+
 
         /// <summary>
         /// Load Progress Event
@@ -200,6 +202,11 @@ namespace mvdw.helpmij.chat
                     user.SetNickname(username);
                     user.SetUserID(userid);
                     users.Add(user);
+                    userColors.Add(color);
+                    if (user.GetUserID() == this.user.GetUserID())
+                    {
+                        this.colorMsg = color; // Zet eigen kleur
+                    }
                 }
             }
             catch (Exception)
@@ -479,6 +486,27 @@ namespace mvdw.helpmij.chat
         }
 
         /// <summary>
+        /// Update User settings
+        /// </summary>
+        /// <param name="key">String - key</param>
+        /// <param name="value">String - value</param>
+        public void UpdateSettings(String key, String value)
+        {
+            try
+            {
+                // Verkrijg cookies
+                CookieContainer cookies = user.GetCookies();
+                String param = "function=usersettings&complete=1&" + key + "=" + value;
+                String url = "http://chat.helpmij.nl/process.php";
+                UtilsHTTP.GetPOSTSource(param, url, ref cookies);
+            }
+            catch (Exception)
+            {
+                // Error while changing settings
+            }
+        }
+
+        /// <summary>
         /// Verkrijg de laatste update
         /// </summary>
         /// <returns>String - Laatste update</returns>
@@ -521,6 +549,8 @@ namespace mvdw.helpmij.chat
         public void SetChatColor(Color color)
         {
             this.colorMsg = color;
+            Thread thUpdateSettings = new Thread(() => UpdateSettings("color",ColorTranslator.ToHtml(color).Substring(1)));
+            thUpdateSettings.Start();
         }
 
         /// <summary>
@@ -558,6 +588,42 @@ namespace mvdw.helpmij.chat
                 // Default kleur
                 return Color.Black;
             }
+        }
+
+        /// <summary>
+        /// Verkrijg alle Smily Codes
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        public List<String> GetSmilyCodes()
+        {
+            return smilyCodes;
+        }
+
+        /// <summary>
+        /// Verkrijg smily codes die van toepassing zijn voor de gebruiker
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        public List<String> GetUserSmilyCodes()
+        {
+            return null;
+        }
+
+        /// <summary>
+        /// Verkrijg alle Smily Files
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        public List<String> GetSmilyFiles()
+        {
+            return smilyFiles;
+        }
+
+        /// <summary>
+        /// Verkrijg smily files die van toepassing zijn voor de gebruiker
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        public List<String> GetUserSmilyFiles()
+        {
+            return null;
         }
     }
 }

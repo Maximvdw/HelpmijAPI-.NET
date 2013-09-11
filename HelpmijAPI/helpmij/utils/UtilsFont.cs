@@ -45,7 +45,11 @@ namespace mvdw.helpmij.utils
             /// <summary>
             /// Visitor Font
             /// </summary>
-            Visitor
+            Visitor,
+            /// <summary>
+            /// Myriad Pro Font
+            /// </summary>
+            Myriad
         }
 
         /// <summary>
@@ -65,6 +69,9 @@ namespace mvdw.helpmij.utils
                     break;
                 case HMFont.Visitor:
                     resource = resource = mvdw.Properties.Resources.visitor;
+                    break;
+                case HMFont.Myriad:
+                    resource = resource = mvdw.Properties.Resources.MyriadPro_Regular;
                     break;
             }
             

@@ -109,5 +109,29 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <returns>List users</returns>
         List<Gebruiker> GetOnlineUsers();
+
+        /// <summary>
+        /// Verkrijg alle Smily Codes
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        List<String> GetSmilyCodes();
+
+        /// <summary>
+        /// Verkrijg smily codes die van toepassing zijn voor de gebruiker
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        List<String> GetUserSmilyCodes();
+
+        /// <summary>
+        /// Verkrijg alle Smily Files
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        List<String> GetSmilyFiles();
+
+        /// <summary>
+        /// Verkrijg smily files die van toepassing zijn voor de gebruiker
+        /// </summary>
+        /// <returns>List van Strings</returns>
+        List<String> GetUserSmilyFiles();
     }
 }
