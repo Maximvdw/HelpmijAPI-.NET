@@ -19,15 +19,113 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Net;
 using System.Drawing;
 
 namespace mvdw.helpmijapi.gebruiker
 {
     /// <summary>
-    /// Verkrijg Gebruiker data
+    /// Verkrijg Gebruiker Identificatie
     /// </summary>
-    public interface GebruikerData : Gebruiker
+    public interface IGebruiker
     {
+        /// <summary>
+        /// Verkrijg de NickName
+        /// </summary>
+        /// <returns>String - Nickname</returns>
+        String GetNickname();
+
+        /// <summary>
+        /// Set de gebruiker Nickname
+        /// </summary>
+        /// <param name="nickname">String - Nickname</param>
+        void SetNickname(String nickname);
+
+        /// <summary>
+        /// Set de avatar URL
+        /// </summary>
+        /// <param name="url"></param>
+        void SetAvatarUrl(String url);
+
+        /// <summary>
+        /// Verkrijg de Gebruikers ID
+        /// </summary>
+        /// <returns>int - ID</returns>
+        int GetUserID();
+
+        /// <summary>
+        /// Set de gebruikers ID
+        /// </summary>
+        /// <param name="ID">int - ID</param>
+        void SetUserID(int ID);
+
+        /// <summary>
+        /// Verkrijg de Security token
+        /// </summary>
+        /// <returns>String - Security Token</returns>
+        String GetSecurityToken();
+
+        /// <summary>
+        /// Set de gebruikers ID
+        /// </summary>
+        /// <param name="sectoken">String - Security Token</param>
+        void SetSecurityToken(String sectoken);
+
+        /// <summary>
+        /// Verkrijg of de gebruiker online is
+        /// </summary>
+        /// <returns>Boolean</returns>
+        Boolean IsOnline();
+
+        /// <summary>
+        /// Set de gebruiker online
+        /// </summary>
+        void SetOnline();
+
+        /// <summary>
+        /// Set de gebruiker offline
+        /// </summary>
+        void SetOffline();
+
+        /// <summary>
+        /// Verkrijg de cookies van de sessie
+        /// </summary>
+        /// <returns>CookieContainer - Cookies</returns>
+        CookieContainer GetCookies();
+
+        /// <summary>
+        /// Set de ccokies van de sessie
+        /// </summary>
+        /// <param name="container"></param>
+        void SetCookies(CookieContainer container);
+
+        /// <summary>
+        /// Sla de wijzigingen op
+        /// </summary>
+        void SaveUserData();
+
+        /// <summary>
+        /// Verkrijg GebruikersData
+        /// </summary>
+        void GetUserData();
+
+        /// <summary>
+        /// Refresh de gegevens
+        /// </summary>
+        void refreshData();
+
+        /// <summary>
+        /// Verkrijg de avatar url
+        /// </summary>
+        /// <returns>String - URL naar avatar</returns>
+        String GetAvatarUrl();
+
+        /// <summary>
+        /// Verkrijg de avatar Image
+        /// </summary>
+        /// <returns>Image - Avatar</returns>
+        Image GetAvatar();
+
         /// <summary>
         /// Verkrijg de geboortedatum
         /// </summary>
@@ -391,18 +489,53 @@ namespace mvdw.helpmijapi.gebruiker
         /// <summary>
         /// Get/Set of de gebruiker verenigingslid is
         /// </summary>
-        Boolean IsVerenigingslid {get; set;}
+        Boolean IsVerenigingslid { get; set; }
 
         /// <summary>
         /// Voeg een gebruikersysteem toe
         /// </summary>
         /// <param name="system">GebruikerSysteem - System</param>
-        void AddSystem(GebruikerSysteem system);
+        void AddSystem(IGebruikerSysteem system);
 
         /// <summary>
         /// Verkrijg een Gebruiker systeem
         /// </summary>
         /// <returns>GebruikerSysteem - System</returns>
-        List<GebruikerSysteem> GetSystems();
+        List<IGebruikerSysteem> GetSystems();
+
+        /// <summary>
+        /// Verkrijg de Gebruiker status
+        /// </summary>
+        /// <returns>GebruikerStatus</returns>
+        UserStatus GetUserStatus();
+
+        /// <summary>
+        /// Set de Gebruiker status
+        /// </summary>
+        /// <param name="status">Gebruiker Status</param>
+        void SetUserStatus(UserStatus status);
+    }
+
+    /// <summary>
+    /// Gebruiker Status
+    /// </summary>
+    public enum UserStatus
+    {
+        /// <summary>
+        /// Gebruiker is Afwezig
+        /// </summary>
+        Away,
+        /// <summary>
+        /// Gebruiker is bezet
+        /// </summary>
+        Busy,
+        /// <summary>
+        /// Gebruiker is online
+        /// </summary>
+        Online,
+        /// <summary>
+        /// Gebruiker is offline
+        /// </summary>
+        Offline
     }
 }

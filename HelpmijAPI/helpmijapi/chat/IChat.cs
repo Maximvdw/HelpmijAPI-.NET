@@ -29,13 +29,13 @@ namespace mvdw.helpmijapi.chat
     /// <summary>
     /// Helpmij.nl Chat
     /// </summary>
-    public interface Chat
+    public interface IChat
     {
         /// <summary>
         /// Connecteer met chat.helpmij.nl
         /// </summary>
         /// <param name="user">Gebruiker</param>
-        void Connect(Gebruiker user);
+        void Connect(IGebruiker user);
 
         /// <summary>
         /// Zend een bericht in de chat
@@ -48,13 +48,13 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="command">String - Commando</param>
         /// <returns>Chat messages</returns>
-        List<ChatMessage> SendCommand(String command);
+        List<IChatMessage> SendCommand(String command);
 
         /// <summary>
         /// Doe een update van de chat
         /// </summary>
         /// <returns>List ChatMessage</returns>
-        List<ChatMessage> Update();
+        List<IChatMessage> Update();
 
         /// <summary>
         /// Verkrijg de laatste update
@@ -78,7 +78,7 @@ namespace mvdw.helpmijapi.chat
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - user</param>
-        void SetUser(Gebruiker user);
+        void SetUser(IGebruiker user);
 
         /// <summary>
         /// Load Progress Event
@@ -102,13 +102,13 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
         /// <returns>Color color</returns>
-        Color GetChatColor(Gebruiker user);
+        Color GetChatColor(IGebruiker user);
 
         /// <summary>
         /// Verkrijg online gebruikers
         /// </summary>
         /// <returns>List users</returns>
-        List<Gebruiker> GetOnlineUsers();
+        List<IGebruiker> GetOnlineUsers();
 
         /// <summary>
         /// Verkrijg alle Smily Codes
@@ -133,5 +133,7 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <returns>List van Strings</returns>
         List<String> GetUserSmilyFiles();
+
+
     }
 }

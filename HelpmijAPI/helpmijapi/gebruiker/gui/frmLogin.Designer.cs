@@ -98,7 +98,7 @@
 
         #endregion
 
-        private helpmijapi.gebruiker.gui.uiHelpmijLogin hmLogin;
+        private mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin hmLogin;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;

@@ -31,7 +31,7 @@ namespace mvdw.helpmij.gebruiker
     /// <summary>
     /// Verkrijg Gebruiker Identificatie
     /// </summary>
-    internal class HelpmijGebruiker : GebruikerData
+    internal class Gebruiker : IGebruiker
     {
         /// <summary>
         /// HM Gebruiker Data
@@ -193,7 +193,11 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Gebruiker systeem
         /// </summary>
-        public List<GebruikerSysteem> systems = new List<GebruikerSysteem>();
+        public List<IGebruikerSysteem> systems = new List<IGebruikerSysteem>();
+        /// <summary>
+        /// Gebruiker Status
+        /// </summary>
+        UserStatus status = UserStatus.Offline;
 
 
         /// <summary>
@@ -253,25 +257,20 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Verkrijg GebruikersData
         /// </summary>
-        /// <param name="fetch">Also fetch data?</param>
-        public GebruikerData GetUserData(Boolean fetch)
+        public void GetUserData()
         {
-            if (fetch)
+            if (GetCookies() != null)
             {
-                if (GetCookies() != null)
-                {
-                    // Laad de instellingen van het online profiel
-                    HelpmijGebruikerData.GetPublicData(this); // Bevat apparte gegevens
-                    HelpmijGebruikerData.GetPrivateData(this);
-                    HelpmijGebruikerData.GetSignature(this);
-                }
-                else
-                {
-                    // Laad publieke instellingen
-                    HelpmijGebruikerData.GetPublicData(this);
-                }
+                // Laad de instellingen van het online profiel
+                GebruikerData.GetPublicData(this); // Bevat apparte gegevens
+                GebruikerData.GetPrivateData(this);
+                GebruikerData.GetSignature(this);
             }
-            return this;
+            else
+            {
+                // Laad publieke instellingen
+                GebruikerData.GetPublicData(this);
+            }
         }
 
         /// <summary>
@@ -287,12 +286,12 @@ namespace mvdw.helpmij.gebruiker
         /// Sla de wijzigingen op
         /// </summary>
         /// <exception cref="UserNotLoggedInException">Wanneer cookies null zijn</exception>
-        public void SetUserData()
+        public void SaveUserData()
         {
             if (GetCookies() != null)
             {
                 // Save de instellingen op het online profiel
-                HelpmijGebruikerData.SetPrivateData(this);
+                GebruikerData.SetPrivateData(this);
             }
             else
             {
@@ -987,10 +986,10 @@ namespace mvdw.helpmij.gebruiker
         /// Voeg een gebruikersysteem toe
         /// </summary>
         /// <param name="system">GebruikerSysteem - System</param>
-        public void AddSystem(GebruikerSysteem system)
+        public void AddSystem(IGebruikerSysteem system)
         {
             // Save system to site
-            if (HelpmijGebruikerSysteem.SaveSystem(system,this))
+            if (GebruikerSysteem.SaveSystem(system,this))
                 systems.Add(system); // Add to list
         }
 
@@ -998,9 +997,27 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg een Gebruiker systeem
         /// </summary>
         /// <returns>GebruikerSysteem - System</returns>
-        public List<GebruikerSysteem> GetSystems()
+        public List<IGebruikerSysteem> GetSystems()
         {
             return systems;
+        }
+
+        /// <summary>
+        /// Verkrijg de Gebruiker status
+        /// </summary>
+        /// <returns>GebruikerStatus</returns>
+        public UserStatus GetUserStatus()
+        {
+            return status;
+        }
+
+        /// <summary>
+        /// Set de Gebruiker status
+        /// </summary>
+        /// <param name="status">GebruikerStatus</param>
+        public void SetUserStatus(UserStatus status)
+        {
+            this.status = status;
         }
 
         /// <summary>

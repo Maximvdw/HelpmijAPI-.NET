@@ -27,7 +27,7 @@ namespace mvdw.helpmijapi.gebruiker
     /// <summary>
     /// Helpmij.nl Gebruiker Systeem
     /// </summary>
-    public interface GebruikerSysteem
+    public interface IGebruikerSysteem
     {
         /// <summary>
         /// Get/Set de Nickname van het systeem

@@ -34,7 +34,7 @@ namespace mvdw.helpmij.forum
         /// <summary>
         /// Autheur van de comment
         /// </summary>
-        private Gebruiker user = null;
+        private IGebruiker user = null;
         /// <summary>
         /// HTML Body
         /// </summary>
@@ -44,7 +44,7 @@ namespace mvdw.helpmij.forum
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - User</returns>
-        public Gebruiker GetUser()
+        public IGebruiker GetUser()
         {
             return user;
         }
@@ -53,7 +53,7 @@ namespace mvdw.helpmij.forum
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        public void SetUser(Gebruiker user)
+        public void SetUser(IGebruiker user)
         {
             this.user = user;
         }

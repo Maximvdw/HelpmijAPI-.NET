@@ -44,7 +44,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="passwordMD5">Wachwoord MD5 Hash</param>
         /// <returns>int - ID</returns>
         /// <exception cref="CredentialsWrongException">Foutieve inlog gegevens</exception>
-        public static Gebruiker Login(String username, String passwordMD5)
+        public static IGebruiker Login(String username, String passwordMD5)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -69,7 +69,7 @@ namespace mvdw.helpmij.gebruiker
                 }
                 else
                 {
-                    Gebruiker user = new HelpmijGebruiker();
+                    IGebruiker user = new Gebruiker();
                     user.SetCookies(cookies);
                     user.SetUserID(id);
                     user.SetNickname(username);

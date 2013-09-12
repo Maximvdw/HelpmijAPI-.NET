@@ -45,11 +45,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private Gebruiker user = null;
-        /// <summary>
-        /// Helpmij Gebruikers Data
-        /// </summary>
-        private GebruikerData userData = null;
+        private IGebruiker user = null;
         /// <summary>
         /// Event wanneer het inloggen mislukt
         /// </summary>
@@ -171,10 +167,10 @@ namespace mvdw.helpmijapi.gebruiker.gui
                 if (Data == true)
                 {
                     // Haal de gegevens op
-                    userData = user.GetUserData(true);
+                    user.GetUserData();
                     // Login gelukt
                     if (this.onLoginSuccess != null)
-                        this.onLoginSuccess(this, new LoginSuccessEventArgs(userData));
+                        this.onLoginSuccess(this, new LoginSuccessEventArgs(user));
                 }
                 else
                 {

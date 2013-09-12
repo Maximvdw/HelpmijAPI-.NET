@@ -66,6 +66,6 @@ namespace mvdw.helpmijapi.gebruiker
         /// <summary>
         /// Laat enkel vrienden toe te contacteren
         /// </summary>
-        VRIEDNEN = 3
+        VRIENDEN = 3
     }
 }

@@ -55,28 +55,26 @@
             // lblMsg
             // 
             this.lblMsg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMsg.AutoSize = true;
             this.lblMsg.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.Location = new System.Drawing.Point(123, 0);
-            this.lblMsg.MaximumSize = new System.Drawing.Size(220, 0);
+            this.lblMsg.MaximumSize = new System.Drawing.Size(45, 0);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(217, 70);
+            this.lblMsg.Size = new System.Drawing.Size(45, 14);
             this.lblMsg.TabIndex = 2;
-            this.lblMsg.Text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n";
+            this.lblMsg.Text = "Bericht";
             // 
             // uiChatMessage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblTimeStamp);
             this.Name = "uiChatMessage";
-            this.Size = new System.Drawing.Size(361, 54);
+            this.Size = new System.Drawing.Size(171, 16);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,11 +41,8 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private Gebruiker user = null;
-        /// <summary>
-        /// Helpmij GebruikerData
-        /// </summary>
-        private GebruikerData userData = null;
+        private IGebruiker user = null;
+
 
         /// <summary>
         /// Helpmij Login Gui Form
@@ -63,18 +60,9 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker</returns>
-        public Gebruiker GetUser()
+        public IGebruiker GetUser()
         {
             return user;
-        }
-
-        /// <summary>
-        /// Verkrijg gebruikers gegevens
-        /// </summary>
-        /// <returns>GebruikerData</returns>
-        public GebruikerData GetUserData()
-        {
-            return userData;
         }
 
         /// <summary>
@@ -154,8 +142,6 @@ namespace mvdw.helpmijapi.gebruiker.gui
                 {
                     // Login success
                     this.DialogResult = DialogResult.OK;
-                    if (getUserData)
-                        userData = e.GetUserData();
                     user = e.GetUser();
                     this.Close();
                 }

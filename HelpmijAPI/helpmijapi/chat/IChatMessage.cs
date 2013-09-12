@@ -21,148 +21,136 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using mvdw.helpmijapi.chat;
 using mvdw.helpmijapi.gebruiker;
 
-namespace mvdw.helpmij.chat
+namespace mvdw.helpmijapi.chat
 {
     /// <summary>
-    /// Helpmij.nl Chat bericht
+    /// Helpmij.nl Chat message
     /// </summary>
-    internal class HelpmijChatMessage : ChatMessage
+    public interface IChatMessage
     {
-        /// <summary>
-        /// Helpmij Gebruiker
-        /// </summary>
-        Gebruiker user = null;
-        /// <summary>
-        /// Het verzonden bericht
-        /// </summary>
-        String message = null;
-        /// <summary>
-        /// Bericht kleur
-        /// </summary>
-        Color color = Color.Black;
-        /// <summary>
-        /// Chat bericht type
-        /// </summary>
-        ChatMessageType type = ChatMessageType.Normal;
-        /// <summary>
-        /// Timestamp
-        /// </summary>
-        DateTime timestamp = DateTime.Now;
-        /// <summary>
-        /// Message ID
-        /// </summary>
-        int id = 0;
-
-
         /// <summary>
         /// Verkrijg de gebruiker die het bericht schreef
         /// </summary>
         /// <returns>Gebruiker</returns>
-        public Gebruiker GetUser()
-        {
-            return user;
-        }
+        IGebruiker GetUser();
 
         /// <summary>
         /// Set de gebruiker die het bericht schreef
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        public void SetUser(Gebruiker user)
-        {
-            this.user = user;
-        }
+        void SetUser(IGebruiker user);
 
         /// <summary>
         /// Verkrijg het bericht
         /// </summary>
         /// <returns>String - Message</returns>
-        public String GetMessage()
-        {
-            return message;
-        }
+        String GetMessage();
 
         /// <summary>
         /// Set het bericht dat de gebruiker schreef
         /// </summary>
         /// <param name="message">String - message</param>
-        public void SetMessage(String message)
-        {
-            this.message = message;
-        }
+        void SetMessage(String message);
+
+        /// <summary>
+        /// Verkrijg het bericht als omgevormde RTF string
+        /// </summary>
+        /// <returns>String - Rtf</returns>
+        String GetMessageRTF();
+
+        /// <summary>
+        /// Set het bericht als omgevorde RTF string
+        /// </summary>
+        /// <param name="message">String - Rtf</param>
+        void SetMessageRTF(String message);
 
         /// <summary>
         /// Verkrijg de kleur van het bericht
         /// </summary>
         /// <returns>Color - Bericht</returns>
-        public Color GetColor()
-        {
-            return color;
-        }
+        Color GetColor();
 
         /// <summary>
         /// Set de kleur van het bericht
         /// </summary>
         /// <param name="color">Color - Bericht</param>
-        public void SetColor(Color color)
-        {
-            this.color = color;
-        }
+        void SetColor(Color color);
 
         /// <summary>
         /// Verkrijg het type bericht
         /// </summary>
         /// <returns>ChatMessageType - Type</returns>
-        public ChatMessageType GetMessageType()
-        {
-            return type;
-        }
+        ChatMessageType GetMessageType();
 
         /// <summary>
         /// Set het type bericht
         /// </summary>
         /// <param name="type">ChatMessageType - Type</param>
-        public void SetMessageType(ChatMessageType type)
-        {
-            this.type = type;
-        }
+        void SetMessageType(ChatMessageType type);
 
         /// <summary>
         /// Verkrijg timestamp van het bericht
         /// </summary>
         /// <returns>DateTime - Timestamp</returns>
-        public DateTime GetTimeStamp()
-        {
-            return timestamp;
-        }
+        DateTime GetTimeStamp();
 
         /// <summary>
         /// Set de timestamp van het bericht
         /// </summary>
         /// <param name="timestamp">DateTime - Timestamp</param>
-        public void SetTimeStamp(DateTime timestamp)
-        {
-            this.timestamp = timestamp;
-        }
+        void SetTimeStamp(DateTime timestamp);
 
         /// <summary>
         /// Verkrijg message ID
         /// </summary>
         /// <returns>int - ID</returns>
-        public int GetMessageID()
-        {
-            return id;
-        }
+        int GetMessageID();
 
         /// <summary>
         /// Set message ID
         /// </summary>
         /// <param name="id">int - ID</param>
-        public void SetMessageID(int id)
-        {
-            this.id = id;
-        }
+        void SetMessageID(int id);
+    }
+
+    /// <summary>
+    /// Chat Message Types
+    /// </summary>
+    public enum ChatMessageType
+    {
+        /// <summary>
+        /// Normal Message
+        /// </summary>
+        Normal = 0,
+        /// <summary>
+        /// Private Message
+        /// </summary>
+        Private = 2,
+        /// <summary>
+        /// Login Action
+        /// </summary>
+        Login = 3,
+        /// <summary>
+        /// Logout Action
+        /// </summary>
+        Logout = 4,
+        /// <summary>
+        /// Back Action
+        /// </summary>
+        Back = 5,
+        /// <summary>
+        /// Away Action
+        /// </summary>
+        Away = 6,
+        /// <summary>
+        /// Busy Action
+        /// </summary>
+        Busy = 7,
+        /// <summary>
+        /// Kicked Action
+        /// </summary>
+        Kicked = 8
     }
 }

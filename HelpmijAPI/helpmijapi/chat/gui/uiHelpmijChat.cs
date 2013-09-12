@@ -27,7 +27,7 @@ namespace mvdw.helpmijapi.chat.gui
         /// Write a message
         /// </summary>
         /// <param name="msg">ChatMessage msg</param>
-        public void WriteMessage(ChatMessage msg)
+        public void WriteMessage(IChatMessage msg)
         {
            
         }

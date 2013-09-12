@@ -55,7 +55,7 @@ namespace mvdw.helpmijapi
         /// Verkrijg de gebruiker die deze api maakte (Maximvdw)
         /// </summary>
         /// <returns>Gebruiker - Maximvdw</returns>
-        public static Gebruiker GetAuthor()
+        public static IGebruiker GetAuthor()
         {
             return Helpmij.GetUser(137609);
         }
@@ -68,7 +68,7 @@ namespace mvdw.helpmijapi
         public static void SetProxy(String url, int port)
         {
             IWebProxy proxyServer = new WebProxy(url, port);
-            HelpmijConfig.proxyServer = proxyServer;
+            HelpmijConfig.PROXY_SERVER = proxyServer;
         }
 
         /// <summary>
@@ -82,23 +82,15 @@ namespace mvdw.helpmijapi
         {
             ICredentials credentials = new NetworkCredential(username, password);
             IWebProxy proxyServer = new WebProxy(url + ":" + port, true, null, credentials);
-            HelpmijConfig.proxyServer = proxyServer;
-        }
-
-        /// <summary>
-        /// Stop het gebruik van de proxy server
-        /// </summary>
-        public static void DisableProxy()
-        {
-            HelpmijConfig.proxy = false; // Zet proxy op af
+            HelpmijConfig.PROXY_SERVER = proxyServer;
         }
 
         /// <summary>
         /// Gebruik een proxy server
         /// </summary>
-        public static void EnableProxy()
+        public static void EnableProxy(Boolean enable)
         {
-            HelpmijConfig.proxy = true; // Zet proxy op aan
+            HelpmijConfig.PROXY = enable; // Zet proxy op aan
         }
 
         /// <summary>

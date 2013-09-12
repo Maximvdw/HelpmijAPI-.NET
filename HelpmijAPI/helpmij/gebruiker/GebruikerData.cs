@@ -31,7 +31,7 @@ namespace mvdw.helpmij.gebruiker
     /// <summary>
     /// Laad en save gebruikersintellingen
     /// </summary>
-    internal class HelpmijGebruikerData : HelpmijData
+    internal class GebruikerData : HelpmijData
     {
         /// <summary>
         /// HM Gebruiker Data
@@ -44,7 +44,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de gebruikers data, en save het
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void GetPrivateData(HelpmijGebruiker userHelpmij)
+        public static void GetPrivateData(Gebruiker userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -157,7 +157,7 @@ namespace mvdw.helpmij.gebruiker
         /// Save de instellingen op Helpmij
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void SetPrivateData(HelpmijGebruiker userHelpmij)
+        public static void SetPrivateData(Gebruiker userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -202,7 +202,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de handtekening gegevens
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void GetSignature(HelpmijGebruiker userHelpmij)
+        public static void GetSignature(Gebruiker userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -240,7 +240,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg posts die door de gebruiker gestart zijn
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker - userHelpmij</param>
-        public static void GetPostsStarted(HelpmijGebruiker userHelpmij)
+        public static void GetPostsStarted(Gebruiker userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -272,7 +272,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de publieke data van de gebruiker
         /// </summary>
         /// <param name="userHelpmij">Helpmij Gebruiker</param>
-        public static void GetPublicData(HelpmijGebruiker userHelpmij)
+        public static void GetPublicData(Gebruiker userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {

@@ -46,7 +46,7 @@ namespace mvdw.helpmij.homepage
         /// <summary>
         /// Cache gebruiker
         /// </summary>
-        public static Gebruiker user = null;
+        public static IGebruiker user = null;
 
         /// <summary>
         /// Clear Cache
@@ -82,7 +82,7 @@ namespace mvdw.helpmij.homepage
         /// <summary>
         /// Refresh the source cache
         /// </summary>
-        public static void RefreshCache(Gebruiker user)
+        public static void RefreshCache(IGebruiker user)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -197,13 +197,13 @@ namespace mvdw.helpmij.homepage
         /// Verkrijg de laatste vragen van de gebruiker
         /// </summary>
         /// <returns>Lijst met topics</returns>
-        public static List<HomepageTopic> GetUnansweredTopics(Gebruiker user)
+        public static List<HomepageTopic> GetUnansweredTopics(IGebruiker user)
         {
             // Initializeer de output
             List<HomepageTopic> newTopics = new List<HomepageTopic>();
             // Verkrijg de broncode
             String source = HomepageTopics.source;
-            Gebruiker cachedUser = HomepageTopics.user;
+            IGebruiker cachedUser = HomepageTopics.user;
             if (source == null || (cachedUser != user))
             {
                 RefreshCache(user);

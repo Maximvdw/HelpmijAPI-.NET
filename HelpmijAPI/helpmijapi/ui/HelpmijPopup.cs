@@ -34,7 +34,7 @@ namespace mvdw.helpmijapi.ui
         /// Toon een notificatie voor een nieuwe gebruiker
         /// </summary>
         /// <param name="newUser">Gebruiker - Nieuwe Gebruiker</param>
-        public static void ShowNewUser(Gebruiker newUser)
+        public static void ShowNewUser(IGebruiker newUser)
         {
             TaskbarPopup popup = new TaskbarPopup(TaskbarPopup.Style.Default);
             popup.Show(1500);

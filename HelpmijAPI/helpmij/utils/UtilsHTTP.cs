@@ -84,8 +84,8 @@ namespace mvdw.helpmij.utils
             request.CookieContainer = cookies;
             request.UserAgent = userAgent;
             // Controlleer of er een proxy server moet worden gebruikt
-            if (HelpmijConfig.proxy == true)
-                request.Proxy = HelpmijConfig.proxyServer;
+            if (HelpmijConfig.PROXY == true)
+                request.Proxy = HelpmijConfig.PROXY_SERVER;
 
             Stream requestStream = request.GetRequestStream();
             Byte[] postBytes = Encoding.ASCII.GetBytes(postData);
@@ -134,8 +134,8 @@ namespace mvdw.helpmij.utils
             request.CookieContainer = cookies;
             request.UserAgent = "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.2.11) Gecko/20101012 Firefox/3.6.11";
             // Controlleer of er een proxy server moet worden gebruikt
-            if (HelpmijConfig.proxy == true)
-                request.Proxy = HelpmijConfig.proxyServer;
+            if (HelpmijConfig.PROXY == true)
+                request.Proxy = HelpmijConfig.PROXY_SERVER;
 
             response = (HttpWebResponse)request.GetResponse();
 

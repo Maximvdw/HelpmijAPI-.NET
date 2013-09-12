@@ -39,7 +39,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private Gebruiker user = null;
+        private IGebruiker user = null;
         /// <summary>
         /// Toon een voorbeeld
         /// </summary>
@@ -84,7 +84,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - user</returns>
-        public Gebruiker GetUser()
+        public IGebruiker GetUser()
         {
             return user;
         }
@@ -93,7 +93,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        public void SetUser(Gebruiker user)
+        public void SetUser(IGebruiker user)
         {
             this.user = user;
         }

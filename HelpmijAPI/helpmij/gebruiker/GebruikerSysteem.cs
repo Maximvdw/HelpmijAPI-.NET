@@ -14,12 +14,13 @@ namespace mvdw.helpmij.gebruiker
     /// <summary>
     /// Helpmij Gebruiker Systeem
     /// </summary>
-    internal class HelpmijGebruikerSysteem : GebruikerSysteem
+    internal class GebruikerSysteem : IGebruikerSysteem
     {
         /// <summary>
         /// HM Gebruiker Data
         /// </summary>
         private static HMGebruikerData s = new HMGebruikerData();
+
 
         /// <summary>
         /// Nickname
@@ -131,7 +132,7 @@ namespace mvdw.helpmij.gebruiker
         /// </summary>
         /// <param name="system">System</param>
         /// <returns>Boolean - Result</returns>
-        public static Boolean SaveSystem(GebruikerSysteem system, Gebruiker user)
+        public static Boolean SaveSystem(IGebruikerSysteem system, IGebruiker user)
         {
             // Stel pakket op
             Dictionary<string, object> postParameters = new Dictionary<string, object>();

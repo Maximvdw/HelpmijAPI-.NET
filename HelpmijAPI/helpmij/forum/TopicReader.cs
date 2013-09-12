@@ -80,7 +80,7 @@ namespace mvdw.helpmij.forum
         /// </summary>
         /// <param name="source">De Broncode</param>
         /// <returns>Gebruiker - Auteur</returns>
-        private static Gebruiker GetAuthor(String source)
+        private static IGebruiker GetAuthor(String source)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace mvdw.helpmij.forum
                 String username = data[1];
                 int id = int.Parse(data[0]);
                 // Maak een nieuwe gebruiker met deze gegevens
-                Gebruiker user = new HelpmijGebruiker();
+                IGebruiker user = new Gebruiker();
                 user.SetNickname(username);
                 user.SetUserID(id);
                 // Return the result
@@ -187,7 +187,7 @@ namespace mvdw.helpmij.forum
                     try
                     {
                         Comment comment = new HelpmijComment();
-                        Gebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0, authors[j].IndexOf('-'))));
+                        IGebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0, authors[j].IndexOf('-'))));
                         comment.SetUser(user);
                         comment.SetBodyHTML(bodyHtml[(j + 1) + (j)]);
                         comments.Add(comment);

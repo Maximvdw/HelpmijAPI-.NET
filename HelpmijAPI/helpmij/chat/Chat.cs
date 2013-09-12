@@ -36,12 +36,12 @@ namespace mvdw.helpmij.chat
     /// <summary>
     /// Helpmij.nl Chat integratie
     /// </summary>
-    internal class HelpmijChat : Chat
+    internal class Chat : IChat
     {
         /// <summary>
         /// Chat gebruiker
         /// </summary>
-        Gebruiker user = null;
+        IGebruiker user = null;
         /// <summary>
         /// Laatste update
         /// </summary>
@@ -61,19 +61,15 @@ namespace mvdw.helpmij.chat
         /// <summary>
         /// Chat gebruikers
         /// </summary>
-        List<Gebruiker> users = null;
+        List<IGebruiker> users = null;
         /// <summary>
         /// Chat kleur van gebruikers
         /// </summary>
         List<Color> userColors = null;
         /// <summary>
-        /// All smily codes
+        /// Smilies
         /// </summary>
-        List<String> smilyCodes = new List<String>();
-        /// <summary>
-        /// All smily urls
-        /// </summary>
-        List<String> smilyFiles = new List<String>();
+        List<String> smilyCodes, smilyFiles = new List<String>();
 
 
         /// <summary>
@@ -85,7 +81,7 @@ namespace mvdw.helpmij.chat
         /// Connecteer met Helpmij.nl Chat
         /// </summary>
         /// <param name="user">Ingelogde gebruiker</param>
-        public void Connect(Gebruiker user)
+        public void Connect(IGebruiker user)
         {
             this.user = user;
             CookieContainer cookies = user.GetCookies();
@@ -182,7 +178,7 @@ namespace mvdw.helpmij.chat
             try
             {
                 // Wis de lijsten
-                users = new List<Gebruiker>();
+                users = new List<IGebruiker>();
                 userColors = new List<Color>();
                 // Haal de gegevens op
                 Hashtable data = (Hashtable)UtilsJSON.JsonDecode(jsonData);
@@ -194,13 +190,34 @@ namespace mvdw.helpmij.chat
                     String username = (String)userJson["username"];
                     int userid = int.Parse(userJson["userid"].ToString());
                     String colorStr = userJson["color"].ToString();
+                    String status = userJson["status"].ToString();
                     Color color = Color.Black; // Default color
-                    if (colorStr != null)
-                        color = ColorTranslator.FromHtml("#" + colorStr);
+                    try
+                    {
+                        if (colorStr != null)
+                            color = ColorTranslator.FromHtml("#" + colorStr);
+                    }
+                    catch (Exception) { }
                     // Maak een gebruiker met deze gegevens
-                    Gebruiker user = new HelpmijGebruiker();
+                    IGebruiker user = new Gebruiker();
                     user.SetNickname(username);
                     user.SetUserID(userid);
+                    // Vind de Gebruiker Status
+                    switch (status)
+                    {
+                        case "away":
+                            user.SetUserStatus(UserStatus.Away);
+                            break;
+                        case "busy":
+                            user.SetUserStatus(UserStatus.Busy);
+                            break;
+                        case "online":
+                            user.SetUserStatus(UserStatus.Online);
+                            break;
+                        case "offline":
+                            user.SetUserStatus(UserStatus.Offline);
+                            break;
+                    }
                     users.Add(user);
                     userColors.Add(color);
                     if (user.GetUserID() == this.user.GetUserID())
@@ -220,9 +237,9 @@ namespace mvdw.helpmij.chat
         /// </summary>
         /// <param name="jsonData">JSON data</param>
         /// <returns>List Chatmessages</returns>
-        private List<ChatMessage> DecodeChatMessages(String jsonData)
+        private List<IChatMessage> DecodeChatMessages(String jsonData)
         {
-            List<ChatMessage> msgs = new List<ChatMessage>();
+            List<IChatMessage> msgs = new List<IChatMessage>();
             try
             {
                 // Decode json
@@ -246,10 +263,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "<span class=\"user\">", "</span>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Login);
                             chatMessage.SetTimeStamp(time);
@@ -261,10 +278,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "</span> <b>", " logt uit</b></li>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Logout);
                             chatMessage.SetTimeStamp(time);
@@ -276,10 +293,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "</span> <b>", " is uit de chat verwijderd</b></li>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Kicked);
                             chatMessage.SetTimeStamp(time);
@@ -291,10 +308,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "</span> <b>", " is terug</b></li>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Back);
                             chatMessage.SetTimeStamp(time);
@@ -306,10 +323,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "</span> <b>", " is bezet</b></li>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Busy);
                             chatMessage.SetTimeStamp(time);
@@ -321,10 +338,10 @@ namespace mvdw.helpmij.chat
                             String username = UtilsString.GetSubStrings(msgHTML,
                                     "</span> <b>", " is afwezig</b></li>")[0];
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Away);
                             chatMessage.SetTimeStamp(time);
@@ -340,14 +357,14 @@ namespace mvdw.helpmij.chat
                             try { color = ColorTranslator.FromHtml(colorStr); }
                             catch (Exception) { }
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             String msg = UtilsString.GetSubStrings(msgHTML, username
                                     + "</span>", "</li>")[0];
                             // Filter message
                             msg = FilterMessage(msg);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetMessage(msg);
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Private);
@@ -365,14 +382,14 @@ namespace mvdw.helpmij.chat
                             try { color = ColorTranslator.FromHtml(colorStr); }
                             catch (Exception) { }
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             String msg = UtilsString.GetSubStrings(msgHTML, username
                                     + "</span>", "</li>")[0];
                             // Filter message
                             msg = FilterMessage(msg);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetMessage(msg);
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Private);
@@ -394,10 +411,10 @@ namespace mvdw.helpmij.chat
                             // Filter message
                             msg = FilterMessage(msg);
                             // Maak een gebruiker
-                            Gebruiker user = new HelpmijGebruiker();
+                            IGebruiker user = new Gebruiker();
                             user.SetNickname(username);
                             // Maak een nieuw ChatMessage aan met de gegevens
-                            ChatMessage chatMessage = new HelpmijChatMessage();
+                            IChatMessage chatMessage = new ChatMessage();
                             chatMessage.SetMessage(msg);
                             chatMessage.SetUser(user);
                             chatMessage.SetMessageType(ChatMessageType.Normal);
@@ -447,7 +464,7 @@ namespace mvdw.helpmij.chat
         /// </summary>
         /// <param name="command">String - Commando</param>
         /// <returns>Chat messages</returns>
-        public List<ChatMessage> SendCommand(String command)
+        public List<IChatMessage> SendCommand(String command)
         {
             // Zend een command
             CookieContainer cookies = user.GetCookies();
@@ -464,12 +481,12 @@ namespace mvdw.helpmij.chat
         /// Doe update van de chat
         /// </summary>
         /// <returns>Chatmessages</returns>
-        public List<ChatMessage> Update()
+        public List<IChatMessage> Update()
         {
             try
             {
                 // Chat messages
-                List<ChatMessage> msgs = new List<ChatMessage>();
+                List<IChatMessage> msgs = new List<IChatMessage>();
                 CookieContainer cookies = user.GetCookies();
                 // Verkrijg Json Data
                 String jsonData = UtilsHTTP.GetPOSTSource("function=update&state=" + state +
@@ -537,7 +554,7 @@ namespace mvdw.helpmij.chat
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - user</param>
-        public void SetUser(Gebruiker user)
+        public void SetUser(IGebruiker user)
         {
             this.user = user;
         }
@@ -549,7 +566,8 @@ namespace mvdw.helpmij.chat
         public void SetChatColor(Color color)
         {
             this.colorMsg = color;
-            Thread thUpdateSettings = new Thread(() => UpdateSettings("color",ColorTranslator.ToHtml(color).Substring(1)));
+            String colorStr = ColorTranslator.ToHtml(Color.FromArgb(colorMsg.ToArgb())).Substring(1);
+            Thread thUpdateSettings = new Thread(() => UpdateSettings("color", colorStr));
             thUpdateSettings.Start();
         }
 
@@ -566,7 +584,7 @@ namespace mvdw.helpmij.chat
         /// Verkrijg online gebruikers
         /// </summary>
         /// <returns>List users</returns>
-        public List<Gebruiker> GetOnlineUsers()
+        public List<IGebruiker> GetOnlineUsers()
         {
             return users;
         }
@@ -576,7 +594,7 @@ namespace mvdw.helpmij.chat
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
         /// <returns>Color color</returns>
-        public Color GetChatColor(Gebruiker user)
+        public Color GetChatColor(IGebruiker user)
         {
             if (users != null)
             {

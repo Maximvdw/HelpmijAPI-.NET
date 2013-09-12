@@ -18,7 +18,6 @@ C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.gebruik
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.forum.gui.uiComment.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.API_Banner.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.frmAbout.resources
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML
 D:\Data\Maxim\My Documents\HelpmijAPI\HelpmijAPI\obj\Debug\ResolveAssemblyReference.cache
 D:\Data\Maxim\My Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.logo.resLogos.resources
 D:\Data\Maxim\My Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.resUserbars.resources
@@ -67,3 +66,5 @@ D:\Data\Maxim\My Documents\Dropbox\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmija
 D:\Data\Maxim\My Documents\Dropbox\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiChatMessage.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiChatMessage.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiHelpmijChat.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiChatOnline.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML

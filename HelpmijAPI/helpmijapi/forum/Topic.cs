@@ -33,13 +33,13 @@ namespace mvdw.helpmijapi.forum
         /// Verkrijg de Auteur van het topic
         /// </summary>
         /// <returns>Gebruiker - Auteru</returns>
-        Gebruiker GetAuthor();
+        IGebruiker GetAuthor();
 
         /// <summary>
         /// Set de Auteur van het topic
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        void SetAuthor(Gebruiker user);
+        void SetAuthor(IGebruiker user);
 
         /// <summary>
         /// Verkrijg de HTML source van de webpagina

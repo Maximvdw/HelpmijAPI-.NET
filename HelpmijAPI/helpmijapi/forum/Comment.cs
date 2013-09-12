@@ -34,13 +34,13 @@ namespace mvdw.helpmijapi.forum
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - User</returns>
-        Gebruiker GetUser();
+        IGebruiker GetUser();
 
         /// <summary>
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        void SetUser(Gebruiker user);
+        void SetUser(IGebruiker user);
 
         /// <summary>
         /// Verkrijg de tekst in HTML

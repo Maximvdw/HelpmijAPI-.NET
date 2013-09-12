@@ -37,7 +37,7 @@ namespace mvdw.helpmij.forum
         /// <summary>
         /// Topic Auteur
         /// </summary>
-        public Gebruiker author = null;
+        public IGebruiker author = null;
         /// <summary>
         /// Topic URL
         /// </summary>
@@ -154,7 +154,7 @@ namespace mvdw.helpmij.forum
         /// Verkrijg de Auteur van het topic
         /// </summary>
         /// <returns>Gebruiker - Auteru</returns>
-        public Gebruiker GetAuthor()
+        public IGebruiker GetAuthor()
         {
             return author;
         }
@@ -163,7 +163,7 @@ namespace mvdw.helpmij.forum
         /// Set de Auteur van het topic
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        public void SetAuthor(Gebruiker user)
+        public void SetAuthor(IGebruiker user)
         {
             this.author = user;
         }

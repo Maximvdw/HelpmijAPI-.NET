@@ -19,7 +19,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Gebruiker
         /// </summary>
-        private Gebruiker user = Helpmij.GetUser(0);
+        private IGebruiker user = Helpmij.GetUser(0);
 
         public uiGebruikerAvatar()
         {

@@ -32,10 +32,14 @@ namespace mvdw.helpmij
         /// <summary>
         /// Defineer of de proxy server enabled is
         /// </summary>
-        public static Boolean proxy = false;
+        public static Boolean PROXY = false;
         /// <summary>
         /// Proxy server instellingen
         /// </summary>
-        public static IWebProxy proxyServer = null;
+        public static IWebProxy PROXY_SERVER = null;
+        /// <summary>
+        /// Helpmij Chat Protection
+        /// </summary>
+        public static Boolean CHAT_PROTECITON = true;
     }
 }
