@@ -111,15 +111,15 @@
     <Compile Include="helpmijapi\forum\gui\uiHompageTopics.Designer.cs">
       <DependentUpon>uiHompageTopics.cs</DependentUpon>
     </Compile>
-    <Compile Include="helpmijapi\gebruiker\events\LoginSuccess.cs" />
-    <Compile Include="helpmijapi\gebruiker\IGebruiker.cs" />
-    <Compile Include="helpmijapi\gebruiker\exceptions\GebruikerExceptions.cs" />
-    <Compile Include="helpmijapi\gebruiker\GebruikerPrivacy.cs" />
-    <Compile Include="helpmijapi\gebruiker\IGebruikerSysteem.cs" />
-    <Compile Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.cs">
+    <Compile Include="helpmijapi\user\events\LoginSuccess.cs" />
+    <Compile Include="helpmijapi\user\IUser.cs" />
+    <Compile Include="helpmijapi\user\exceptions\GebruikerExceptions.cs" />
+    <Compile Include="helpmijapi\user\UserPrivacy.cs" />
+    <Compile Include="helpmijapi\user\IUserSystem.cs" />
+    <Compile Include="helpmijapi\user\gui\uiGebruikerAvatar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.Designer.cs">
+    <Compile Include="helpmijapi\user\gui\uiGebruikerAvatar.Designer.cs">
       <DependentUpon>uiGebruikerAvatar.cs</DependentUpon>
     </Compile>
     <Compile Include="helpmijapi\Helpmij.cs" />
@@ -148,17 +148,17 @@
     </Compile>
     <Compile Include="helpmijapi\ui\HelpmijPopup.cs" />
     <Compile Include="helpmij\chat\ChatMessage.cs" />
-    <Compile Include="helpmijapi\gebruiker\events\LoginFailed.cs" />
-    <Compile Include="helpmijapi\gebruiker\gui\frmLogin.cs">
+    <Compile Include="helpmijapi\user\events\LoginFailed.cs" />
+    <Compile Include="helpmijapi\user\gui\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="helpmijapi\gebruiker\gui\frmLogin.Designer.cs">
+    <Compile Include="helpmijapi\user\gui\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.cs">
+    <Compile Include="helpmijapi\user\gui\uiHelpmijLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.Designer.cs">
+    <Compile Include="helpmijapi\user\gui\uiHelpmijLogin.Designer.cs">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="helpmij\debug\DebugChat.cs" />
@@ -169,11 +169,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>HMForumData.settings</DependentUpon>
     </Compile>
-    <Compile Include="helpmij\gebruiker\GebruikerSysteem.cs" />
-    <Compile Include="helpmij\gebruiker\HMGebruikerData.Designer.cs">
+    <Compile Include="helpmij\user\UserSystem.cs" />
+    <Compile Include="helpmij\user\HMUserData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>HMGebruikerData.settings</DependentUpon>
+      <DependentUpon>HMUserData.settings</DependentUpon>
     </Compile>
     <Compile Include="helpmij\HelpmijConfig.cs" />
     <Compile Include="helpmij\ui\TaskbarPopup.cs" />
@@ -184,11 +184,11 @@
     <Compile Include="helpmij\forum\HelpmijComment.cs" />
     <Compile Include="helpmij\HelpmijData.cs" />
     <Compile Include="helpmij\forum\HelpmijForum.cs" />
-    <Compile Include="helpmij\gebruiker\Gebruiker.cs" />
-    <Compile Include="helpmij\gebruiker\GebruikerData.cs">
+    <Compile Include="helpmij\user\User.cs" />
+    <Compile Include="helpmij\user\UserData.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="helpmij\gebruiker\HelpmijLogin.cs" />
+    <Compile Include="helpmij\user\HelpmijLogin.cs" />
     <Compile Include="helpmij\forum\HelpmijTopic.cs" />
     <Compile Include="helpmijapi\forum\HomepageTopic.cs" />
     <Compile Include="helpmij\forum\HomepageTopics.cs" />
@@ -238,13 +238,13 @@
     <EmbeddedResource Include="helpmijapi\forum\gui\uiHompageTopics.resx">
       <DependentUpon>uiHompageTopics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="helpmijapi\gebruiker\gui\frmLogin.resx">
+    <EmbeddedResource Include="helpmijapi\user\gui\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiGebruikerAvatar.resx">
+    <EmbeddedResource Include="helpmijapi\user\gui\uiGebruikerAvatar.resx">
       <DependentUpon>uiGebruikerAvatar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="helpmijapi\gebruiker\gui\uiHelpmijLogin.resx">
+    <EmbeddedResource Include="helpmijapi\user\gui\uiHelpmijLogin.resx">
       <DependentUpon>uiHelpmijLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="helpmijapi\ui\API-Banner.resx">
@@ -264,9 +264,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>HMForumData.Designer.cs</LastGenOutput>
     </None>
-    <None Include="helpmij\gebruiker\HMGebruikerData.settings">
+    <None Include="helpmij\user\HMUserData.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>HMGebruikerData.Designer.cs</LastGenOutput>
+      <LastGenOutput>HMUserData.Designer.cs</LastGenOutput>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

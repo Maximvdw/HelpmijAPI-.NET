@@ -21,8 +21,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using mvdw.helpmijapi.forum;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 
 namespace mvdw.helpmij.forum
 {

@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 
 namespace mvdw.helpmijapi.forum
 {
@@ -34,13 +34,13 @@ namespace mvdw.helpmijapi.forum
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - User</returns>
-        IGebruiker GetUser();
+        IUser GetUser();
 
         /// <summary>
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        void SetUser(IGebruiker user);
+        void SetUser(IUser user);
 
         /// <summary>
         /// Verkrijg de tekst in HTML

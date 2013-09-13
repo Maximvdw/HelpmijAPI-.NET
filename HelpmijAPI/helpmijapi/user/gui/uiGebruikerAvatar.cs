@@ -7,19 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmij.gebruiker;
+using mvdw.helpmijapi.user;
+using mvdw.helpmij.user;
 using mvdw.helpmijapi;
 using System.Threading;
 
-namespace mvdw.helpmijapi.gebruiker.gui
+namespace mvdw.helpmijapi.user.gui
 {
     public partial class uiGebruikerAvatar : UserControl
     {
         /// <summary>
         /// Gebruiker
         /// </summary>
-        private IGebruiker user = Helpmij.GetUser(0);
+        private IUser user = Helpmij.GetUser(0);
 
         public uiGebruikerAvatar()
         {

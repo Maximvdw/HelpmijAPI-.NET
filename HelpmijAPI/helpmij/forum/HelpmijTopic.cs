@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using mvdw.helpmijapi.forum;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 
 namespace mvdw.helpmij.forum
 {
@@ -37,7 +37,7 @@ namespace mvdw.helpmij.forum
         /// <summary>
         /// Topic Auteur
         /// </summary>
-        public IGebruiker author = null;
+        public IUser author = null;
         /// <summary>
         /// Topic URL
         /// </summary>
@@ -154,7 +154,7 @@ namespace mvdw.helpmij.forum
         /// Verkrijg de Auteur van het topic
         /// </summary>
         /// <returns>Gebruiker - Auteru</returns>
-        public IGebruiker GetAuthor()
+        public IUser GetAuthor()
         {
             return author;
         }
@@ -163,7 +163,7 @@ namespace mvdw.helpmij.forum
         /// Set de Auteur van het topic
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        public void SetAuthor(IGebruiker user)
+        public void SetAuthor(IUser user)
         {
             this.author = user;
         }

@@ -32,7 +32,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.rtfComment = new System.Windows.Forms.RichTextBox();
             this.lnlTitle = new System.Windows.Forms.Label();
-            this.avatar = new mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar();
+            this.avatar = new mvdw.helpmijapi.user.gui.uiGebruikerAvatar();
             this.lblTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private gebruiker.gui.uiGebruikerAvatar avatar;
+        private user.gui.uiGebruikerAvatar avatar;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.RichTextBox rtfComment;
         private System.Windows.Forms.Label lnlTitle;

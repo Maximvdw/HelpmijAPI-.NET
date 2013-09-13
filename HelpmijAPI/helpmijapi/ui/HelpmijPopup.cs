@@ -20,7 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 using mvdw.helpmij.ui;
 
 namespace mvdw.helpmijapi.ui
@@ -34,7 +34,7 @@ namespace mvdw.helpmijapi.ui
         /// Toon een notificatie voor een nieuwe gebruiker
         /// </summary>
         /// <param name="newUser">Gebruiker - Nieuwe Gebruiker</param>
-        public static void ShowNewUser(IGebruiker newUser)
+        public static void ShowNewUser(IUser newUser)
         {
             TaskbarPopup popup = new TaskbarPopup(TaskbarPopup.Style.Default);
             popup.Show(1500);

@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace mvdw.helpmijapi.gebruiker.events
+namespace mvdw.helpmijapi.user.events
 {
     /// <summary>
     /// Login Failed Event Arguments

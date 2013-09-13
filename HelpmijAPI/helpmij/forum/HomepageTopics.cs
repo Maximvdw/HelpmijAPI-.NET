@@ -24,8 +24,8 @@ using System.Net;
 using mvdw.helpmijapi.forum;
 using mvdw.helpmij.utils;
 using mvdw.helpmij.forum;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 
 namespace mvdw.helpmij.homepage
 {
@@ -46,7 +46,7 @@ namespace mvdw.helpmij.homepage
         /// <summary>
         /// Cache gebruiker
         /// </summary>
-        public static IGebruiker user = null;
+        public static IUser user = null;
 
         /// <summary>
         /// Clear Cache
@@ -82,7 +82,7 @@ namespace mvdw.helpmij.homepage
         /// <summary>
         /// Refresh the source cache
         /// </summary>
-        public static void RefreshCache(IGebruiker user)
+        public static void RefreshCache(IUser user)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -197,13 +197,13 @@ namespace mvdw.helpmij.homepage
         /// Verkrijg de laatste vragen van de gebruiker
         /// </summary>
         /// <returns>Lijst met topics</returns>
-        public static List<HomepageTopic> GetUnansweredTopics(IGebruiker user)
+        public static List<HomepageTopic> GetUnansweredTopics(IUser user)
         {
             // Initializeer de output
             List<HomepageTopic> newTopics = new List<HomepageTopic>();
             // Verkrijg de broncode
             String source = HomepageTopics.source;
-            IGebruiker cachedUser = HomepageTopics.user;
+            IUser cachedUser = HomepageTopics.user;
             if (source == null || (cachedUser != user))
             {
                 RefreshCache(user);

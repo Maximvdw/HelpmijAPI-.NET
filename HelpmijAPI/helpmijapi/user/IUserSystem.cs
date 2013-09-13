@@ -22,12 +22,12 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace mvdw.helpmijapi.gebruiker
+namespace mvdw.helpmijapi.user
 {
     /// <summary>
     /// Helpmij.nl Gebruiker Systeem
     /// </summary>
-    public interface IGebruikerSysteem
+    public interface IUserSystem
     {
         /// <summary>
         /// Get/Set de Nickname van het systeem

@@ -20,8 +20,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using mvdw.helpmij.utils;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmij.gebruiker;
+using mvdw.helpmijapi.user;
+using mvdw.helpmij.user;
 using mvdw.helpmij.homepage;
 using mvdw.helpmijapi.forum;
 using mvdw.helpmijapi.chat;
@@ -35,17 +35,12 @@ namespace mvdw.helpmijapi
     public class Helpmij
     {
         /// <summary>
-        /// HM Gebruiker Data
-        /// </summary>
-        private static HMGebruikerData sUser = new HMGebruikerData();
-
-        /// <summary>
         /// Aanmelden op Helpmij.nl
         /// </summary>
         /// <param name="username">Helpmij gebruikersnaam</param>
         /// <param name="passwordMD5">MD5 Hash van wachtwoord</param>
         /// <returns>Gebruiker</returns>
-        public static IGebruiker LoginMD5(String username, String passwordMD5)
+        public static IUser LoginMD5(String username, String passwordMD5)
         {
             return HelpmijLogin.Login(username, passwordMD5);
         }
@@ -56,7 +51,7 @@ namespace mvdw.helpmijapi
         /// <param name="username">Helpmij gebruikersnaam</param>
         /// <param name="password">Zuiver wachtwoord</param>
         /// <returns>Gebruiker</returns>
-        public static IGebruiker Login(String username, String password)
+        public static IUser Login(String username, String password)
         {
             // Zet om naar MD5 wachtwoord
             String passwordMD5 = UtilsEncryption.GetMD5Hash(password);
@@ -68,12 +63,12 @@ namespace mvdw.helpmijapi
         /// </summary>
         /// <param name="ID">Gebruikers ID</param>
         /// <returns>Gebruikers</returns>
-        public static IGebruiker GetUser(int ID)
+        public static IUser GetUser(int ID)
         {
             // Creeer een nieuwe gebruikers instantie
-            IGebruiker user = new Gebruiker();
+            IUser user = new User();
             user.SetUserID(ID);
-            user.SetAvatarUrl(sUser.siteURL + sUser.avatarUrlPrefix + ID);
+            user.SetAvatarUrl("http://www.helpmij.nl/forum/image.php?u=" + ID);
             return user; // Return de gebruiker
         }
 
@@ -99,7 +94,7 @@ namespace mvdw.helpmijapi
         /// Verkrijg een lijst met de nieuwe onbeantwoorde topics van de gebruiker
         /// </summary>
         /// <returns>List Topic - Topics</returns>
-        public static List<HomepageTopic> GetUnansweredTopics(IGebruiker user)
+        public static List<HomepageTopic> GetUnansweredTopics(IUser user)
         {
             return HomepageTopics.GetUnansweredTopics(user);
         }
@@ -109,7 +104,7 @@ namespace mvdw.helpmijapi
         /// </summary>
         /// <param name="user">Gebruiker</param>
         /// <returns>Chat instantie</returns>
-        public static IChat GetChat(IGebruiker user)
+        public static IChat GetChat(IUser user)
         {
             IChat chat = new Chat();
             chat.Connect(user);
@@ -141,16 +136,16 @@ namespace mvdw.helpmijapi
         /// <param name="email">String - Email</param>
         public static void ResetPassword(String email)
         {
-            Gebruiker.ResetPassword(email);
+            User.ResetPassword(email);
         }
 
         /// <summary>
         /// Verkrijg een Gebruikers Systeem
         /// </summary>
         /// <returns>GebruikerSysteem - system</returns>
-        public static IGebruikerSysteem GetSystem()
+        public static IUserSystem GetSystem()
         {
-            return new GebruikerSysteem();
+            return new UserSystem();
         }
     }
 }

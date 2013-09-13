@@ -21,8 +21,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using mvdw.helpmijapi.forum;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 
 namespace mvdw.helpmij.forum
 {
@@ -34,7 +34,7 @@ namespace mvdw.helpmij.forum
         /// <summary>
         /// Autheur van de comment
         /// </summary>
-        private IGebruiker user = null;
+        private IUser user = null;
         /// <summary>
         /// HTML Body
         /// </summary>
@@ -44,7 +44,7 @@ namespace mvdw.helpmij.forum
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - User</returns>
-        public IGebruiker GetUser()
+        public IUser GetUser()
         {
             return user;
         }
@@ -53,7 +53,7 @@ namespace mvdw.helpmij.forum
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        public void SetUser(IGebruiker user)
+        public void SetUser(IUser user)
         {
             this.user = user;
         }

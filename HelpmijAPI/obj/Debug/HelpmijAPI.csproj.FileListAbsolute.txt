@@ -6,15 +6,12 @@ C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll.CodeAnal
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll.lastcodeanalysissucceeded
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.Properties.Resources.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.csproj.GenerateResource.Cache
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.dll.config
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\HelpmijAPI.csprojResolveAssemblyReference.cache
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.gebruiker.gui.frmLogin.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.forum.gui.uiHompageTopics.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.logo.resLogos.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.resUserbars.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.artwork.userbar.uiUserbar.resources
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.gebruiker.gui.uiGebruikerAvatar.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.forum.gui.uiComment.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.API_Banner.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.ui.frmAbout.resources
@@ -67,4 +64,6 @@ D:\Data\Maxim\My Documents\Dropbox\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmija
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiChatMessage.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiHelpmijChat.resources
 C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.chat.gui.uiChatOnline.resources
-C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\bin\Debug\HelpmijAPI.XML
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.user.gui.frmLogin.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.user.gui.uiGebruikerAvatar.resources
+C:\Users\Maxim\Documents\HelpmijAPI\HelpmijAPI\obj\Debug\mvdw.helpmijapi.user.gui.uiHelpmijLogin.resources

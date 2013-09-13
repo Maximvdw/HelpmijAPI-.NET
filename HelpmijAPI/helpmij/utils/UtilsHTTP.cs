@@ -107,7 +107,7 @@ namespace mvdw.helpmij.utils
                 source = reader.ReadToEnd();
             }
             // Get Download size [RAW}
-            HelpmijAPI.downloadSize += source.Length;
+            HelpmijAPI._downloadSize += source.Length;
 
             response.Close();
 
@@ -152,7 +152,7 @@ namespace mvdw.helpmij.utils
                 source = reader.ReadToEnd();
             }
             // Get Download size [RAW}
-            HelpmijAPI.downloadSize += source.Length;
+            HelpmijAPI._downloadSize += source.Length;
 
             response.Close();
 

@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 
 namespace mvdw.helpmijapi.chat
 {
@@ -34,13 +34,13 @@ namespace mvdw.helpmijapi.chat
         /// Verkrijg de gebruiker die het bericht schreef
         /// </summary>
         /// <returns>Gebruiker</returns>
-        IGebruiker GetUser();
+        IUser GetUser();
 
         /// <summary>
         /// Set de gebruiker die het bericht schreef
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        void SetUser(IGebruiker user);
+        void SetUser(IUser user);
 
         /// <summary>
         /// Verkrijg het bericht

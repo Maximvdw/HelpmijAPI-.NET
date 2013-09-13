@@ -22,10 +22,10 @@ using System.Text;
 using System.Net;
 using System.IO;
 using mvdw.helpmij.utils;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 
-namespace mvdw.helpmij.gebruiker
+namespace mvdw.helpmij.user
 {
     /// <summary>
     /// Aanmelden op Helpmij.nl
@@ -35,7 +35,7 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// HM Gebruiker Data
         /// </summary>
-        private static HMGebruikerData s = new HMGebruikerData();
+        private static HMUserData s = new HMUserData();
 
         /// <summary>
         /// Aanmelden op Helpmij.nl
@@ -44,7 +44,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="passwordMD5">Wachwoord MD5 Hash</param>
         /// <returns>int - ID</returns>
         /// <exception cref="CredentialsWrongException">Foutieve inlog gegevens</exception>
-        public static IGebruiker Login(String username, String passwordMD5)
+        public static IUser Login(String username, String passwordMD5)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -69,11 +69,11 @@ namespace mvdw.helpmij.gebruiker
                 }
                 else
                 {
-                    IGebruiker user = new Gebruiker();
+                    IUser user = new User();
                     user.SetCookies(cookies);
                     user.SetUserID(id);
                     user.SetNickname(username);
-                    user.SetOnline();
+                    user.SetUserStatus(UserStatus.Online);
                     user.SetAvatarUrl(s.siteURL + s.avatarUrlPrefix + id);
                     return user; // Enkel cookies , id , nick en sectoken
                 }

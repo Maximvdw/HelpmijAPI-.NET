@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 using mvdw.helpmijapi.forum;
 using mvdw.helpmijapi.forum.exceptions;
 
@@ -39,7 +39,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private IGebruiker user = null;
+        private IUser user = null;
         /// <summary>
         /// Toon een voorbeeld
         /// </summary>
@@ -84,7 +84,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - user</returns>
-        public IGebruiker GetUser()
+        public IUser GetUser()
         {
             return user;
         }
@@ -93,7 +93,7 @@ namespace mvdw.helpmijapi.forum.gui
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        public void SetUser(IGebruiker user)
+        public void SetUser(IUser user)
         {
             this.user = user;
         }

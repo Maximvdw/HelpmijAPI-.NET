@@ -22,21 +22,21 @@ using System.Text;
 using System.Net;
 using System.Drawing;
 using System.IO;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 using mvdw.helpmij.utils;
 
-namespace mvdw.helpmij.gebruiker
+namespace mvdw.helpmij.user
 {
     /// <summary>
     /// Verkrijg Gebruiker Identificatie
     /// </summary>
-    internal class Gebruiker : IGebruiker
+    internal class User : IUser
     {
         /// <summary>
         /// HM Gebruiker Data
         /// </summary>
-        private static HMGebruikerData s = new HMGebruikerData();
+        private static HMUserData s = new HMUserData();
 
         /// <summary>
         /// User ID
@@ -46,10 +46,6 @@ namespace mvdw.helpmij.gebruiker
         /// Security Token
         /// </summary>
         public String sectoken = null;
-        /// <summary>
-        /// Is de gebruiker online
-        /// </summary>
-        public Boolean online = false;
         /// <summary>
         /// User Session Cookies
         /// </summary>
@@ -193,7 +189,7 @@ namespace mvdw.helpmij.gebruiker
         /// <summary>
         /// Gebruiker systeem
         /// </summary>
-        public List<IGebruikerSysteem> systems = new List<IGebruikerSysteem>();
+        public List<IUserSystem> systems = new List<IUserSystem>();
         /// <summary>
         /// Gebruiker Status
         /// </summary>
@@ -262,14 +258,14 @@ namespace mvdw.helpmij.gebruiker
             if (GetCookies() != null)
             {
                 // Laad de instellingen van het online profiel
-                GebruikerData.GetPublicData(this); // Bevat apparte gegevens
-                GebruikerData.GetPrivateData(this);
-                GebruikerData.GetSignature(this);
+                UserData.GetPublicData(this); // Bevat apparte gegevens
+                UserData.GetPrivateData(this);
+                UserData.GetSignature(this);
             }
             else
             {
                 // Laad publieke instellingen
-                GebruikerData.GetPublicData(this);
+                UserData.GetPublicData(this);
             }
         }
 
@@ -291,7 +287,7 @@ namespace mvdw.helpmij.gebruiker
             if (GetCookies() != null)
             {
                 // Save de instellingen op het online profiel
-                GebruikerData.SetPrivateData(this);
+                UserData.SetPrivateData(this);
             }
             else
             {
@@ -345,23 +341,11 @@ namespace mvdw.helpmij.gebruiker
         public Boolean IsOnline()
         {
             // Poll zowizo om te kijken of de gebruiker online is
-            return online;
-        }
-
-        /// <summary>
-        /// Set de gebruiker online
-        /// </summary>
-        public void SetOnline()
-        {
-            online = true;
-        }
-
-        /// <summary>
-        /// Set de gebruiker offline
-        /// </summary>
-        public void SetOffline()
-        {
-            online = false;
+            if (status == UserStatus.Online)
+            {
+                return true; // User is online
+            }
+            else { return false; }
         }
 
         /// <summary>
@@ -860,6 +844,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="year">int - Jaar</param>
         public void SetLastactivityYear(int year)
         {
+            this.lastactivityYear = year;
         }
 
         /// <summary>
@@ -877,6 +862,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="month">int - Maand</param>
         public void SetLastactivityMonth(int month)
         {
+            this.lastactivityMonth = month;
         }
 
         /// <summary>
@@ -894,6 +880,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="day"></param>
         public void SetLastactivityDay(int day)
         {
+            this.lastactivityDay = day;
         }
 
         /// <summary>
@@ -911,6 +898,7 @@ namespace mvdw.helpmij.gebruiker
         /// <param name="rank">String - Rank</param>
         public void SetUserRank(String rank)
         {
+            this.userRank = rank;
         }
 
         /// <summary>
@@ -986,10 +974,10 @@ namespace mvdw.helpmij.gebruiker
         /// Voeg een gebruikersysteem toe
         /// </summary>
         /// <param name="system">GebruikerSysteem - System</param>
-        public void AddSystem(IGebruikerSysteem system)
+        public void AddSystem(IUserSystem system)
         {
             // Save system to site
-            if (GebruikerSysteem.SaveSystem(system,this))
+            if (UserSystem.SaveSystem(system, this))
                 systems.Add(system); // Add to list
         }
 
@@ -997,7 +985,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg een Gebruiker systeem
         /// </summary>
         /// <returns>GebruikerSysteem - System</returns>
-        public List<IGebruikerSysteem> GetSystems()
+        public List<IUserSystem> GetSystems()
         {
             return systems;
         }
@@ -1018,6 +1006,16 @@ namespace mvdw.helpmij.gebruiker
         public void SetUserStatus(UserStatus status)
         {
             this.status = status;
+        }
+
+        /// <summary>
+        /// Check of de Gebruiker een Chat moderator is
+        /// </summary>
+        /// <returns>Boolean True/False</returns>
+        [Obsolete("Not Implemented")]
+        public Boolean IsChatMod()
+        {
+            return false;
         }
 
         /// <summary>

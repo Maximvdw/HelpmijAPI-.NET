@@ -21,11 +21,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 using mvdw.helpmij;
 using mvdw.helpmij.utils;
-using mvdw.helpmij.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmij.user;
+using mvdw.helpmijapi.user.exceptions;
 using mvdw.helpmijapi.forum;
 using mvdw.helpmijapi;
 
@@ -80,7 +80,7 @@ namespace mvdw.helpmij.forum
         /// </summary>
         /// <param name="source">De Broncode</param>
         /// <returns>Gebruiker - Auteur</returns>
-        private static IGebruiker GetAuthor(String source)
+        private static IUser GetAuthor(String source)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace mvdw.helpmij.forum
                 String username = data[1];
                 int id = int.Parse(data[0]);
                 // Maak een nieuwe gebruiker met deze gegevens
-                IGebruiker user = new Gebruiker();
+                IUser user = new User();
                 user.SetNickname(username);
                 user.SetUserID(id);
                 // Return the result
@@ -187,7 +187,7 @@ namespace mvdw.helpmij.forum
                     try
                     {
                         Comment comment = new HelpmijComment();
-                        IGebruiker user = Helpmij.GetUser(int.Parse(authors[j].Substring(0, authors[j].IndexOf('-'))));
+                        IUser user = Helpmij.GetUser(int.Parse(authors[j].Substring(0, authors[j].IndexOf('-'))));
                         comment.SetUser(user);
                         comment.SetBodyHTML(bodyHtml[(j + 1) + (j)]);
                         comments.Add(comment);

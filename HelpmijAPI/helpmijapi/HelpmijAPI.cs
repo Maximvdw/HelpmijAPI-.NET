@@ -20,8 +20,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmij.gebruiker;
+using mvdw.helpmijapi.user;
+using mvdw.helpmij.user;
 using mvdw.helpmij;
 using mvdw.helpmij.forum;
 
@@ -35,11 +35,11 @@ namespace mvdw.helpmijapi
         /// <summary>
         /// Total Downloaded
         /// </summary>
-        internal static Decimal downloadSize = 0;
+        internal static Decimal _downloadSize = 0;
         /// <summary>
         /// Total Uploaded
         /// </summary>
-        internal static Decimal uploadSize = 0;
+        internal static Decimal _uploadSize = 0;
 
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace mvdw.helpmijapi
         /// Verkrijg de gebruiker die deze api maakte (Maximvdw)
         /// </summary>
         /// <returns>Gebruiker - Maximvdw</returns>
-        public static IGebruiker GetAuthor()
+        public static IUser GetAuthor()
         {
             return Helpmij.GetUser(137609);
         }
@@ -94,23 +94,12 @@ namespace mvdw.helpmijapi
         }
 
         /// <summary>
-        /// Reset API Settings
-        /// </summary>
-        public static void ResetSettings()
-        {
-            HMGebruikerData.Default.Reset();
-            HMGebruikerData.Default.Reload();
-            HMForumData.Default.Reset();
-            HMForumData.Default.Reload();
-        }
-
-        /// <summary>
         /// Verkrijg het aantal byte dat gedownload is
         /// </summary>
         /// <returns>Size in byte</returns>
         public static Decimal GetDownloadSize()
         {
-            return downloadSize;
+            return _downloadSize;
         }
 
         /// <summary>
@@ -119,7 +108,7 @@ namespace mvdw.helpmijapi
         /// <returns>Size in byte</returns>
         public static Decimal GetUploadSize()
         {
-            return uploadSize;
+            return _uploadSize;
         }
 
         /// <summary>

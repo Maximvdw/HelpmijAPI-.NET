@@ -25,13 +25,13 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
-using mvdw.helpmijapi.gebruiker.events;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
+using mvdw.helpmijapi.user.events;
 using mvdw.helpmijapi;
 using mvdw.helpmij.utils;
 
-namespace mvdw.helpmijapi.gebruiker.gui
+namespace mvdw.helpmijapi.user.gui
 {
     /// <summary>
     /// Helpmij.nl Login Interface
@@ -45,7 +45,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private IGebruiker user = null;
+        private IUser user = null;
         /// <summary>
         /// Event wanneer het inloggen mislukt
         /// </summary>

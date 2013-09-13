@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace mvdw.helpmijapi.gebruiker
+namespace mvdw.helpmijapi.user
 {
     /// <summary>
     /// Leeftijd privacy

@@ -1,4 +1,4 @@
-﻿namespace mvdw.helpmijapi.gebruiker.gui
+﻿namespace mvdw.helpmijapi.user.gui
 {
     partial class frmLogin
     {
@@ -31,7 +31,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.hmLogin = new mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin();
+            this.hmLogin = new mvdw.helpmijapi.user.gui.uiHelpmijLogin();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +98,7 @@
 
         #endregion
 
-        private mvdw.helpmijapi.gebruiker.gui.uiHelpmijLogin hmLogin;
+        private mvdw.helpmijapi.user.gui.uiHelpmijLogin hmLogin;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCancel;

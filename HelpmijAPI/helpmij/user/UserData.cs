@@ -22,21 +22,21 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using mvdw.helpmij.utils;
-using mvdw.helpmijapi.gebruiker;
-using mvdw.helpmijapi.gebruiker.exceptions;
+using mvdw.helpmijapi.user;
+using mvdw.helpmijapi.user.exceptions;
 using mvdw.helpmijapi.forum;
 
-namespace mvdw.helpmij.gebruiker
+namespace mvdw.helpmij.user
 {
     /// <summary>
     /// Laad en save gebruikersintellingen
     /// </summary>
-    internal class GebruikerData : HelpmijData
+    internal class UserData : HelpmijData
     {
         /// <summary>
         /// HM Gebruiker Data
         /// </summary>
-        private static HMGebruikerData s = new HMGebruikerData();
+        private static HMUserData s = new HMUserData();
 
         /* Prive Gegevens van de Gebruiker */
         #region Prive Gebruikers Data
@@ -44,7 +44,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de gebruikers data, en save het
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void GetPrivateData(Gebruiker userHelpmij)
+        public static void GetPrivateData(User userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -157,7 +157,7 @@ namespace mvdw.helpmij.gebruiker
         /// Save de instellingen op Helpmij
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void SetPrivateData(Gebruiker userHelpmij)
+        public static void SetPrivateData(User userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -202,7 +202,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de handtekening gegevens
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker</param>
-        public static void GetSignature(Gebruiker userHelpmij)
+        public static void GetSignature(User userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -240,7 +240,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg posts die door de gebruiker gestart zijn
         /// </summary>
         /// <param name="userHelpmij">HelpmijGebruiker - userHelpmij</param>
-        public static void GetPostsStarted(Gebruiker userHelpmij)
+        public static void GetPostsStarted(User userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {
@@ -272,7 +272,7 @@ namespace mvdw.helpmij.gebruiker
         /// Verkrijg de publieke data van de gebruiker
         /// </summary>
         /// <param name="userHelpmij">Helpmij Gebruiker</param>
-        public static void GetPublicData(Gebruiker userHelpmij)
+        public static void GetPublicData(User userHelpmij)
         {
             if (UtilsHTTP.IsInternetAvailable())
             {

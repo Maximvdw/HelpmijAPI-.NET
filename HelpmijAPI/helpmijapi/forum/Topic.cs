@@ -20,7 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 
 namespace mvdw.helpmijapi.forum
 {
@@ -33,13 +33,13 @@ namespace mvdw.helpmijapi.forum
         /// Verkrijg de Auteur van het topic
         /// </summary>
         /// <returns>Gebruiker - Auteru</returns>
-        IGebruiker GetAuthor();
+        IUser GetAuthor();
 
         /// <summary>
         /// Set de Auteur van het topic
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        void SetAuthor(IGebruiker user);
+        void SetAuthor(IUser user);
 
         /// <summary>
         /// Verkrijg de HTML source van de webpagina

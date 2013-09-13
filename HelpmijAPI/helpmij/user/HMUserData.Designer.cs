@@ -8,16 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mvdw.helpmij.gebruiker {
+namespace mvdw.helpmij.user {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
-    internal sealed partial class HMGebruikerData : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class HMUserData : global::System.Configuration.ApplicationSettingsBase {
         
-        private static HMGebruikerData defaultInstance = ((HMGebruikerData)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new HMGebruikerData())));
+        private static HMUserData defaultInstance = ((HMUserData)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new HMUserData())));
         
-        public static HMGebruikerData Default {
+        public static HMUserData Default {
             get {
                 return defaultInstance;
             }

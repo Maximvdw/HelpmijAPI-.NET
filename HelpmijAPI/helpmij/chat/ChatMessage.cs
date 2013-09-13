@@ -22,7 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using mvdw.helpmijapi.chat;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 
 namespace mvdw.helpmij.chat
 {
@@ -34,7 +34,7 @@ namespace mvdw.helpmij.chat
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        IGebruiker user = null;
+        IUser user = null;
         /// <summary>
         /// Het verzonden bericht
         /// </summary>
@@ -61,7 +61,7 @@ namespace mvdw.helpmij.chat
         /// Verkrijg de gebruiker die het bericht schreef
         /// </summary>
         /// <returns>Gebruiker</returns>
-        public IGebruiker GetUser()
+        public IUser GetUser()
         {
             return user;
         }
@@ -70,7 +70,7 @@ namespace mvdw.helpmij.chat
         /// Set de gebruiker die het bericht schreef
         /// </summary>
         /// <param name="user">Gebruiker - Auteur</param>
-        public void SetUser(IGebruiker user)
+        public void SetUser(IUser user)
         {
             this.user = user;
         }

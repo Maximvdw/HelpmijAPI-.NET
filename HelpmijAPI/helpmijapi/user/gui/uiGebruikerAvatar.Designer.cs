@@ -1,4 +1,4 @@
-﻿namespace mvdw.helpmijapi.gebruiker.gui
+﻿namespace mvdw.helpmijapi.user.gui
 {
     partial class uiGebruikerAvatar
     {

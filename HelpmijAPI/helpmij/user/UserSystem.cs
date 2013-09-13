@@ -6,20 +6,20 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 using mvdw.helpmij.utils;
 
-namespace mvdw.helpmij.gebruiker
+namespace mvdw.helpmij.user
 {
     /// <summary>
     /// Helpmij Gebruiker Systeem
     /// </summary>
-    internal class GebruikerSysteem : IGebruikerSysteem
+    internal class UserSystem : IUserSystem
     {
         /// <summary>
         /// HM Gebruiker Data
         /// </summary>
-        private static HMGebruikerData s = new HMGebruikerData();
+        private static HMUserData s = new HMUserData();
 
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace mvdw.helpmij.gebruiker
         /// </summary>
         /// <param name="system">System</param>
         /// <returns>Boolean - Result</returns>
-        public static Boolean SaveSystem(IGebruikerSysteem system, IGebruiker user)
+        public static Boolean SaveSystem(IUserSystem system, IUser user)
         {
             // Stel pakket op
             Dictionary<string, object> postParameters = new Dictionary<string, object>();

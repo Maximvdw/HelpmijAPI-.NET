@@ -24,10 +24,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using mvdw.helpmijapi.gebruiker.events;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user.events;
+using mvdw.helpmijapi.user;
 
-namespace mvdw.helpmijapi.gebruiker.gui
+namespace mvdw.helpmijapi.user.gui
 {
     /// <summary>
     /// Helpmij Login GUI Form
@@ -41,7 +41,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// <summary>
         /// Helpmij Gebruiker
         /// </summary>
-        private IGebruiker user = null;
+        private IUser user = null;
 
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace mvdw.helpmijapi.gebruiker.gui
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker</returns>
-        public IGebruiker GetUser()
+        public IUser GetUser()
         {
             return user;
         }

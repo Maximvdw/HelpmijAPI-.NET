@@ -22,12 +22,12 @@ using System.Text;
 using System.Net;
 using System.Drawing;
 
-namespace mvdw.helpmijapi.gebruiker
+namespace mvdw.helpmijapi.user
 {
     /// <summary>
     /// Verkrijg Gebruiker Identificatie
     /// </summary>
-    public interface IGebruiker
+    public interface IUser
     {
         /// <summary>
         /// Verkrijg de NickName
@@ -76,16 +76,6 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <returns>Boolean</returns>
         Boolean IsOnline();
-
-        /// <summary>
-        /// Set de gebruiker online
-        /// </summary>
-        void SetOnline();
-
-        /// <summary>
-        /// Set de gebruiker offline
-        /// </summary>
-        void SetOffline();
 
         /// <summary>
         /// Verkrijg de cookies van de sessie
@@ -495,13 +485,13 @@ namespace mvdw.helpmijapi.gebruiker
         /// Voeg een gebruikersysteem toe
         /// </summary>
         /// <param name="system">GebruikerSysteem - System</param>
-        void AddSystem(IGebruikerSysteem system);
+        void AddSystem(IUserSystem system);
 
         /// <summary>
         /// Verkrijg een Gebruiker systeem
         /// </summary>
         /// <returns>GebruikerSysteem - System</returns>
-        List<IGebruikerSysteem> GetSystems();
+        List<IUserSystem> GetSystems();
 
         /// <summary>
         /// Verkrijg de Gebruiker status
@@ -514,6 +504,12 @@ namespace mvdw.helpmijapi.gebruiker
         /// </summary>
         /// <param name="status">Gebruiker Status</param>
         void SetUserStatus(UserStatus status);
+
+        /// <summary>
+        /// Check of de Gebruiker een Chat moderator is
+        /// </summary>
+        /// <returns>Boolean True/False</returns>
+        Boolean IsChatMod();
     }
 
     /// <summary>

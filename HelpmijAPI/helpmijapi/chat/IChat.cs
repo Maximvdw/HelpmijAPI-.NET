@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using mvdw.helpmijapi.gebruiker;
+using mvdw.helpmijapi.user;
 using mvdw.helpmijapi.chat.events;
 
 namespace mvdw.helpmijapi.chat
@@ -35,7 +35,7 @@ namespace mvdw.helpmijapi.chat
         /// Connecteer met chat.helpmij.nl
         /// </summary>
         /// <param name="user">Gebruiker</param>
-        void Connect(IGebruiker user);
+        void Connect(IUser user);
 
         /// <summary>
         /// Zend een bericht in de chat
@@ -78,7 +78,7 @@ namespace mvdw.helpmijapi.chat
         /// Set de gebruiker
         /// </summary>
         /// <param name="user">Gebruiker - user</param>
-        void SetUser(IGebruiker user);
+        void SetUser(IUser user);
 
         /// <summary>
         /// Load Progress Event
@@ -102,13 +102,13 @@ namespace mvdw.helpmijapi.chat
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
         /// <returns>Color color</returns>
-        Color GetChatColor(IGebruiker user);
+        Color GetChatColor(IUser user);
 
         /// <summary>
         /// Verkrijg online gebruikers
         /// </summary>
         /// <returns>List users</returns>
-        List<IGebruiker> GetOnlineUsers();
+        List<IUser> GetOnlineUsers();
 
         /// <summary>
         /// Verkrijg alle Smily Codes
@@ -134,6 +134,9 @@ namespace mvdw.helpmijapi.chat
         /// <returns>List van Strings</returns>
         List<String> GetUserSmilyFiles();
 
-
+        /// <summary>
+        /// Afmelden uit de chat
+        /// </summary>
+        void Disconnect();
     }
 }

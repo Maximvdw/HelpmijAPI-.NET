@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace mvdw.helpmijapi.gebruiker.events
+namespace mvdw.helpmijapi.user.events
 {
     /// <summary>
     /// Login Success Event Arguments
@@ -13,13 +13,13 @@ namespace mvdw.helpmijapi.gebruiker.events
         /// <summary>
         /// Gebruiker
         /// </summary>
-        private IGebruiker user = null;
+        private IUser user = null;
 
         /// <summary>
         /// Login Success Event Argeuments
         /// </summary>
         /// <param name="user">Gebruiker - User</param>
-        public LoginSuccessEventArgs(IGebruiker user)
+        public LoginSuccessEventArgs(IUser user)
         {
             this.user = user;
         }
@@ -28,7 +28,7 @@ namespace mvdw.helpmijapi.gebruiker.events
         /// Verkrijg de gebruiker
         /// </summary>
         /// <returns>Gebruiker - User</returns>
-        public IGebruiker GetUser()
+        public IUser GetUser()
         {
             return user;
         }
